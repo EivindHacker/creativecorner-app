@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/global-style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<nav class="static-nav" id="navbar"></nav>
+
+		<script src="./scripts/globalScripts/menubar.js" type="module"></script>
+
+		<div style="height: 60px"></div>
+
+		<h1>User Settings</h1>
+		<h2 id="newUserTxt"></h2>
+		<fieldset class="cont-sm">
+			<legend>User Info</legend>
+			<h3 id="creatorTxt"></h3>
+			<div><label>Name: </label> <span id="nameDisplay"></span></div>
+
+			<div><label>Email: </label><span id="emailDisplay"></span></div>
+			<div><label>Credits: </label><span id="creditsDisplay"></span></div>
+
+			<h3>Purchased Kits</h3>
+			<ul id="purchasedKitsList" style="margin-top: -20px">
+				<li>You don't own any kits yet...</li>
+			</ul>
+			<button onclick="signOut()" style="width: max-content; margin: auto">Sign out</button>
+		</fieldset>
+
+		<script>
+			const userId = localStorage.getItem("id");
+			const newUser = sessionStorage.getItem("newUser");
+			const newUserTxt = document.getElementById("newUserTxt");
+
+			function signOut() {
+				localStorage.clear("id");
+				window.location.href = "./index.html";
+			}
+
+			function displayUserData(userData) {
+				document.getElementById("nameDisplay").innerText = userData.name;
+				document.getElementById("emailDisplay").innerText = userData.email;
+				document.getElementById("creditsDisplay").innerText = userData.credits;
+				document.getElementById("creatorTxt").innerText = "CREATOR";
+				if (newUser) {
+					const successTxt = '<span class="success">User Created Successfully</span>';
+					newUserTxt.innerHTML = `Welcome to SSK ${userData.name} <br> ${successTxt}`;
+					sessionStorage.clear("newUser");
+				}
+			}
+
+			async function getUser(id) {
+				const response = await fetch(`/user/${id}`);
+
+				if (response.ok) {
+					const userData = await response.json();
+					console.log("User data:", userData);
+					displayUserData(userData);
+				} else {
+					console.error("Error fetching user data:", response.statusText);
+				}
+			}
+
+			getUser(userId);
+		</script>
+	</body>
+</html>
