@@ -64,8 +64,8 @@ class DBManager {
 		try {
 			await client.connect();
 			const output = await client.query(
-				'INSERT INTO "public"."Users"("name", "email", "password", "credits", "purchased_kits", "uploaded_kits", "creator") VALUES($1::Text, $2::Text, $3::Text, $4::Integer, $5::Text, $6::Text, $7::Boolean) RETURNING id;',
-				[user.name, user.email, user.pswHash, user.credits, user.purchasedKits, user.uploadedKits, user.creator]
+				'INSERT INTO "public"."Users"("name", "email", "password") VALUES($1::Text, $2::Text, $3::Text) RETURNING id;',
+				[user.name, user.email, user.pswHash]
 			);
 
 			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)

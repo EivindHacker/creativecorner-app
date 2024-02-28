@@ -1,0 +1,43 @@
+####################
+####################
+Database connection  postgresql://localhost:5432/ssk_db
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost:5432/ssk_db
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost:5432/ssk_db
+####################
+4:17:45 PM [32mGET[39m /
+4:17:45 PM [32mGET[39m /favicon.ico
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+4:24:36 PM [33mPOST[39m /user
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
