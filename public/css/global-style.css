@@ -1,0 +1,220 @@
+body {
+	background-color: #161616;
+	color: white;
+	font-family: sans-serif;
+	max-width: 1080px;
+	margin: auto;
+}
+
+nav {
+	border-width: 4px;
+	background: linear-gradient(#161616, #161616) padding-box, linear-gradient(to right, #ffd466, #c46d0f) border-box;
+	border-bottom: 4px solid transparent;
+	padding: 15px 30px 15px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: sticky;
+	top: 0px;
+}
+
+.nav-btn {
+	border: none;
+	background: none;
+	width: max-content;
+	border-bottom: 1px solid #454545;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.nav-btn-active {
+	border-bottom-width: 3px;
+	border-bottom-color: #5b5b5b;
+}
+
+.nav-btn:hover {
+	border-bottom-width: 3px;
+	border-bottom-color: #5b5b5b;
+}
+
+.logo {
+	font-size: xx-large;
+	font-weight: 200;
+	cursor: pointer;
+	border-radius: 5px;
+	width: max-content;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav-btn {
+		font-size: small;
+		border: none;
+		background: none;
+		width: max-content;
+	}
+}
+
+.corner {
+	border: 2px solid white;
+	border-left: none;
+	border-bottom: none;
+	height: 25px;
+	width: 25px;
+	margin-left: -12px;
+	margin-bottom: 18px;
+}
+
+button {
+	background: none;
+	border: 2px solid #ffd466;
+	color: white;
+	padding: 8px;
+	font-size: large;
+	font-weight: 200;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+button:hover {
+	font-weight: 400;
+	background-color: #ffffff18;
+	transform: scale(1.05);
+}
+
+input {
+	margin-top: 5px;
+	background: none;
+	border: 2px solid rgba(201, 234, 213, 0.241);
+	border-radius: 5px;
+	color: white;
+	font-size: large;
+	padding: 2px 4px 2px 4px;
+	transition: all 0.3s;
+}
+input:hover {
+	background-color: #ffffff18;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid #555;
+	outline: none;
+	transition: 0.3s;
+}
+
+/* Custom styling for checked state */
+input[type="radio"]:checked {
+	background-color: #ffd466;
+}
+
+label {
+	font-size: large;
+	font-weight: 600;
+}
+
+span {
+	font-size: large;
+}
+
+.cont {
+	padding: 25px;
+	background: linear-gradient(#2c2c2c, #2c2c2c) padding-box, linear-gradient(to right, #ffd466, #c46d0f) border-box;
+	border: 4px solid transparent;
+	border-radius: 25px;
+	margin: auto;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	box-shadow: rgba(0, 0, 0, 0.829) 0px 5px 25px;
+}
+
+.sm {
+	width: 256px;
+}
+
+.md {
+	width: 512px;
+}
+
+.lg {
+	width: 756px;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+h2 {
+	font-size: x-large;
+	font-weight: 200;
+	padding: 0 8px 4px 8px;
+	border-bottom: 1px solid gray;
+}
+
+h3 {
+	font-size: x-large;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 20px;
+	color: #959595;
+	font-weight: 200;
+}
+
+p {
+	font-size: large;
+	font-weight: 200;
+	line-height: 24px;
+	letter-spacing: 1px;
+}
+
+/*-------- Song Idea Card ----------*/
+
+.song-card {
+	border: 1px solid rgb(92, 92, 92);
+	padding: 30px;
+	border-radius: 25px;
+	box-shadow: #00000049 0px 5px 25px;
+}
+
+.genre-wrapper {
+	display: flex;
+	gap: 5px;
+	margin-top: -20px;
+}
+
+.genre {
+	padding: 10px 24px 7px 24px;
+	text-align: center;
+	background-color: #202020;
+	border-radius: 20px;
+	font-style: italic;
+	font-weight: 200;
+	color: rgb(151, 151, 151);
+}
+
+.rating-wrapper {
+	display: flex;
+	gap: 10px;
+	margin-top: -20px;
+	align-items: center;
+}
+
+.rating {
+	margin-top: 4px;
+}

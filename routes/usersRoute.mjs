@@ -2,6 +2,9 @@ import express from "express";
 import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
 import SuperLogger from "../modules/SuperLogger.mjs";
+import {createHashPassword} from "../modules/hashPassword.mjs";
+import DBManager from "../modules/storageManager.mjs";
+import chalk from "chalk";
 
 const USER_API = express.Router();
 USER_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
@@ -13,26 +16,30 @@ USER_API.get("/", (req, res, next) => {
 	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
 });
 
-USER_API.get("/:id", (req, res, next) => {
+USER_API.get("/authString/:authString", async (req, res, next) => {
 	// Tip: All the information you need to get the id part of the request can be found in the documentation
 	// https://expressjs.com/en/guide/routing.html (Route parameters)
 	/// TODO:
 	// Return user object
+	const decryptedToken = atob(req.params.authString);
+
+	const userData = await DBManager.getUser(decryptedToken);
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(userData)).end();
 });
 
 USER_API.post("/", async (req, res, next) => {
 	// This is using javascript object destructuring.
 	// Recomend reading up https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#syntax
 	// https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
-	const {name, email, password} = req.body;
+	const {name, email, pswHash} = req.body;
 
-	if (name != "" && email != "" && password != "") {
+	if (name != "" && email != "" && pswHash != "") {
 		let user = new User();
 		user.name = name;
 		user.email = email;
 
 		///TODO: Do not save passwords.
-		user.pswHash = password;
+		user.pswHash = createHashPassword(pswHash);
 
 		///TODO: Does the user exist?
 		let exists = false;
