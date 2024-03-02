@@ -8,6 +8,7 @@
 	</head>
 
 	<body>
+		<!-- NAVBAR -->
 		<nav>
 			<div style="display: flex; align-items: center">
 				<span class="logo">Creative Corner</span>
@@ -23,13 +24,20 @@
 
 		<script src="./scripts/pageState.mjs"></script>
 
+		<!-- THE CORNER -->
+
 		<h1 style="text-align: center; margin-top: 50px">The Corner</h1>
+		<p style="width: 564px; margin: auto; text-align: center">
+			Do you have a good idea for a song, but do not have the tools to create music? Than this is the place for you! <br /><br />
+			At Creative Corner musicians can find inspiration for their next song, based on your ideas! Get started by
+			<span style="font-weight: 600">signing up</span>, and post your unique and special ideas.
+		</p>
 
 		<div class="lg cont">
 			<h2>Song Ideas</h2>
 			<div class="song-card">
 				<h3 id="title">Carrots on Mars</h3>
-				<p id="description">
+				<p class="description">
 					"Carrots on Mars" is an eccentric and whimsical tune that whimsically explores the idea of growing vegetables on the red planet. Set to a
 					catchy melody with a blend of upbeat rhythms and futuristic sounds, the song follows the adventures of a group of intrepid astronauts who
 					embark on a mission to cultivate carrots in the barren landscapes of Mars. As they face challenges and unexpected discoveries along the way,
@@ -48,29 +56,86 @@
 					<div style="height: 30px; width: 2px; background-color: gray; margin-left: 10px; margin-right: 10px"></div>
 					<input style="width: 40px" type="number" min="0" max="5" /> <button>Submit Rating</button>
 				</div>
+				<h4>Creations</h4>
+				<ul class="creations-wrapper">
+					<li>
+						Title: <span>Carrots On Mars</span>&nbsp;By: <span>Bluesbrothers</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+					</li>
+					<li>
+						Title: <span>Vegetables On Venus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+					</li>
+					<li>
+						Title: <span>Vegetables On The Moon</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+					</li>
+					<li>
+						Title: <span>Vegetables In Uranus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+					</li>
+				</ul>
+
+				<!-- Only Visible for Musicians -->
+
+				<h4>Add Creation</h4>
+				<div class="add-creation-wrapper">
+					<div><label>Title: &nbsp; </label><input type="text" /></div>
+					<div><label>Artist: </label><input type="text" /></div>
+					<div><label>Link: &nbsp; </label><input type="url" /></div>
+					<button style="margin-top: 10px">Add Creation</button>
+				</div>
 			</div>
 		</div>
+
+		<!-- CREATE SONG IDEA -->
+
+		<div class="lg cont">
+			<h2>Create Song Idea</h2>
+			<div class="song-input-card">
+				<div><label>Title: </label> <input type="text" id="emailTitle" /><br /></div>
+				<label>Description: </label>
+				<textarea style="margin-top: -15px" id="descriptionInput"></textarea>
+				<h4>Genre Suggestions</h4>
+				<div style="margin-top: -45px; margin-bottom: 10px">
+					<input type="text" />
+					<button>Add Genre</button>
+				</div>
+				<div class="genre-wrapper">
+					<span class="genre">EDM</span>
+					<span class="genre">Electronic</span>
+					<span class="genre">Hyper Pop</span>
+				</div>
+			</div>
+			<button style="font-size: x-large; margin-top: 20px">Save Idea</button>
+		</div>
+
+		<!-- SIGNUP -->
 
 		<div class="sm cont">
 			<h1>Sign up</h1>
 			<div><label>Name</label> <input type="text" id="nameInput" /><br /></div>
 			<div><label>Email</label> <input type="email" id="emailInput" /><br /></div>
 			<div><label>Password</label> <input type="password" id="pswHashInput" /><br /></div>
-			<div style="width: 100%">
+			<form style="width: 100%">
 				<label>User Type</label>
 				<div style="display: flex; gap: 10px; margin-top: 5px; margin-bottom: 5px">
 					<div><label>Writer</label><input type="radio" id="" name="user-type" checked="true" /></div>
 					<div><label>Musician</label><input type="radio" id="user-type" name="user-type" /></div>
 				</div>
-			</div>
+			</form>
 			<button id="createUserButton">Create User</button>
 		</div>
+
+		<!-- SIGNIN -->
 		<div class="sm cont">
 			<h1>Your Info</h1>
 			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%">
 				<div><label>Name: </label><span id="nameDisplay"></span></div>
 				<div><label>Email: </label><span id="emailDisplay"></span></div>
-				<div><label>Account Type: </label><span id="accountTypeDisplay"></span></div>
+				<form style="width: 100%">
+					<label>User Type</label>
+					<div style="display: flex; gap: 10px; margin-top: 5px; margin-bottom: 5px">
+						<div><label>Writer</label><input type="radio" id="" name="user-type" checked="true" /></div>
+						<div><label>Musician</label><input type="radio" id="user-type" name="user-type" /></div>
+					</div>
+				</form>
 			</div>
 			<button style="margin-top: 20px; color: red; border-color: red">Delete Account</button>
 		</div>
@@ -130,13 +195,12 @@
 
 			const nameDisplay = document.getElementById("nameDisplay");
 			const emailDisplay = document.getElementById("emailDisplay");
-			const accountTypeDisplay = document.getElementById("accountTypeDisplay");
 
 			function displayUserData(data) {
 				const userData = JSON.parse(data);
 				nameDisplay.innerText = userData[0].name;
 				emailDisplay.innerText = userData[0].email;
-				accountTypeDisplay.innerText = userData[0].userType;
+				//To do: Add code for showing account type.
 			}
 		</script>
 	</body>
