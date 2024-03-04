@@ -1,6 +1,10 @@
 import {updatePageState} from "./pageState.mjs";
 import {pageState} from "./pageState.mjs";
 
+document.getElementById("logo").addEventListener("click", () => {
+	updatePageState("thecorner");
+});
+
 const navButtons = document.querySelectorAll(".nav-btn");
 
 const token = localStorage.getItem("token");

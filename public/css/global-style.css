@@ -93,6 +93,10 @@ nav {
 		background: none;
 		width: max-content;
 	}
+
+	footer {
+		font-size: medium;
+	}
 }
 
 .corner {
@@ -121,6 +125,12 @@ button:hover {
 	font-weight: 400;
 	background-color: #ffffff18;
 	transform: scale(1.025);
+}
+
+@media (max-width: 768px) {
+	button {
+		font-size: medium;
+	}
 }
 
 input {
@@ -182,14 +192,17 @@ span {
 
 .sm {
 	max-width: 256px;
+	width: 80vw;
 }
 
 .md {
 	max-width: 512px;
+	width: 80vw;
 }
 
 .lg {
 	max-width: 756px;
+	width: 80vw;
 }
 
 h1 {
@@ -243,6 +256,12 @@ textarea {
 	border: 1px solid rgb(122, 122, 122);
 }
 
+@media (max-width: 768px) {
+	p {
+		font-size: medium;
+	}
+}
+
 /*-------- Song Idea Card ----------*/
 
 .song-card {
@@ -266,19 +285,11 @@ textarea {
 	overflow: scroll;
 }
 
-@media (max-width: 768px) {
-	.description {
-		border-radius: 25px;
-		padding: 10px;
-		box-shadow: inset #00000050 0px -25px 25px;
-		border: 1px solid rgb(77, 77, 77);
-	}
-}
-
 .genre-wrapper {
 	display: flex;
 	gap: 5px;
 	margin-top: -20px;
+	flex-wrap: wrap;
 }
 
 .genre {
@@ -290,6 +301,15 @@ textarea {
 	font-weight: 200;
 	color: rgb(151, 151, 151);
 	width: max-content;
+}
+
+@media (max-width: 768px) {
+	.description {
+		border-radius: 25px;
+		padding: 10px;
+		box-shadow: inset #00000050 0px -25px 25px;
+		border: 1px solid rgb(77, 77, 77);
+	}
 }
 
 .rating-wrapper {
