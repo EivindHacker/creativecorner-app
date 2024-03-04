@@ -1,3 +1,16 @@
+.err {
+	color: red;
+}
+
+.success {
+	color: #10ff10;
+}
+
+.subtle {
+	color: gray;
+	font-size: small;
+}
+
 body {
 	background-color: #161616;
 	color: white;
@@ -52,6 +65,7 @@ nav {
 .nav-btn-active {
 	border-bottom-width: 3px;
 	border-bottom-color: #5b5b5b;
+	color: #ffd466;
 	font-weight: 400;
 }
 
@@ -76,7 +90,6 @@ nav {
 	}
 	.nav-btn {
 		font-size: small;
-		border: none;
 		background: none;
 		width: max-content;
 	}
@@ -240,6 +253,14 @@ textarea {
 	width: calc(100% - 60px);
 }
 
+.creator-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	height: 25px;
+	margin-top: -18px;
+}
+
 .description {
 	max-height: 300px;
 	overflow: scroll;
@@ -312,7 +333,7 @@ textarea {
 .appear {
 	opacity: 0;
 	animation-name: appear;
-	animation-duration: 0.5s;
+	animation-duration: 0.75s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
 }

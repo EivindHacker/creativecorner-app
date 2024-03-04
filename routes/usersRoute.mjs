@@ -16,21 +16,7 @@ USER_API.get("/", (req, res, next) => {
 	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
 });
 
-USER_API.get("/authString/:authString", async (req, res, next) => {
-	// Tip: All the information you need to get the id part of the request can be found in the documentation
-	// https://expressjs.com/en/guide/routing.html (Route parameters)
-	/// TODO:
-	// Return user object
-	const decryptedToken = atob(req.params.authString);
-
-	const userData = await DBManager.getUser(decryptedToken);
-	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(userData)).end();
-});
-
 USER_API.post("/signUp", async (req, res, next) => {
-	// This is using javascript object destructuring.
-	// Recomend reading up https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#syntax
-	// https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
 	const {name, email, pswHash} = req.body;
 
 	if (name != "" && email != "" && pswHash != "") {
@@ -40,13 +26,15 @@ USER_API.post("/signUp", async (req, res, next) => {
 
 		user.pswHash = createHashPassword(pswHash);
 
+		const token = btoa(user.email + " " + user.pswHash);
+
 		///TODO: Does the user exist?
 		let exists = false;
 
 		if (!exists) {
 			//TODO: What happens if this fails?
 			user = await user.save();
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(token)).end();
 		} else {
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).end();
 		}
@@ -68,19 +56,49 @@ USER_API.post("/login", async (req, res, next) => {
 
 		user.pswHash = createHashPassword(pswHash);
 
-		///TODO: Does the user exist?
-		let exists = false;
+		user = await user.getUser();
 
-		if (!exists) {
-			//TODO: What happens if this fails?
-			user = await user.getUser();
-			console.log(user);
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
+		if (user.length !== 0) {
+			const emailRes = user[0].email;
+			const passRes = user[0].password;
+
+			const token = btoa(emailRes + " " + passRes);
+
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(token)).end();
 		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Wrong Username or Password").end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Mangler data felt").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing Data Fields").end();
+	}
+});
+
+USER_API.post("/getUserData", async (req, res, next) => {
+	// This is using javascript object destructuring.
+	// Recomend reading up https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#syntax
+	// https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
+	const {token} = req.body;
+
+	if (token != "") {
+		const decryptedToken = atob(token);
+
+		const userData = decryptedToken.split(" ");
+
+		let user = new User();
+
+		user.email = userData[0];
+
+		user.pswHash = userData[1];
+
+		user = await user.getUserData();
+
+		if (user.length !== 0) {
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
+		} else {
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Wrong Username or Password").end();
+		}
+	} else {
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing Data Fields").end();
 	}
 });
 

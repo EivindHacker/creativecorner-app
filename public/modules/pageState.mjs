@@ -1,38 +1,20 @@
 // index.js
 
 import updatePageContent from "./contentLoader.mjs";
+import {setNavBtns} from "./nav.mjs";
 
-let pageState = "thecorner";
-function updatePageState(aState) {
+export let pageState = "thecorner";
+
+if (sessionStorage.getItem("state")) {
+	pageState = sessionStorage.getItem("state");
+}
+
+export function updatePageState(aState) {
 	pageState = aState;
 	updatePageContent(pageState);
+	setNavBtns(pageState);
+
+	sessionStorage.setItem("state", pageState);
 }
 
-const navButtons = document.querySelectorAll(".nav-btn");
-
-navButtons.forEach((button) => {
-	button.addEventListener("click", (e) => {
-		const clickedButton = e.target.id;
-		updatePageState(clickedButton);
-		setNavBtns(clickedButton);
-	});
-});
-
-export function setNavBtns(clickedButton) {
-	navButtons.forEach((button) => {
-		if (clickedButton !== button.id) {
-			button.classList.remove("nav-btn-active");
-		} else {
-			button.classList.add("nav-btn-active");
-		}
-	});
-}
-
-setNavBtns(pageState);
 updatePageContent(pageState);
-
-// Handle page refresh
-window.onload = function () {
-	const pageState = window.location.pathname.replace("/", "");
-	updatePageContent(pageState);
-};

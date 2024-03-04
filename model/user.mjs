@@ -28,6 +28,10 @@ class User {
 	async getUser() {
 		return await DBManager.getUser(this);
 	}
+
+	async getUserData() {
+		return await DBManager.getUserData(this);
+	}
 }
 
 export default User;

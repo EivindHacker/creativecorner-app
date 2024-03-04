@@ -1,40 +1,41 @@
-import 'dotenv/config'
-import express from 'express' // Express is installed using npm
-import USER_API from './routes/usersRoute.mjs'; // This is where we have defined the API for working with users
-import SuperLogger from './modules/SuperLogger.mjs';
+import "dotenv/config";
+import express from "express";
+import path from "path";
+import {fileURLToPath} from "url";
+import SuperLogger from "./modules/SuperLogger.mjs";
 import printDeveloperStartupInportantInformationMSG from "./modules/developerHelpers.mjs";
+
+// Import USER_API and other route handlers as needed
+import USER_API from "./routes/usersRoute.mjs";
 
 printDeveloperStartupInportantInformationMSG();
 
-
 // Creating an instance of the server
 const server = express();
-// Selecting a port for the server to use.
-const port = (process.env.PORT || 8080);
-server.set('port', port);
 
+// Selecting a port for the server to use.
+const port = process.env.PORT || 8080;
+server.set("port", port);
 
 // Enable logging for server
 const logger = new SuperLogger();
-server.use(logger.createAutoHTTPRequestLogger()); // Will logg all http method requests
+server.use(logger.createAutoHTTPRequestLogger());
 
+// Resolve the directory name from the current module's URL
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Defining a folder that will contain static files.
-server.use(express.static('public'));
+server.use(express.static(path.join(__dirname, "public")));
 
-// Telling the server to use the USER_API (all urls that uses this code will have to have the /user after the base address)
+// Telling the server to use the USER_API
 server.use("/user", USER_API);
 
-// A get request handler example)
-server.get("/", (req, res, next) => {
-    res.status(200).send(JSON.stringify({ msg: "These are not the droids...." })).end();
+// Route all requests to the main HTML file
+server.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-
-
-// Start the server 
-server.listen(server.get('port'), function () {
-    console.log('server running', server.get('port'));
+// Start the server
+server.listen(server.get("port"), function () {
+	console.log("Server is running on port", server.get("port"));
 });
-
-

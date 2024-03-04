@@ -1,4 +1,4 @@
-import {setNavBtns} from "./pageState.mjs";
+import {setNavBtns} from "./nav.mjs";
 
 export default async function updatePageContent(pageState) {
 	try {
@@ -32,7 +32,6 @@ function loadScripts(pageState) {
 }
 
 function updateURL(pageState) {
-	// Update the URL without triggering a full page refresh
 	history.pushState({pageState: pageState}, "", `/${pageState}`);
 }
 
@@ -43,7 +42,3 @@ window.onpopstate = function (event) {
 		setNavBtns(event.state.pageState);
 	}
 };
-
-// Initial rendering based on the URL pathname
-const initialPageState = window.location.pathname.replace("/", "");
-updatePageContent(initialPageState);
