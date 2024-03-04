@@ -27,7 +27,7 @@ USER_API.get("/authString/:authString", async (req, res, next) => {
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(userData)).end();
 });
 
-USER_API.post("/", async (req, res, next) => {
+USER_API.post("/signUp", async (req, res, next) => {
 	// This is using javascript object destructuring.
 	// Recomend reading up https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#syntax
 	// https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
@@ -38,7 +38,6 @@ USER_API.post("/", async (req, res, next) => {
 		user.name = name;
 		user.email = email;
 
-		///TODO: Do not save passwords.
 		user.pswHash = createHashPassword(pswHash);
 
 		///TODO: Does the user exist?
@@ -47,6 +46,35 @@ USER_API.post("/", async (req, res, next) => {
 		if (!exists) {
 			//TODO: What happens if this fails?
 			user = await user.save();
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
+		} else {
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).end();
+		}
+	} else {
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Mangler data felt").end();
+	}
+});
+
+USER_API.post("/login", async (req, res, next) => {
+	// This is using javascript object destructuring.
+	// Recomend reading up https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#syntax
+	// https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
+	const {email, pswHash} = req.body;
+
+	if (email != "" && pswHash != "") {
+		let user = new User();
+
+		user.email = email;
+
+		user.pswHash = createHashPassword(pswHash);
+
+		///TODO: Does the user exist?
+		let exists = false;
+
+		if (!exists) {
+			//TODO: What happens if this fails?
+			user = await user.getUser();
+			console.log(user);
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
 		} else {
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).end();

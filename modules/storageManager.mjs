@@ -38,12 +38,12 @@ class DBManager {
 		return user;
 	}
 
-	async getUser(pswHash) {
+	async getUser(user) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
-			const output = await client.query('SELECT * from "public"."Users"  where password = $1;', [pswHash]);
+			const output = await client.query('SELECT * from "public"."Users"  where password = $1;', [user.pswHash]);
 			return output.rows;
 			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
 			// Of special intrest is the rows and rowCount properties of this object.

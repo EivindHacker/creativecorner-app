@@ -4,204 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/global-style.css" />
-		<title>My app</title>
+		<title>Creative Corner</title>
 	</head>
 
 	<body>
 		<!-- NAVBAR -->
 		<nav>
-			<div style="display: flex; align-items: center">
+			<div style="display: flex; align-items: center; margin-left: 15px">
 				<span class="logo">Creative Corner</span>
 				<div class="corner">&nbsp;</div>
 			</div>
-			<div style="display: flex; gap: 10px; align-items: center">
-				<button class="nav-btn">The Corner</button>
-				<button class="nav-btn">Sign Up</button>
-				<button class="nav-btn">Sign In</button>
-				<button class="nav-btn">User Settings</button>
+			<div style="display: flex; gap: 10px; align-items: center; margin-right: 15px">
+				<button id="thecorner" class="nav-btn">The Corner</button>
+				<button id="signup" class="nav-btn">Sign Up</button>
+				<button id="login" class="nav-btn">Sign In</button>
+				<button id="usersettings" class="nav-btn">User Settings</button>
 			</div>
 		</nav>
 
-		<script src="./scripts/pageState.mjs"></script>
+		<script type="module" src="./modules/pageState.mjs"></script>
 
-		<!-- THE CORNER -->
+		<main style="flex: 1"></main>
 
-		<h1 style="text-align: center; margin-top: 50px">The Corner</h1>
-		<p style="width: 564px; margin: auto; text-align: center">
-			Do you have a good idea for a song, but do not have the tools to create music? Than this is the place for you! <br /><br />
-			At Creative Corner musicians can find inspiration for their next song, based on your ideas! Get started by
-			<span style="font-weight: 600">signing up</span>, and post your unique and special ideas.
-		</p>
+		<script type="module" src="./modules/contentLoader.mjs"></script>
 
-		<div class="lg cont">
-			<h2>Song Ideas</h2>
-			<div class="song-card">
-				<h3 id="title">Carrots on Mars</h3>
-				<p class="description">
-					"Carrots on Mars" is an eccentric and whimsical tune that whimsically explores the idea of growing vegetables on the red planet. Set to a
-					catchy melody with a blend of upbeat rhythms and futuristic sounds, the song follows the adventures of a group of intrepid astronauts who
-					embark on a mission to cultivate carrots in the barren landscapes of Mars. As they face challenges and unexpected discoveries along the way,
-					the song celebrates the spirit of exploration, innovation, and the possibility of finding life, even in the most unlikely of places. With
-					its playful lyrics and infectious energy, "Carrots on Mars" is a delightful ode to curiosity and the wonders of the universe.
-				</p>
-				<h4>Genre Suggestions</h4>
-				<div class="genre-wrapper">
-					<span class="genre">EDM</span>
-					<span class="genre">Electronic</span>
-					<span class="genre">Hyper Pop</span>
-				</div>
-				<h4>Rating</h4>
-				<div class="rating-wrapper">
-					<span>⭐️</span><span class="rating">5</span>
-					<div style="height: 30px; width: 2px; background-color: gray; margin-left: 10px; margin-right: 10px"></div>
-					<input style="width: 40px" type="number" min="0" max="5" /> <button>Submit Rating</button>
-				</div>
-				<h4>Creations</h4>
-				<ul class="creations-wrapper">
-					<li>
-						Title: <span>Carrots On Mars</span>&nbsp;By: <span>Bluesbrothers</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-					</li>
-					<li>
-						Title: <span>Vegetables On Venus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-					</li>
-					<li>
-						Title: <span>Vegetables On The Moon</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-					</li>
-					<li>
-						Title: <span>Vegetables In Uranus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-					</li>
-				</ul>
-
-				<!-- Only Visible for Musicians -->
-
-				<h4>Add Creation</h4>
-				<div class="add-creation-wrapper">
-					<div><label>Title: &nbsp; </label><input type="text" /></div>
-					<div><label>Artist: </label><input type="text" /></div>
-					<div><label>Link: &nbsp; </label><input type="url" /></div>
-					<button style="margin-top: 10px">Add Creation</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- CREATE SONG IDEA -->
-
-		<div class="lg cont">
-			<h2>Create Song Idea</h2>
-			<div class="song-input-card">
-				<div><label>Title: </label> <input type="text" id="emailTitle" /><br /></div>
-				<label>Description: </label>
-				<textarea style="margin-top: -15px" id="descriptionInput"></textarea>
-				<h4>Genre Suggestions</h4>
-				<div style="margin-top: -45px; margin-bottom: 10px">
-					<input type="text" />
-					<button>Add Genre</button>
-				</div>
-				<div class="genre-wrapper">
-					<span class="genre">EDM</span>
-					<span class="genre">Electronic</span>
-					<span class="genre">Hyper Pop</span>
-				</div>
-			</div>
-			<button style="font-size: x-large; margin-top: 20px">Save Idea</button>
-		</div>
-
-		<!-- SIGNUP -->
-
-		<div class="sm cont">
-			<h1>Sign up</h1>
-			<div><label>Name</label> <input type="text" id="nameInput" /><br /></div>
-			<div><label>Email</label> <input type="email" id="emailInput" /><br /></div>
-			<div><label>Password</label> <input type="password" id="pswHashInput" /><br /></div>
-			<form style="width: 100%">
-				<label>User Type</label>
-				<div style="display: flex; gap: 10px; margin-top: 5px; margin-bottom: 5px">
-					<div><label>Writer</label><input type="radio" id="" name="user-type" checked="true" /></div>
-					<div><label>Musician</label><input type="radio" id="user-type" name="user-type" /></div>
-				</div>
-			</form>
-			<button id="createUserButton">Create User</button>
-		</div>
-
-		<!-- SIGNIN -->
-		<div class="sm cont">
-			<h1>Your Info</h1>
-			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%">
-				<div><label>Name: </label><span id="nameDisplay"></span></div>
-				<div><label>Email: </label><span id="emailDisplay"></span></div>
-				<form style="width: 100%">
-					<label>User Type</label>
-					<div style="display: flex; gap: 10px; margin-top: 5px; margin-bottom: 5px">
-						<div><label>Writer</label><input type="radio" id="" name="user-type" checked="true" /></div>
-						<div><label>Musician</label><input type="radio" id="user-type" name="user-type" /></div>
-					</div>
-				</form>
-			</div>
-			<button style="margin-top: 20px; color: red; border-color: red">Delete Account</button>
-		</div>
-
-		<script>
-			const createUserButton = document.getElementById("createUserButton");
-
-			createUserButton.onclick = async function (e) {
-				const name = document.getElementById("nameInput").value;
-				const email = document.getElementById("emailInput").value;
-				const pswHash = document.getElementById("pswHashInput").value;
-				const user = {name, email, pswHash};
-				const respon = await postTo("/user", user)
-					.then((res) => {
-						return res.json();
-					})
-					.then((data) => {
-						const userData = JSON.parse(data);
-						const authString = btoa(userData.pswHash);
-						localStorage.setItem("authString", authString);
-						console.log(authString);
-
-						getUser(`/user/authString/${authString}`)
-							.then((data) => {
-								displayUserData(data);
-							})
-							.catch((error) => {
-								console.error("Error:", error);
-								// Handle any errors that occur during the request
-							});
-					});
-
-				//const userData = await getUser();
-			};
-
-			async function postTo(url, data) {
-				const header = {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(data),
-				};
-
-				const respon = await fetch(url, header);
-				return respon;
-			}
-
-			async function getUser(url) {
-				return fetch(url).then((response) => {
-					if (!response.ok) {
-						throw new Error("Network response was not ok");
-					}
-					return response.json();
-				});
-			}
-
-			const nameDisplay = document.getElementById("nameDisplay");
-			const emailDisplay = document.getElementById("emailDisplay");
-
-			function displayUserData(data) {
-				const userData = JSON.parse(data);
-				nameDisplay.innerText = userData[0].name;
-				emailDisplay.innerText = userData[0].email;
-				//To do: Add code for showing account type.
-			}
-		</script>
+		<footer>Creative Corner by Eivind Wøien 2024</footer>
 	</body>
 </html>
