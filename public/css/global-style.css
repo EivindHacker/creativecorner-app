@@ -11,6 +11,10 @@
 	font-size: small;
 }
 
+.cancel {
+	filter: brightness(0.5) grayscale();
+}
+
 body {
 	background-color: #161616;
 	color: white;

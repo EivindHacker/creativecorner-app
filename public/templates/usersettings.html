@@ -4,7 +4,17 @@
 		<div><label>Name: </label><span id="nameDisplay"></span></div>
 		<div><label>Email: </label><span id="emailDisplay"></span></div>
 	</div>
-	<button id="logoutBtn" style="filter: grayscale(1) brightness(0.75)">Log Out</button>
-	<button style="margin-top: 20px; color: red; border-color: red">Delete Account</button>
+	<div>
+		<div><label>Name: </label><input type="text" /></div>
+		<div><label>Email: </label><input type="text" /></div>
+		<button>Change Password</button>
+		<div>
+			<div><label>Old Password: </label><input type="text" /></div>
+			<div><label>New Password: </label><input type="text" /></div>
+		</div>
+	</div>
+	<button id="editUserBtn">Edit User</button>
+	<button id="logoutBtn" class="cancel">Log Out</button>
+	<button id="deleteUserBtn" style="margin-top: 20px; color: red; border-color: red">Delete Account</button>
 </div>
 <div style="margin: auto; margin-top: 25px" class="sm"><h3 id="errorDisplay" class="err"></h3></div>

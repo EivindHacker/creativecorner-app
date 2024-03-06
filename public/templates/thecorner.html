@@ -7,7 +7,17 @@
 	</p>
 </div>
 
-<button style="margin: auto; display: block; margin-top: 25px">+ Create Idea</button>
+<button id="createIdeaBtn" style="margin: auto; display: block; margin-top: 25px">+ Create Idea</button>
+
+<div id="getStartedWrapper" style="margin-top: 25px">
+	<p style="text-align: center">Get started by</p>
+	<div style="display: flex; justify-content: center; align-items: center; gap: 10px">
+		<a id="signUpBtn">Signing up</a>
+		<span>or</span>
+		<a id="loginBtn">Login</a>
+	</div>
+	<p style="text-align: center">to share your ideas</p>
+</div>
 
 <!-- CREATE SONG IDEA -->
 
@@ -55,32 +65,37 @@
 			<span class="genre">Electronic</span>
 			<span class="genre">Hyper Pop</span>
 		</div>
-		<h4>Rating</h4>
-		<div class="rating-wrapper">
-			<span>⭐️</span><span class="rating">5</span>
-			<div style="height: 30px; width: 2px; background-color: gray; margin-left: 10px; margin-right: 10px"></div>
-			<input style="width: 40px" type="number" min="0" max="5" /> <button>Submit Rating</button>
-		</div>
-		<h4>Creations</h4>
-		<ul class="creations-wrapper">
-			<li>
-				Title: <span>Carrots On Mars</span>&nbsp;By: <span>Bluesbrothers</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-			</li>
-			<li>Title: <span>Vegetables On Venus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a></li>
-			<li>
-				Title: <span>Vegetables On The Moon</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-			</li>
-			<li>Title: <span>Vegetables In Uranus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a></li>
-		</ul>
+		<div id="cardUserInteractivesWrapper">
+			<h4>Rating</h4>
+			<div class="rating-wrapper">
+				<span>⭐️</span><span class="rating">5</span>
+				<div style="height: 30px; width: 2px; background-color: gray; margin-left: 10px; margin-right: 10px"></div>
+				<input style="width: 40px" type="number" min="0" max="5" /> <button>Submit Rating</button>
+			</div>
+			<h4>Creations</h4>
+			<ul class="creations-wrapper">
+				<li>
+					Title: <span>Carrots On Mars</span>&nbsp;By: <span>Bluesbrothers</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+				</li>
+				<li>Title: <span>Vegetables On Venus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a></li>
+				<li>
+					Title: <span>Vegetables On The Moon</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+				</li>
+				<li>
+					Title: <span>Vegetables In Uranus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
+				</li>
+			</ul>
 
-		<!-- Only Visible for Musicians -->
+			<!-- Only Visible for Musicians -->
 
-		<h4>Add Creation</h4>
-		<div class="add-creation-wrapper">
-			<div><label>Title: &nbsp; </label><input type="text" /></div>
-			<div><label>Artist: </label><input type="text" /></div>
-			<div><label>Link: &nbsp; </label><input type="url" /></div>
-			<button style="margin-top: 10px">Add Creation</button>
+			<div id="addCreationWrapper" style="display: none" class="add-creation-wrapper">
+				<h4>Add Creation</h4>
+				<div><label>Title: &nbsp; </label><input type="text" /></div>
+				<div><label>Artist: </label><input type="text" /></div>
+				<div><label>Link: &nbsp; </label><input type="url" /></div>
+				<button style="margin-top: 10px">Save Creation</button>
+			</div>
+			<button id="addCreationBtn" style="margin-top: 10px; display: block">Add Creation</button>
 		</div>
 	</div>
 </div>

@@ -10273,3 +10273,2691 @@ Database connection  postgresql://localhost/CC-DB
 10:36:40 PM [32mGET[39m /templates/login.html
 10:36:40 PM [32mGET[39m /scripts/login.mjs?timestamp=1709588200719
 10:36:40 PM [32mGET[39m /modules/postTo.mjs
+10:36:59 PM [32mGET[39m /login
+10:36:59 PM [32mGET[39m /css/global-style.css
+10:36:59 PM [32mGET[39m /modules/contentLoader.mjs
+10:36:59 PM [32mGET[39m /modules/pageState.mjs
+10:36:59 PM [32mGET[39m /modules/nav.mjs
+10:36:59 PM [32mGET[39m /templates/login.html
+10:36:59 PM [32mGET[39m /scripts/login.mjs?timestamp=1709588219681
+10:36:59 PM [32mGET[39m /modules/postTo.mjs
+10:37:02 PM [32mGET[39m /templates/thecorner.html
+10:37:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709588222272
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:38:13 PM [32mGET[39m /thecorner
+10:38:13 PM [32mGET[39m /css/global-style.css
+10:38:13 PM [32mGET[39m /modules/contentLoader.mjs
+10:38:13 PM [32mGET[39m /modules/pageState.mjs
+10:38:13 PM [32mGET[39m /modules/nav.mjs
+10:38:13 PM [32mGET[39m /templates/thecorner.html
+10:38:13 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709588293781
+11:03:27 AM [32mGET[39m /thecorner
+11:03:27 AM [32mGET[39m /css/global-style.css
+11:03:27 AM [32mGET[39m /modules/pageState.mjs
+11:03:27 AM [32mGET[39m /modules/contentLoader.mjs
+11:03:27 AM [32mGET[39m /modules/nav.mjs
+11:03:27 AM [32mGET[39m /templates/thecorner.html
+11:03:27 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633007288
+11:03:41 AM [32mGET[39m /templates/thecorner.html
+11:03:41 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633021142
+11:03:42 AM [32mGET[39m /templates/signup.html
+11:03:42 AM [32mGET[39m /scripts/signup.mjs?timestamp=1709633022025
+11:03:42 AM [32mGET[39m /modules/postTo.mjs
+11:03:43 AM [32mGET[39m /templates/login.html
+11:03:43 AM [32mGET[39m /scripts/login.mjs?timestamp=1709633023094
+11:03:48 AM [33mPOST[39m /user/login
+11:03:48 AM [32mGET[39m /templates/thecorner.html
+11:03:48 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633028139
+11:03:52 AM [32mGET[39m /templates/usersettings.html
+11:03:52 AM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709633032832
+11:03:52 AM [33mPOST[39m /user/getUserData
+11:03:54 AM [32mGET[39m /templates/thecorner.html
+11:03:54 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633034646
+11:05:45 AM [32mGET[39m /thecorner
+11:05:45 AM [32mGET[39m /css/global-style.css
+11:05:45 AM [32mGET[39m /modules/pageState.mjs
+11:05:45 AM [32mGET[39m /modules/contentLoader.mjs
+11:05:45 AM [32mGET[39m /modules/nav.mjs
+11:05:45 AM [32mGET[39m /templates/thecorner.html
+11:05:45 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633145596
+11:07:46 AM [32mGET[39m /thecorner
+11:07:46 AM [32mGET[39m /css/global-style.css
+11:07:46 AM [32mGET[39m /modules/contentLoader.mjs
+11:07:46 AM [32mGET[39m /modules/pageState.mjs
+11:07:46 AM [32mGET[39m /modules/nav.mjs
+11:07:46 AM [32mGET[39m /templates/thecorner.html
+11:07:46 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633266108
+11:07:54 AM [32mGET[39m /thecorner
+11:07:54 AM [32mGET[39m /css/global-style.css
+11:07:54 AM [32mGET[39m /modules/contentLoader.mjs
+11:07:54 AM [32mGET[39m /modules/pageState.mjs
+11:07:54 AM [32mGET[39m /modules/nav.mjs
+11:07:54 AM [32mGET[39m /templates/thecorner.html
+11:07:54 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633274397
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:10:41 AM [32mGET[39m /templates/thecorner.html
+11:10:41 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709633441497
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:36:25 PM [32mGET[39m /thecorner
+12:36:25 PM [32mGET[39m /css/global-style.css
+12:36:25 PM [32mGET[39m /modules/contentLoader.mjs
+12:36:25 PM [32mGET[39m /modules/pageState.mjs
+12:36:25 PM [32mGET[39m /modules/nav.mjs
+12:36:25 PM [32mGET[39m /templates/thecorner.html
+12:36:26 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709724986005
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+12:36:41 PM [32mGET[39m /thecorner
+12:36:41 PM [32mGET[39m /css/global-style.css
+12:36:41 PM [32mGET[39m /modules/contentLoader.mjs
+12:36:41 PM [32mGET[39m /modules/pageState.mjs
+12:36:41 PM [32mGET[39m /modules/nav.mjs
+12:36:41 PM [32mGET[39m /templates/thecorner.html
+12:36:41 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709725001245
+12:36:49 PM [32mGET[39m /templates/usersettings.html
+12:36:49 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725009947
+12:36:49 PM [32mGET[39m /modules/getUserData.mjs
+12:36:49 PM [32mGET[39m /modules/postTo.mjs
+12:36:49 PM [33mPOST[39m /user/getUserData
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+12:37:42 PM [32mGET[39m /usersettings
+12:37:43 PM [32mGET[39m /css/global-style.css
+12:37:43 PM [32mGET[39m /modules/contentLoader.mjs
+12:37:43 PM [32mGET[39m /modules/pageState.mjs
+12:37:43 PM [32mGET[39m /modules/nav.mjs
+12:37:43 PM [32mGET[39m /templates/usersettings.html
+12:37:43 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725063042
+12:37:43 PM [32mGET[39m /modules/getUserData.mjs
+12:37:43 PM [32mGET[39m /modules/postTo.mjs
+12:37:43 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:37:53 PM [32mGET[39m /usersettings
+12:37:53 PM [32mGET[39m /css/global-style.css
+12:37:53 PM [32mGET[39m /modules/contentLoader.mjs
+12:37:53 PM [32mGET[39m /modules/pageState.mjs
+12:37:53 PM [32mGET[39m /modules/nav.mjs
+12:37:53 PM [32mGET[39m /templates/usersettings.html
+12:37:53 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725073104
+12:37:53 PM [32mGET[39m /modules/getUserData.mjs
+12:37:53 PM [32mGET[39m /modules/postTo.mjs
+12:37:53 PM [33mPOST[39m /user/getUserData
+12:37:56 PM [32mGET[39m /templates/thecorner.html
+12:37:56 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709725076662
+12:37:57 PM [32mGET[39m /templates/usersettings.html
+12:37:57 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725077450
+12:37:57 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:39:32 PM [32mGET[39m /usersettings
+12:39:32 PM [32mGET[39m /css/global-style.css
+12:39:32 PM [32mGET[39m /modules/contentLoader.mjs
+12:39:32 PM [32mGET[39m /modules/pageState.mjs
+12:39:32 PM [32mGET[39m /modules/nav.mjs
+12:39:32 PM [32mGET[39m /templates/usersettings.html
+12:39:32 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725172838
+12:39:32 PM [32mGET[39m /modules/getUserData.mjs
+12:39:32 PM [32mGET[39m /modules/postTo.mjs
+12:39:34 PM [32mGET[39m /templates/thecorner.html
+12:39:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709725174034
+12:39:34 PM [32mGET[39m /templates/usersettings.html
+12:39:34 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725174552
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+12:39:46 PM [32mGET[39m /usersettings
+12:39:46 PM [32mGET[39m /css/global-style.css
+12:39:46 PM [32mGET[39m /modules/contentLoader.mjs
+12:39:46 PM [32mGET[39m /modules/pageState.mjs
+12:39:46 PM [32mGET[39m /modules/nav.mjs
+12:39:46 PM [32mGET[39m /templates/usersettings.html
+12:39:46 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725186557
+12:39:46 PM [32mGET[39m /modules/getUserData.mjs
+12:39:46 PM [32mGET[39m /modules/postTo.mjs
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+12:39:56 PM [32mGET[39m /usersettings
+12:39:56 PM [32mGET[39m /css/global-style.css
+12:39:56 PM [32mGET[39m /modules/contentLoader.mjs
+12:39:56 PM [32mGET[39m /modules/pageState.mjs
+12:39:56 PM [32mGET[39m /modules/nav.mjs
+12:39:56 PM [32mGET[39m /templates/usersettings.html
+12:39:56 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725196937
+12:39:56 PM [32mGET[39m /modules/getUserData.mjs
+12:39:56 PM [32mGET[39m /modules/postTo.mjs
+12:39:56 PM [33mPOST[39m /user/getUserData
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+12:40:14 PM [32mGET[39m /usersettings
+12:40:14 PM [32mGET[39m /css/global-style.css
+12:40:14 PM [32mGET[39m /modules/contentLoader.mjs
+12:40:14 PM [32mGET[39m /modules/pageState.mjs
+12:40:14 PM [32mGET[39m /modules/nav.mjs
+12:40:14 PM [32mGET[39m /templates/usersettings.html
+12:40:14 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725214881
+12:40:14 PM [32mGET[39m /modules/getUserData.mjs
+12:40:14 PM [32mGET[39m /modules/postTo.mjs
+12:40:14 PM [33mPOST[39m /user/getUserData
+12:41:35 PM [32mGET[39m /templates/thecorner.html
+12:41:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709725295691
+12:41:39 PM [32mGET[39m /templates/usersettings.html
+12:41:39 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709725299194
+12:41:39 PM [33mPOST[39m /user/getUserData
+12:50:45 PM [32mGET[39m /templates/thecorner.html
+12:50:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709725845016
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:57:12 PM [32mGET[39m /thecorner
+12:57:12 PM [32mGET[39m /css/global-style.css
+12:57:12 PM [32mGET[39m /modules/contentLoader.mjs
+12:57:12 PM [32mGET[39m /modules/pageState.mjs
+12:57:12 PM [32mGET[39m /modules/nav.mjs
+12:57:12 PM [32mGET[39m /templates/thecorner.html
+12:57:12 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726232511
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+12:57:48 PM [32mGET[39m /thecorner
+12:57:48 PM [32mGET[39m /css/global-style.css
+12:57:48 PM [32mGET[39m /modules/contentLoader.mjs
+12:57:48 PM [32mGET[39m /modules/pageState.mjs
+12:57:48 PM [32mGET[39m /modules/nav.mjs
+12:57:48 PM [32mGET[39m /templates/thecorner.html
+12:57:48 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726268849
+12:58:00 PM [32mGET[39m /thecorner
+12:58:00 PM [32mGET[39m /css/global-style.css
+12:58:00 PM [32mGET[39m /modules/contentLoader.mjs
+12:58:00 PM [32mGET[39m /modules/pageState.mjs
+12:58:00 PM [32mGET[39m /modules/nav.mjs
+12:58:00 PM [32mGET[39m /templates/thecorner.html
+12:58:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726280978
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:58:33 PM [32mGET[39m /thecorner
+12:58:33 PM [32mGET[39m /css/global-style.css
+12:58:33 PM [32mGET[39m /modules/contentLoader.mjs
+12:58:33 PM [32mGET[39m /modules/pageState.mjs
+12:58:33 PM [32mGET[39m /modules/nav.mjs
+12:58:33 PM [32mGET[39m /templates/thecorner.html
+12:58:33 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726313962
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:59:36 PM [32mGET[39m /thecorner
+12:59:36 PM [32mGET[39m /css/global-style.css
+12:59:36 PM [32mGET[39m /modules/contentLoader.mjs
+12:59:36 PM [32mGET[39m /modules/pageState.mjs
+12:59:36 PM [32mGET[39m /modules/nav.mjs
+12:59:36 PM [32mGET[39m /templates/thecorner.html
+12:59:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726376644
+1:00:14 PM [32mGET[39m /thecorner
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+1:00:15 PM [32mGET[39m /thecorner
+1:00:15 PM [32mGET[39m /css/global-style.css
+1:00:15 PM [32mGET[39m /modules/contentLoader.mjs
+1:00:15 PM [32mGET[39m /modules/pageState.mjs
+1:00:15 PM [32mGET[39m /modules/nav.mjs
+1:00:15 PM [32mGET[39m /templates/thecorner.html
+1:00:15 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726415946
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+1:00:27 PM [32mGET[39m /thecorner
+1:00:27 PM [32mGET[39m /css/global-style.css
+1:00:27 PM [32mGET[39m /modules/contentLoader.mjs
+1:00:27 PM [32mGET[39m /modules/pageState.mjs
+1:00:27 PM [32mGET[39m /modules/nav.mjs
+1:00:27 PM [32mGET[39m /templates/thecorner.html
+1:00:27 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726427198
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+1:00:37 PM [32mGET[39m /thecorner
+1:00:37 PM [32mGET[39m /css/global-style.css
+1:00:37 PM [32mGET[39m /modules/contentLoader.mjs
+1:00:37 PM [32mGET[39m /modules/pageState.mjs
+1:00:37 PM [32mGET[39m /modules/nav.mjs
+1:00:38 PM [32mGET[39m /templates/thecorner.html
+1:00:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726438004
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+1:01:04 PM [32mGET[39m /templates/usersettings.html
+1:01:04 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726464310
+1:01:04 PM [32mGET[39m /modules/getUserData.mjs
+1:01:04 PM [32mGET[39m /modules/postTo.mjs
+1:01:04 PM [33mPOST[39m /user/getUserData
+1:01:06 PM [32mGET[39m /templates/thecorner.html
+1:01:06 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726466422
+1:01:08 PM [32mGET[39m /templates/usersettings.html
+1:01:08 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726468523
+1:01:08 PM [33mPOST[39m /user/getUserData
+1:01:10 PM [32mGET[39m /templates/thecorner.html
+1:01:10 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726470259
+1:01:17 PM [32mGET[39m /templates/usersettings.html
+1:01:17 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726477023
+1:01:17 PM [33mPOST[39m /user/getUserData
+1:01:18 PM [32mGET[39m /templates/thecorner.html
+1:01:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726478122
+1:01:19 PM [32mGET[39m /templates/thecorner.html
+1:01:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726479739
+1:01:20 PM [32mGET[39m /templates/thecorner.html
+1:01:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726480351
+1:01:20 PM [32mGET[39m /templates/thecorner.html
+1:01:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726480503
+1:01:22 PM [32mGET[39m /templates/usersettings.html
+1:01:22 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726482288
+1:01:22 PM [33mPOST[39m /user/getUserData
+1:01:22 PM [32mGET[39m /templates/thecorner.html
+1:01:22 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726482749
+1:01:23 PM [32mGET[39m /templates/usersettings.html
+1:01:23 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726483014
+1:01:23 PM [33mPOST[39m /user/getUserData
+1:01:23 PM [32mGET[39m /templates/thecorner.html
+1:01:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726483397
+1:01:24 PM [32mGET[39m /templates/usersettings.html
+1:01:24 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726484051
+1:01:24 PM [33mPOST[39m /user/getUserData
+1:01:25 PM [32mGET[39m /templates/thecorner.html
+1:01:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726485350
+1:01:25 PM [32mGET[39m /templates/thecorner.html
+1:01:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726485501
+1:01:25 PM [32mGET[39m /templates/thecorner.html
+1:01:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726485671
+1:01:25 PM [32mGET[39m /templates/thecorner.html
+1:01:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726485818
+1:01:25 PM [32mGET[39m /templates/thecorner.html
+1:01:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726485990
+1:01:26 PM [32mGET[39m /templates/thecorner.html
+1:01:26 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726486135
+1:01:26 PM [32mGET[39m /templates/thecorner.html
+1:01:26 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726486266
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+1:01:50 PM [32mGET[39m /thecorner
+1:01:50 PM [32mGET[39m /css/global-style.css
+1:01:50 PM [32mGET[39m /modules/contentLoader.mjs
+1:01:50 PM [32mGET[39m /modules/pageState.mjs
+1:01:50 PM [32mGET[39m /modules/nav.mjs
+1:01:50 PM [32mGET[39m /templates/usersettings.html
+1:01:50 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726510162
+1:01:50 PM [32mGET[39m /modules/getUserData.mjs
+1:01:50 PM [32mGET[39m /modules/postTo.mjs
+1:01:50 PM [33mPOST[39m /user/getUserData
+1:01:51 PM [32mGET[39m /templates/thecorner.html
+1:01:51 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726511744
+1:01:52 PM [32mGET[39m /templates/.html
+1:01:52 PM [32mGET[39m /scripts/.mjs?timestamp=1709726512459
+1:01:54 PM [32mGET[39m /templates/usersettings.html
+1:01:54 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726514922
+1:01:54 PM [33mPOST[39m /user/getUserData
+1:01:56 PM [32mGET[39m /templates/thecorner.html
+1:01:56 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726516189
+1:01:56 PM [32mGET[39m /templates/usersettings.html
+1:01:56 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726516861
+1:01:56 PM [33mPOST[39m /user/getUserData
+1:01:57 PM [32mGET[39m /templates/thecorner.html
+1:01:57 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726517945
+1:01:58 PM [32mGET[39m /templates/usersettings.html
+1:01:58 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726518289
+1:01:58 PM [33mPOST[39m /user/getUserData
+1:01:59 PM [32mGET[39m /templates/thecorner.html
+1:01:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726519064
+1:01:59 PM [32mGET[39m /templates/thecorner.html
+1:01:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726519337
+1:01:59 PM [32mGET[39m /templates/usersettings.html
+1:01:59 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709726519764
+1:01:59 PM [33mPOST[39m /user/getUserData
+1:02:01 PM [32mGET[39m /templates/thecorner.html
+1:02:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726521026
+1:04:36 PM [32mGET[39m /thecorner
+1:04:36 PM [32mGET[39m /css/global-style.css
+1:04:36 PM [32mGET[39m /modules/contentLoader.mjs
+1:04:36 PM [32mGET[39m /modules/pageState.mjs
+1:04:36 PM [32mGET[39m /modules/nav.mjs
+1:04:36 PM [32mGET[39m /templates/thecorner.html
+1:04:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709726676797
+1:14:09 PM [32mGET[39m /thecorner
+1:14:09 PM [32mGET[39m /css/global-style.css
+1:14:09 PM [32mGET[39m /modules/contentLoader.mjs
+1:14:09 PM [32mGET[39m /modules/pageState.mjs
+1:14:09 PM [32mGET[39m /modules/nav.mjs
+1:14:09 PM [32mGET[39m /templates/thecorner.html
+1:14:09 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727249182
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+1:15:12 PM [32mGET[39m /thecorner
+1:15:12 PM [32mGET[39m /css/global-style.css
+1:15:12 PM [32mGET[39m /modules/contentLoader.mjs
+1:15:12 PM [32mGET[39m /modules/pageState.mjs
+1:15:12 PM [32mGET[39m /modules/nav.mjs
+1:15:12 PM [32mGET[39m /templates/thecorner.html
+1:15:12 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727312572
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+1:15:23 PM [32mGET[39m /thecorner
+1:15:23 PM [32mGET[39m /css/global-style.css
+1:15:23 PM [32mGET[39m /modules/contentLoader.mjs
+1:15:23 PM [32mGET[39m /modules/pageState.mjs
+1:15:23 PM [32mGET[39m /modules/nav.mjs
+1:15:23 PM [32mGET[39m /templates/thecorner.html
+1:15:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727323487
+1:15:43 PM [32mGET[39m /thecorner
+1:15:43 PM [32mGET[39m /css/global-style.css
+1:15:43 PM [32mGET[39m /modules/contentLoader.mjs
+1:15:43 PM [32mGET[39m /modules/pageState.mjs
+1:15:43 PM [32mGET[39m /modules/nav.mjs
+1:15:43 PM [32mGET[39m /templates/thecorner.html
+1:15:43 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727343780
+1:15:46 PM [32mGET[39m /templates/usersettings.html
+1:15:46 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709727346362
+1:15:46 PM [32mGET[39m /modules/getUserData.mjs
+1:15:46 PM [32mGET[39m /modules/postTo.mjs
+1:15:46 PM [33mPOST[39m /user/getUserData
+1:15:47 PM [32mGET[39m /templates/thecorner.html
+1:15:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727347840
+1:19:22 PM [32mGET[39m /templates/usersettings.html
+1:19:22 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709727562102
+1:19:22 PM [33mPOST[39m /user/getUserData
+1:19:23 PM [32mGET[39m /templates/login.html
+1:19:23 PM [32mGET[39m /scripts/login.mjs?timestamp=1709727563106
+1:19:24 PM [32mGET[39m /templates/signup.html
+1:19:24 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709727564392
+1:19:24 PM [32mGET[39m /templates/login.html
+1:19:24 PM [32mGET[39m /scripts/login.mjs?timestamp=1709727564989
+1:19:25 PM [32mGET[39m /templates/thecorner.html
+1:19:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727565529
+1:19:26 PM [32mGET[39m /templates/login.html
+1:19:26 PM [32mGET[39m /scripts/login.mjs?timestamp=1709727566174
+1:19:31 PM [32mGET[39m /templates/signup.html
+1:19:31 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709727571719
+1:19:32 PM [32mGET[39m /templates/thecorner.html
+1:19:32 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727572252
+1:19:32 PM [32mGET[39m /templates/signup.html
+1:19:32 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709727572737
+1:19:33 PM [32mGET[39m /templates/login.html
+1:19:33 PM [32mGET[39m /scripts/login.mjs?timestamp=1709727573264
+1:19:35 PM [32mGET[39m /templates/signup.html
+1:19:35 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709727575707
+1:19:36 PM [32mGET[39m /templates/thecorner.html
+1:19:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727576161
+1:19:37 PM [32mGET[39m /templates/login.html
+1:19:37 PM [32mGET[39m /scripts/login.mjs?timestamp=1709727577342
+1:19:40 PM [33mPOST[39m /user/login
+1:19:40 PM [32mGET[39m /templates/thecorner.html
+1:19:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727580713
+1:20:57 PM [32mGET[39m /templates/usersettings.html
+1:20:57 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709727657932
+1:20:57 PM [33mPOST[39m /user/getUserData
+1:20:59 PM [32mGET[39m /templates/thecorner.html
+1:20:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727659492
+1:21:00 PM [32mGET[39m /templates/usersettings.html
+1:21:00 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709727660168
+1:21:00 PM [33mPOST[39m /user/getUserData
+1:21:00 PM [32mGET[39m /templates/thecorner.html
+1:21:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727660741
+1:21:01 PM [32mGET[39m /templates/usersettings.html
+1:21:01 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709727661186
+1:21:01 PM [33mPOST[39m /user/getUserData
+1:21:01 PM [32mGET[39m /templates/thecorner.html
+1:21:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709727661610
+1:40:15 PM [32mGET[39m /templates/usersettings.html
+1:40:15 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728815455
+1:40:15 PM [33mPOST[39m /user/getUserData
+1:40:16 PM [32mGET[39m /templates/thecorner.html
+1:40:16 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728816551
+1:40:18 PM [32mGET[39m /templates/usersettings.html
+1:40:18 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728818802
+1:40:18 PM [33mPOST[39m /user/getUserData
+1:40:19 PM [32mGET[39m /templates/thecorner.html
+1:40:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728819344
+1:40:24 PM [32mGET[39m /templates/usersettings.html
+1:40:24 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728824189
+1:40:24 PM [33mPOST[39m /user/getUserData
+1:40:24 PM [32mGET[39m /templates/thecorner.html
+1:40:24 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728824650
+1:40:25 PM [32mGET[39m /templates/usersettings.html
+1:40:25 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728825066
+1:40:25 PM [33mPOST[39m /user/getUserData
+1:40:25 PM [32mGET[39m /templates/thecorner.html
+1:40:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728825477
+1:40:25 PM [32mGET[39m /templates/usersettings.html
+1:40:25 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728825775
+1:40:25 PM [33mPOST[39m /user/getUserData
+1:40:26 PM [32mGET[39m /templates/thecorner.html
+1:40:26 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728826084
+1:41:14 PM [32mGET[39m /templates/usersettings.html
+1:41:14 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728874942
+1:41:14 PM [33mPOST[39m /user/getUserData
+1:41:16 PM [32mGET[39m /templates/login.html
+1:41:16 PM [32mGET[39m /scripts/login.mjs?timestamp=1709728876466
+1:41:22 PM [33mPOST[39m /user/login
+1:41:22 PM [32mGET[39m /templates/thecorner.html
+1:41:22 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728882464
+1:41:24 PM [32mGET[39m /templates/usersettings.html
+1:41:24 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709728884039
+1:41:24 PM [33mPOST[39m /user/getUserData
+1:41:25 PM [32mGET[39m /templates/login.html
+1:41:25 PM [32mGET[39m /scripts/login.mjs?timestamp=1709728885016
+1:41:28 PM [33mPOST[39m /user/login
+1:41:31 PM [32mGET[39m /templates/signup.html
+1:41:31 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709728891051
+1:41:33 PM [32mGET[39m /templates/login.html
+1:41:33 PM [32mGET[39m /scripts/login.mjs?timestamp=1709728893836
+1:41:35 PM [32mGET[39m /templates/thecorner.html
+1:41:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709728895755
+1:44:11 PM [32mGET[39m /thecorner
+1:44:11 PM [32mGET[39m /css/global-style.css
+1:44:11 PM [32mGET[39m /modules/contentLoader.mjs
+1:44:11 PM [32mGET[39m /modules/pageState.mjs
+1:44:11 PM [32mGET[39m /modules/nav.mjs
+1:44:11 PM [32mGET[39m /templates/thecorner.html
+1:44:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709729051677
+1:44:13 PM [32mGET[39m /templates/signup.html
+1:44:13 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709729053929
+1:44:13 PM [32mGET[39m /modules/postTo.mjs
+1:44:14 PM [32mGET[39m /templates/login.html
+1:44:14 PM [32mGET[39m /scripts/login.mjs?timestamp=1709729054543
+1:44:15 PM [32mGET[39m /templates/signup.html
+1:44:15 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709729055225
+1:44:15 PM [32mGET[39m /templates/thecorner.html
+1:44:15 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709729055728
+2:26:57 PM [32mGET[39m /templates/signup.html
+2:26:57 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709731617577
+2:26:58 PM [32mGET[39m /templates/login.html
+2:26:58 PM [32mGET[39m /scripts/login.mjs?timestamp=1709731618016
+2:26:58 PM [32mGET[39m /templates/signup.html
+2:26:58 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709731618500
+2:26:58 PM [32mGET[39m /templates/thecorner.html
+2:26:58 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731618987
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+2:27:28 PM [32mGET[39m /thecorner
+2:27:28 PM [32mGET[39m /modules/contentLoader.mjs
+2:27:28 PM [32mGET[39m /modules/pageState.mjs
+2:27:28 PM [32mGET[39m /css/global-style.css
+2:27:28 PM [32mGET[39m /modules/nav.mjs
+2:27:28 PM [32mGET[39m /templates/thecorner.html
+2:27:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731648241
+2:27:30 PM [32mGET[39m /templates/signup.html
+2:27:30 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709731650292
+2:27:30 PM [32mGET[39m /modules/postTo.mjs
+2:27:30 PM [32mGET[39m /templates/login.html
+2:27:30 PM [32mGET[39m /scripts/login.mjs?timestamp=1709731650673
+2:27:34 PM [33mPOST[39m /user/login
+2:27:34 PM [32mGET[39m /templates/thecorner.html
+2:27:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731654245
+2:27:38 PM [32mGET[39m /templates/usersettings.html
+2:27:38 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709731658351
+2:27:38 PM [32mGET[39m /modules/getUserData.mjs
+2:27:38 PM [33mPOST[39m /user/getUserData
+2:27:39 PM [32mGET[39m /templates/thecorner.html
+2:27:39 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731659278
+2:27:40 PM [32mGET[39m /templates/thecorner.html
+2:27:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731660071
+2:28:00 PM [32mGET[39m /templates/usersettings.html
+2:28:00 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709731680285
+2:28:00 PM [33mPOST[39m /user/getUserData
+2:28:00 PM [32mGET[39m /templates/thecorner.html
+2:28:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731680966
+2:28:01 PM [32mGET[39m /templates/usersettings.html
+2:28:01 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709731681376
+2:28:01 PM [33mPOST[39m /user/getUserData
+2:28:01 PM [32mGET[39m /templates/thecorner.html
+2:28:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731681828
+2:32:07 PM [32mGET[39m /templates/usersettings.html
+2:32:07 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709731927102
+2:32:07 PM [33mPOST[39m /user/getUserData
+2:32:10 PM [32mGET[39m /templates/thecorner.html
+2:32:10 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709731930332
+2:32:14 PM [32mGET[39m /templates/usersettings.html
+2:32:14 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709731934590
+2:32:14 PM [33mPOST[39m /user/getUserData
+2:45:07 PM [32mGET[39m /templates/thecorner.html
+2:45:07 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709732707033
+2:59:18 PM [32mGET[39m /thecorner
+2:59:18 PM [32mGET[39m /css/global-style.css
+2:59:18 PM [32mGET[39m /modules/contentLoader.mjs
+2:59:18 PM [32mGET[39m /modules/pageState.mjs
+2:59:18 PM [32mGET[39m /modules/nav.mjs
+2:59:18 PM [32mGET[39m /templates/thecorner.html
+2:59:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709733558421
+3:00:03 PM [32mGET[39m /templates/usersettings.html
+3:00:03 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709733603302
+3:00:03 PM [32mGET[39m /modules/getUserData.mjs
+3:00:03 PM [32mGET[39m /modules/postTo.mjs
+3:00:03 PM [33mPOST[39m /user/getUserData
+3:00:04 PM [32mGET[39m /templates/thecorner.html
+3:00:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709733604581
+3:00:34 PM [32mGET[39m /templates/usersettings.html
+3:00:34 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709733634174
+3:00:34 PM [33mPOST[39m /user/getUserData
+3:00:34 PM [32mGET[39m /templates/thecorner.html
+3:00:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709733634700
+3:00:54 PM [32mGET[39m /templates/usersettings.html
+3:00:54 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709733654871
+3:00:54 PM [33mPOST[39m /user/getUserData
+3:00:55 PM [32mGET[39m /templates/thecorner.html
+3:00:55 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709733655423
+3:00:55 PM [32mGET[39m /templates/usersettings.html
+3:00:55 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709733655982
+3:00:55 PM [33mPOST[39m /user/getUserData
+3:00:56 PM [32mGET[39m /templates/thecorner.html
+3:00:56 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709733656452
+3:00:57 PM [32mGET[39m /templates/usersettings.html
+3:00:57 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709733657236
+3:00:57 PM [33mPOST[39m /user/getUserData
+3:01:02 PM [32mGET[39m /templates/thecorner.html
+3:01:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709733662677
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+3:19:21 PM [32mGET[39m /thecorner
+3:19:21 PM [32mGET[39m /css/global-style.css
+3:19:21 PM [32mGET[39m /modules/contentLoader.mjs
+3:19:21 PM [32mGET[39m /modules/pageState.mjs
+3:19:21 PM [32mGET[39m /modules/nav.mjs
+3:19:21 PM [32mGET[39m /templates/thecorner.html
+3:19:21 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709734761770
+3:19:24 PM [32mGET[39m /templates/.html
+3:19:24 PM [32mGET[39m /scripts/.mjs?timestamp=1709734764923
+3:19:27 PM [32mGET[39m /templates/usersettings.html
+3:19:27 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709734767233
+3:19:27 PM [32mGET[39m /modules/getUserData.mjs
+3:19:27 PM [32mGET[39m /modules/postTo.mjs
+3:19:27 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:23:48 PM [32mGET[39m /usersettings
+3:23:48 PM [32mGET[39m /css/global-style.css
+3:23:48 PM [32mGET[39m /modules/contentLoader.mjs
+3:23:48 PM [32mGET[39m /modules/pageState.mjs
+3:23:48 PM [32mGET[39m /modules/nav.mjs
+3:23:48 PM [32mGET[39m /templates/usersettings.html
+3:23:48 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709735028061
+3:23:48 PM [32mGET[39m /modules/getUserData.mjs
+3:23:48 PM [32mGET[39m /modules/deleteAccount.mjs
+3:23:48 PM [32mGET[39m /modules/postTo.mjs
+3:23:48 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:34:58 PM [32mGET[39m /usersettings
+3:34:58 PM [32mGET[39m /css/global-style.css
+3:34:58 PM [32mGET[39m /modules/contentLoader.mjs
+3:34:58 PM [32mGET[39m /modules/pageState.mjs
+3:34:59 PM [32mGET[39m /modules/nav.mjs
+3:34:59 PM [32mGET[39m /templates/usersettings.html
+3:34:59 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709735699023
+3:34:59 PM [32mGET[39m /modules/getUserData.mjs
+3:34:59 PM [32mGET[39m /modules/deleteAccount.mjs
+3:34:59 PM [32mGET[39m /modules/postTo.mjs
+3:34:59 PM [33mPOST[39m /user/getUserData
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+3:35:13 PM [32mGET[39m /usersettings
+3:35:13 PM [32mGET[39m /css/global-style.css
+3:35:13 PM [32mGET[39m /modules/contentLoader.mjs
+3:35:13 PM [32mGET[39m /modules/pageState.mjs
+3:35:13 PM [32mGET[39m /modules/nav.mjs
+3:35:13 PM [32mGET[39m /templates/usersettings.html
+3:35:13 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709735713282
+3:35:13 PM [32mGET[39m /modules/getUserData.mjs
+3:35:13 PM [32mGET[39m /modules/deleteAccount.mjs
+3:35:13 PM [32mGET[39m /modules/postTo.mjs
+3:35:13 PM [33mPOST[39m /user/getUserData
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+3:35:23 PM [32mGET[39m /usersettings
+3:35:23 PM [32mGET[39m /css/global-style.css
+3:35:23 PM [32mGET[39m /modules/contentLoader.mjs
+3:35:23 PM [32mGET[39m /modules/pageState.mjs
+3:35:23 PM [32mGET[39m /modules/nav.mjs
+3:35:23 PM [32mGET[39m /templates/usersettings.html
+3:35:23 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709735723050
+3:35:23 PM [32mGET[39m /modules/getUserData.mjs
+3:35:23 PM [32mGET[39m /modules/deleteAccount.mjs
+3:35:23 PM [32mGET[39m /modules/postTo.mjs
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+3:35:27 PM [32mGET[39m /usersettings
+3:35:27 PM [32mGET[39m /css/global-style.css
+3:35:27 PM [32mGET[39m /modules/contentLoader.mjs
+3:35:27 PM [32mGET[39m /modules/pageState.mjs
+3:35:27 PM [32mGET[39m /modules/nav.mjs
+3:35:27 PM [32mGET[39m /templates/usersettings.html
+3:35:27 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709735727168
+3:35:27 PM [32mGET[39m /modules/getUserData.mjs
+3:35:27 PM [32mGET[39m /modules/deleteAccount.mjs
+3:35:27 PM [32mGET[39m /modules/postTo.mjs
+3:35:27 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+3:45:41 PM [32mGET[39m /usersettings
+3:45:41 PM [32mGET[39m /css/global-style.css
+3:45:41 PM [32mGET[39m /modules/contentLoader.mjs
+3:45:41 PM [32mGET[39m /modules/pageState.mjs
+3:45:41 PM [32mGET[39m /modules/nav.mjs
+3:45:41 PM [32mGET[39m /templates/usersettings.html
+3:45:41 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736341557
+3:45:41 PM [32mGET[39m /modules/getUserData.mjs
+3:45:41 PM [32mGET[39m /modules/deleteAccount.mjs
+3:45:41 PM [32mGET[39m /modules/postTo.mjs
+3:45:41 PM [33mPOST[39m /user/getUserData
+3:45:55 PM [32mGET[39m /usersettings
+3:45:55 PM [32mGET[39m /css/global-style.css
+3:45:55 PM [32mGET[39m /modules/contentLoader.mjs
+3:45:55 PM [32mGET[39m /modules/pageState.mjs
+3:45:55 PM [32mGET[39m /modules/nav.mjs
+3:45:55 PM [32mGET[39m /templates/usersettings.html
+3:45:55 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736355658
+3:45:55 PM [32mGET[39m /modules/getUserData.mjs
+3:45:55 PM [32mGET[39m /modules/deleteAccount.mjs
+3:45:55 PM [32mGET[39m /modules/postTo.mjs
+3:45:55 PM [33mPOST[39m /user/getUserData
+3:46:25 PM [32mGET[39m /usersettings
+3:46:25 PM [32mGET[39m /css/global-style.css
+3:46:25 PM [32mGET[39m /modules/contentLoader.mjs
+3:46:25 PM [32mGET[39m /modules/pageState.mjs
+3:46:25 PM [32mGET[39m /modules/nav.mjs
+3:46:25 PM [32mGET[39m /templates/usersettings.html
+3:46:25 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736385427
+3:46:25 PM [32mGET[39m /modules/getUserData.mjs
+3:46:25 PM [32mGET[39m /modules/deleteAccount.mjs
+3:46:25 PM [32mGET[39m /modules/postTo.mjs
+3:46:25 PM [33mPOST[39m /user/getUserData
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+3:46:40 PM [32mGET[39m /usersettings
+3:46:40 PM [32mGET[39m /css/global-style.css
+3:46:40 PM [32mGET[39m /modules/pageState.mjs
+3:46:40 PM [32mGET[39m /modules/contentLoader.mjs
+3:46:40 PM [32mGET[39m /modules/nav.mjs
+3:46:40 PM [32mGET[39m /templates/usersettings.html
+3:46:40 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736400296
+3:46:40 PM [32mGET[39m /modules/getUserData.mjs
+3:46:40 PM [32mGET[39m /modules/deleteAccount.mjs
+3:46:40 PM [32mGET[39m /modules/postTo.mjs
+3:46:40 PM [33mPOST[39m /user/getUserData
+3:46:41 PM [32mGET[39m /templates/login.html
+3:46:41 PM [32mGET[39m /scripts/login.mjs?timestamp=1709736401130
+3:46:46 PM [33mPOST[39m /user/login
+3:46:46 PM [32mGET[39m /templates/thecorner.html
+3:46:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709736406348
+3:46:48 PM [32mGET[39m /templates/usersettings.html
+3:46:48 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736408022
+3:46:48 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+3:47:18 PM [32mGET[39m /usersettings
+3:47:18 PM [32mGET[39m /css/global-style.css
+3:47:18 PM [32mGET[39m /modules/contentLoader.mjs
+3:47:18 PM [32mGET[39m /modules/pageState.mjs
+3:47:18 PM [32mGET[39m /modules/nav.mjs
+3:47:18 PM [32mGET[39m /templates/usersettings.html
+3:47:18 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736438074
+3:47:18 PM [32mGET[39m /modules/getUserData.mjs
+3:47:18 PM [32mGET[39m /modules/deleteUser.mjs
+3:47:18 PM [32mGET[39m /modules/postTo.mjs
+3:47:18 PM [33mPOST[39m /user/getUserData
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+3:48:05 PM [32mGET[39m /usersettings
+3:48:05 PM [32mGET[39m /css/global-style.css
+3:48:05 PM [32mGET[39m /modules/contentLoader.mjs
+3:48:05 PM [32mGET[39m /modules/pageState.mjs
+3:48:05 PM [32mGET[39m /modules/nav.mjs
+3:48:05 PM [32mGET[39m /templates/usersettings.html
+3:48:05 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736485131
+3:48:05 PM [32mGET[39m /modules/getUserData.mjs
+3:48:05 PM [32mGET[39m /modules/deleteUser.mjs
+3:48:05 PM [32mGET[39m /modules/postTo.mjs
+3:48:05 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:49:11 PM [32mGET[39m /usersettings
+3:49:11 PM [32mGET[39m /css/global-style.css
+3:49:11 PM [32mGET[39m /modules/contentLoader.mjs
+3:49:11 PM [32mGET[39m /modules/pageState.mjs
+3:49:11 PM [32mGET[39m /modules/nav.mjs
+3:49:11 PM [32mGET[39m /templates/usersettings.html
+3:49:11 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736551776
+3:49:11 PM [32mGET[39m /modules/getUserData.mjs
+3:49:11 PM [32mGET[39m /modules/deleteUser.mjs
+3:49:11 PM [32mGET[39m /modules/postTo.mjs
+3:49:11 PM [33mPOST[39m /user/getUserData
+3:49:13 PM [33mPOST[39m /user/deleteUser
+3:49:22 PM [32mGET[39m /usersettings
+3:49:22 PM [32mGET[39m /css/global-style.css
+3:49:22 PM [32mGET[39m /modules/contentLoader.mjs
+3:49:22 PM [32mGET[39m /modules/pageState.mjs
+3:49:22 PM [32mGET[39m /modules/nav.mjs
+3:49:22 PM [32mGET[39m /templates/usersettings.html
+3:49:22 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736562737
+3:49:22 PM [32mGET[39m /modules/getUserData.mjs
+3:49:22 PM [32mGET[39m /modules/deleteUser.mjs
+3:49:22 PM [32mGET[39m /modules/postTo.mjs
+3:49:22 PM [33mPOST[39m /user/getUserData
+3:49:42 PM [32mGET[39m /templates/login.html
+3:49:42 PM [32mGET[39m /scripts/login.mjs?timestamp=1709736582011
+3:49:47 PM [33mPOST[39m /user/login
+3:49:48 PM [32mGET[39m /templates/thecorner.html
+3:49:48 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709736588053
+3:49:50 PM [32mGET[39m /templates/.html
+3:49:50 PM [32mGET[39m /scripts/.mjs?timestamp=1709736590232
+3:49:51 PM [32mGET[39m /templates/usersettings.html
+3:49:51 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736591779
+3:49:51 PM [33mPOST[39m /user/getUserData
+3:49:54 PM [33mPOST[39m /user/deleteUser
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+3:50:52 PM [32mGET[39m /usersettings
+3:50:52 PM [32mGET[39m /css/global-style.css
+3:50:52 PM [32mGET[39m /modules/contentLoader.mjs
+3:50:52 PM [32mGET[39m /modules/pageState.mjs
+3:50:52 PM [32mGET[39m /modules/nav.mjs
+3:50:52 PM [32mGET[39m /templates/usersettings.html
+3:50:52 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736652539
+3:50:52 PM [32mGET[39m /modules/getUserData.mjs
+3:50:52 PM [32mGET[39m /modules/deleteUser.mjs
+3:50:52 PM [32mGET[39m /modules/postTo.mjs
+3:50:52 PM [33mPOST[39m /user/getUserData
+3:50:56 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:51:19 PM [32mGET[39m /usersettings
+3:51:19 PM [32mGET[39m /css/global-style.css
+3:51:19 PM [32mGET[39m /modules/contentLoader.mjs
+3:51:19 PM [32mGET[39m /modules/pageState.mjs
+3:51:19 PM [32mGET[39m /modules/nav.mjs
+3:51:19 PM [32mGET[39m /templates/usersettings.html
+3:51:19 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736679344
+3:51:19 PM [32mGET[39m /modules/getUserData.mjs
+3:51:19 PM [32mGET[39m /modules/deleteUser.mjs
+3:51:19 PM [32mGET[39m /modules/postTo.mjs
+3:51:19 PM [33mPOST[39m /user/getUserData
+3:51:21 PM [33mPOST[39m /user/deleteUser
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+3:51:53 PM [32mGET[39m /usersettings
+3:51:53 PM [32mGET[39m /css/global-style.css
+3:51:53 PM [32mGET[39m /modules/contentLoader.mjs
+3:51:53 PM [32mGET[39m /modules/pageState.mjs
+3:51:53 PM [32mGET[39m /modules/nav.mjs
+3:51:53 PM [32mGET[39m /templates/usersettings.html
+3:51:53 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736713711
+3:51:53 PM [32mGET[39m /modules/deleteUser.mjs
+3:51:53 PM [32mGET[39m /modules/getUserData.mjs
+3:51:53 PM [32mGET[39m /modules/postTo.mjs
+3:51:53 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:52:21 PM [32mGET[39m /usersettings
+3:52:21 PM [32mGET[39m /css/global-style.css
+3:52:21 PM [32mGET[39m /modules/contentLoader.mjs
+3:52:21 PM [32mGET[39m /modules/pageState.mjs
+3:52:21 PM [32mGET[39m /modules/nav.mjs
+3:52:21 PM [32mGET[39m /templates/usersettings.html
+3:52:21 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736741267
+3:52:21 PM [32mGET[39m /modules/getUserData.mjs
+3:52:21 PM [32mGET[39m /modules/deleteUser.mjs
+3:52:21 PM [32mGET[39m /modules/postTo.mjs
+3:52:21 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:52:32 PM [32mGET[39m /usersettings
+3:52:32 PM [32mGET[39m /css/global-style.css
+3:52:32 PM [32mGET[39m /modules/contentLoader.mjs
+3:52:32 PM [32mGET[39m /modules/pageState.mjs
+3:52:32 PM [32mGET[39m /modules/nav.mjs
+3:52:32 PM [32mGET[39m /templates/usersettings.html
+3:52:32 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736752992
+3:52:33 PM [32mGET[39m /modules/getUserData.mjs
+3:52:33 PM [32mGET[39m /modules/deleteUser.mjs
+3:52:33 PM [32mGET[39m /modules/postTo.mjs
+3:52:33 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+3:54:24 PM [32mGET[39m /usersettings
+3:54:24 PM [32mGET[39m /css/global-style.css
+3:54:24 PM [32mGET[39m /modules/contentLoader.mjs
+3:54:24 PM [32mGET[39m /modules/pageState.mjs
+3:54:24 PM [32mGET[39m /modules/nav.mjs
+3:54:24 PM [32mGET[39m /templates/usersettings.html
+3:54:24 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736864509
+3:54:24 PM [32mGET[39m /modules/getUserData.mjs
+3:54:24 PM [32mGET[39m /modules/deleteUser.mjs
+3:54:24 PM [32mGET[39m /modules/postTo.mjs
+3:54:24 PM [33mPOST[39m /user/getUserData
+3:54:25 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:55:38 PM [32mGET[39m /usersettings
+3:55:38 PM [32mGET[39m /modules/contentLoader.mjs
+3:55:38 PM [32mGET[39m /modules/pageState.mjs
+3:55:38 PM [32mGET[39m /css/global-style.css
+3:55:38 PM [32mGET[39m /modules/nav.mjs
+3:55:38 PM [32mGET[39m /templates/usersettings.html
+3:55:38 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736938080
+3:55:38 PM [32mGET[39m /modules/getUserData.mjs
+3:55:38 PM [32mGET[39m /modules/deleteUser.mjs
+3:55:38 PM [32mGET[39m /modules/postTo.mjs
+3:55:38 PM [33mPOST[39m /user/getUserData
+3:55:40 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:56:05 PM [32mGET[39m /usersettings
+3:56:05 PM [32mGET[39m /css/global-style.css
+3:56:05 PM [32mGET[39m /modules/contentLoader.mjs
+3:56:05 PM [32mGET[39m /modules/pageState.mjs
+3:56:05 PM [32mGET[39m /modules/nav.mjs
+3:56:05 PM [32mGET[39m /templates/usersettings.html
+3:56:05 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709736965849
+3:56:05 PM [32mGET[39m /modules/getUserData.mjs
+3:56:05 PM [32mGET[39m /modules/deleteUser.mjs
+3:56:05 PM [32mGET[39m /modules/postTo.mjs
+3:56:05 PM [33mPOST[39m /user/getUserData
+3:56:07 PM [33mPOST[39m /user/deleteUser
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+3:56:14 PM [33mPOST[39m /user/deleteUser
+3:56:50 PM [33mPOST[39m /user/deleteUser
+3:56:53 PM [32mGET[39m /usersettings
+3:56:53 PM [32mGET[39m /css/global-style.css
+3:56:53 PM [32mGET[39m /modules/contentLoader.mjs
+3:56:53 PM [32mGET[39m /modules/pageState.mjs
+3:56:53 PM [32mGET[39m /modules/nav.mjs
+3:56:53 PM [32mGET[39m /templates/usersettings.html
+3:56:53 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737013919
+3:56:53 PM [32mGET[39m /modules/getUserData.mjs
+3:56:53 PM [32mGET[39m /modules/deleteUser.mjs
+3:56:53 PM [32mGET[39m /modules/postTo.mjs
+3:56:53 PM [33mPOST[39m /user/getUserData
+3:57:25 PM [32mGET[39m /templates/thecorner.html
+3:57:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709737045091
+3:57:25 PM [32mGET[39m /templates/usersettings.html
+3:57:25 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737045678
+3:57:25 PM [33mPOST[39m /user/getUserData
+3:57:26 PM [32mGET[39m /templates/login.html
+3:57:26 PM [32mGET[39m /scripts/login.mjs?timestamp=1709737046540
+3:57:30 PM [33mPOST[39m /user/login
+3:57:30 PM [32mGET[39m /templates/thecorner.html
+3:57:30 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709737050839
+3:57:32 PM [32mGET[39m /templates/usersettings.html
+3:57:32 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737052938
+3:57:32 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:58:01 PM [32mGET[39m /usersettings
+3:58:01 PM [32mGET[39m /css/global-style.css
+3:58:01 PM [32mGET[39m /modules/contentLoader.mjs
+3:58:01 PM [32mGET[39m /modules/pageState.mjs
+3:58:01 PM [32mGET[39m /modules/nav.mjs
+3:58:01 PM [32mGET[39m /templates/usersettings.html
+3:58:01 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737081420
+3:58:01 PM [32mGET[39m /modules/getUserData.mjs
+3:58:01 PM [32mGET[39m /modules/deleteUser.mjs
+3:58:01 PM [32mGET[39m /modules/postTo.mjs
+3:58:01 PM [33mPOST[39m /user/getUserData
+3:58:02 PM [33mPOST[39m /user/deleteUser
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+3:58:09 PM [32mGET[39m /usersettings
+3:58:09 PM [32mGET[39m /css/global-style.css
+3:58:09 PM [32mGET[39m /modules/contentLoader.mjs
+3:58:09 PM [32mGET[39m /modules/pageState.mjs
+3:58:09 PM [32mGET[39m /modules/nav.mjs
+3:58:09 PM [32mGET[39m /templates/usersettings.html
+3:58:09 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737089345
+3:58:09 PM [32mGET[39m /modules/getUserData.mjs
+3:58:09 PM [32mGET[39m /modules/deleteUser.mjs
+3:58:09 PM [32mGET[39m /modules/postTo.mjs
+3:58:09 PM [33mPOST[39m /user/getUserData
+3:58:10 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:58:15 PM [32mGET[39m /usersettings
+3:58:15 PM [32mGET[39m /css/global-style.css
+3:58:15 PM [32mGET[39m /modules/contentLoader.mjs
+3:58:15 PM [32mGET[39m /modules/pageState.mjs
+3:58:15 PM [32mGET[39m /modules/nav.mjs
+3:58:15 PM [32mGET[39m /templates/usersettings.html
+3:58:15 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737095346
+3:58:15 PM [32mGET[39m /modules/getUserData.mjs
+3:58:15 PM [32mGET[39m /modules/deleteUser.mjs
+3:58:15 PM [32mGET[39m /modules/postTo.mjs
+3:58:15 PM [33mPOST[39m /user/getUserData
+3:58:16 PM [33mPOST[39m /user/deleteUser
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+3:59:27 PM [32mGET[39m /usersettings
+3:59:27 PM [32mGET[39m /css/global-style.css
+3:59:27 PM [32mGET[39m /modules/contentLoader.mjs
+3:59:27 PM [32mGET[39m /modules/pageState.mjs
+3:59:27 PM [32mGET[39m /modules/nav.mjs
+3:59:27 PM [32mGET[39m /templates/usersettings.html
+3:59:27 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737167162
+3:59:27 PM [32mGET[39m /modules/getUserData.mjs
+3:59:27 PM [32mGET[39m /modules/deleteUser.mjs
+3:59:27 PM [32mGET[39m /modules/postTo.mjs
+3:59:27 PM [33mPOST[39m /user/getUserData
+3:59:28 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+3:59:49 PM [32mGET[39m /usersettings
+3:59:49 PM [32mGET[39m /css/global-style.css
+3:59:49 PM [32mGET[39m /modules/contentLoader.mjs
+3:59:49 PM [32mGET[39m /modules/pageState.mjs
+3:59:49 PM [32mGET[39m /modules/nav.mjs
+3:59:49 PM [32mGET[39m /templates/usersettings.html
+3:59:49 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737189817
+3:59:49 PM [32mGET[39m /modules/getUserData.mjs
+3:59:49 PM [32mGET[39m /modules/deleteUser.mjs
+3:59:49 PM [32mGET[39m /modules/postTo.mjs
+3:59:49 PM [33mPOST[39m /user/getUserData
+3:59:50 PM [33mPOST[39m /user/deleteUser
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+4:00:34 PM [32mGET[39m /usersettings
+4:00:34 PM [32mGET[39m /css/global-style.css
+4:00:34 PM [32mGET[39m /modules/contentLoader.mjs
+4:00:34 PM [32mGET[39m /modules/pageState.mjs
+4:00:34 PM [32mGET[39m /modules/nav.mjs
+4:00:34 PM [32mGET[39m /templates/usersettings.html
+4:00:34 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737234261
+4:00:34 PM [32mGET[39m /modules/getUserData.mjs
+4:00:34 PM [32mGET[39m /modules/deleteUser.mjs
+4:00:34 PM [32mGET[39m /modules/postTo.mjs
+4:00:34 PM [33mPOST[39m /user/getUserData
+4:00:35 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:01:02 PM [32mGET[39m /usersettings
+4:01:02 PM [32mGET[39m /css/global-style.css
+4:01:02 PM [32mGET[39m /modules/contentLoader.mjs
+4:01:02 PM [32mGET[39m /modules/pageState.mjs
+4:01:02 PM [32mGET[39m /modules/nav.mjs
+4:01:02 PM [32mGET[39m /templates/usersettings.html
+4:01:02 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737262945
+4:01:02 PM [32mGET[39m /modules/getUserData.mjs
+4:01:02 PM [32mGET[39m /modules/deleteUser.mjs
+4:01:02 PM [32mGET[39m /modules/postTo.mjs
+4:01:02 PM [33mPOST[39m /user/getUserData
+4:01:04 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:11:58 PM [32mGET[39m /usersettings
+4:11:58 PM [32mGET[39m /css/global-style.css
+4:11:58 PM [32mGET[39m /modules/contentLoader.mjs
+4:11:58 PM [32mGET[39m /modules/pageState.mjs
+4:11:58 PM [32mGET[39m /modules/nav.mjs
+4:11:58 PM [32mGET[39m /templates/usersettings.html
+4:11:58 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737918901
+4:11:58 PM [32mGET[39m /modules/getUserData.mjs
+4:11:58 PM [32mGET[39m /modules/deleteUser.mjs
+4:11:58 PM [32mGET[39m /modules/postTo.mjs
+4:11:58 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:12:47 PM [32mGET[39m /usersettings
+4:12:47 PM [32mGET[39m /css/global-style.css
+4:12:47 PM [32mGET[39m /modules/contentLoader.mjs
+4:12:47 PM [32mGET[39m /modules/pageState.mjs
+4:12:47 PM [32mGET[39m /modules/nav.mjs
+4:12:47 PM [32mGET[39m /templates/usersettings.html
+4:12:47 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737967927
+4:12:47 PM [32mGET[39m /modules/getUserData.mjs
+4:12:47 PM [32mGET[39m /modules/deleteUser.mjs
+4:12:47 PM [32mGET[39m /modules/postTo.mjs
+4:12:47 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:13:07 PM [32mGET[39m /usersettings
+4:13:07 PM [32mGET[39m /css/global-style.css
+4:13:07 PM [32mGET[39m /modules/contentLoader.mjs
+4:13:07 PM [32mGET[39m /modules/pageState.mjs
+4:13:07 PM [32mGET[39m /modules/nav.mjs
+4:13:07 PM [32mGET[39m /templates/usersettings.html
+4:13:07 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709737987304
+4:13:07 PM [32mGET[39m /modules/getUserData.mjs
+4:13:07 PM [32mGET[39m /modules/deleteUser.mjs
+4:13:07 PM [32mGET[39m /modules/postTo.mjs
+4:13:07 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:13:57 PM [32mGET[39m /usersettings
+4:13:57 PM [32mGET[39m /css/global-style.css
+4:13:57 PM [32mGET[39m /modules/contentLoader.mjs
+4:13:57 PM [32mGET[39m /modules/pageState.mjs
+4:13:57 PM [32mGET[39m /modules/nav.mjs
+4:13:57 PM [32mGET[39m /templates/usersettings.html
+4:13:57 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738037683
+4:13:57 PM [32mGET[39m /modules/getUserData.mjs
+4:13:57 PM [32mGET[39m /modules/deleteUser.mjs
+4:13:57 PM [32mGET[39m /modules/postTo.mjs
+4:13:57 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:14:14 PM [32mGET[39m /usersettings
+4:14:14 PM [32mGET[39m /css/global-style.css
+4:14:14 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:14 PM [32mGET[39m /modules/pageState.mjs
+4:14:14 PM [32mGET[39m /modules/nav.mjs
+4:14:14 PM [32mGET[39m /templates/usersettings.html
+4:14:14 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738054675
+4:14:14 PM [32mGET[39m /modules/getUserData.mjs
+4:14:14 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:14 PM [32mGET[39m /modules/postTo.mjs
+4:14:14 PM [33mPOST[39m /user/getUserData
+4:14:16 PM [32mGET[39m /usersettings
+4:14:16 PM [32mGET[39m /css/global-style.css
+4:14:16 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:16 PM [32mGET[39m /modules/pageState.mjs
+4:14:16 PM [32mGET[39m /modules/nav.mjs
+4:14:16 PM [32mGET[39m /templates/usersettings.html
+4:14:16 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738056709
+4:14:16 PM [32mGET[39m /modules/getUserData.mjs
+4:14:16 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:16 PM [32mGET[39m /modules/postTo.mjs
+4:14:16 PM [33mPOST[39m /user/getUserData
+4:14:16 PM [32mGET[39m /usersettings
+4:14:16 PM [32mGET[39m /css/global-style.css
+4:14:16 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:16 PM [32mGET[39m /modules/pageState.mjs
+4:14:16 PM [32mGET[39m /modules/nav.mjs
+4:14:16 PM [32mGET[39m /templates/usersettings.html
+4:14:16 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738056831
+4:14:16 PM [32mGET[39m /modules/getUserData.mjs
+4:14:16 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:16 PM [32mGET[39m /modules/postTo.mjs
+4:14:16 PM [33mPOST[39m /user/getUserData
+4:14:16 PM [32mGET[39m /usersettings
+4:14:16 PM [32mGET[39m /css/global-style.css
+4:14:16 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:16 PM [32mGET[39m /modules/pageState.mjs
+4:14:16 PM [32mGET[39m /modules/nav.mjs
+4:14:16 PM [32mGET[39m /templates/usersettings.html
+4:14:16 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738056984
+4:14:17 PM [32mGET[39m /modules/getUserData.mjs
+4:14:17 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:17 PM [32mGET[39m /modules/postTo.mjs
+4:14:17 PM [33mPOST[39m /user/getUserData
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+4:14:24 PM [32mGET[39m /usersettings
+4:14:24 PM [32mGET[39m /css/global-style.css
+4:14:24 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:24 PM [32mGET[39m /modules/pageState.mjs
+4:14:24 PM [32mGET[39m /modules/nav.mjs
+4:14:24 PM [32mGET[39m /templates/usersettings.html
+4:14:24 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738064140
+4:14:24 PM [32mGET[39m /modules/getUserData.mjs
+4:14:24 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:24 PM [32mGET[39m /modules/postTo.mjs
+4:14:24 PM [33mPOST[39m /user/getUserData
+4:14:25 PM [32mGET[39m /usersettings
+4:14:25 PM [32mGET[39m /css/global-style.css
+4:14:25 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:25 PM [32mGET[39m /modules/pageState.mjs
+4:14:26 PM [32mGET[39m /modules/nav.mjs
+4:14:26 PM [32mGET[39m /templates/usersettings.html
+4:14:26 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738066012
+4:14:26 PM [32mGET[39m /modules/getUserData.mjs
+4:14:26 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:26 PM [32mGET[39m /modules/postTo.mjs
+4:14:26 PM [33mPOST[39m /user/getUserData
+4:14:26 PM [32mGET[39m /usersettings
+4:14:26 PM [32mGET[39m /css/global-style.css
+4:14:26 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:26 PM [32mGET[39m /modules/pageState.mjs
+4:14:26 PM [32mGET[39m /modules/nav.mjs
+4:14:26 PM [32mGET[39m /templates/usersettings.html
+4:14:26 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738066108
+4:14:26 PM [32mGET[39m /modules/getUserData.mjs
+4:14:26 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:26 PM [32mGET[39m /modules/postTo.mjs
+4:14:26 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:14:34 PM [32mGET[39m /usersettings
+4:14:34 PM [32mGET[39m /css/global-style.css
+4:14:34 PM [32mGET[39m /modules/contentLoader.mjs
+4:14:34 PM [32mGET[39m /modules/pageState.mjs
+4:14:34 PM [32mGET[39m /modules/nav.mjs
+4:14:34 PM [32mGET[39m /templates/usersettings.html
+4:14:34 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738074425
+4:14:34 PM [32mGET[39m /modules/getUserData.mjs
+4:14:34 PM [32mGET[39m /modules/deleteUser.mjs
+4:14:34 PM [32mGET[39m /modules/postTo.mjs
+4:14:34 PM [33mPOST[39m /user/getUserData
+4:14:45 PM [32mGET[39m /templates/login.html
+4:14:45 PM [32mGET[39m /scripts/login.mjs?timestamp=1709738085037
+4:14:49 PM [33mPOST[39m /user/login
+4:14:50 PM [32mGET[39m /templates/thecorner.html
+4:14:50 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738090031
+4:14:51 PM [32mGET[39m /templates/usersettings.html
+4:14:51 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738091929
+4:14:51 PM [33mPOST[39m /user/getUserData
+4:14:57 PM [33mPOST[39m /user/deleteUser
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+4:18:44 PM [32mGET[39m /usersettings
+4:18:44 PM [32mGET[39m /css/global-style.css
+4:18:44 PM [32mGET[39m /modules/contentLoader.mjs
+4:18:44 PM [32mGET[39m /modules/pageState.mjs
+4:18:44 PM [32mGET[39m /modules/nav.mjs
+4:18:44 PM [32mGET[39m /templates/usersettings.html
+4:18:44 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738324305
+4:18:44 PM [32mGET[39m /modules/getUserData.mjs
+4:18:44 PM [32mGET[39m /modules/deleteUser.mjs
+4:18:44 PM [32mGET[39m /modules/postTo.mjs
+4:18:44 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:19:47 PM [32mGET[39m /usersettings
+4:19:47 PM [32mGET[39m /css/global-style.css
+4:19:47 PM [32mGET[39m /modules/contentLoader.mjs
+4:19:47 PM [32mGET[39m /modules/pageState.mjs
+4:19:47 PM [32mGET[39m /modules/nav.mjs
+4:19:47 PM [32mGET[39m /templates/usersettings.html
+4:19:47 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738387836
+4:19:47 PM [32mGET[39m /modules/getUserData.mjs
+4:19:47 PM [32mGET[39m /modules/deleteUser.mjs
+4:19:47 PM [32mGET[39m /modules/postTo.mjs
+4:19:47 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:19:59 PM [32mGET[39m /usersettings
+4:19:59 PM [32mGET[39m /css/global-style.css
+4:19:59 PM [32mGET[39m /modules/contentLoader.mjs
+4:19:59 PM [32mGET[39m /modules/pageState.mjs
+4:19:59 PM [32mGET[39m /modules/nav.mjs
+4:19:59 PM [32mGET[39m /templates/usersettings.html
+4:19:59 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738399878
+4:19:59 PM [32mGET[39m /modules/getUserData.mjs
+4:19:59 PM [32mGET[39m /modules/deleteUser.mjs
+4:19:59 PM [32mGET[39m /modules/postTo.mjs
+4:19:59 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:22:00 PM [32mGET[39m /usersettings
+4:22:00 PM [32mGET[39m /css/global-style.css
+4:22:00 PM [32mGET[39m /modules/contentLoader.mjs
+4:22:00 PM [32mGET[39m /modules/nav.mjs
+4:22:00 PM [32mGET[39m /modules/pageState.mjs
+4:22:00 PM [32mGET[39m /templates/usersettings.html
+4:22:00 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738520779
+4:22:00 PM [32mGET[39m /modules/getUserData.mjs
+4:22:00 PM [32mGET[39m /modules/deleteUser.mjs
+4:22:00 PM [32mGET[39m /modules/postTo.mjs
+4:22:00 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:24:03 PM [32mGET[39m /
+4:24:03 PM [32mGET[39m /css/global-style.css
+4:24:03 PM [32mGET[39m /modules/contentLoader.mjs
+4:24:03 PM [32mGET[39m /modules/pageState.mjs
+4:24:03 PM [32mGET[39m /modules/nav.mjs
+4:24:03 PM [32mGET[39m /templates/usersettings.html
+4:24:03 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738643742
+4:24:03 PM [32mGET[39m /modules/getUserData.mjs
+4:24:03 PM [32mGET[39m /modules/deleteUser.mjs
+4:24:03 PM [32mGET[39m /modules/postTo.mjs
+4:24:03 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:24:56 PM [32mGET[39m /usersettings
+4:24:56 PM [32mGET[39m /css/global-style.css
+4:24:56 PM [32mGET[39m /modules/contentLoader.mjs
+4:24:56 PM [32mGET[39m /modules/pageState.mjs
+4:24:56 PM [32mGET[39m /modules/nav.mjs
+4:24:56 PM [32mGET[39m /templates/usersettings.html
+4:24:56 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738696282
+4:24:56 PM [32mGET[39m /modules/getUserData.mjs
+4:24:56 PM [32mGET[39m /modules/deleteUser.mjs
+4:24:56 PM [32mGET[39m /modules/postTo.mjs
+4:24:56 PM [33mPOST[39m /user/getUserData
+4:24:59 PM [32mGET[39m /templates/thecorner.html
+4:24:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738699927
+4:25:00 PM [32mGET[39m /templates/usersettings.html
+4:25:00 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738700845
+4:25:00 PM [33mPOST[39m /user/getUserData
+4:25:02 PM [32mGET[39m /templates/thecorner.html
+4:25:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738702776
+4:25:03 PM [32mGET[39m /templates/.html
+4:25:03 PM [32mGET[39m /scripts/.mjs?timestamp=1709738703867
+4:25:04 PM [32mGET[39m /templates/thecorner.html
+4:25:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738704866
+4:25:05 PM [32mGET[39m /templates/usersettings.html
+4:25:05 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738705298
+4:25:05 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+4:27:07 PM [32mGET[39m /templates/login.html
+4:27:07 PM [32mGET[39m /scripts/login.mjs?timestamp=1709738827986
+4:27:20 PM [33mPOST[39m /user/login
+4:27:20 PM [32mGET[39m /templates/thecorner.html
+4:27:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738840829
+4:27:23 PM [32mGET[39m /templates/usersettings.html
+4:27:23 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738843202
+4:27:23 PM [33mPOST[39m /user/getUserData
+4:27:26 PM [32mGET[39m /templates/login.html
+4:27:26 PM [32mGET[39m /scripts/login.mjs?timestamp=1709738846622
+4:27:35 PM [33mPOST[39m /user/login
+4:27:35 PM [32mGET[39m /templates/thecorner.html
+4:27:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738855473
+4:27:36 PM [32mGET[39m /templates/usersettings.html
+4:27:36 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738856599
+4:27:36 PM [33mPOST[39m /user/getUserData
+4:27:37 PM [33mPOST[39m /user/deleteUser
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+4:28:01 PM [32mGET[39m /usersettings
+4:28:01 PM [32mGET[39m /css/global-style.css
+4:28:01 PM [32mGET[39m /modules/contentLoader.mjs
+4:28:01 PM [32mGET[39m /modules/pageState.mjs
+4:28:01 PM [32mGET[39m /modules/nav.mjs
+4:28:01 PM [32mGET[39m /templates/usersettings.html
+4:28:01 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738881833
+4:28:01 PM [32mGET[39m /modules/getUserData.mjs
+4:28:01 PM [32mGET[39m /modules/deleteUser.mjs
+4:28:01 PM [32mGET[39m /modules/postTo.mjs
+4:28:01 PM [33mPOST[39m /user/getUserData
+4:28:02 PM [32mGET[39m /templates/thecorner.html
+4:28:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738882839
+4:28:03 PM [32mGET[39m /templates/usersettings.html
+4:28:03 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738883331
+4:28:03 PM [33mPOST[39m /user/getUserData
+4:28:05 PM [32mGET[39m /templates/login.html
+4:28:05 PM [32mGET[39m /scripts/login.mjs?timestamp=1709738885710
+4:28:10 PM [33mPOST[39m /user/login
+4:28:25 PM [33mPOST[39m /user/login
+4:28:25 PM [32mGET[39m /templates/thecorner.html
+4:28:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738905832
+4:28:27 PM [32mGET[39m /templates/usersettings.html
+4:28:27 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738907766
+4:28:27 PM [33mPOST[39m /user/getUserData
+4:28:30 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:29:08 PM [32mGET[39m /usersettings
+4:29:08 PM [32mGET[39m /css/global-style.css
+4:29:08 PM [32mGET[39m /modules/contentLoader.mjs
+4:29:08 PM [32mGET[39m /modules/pageState.mjs
+4:29:08 PM [32mGET[39m /modules/nav.mjs
+4:29:08 PM [32mGET[39m /templates/usersettings.html
+4:29:08 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738948133
+4:29:08 PM [32mGET[39m /modules/getUserData.mjs
+4:29:08 PM [32mGET[39m /modules/deleteUser.mjs
+4:29:08 PM [32mGET[39m /modules/postTo.mjs
+4:29:08 PM [33mPOST[39m /user/getUserData
+4:29:08 PM [32mGET[39m /templates/login.html
+4:29:08 PM [32mGET[39m /scripts/login.mjs?timestamp=1709738948886
+4:29:18 PM [33mPOST[39m /user/login
+4:29:18 PM [32mGET[39m /templates/thecorner.html
+4:29:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709738958857
+4:29:19 PM [32mGET[39m /templates/usersettings.html
+4:29:19 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709738959939
+4:29:19 PM [33mPOST[39m /user/getUserData
+4:29:26 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:34:02 PM [32mGET[39m /usersettings
+4:34:02 PM [32mGET[39m /css/global-style.css
+4:34:02 PM [32mGET[39m /modules/contentLoader.mjs
+4:34:02 PM [32mGET[39m /modules/pageState.mjs
+4:34:02 PM [32mGET[39m /modules/nav.mjs
+4:34:02 PM [32mGET[39m /templates/usersettings.html
+4:34:02 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709739242080
+4:34:02 PM [32mGET[39m /modules/getUserData.mjs
+4:34:02 PM [32mGET[39m /modules/deleteUser.mjs
+4:34:02 PM [32mGET[39m /modules/postTo.mjs
+4:34:02 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+4:47:03 PM [32mGET[39m /usersettings
+4:47:03 PM [32mGET[39m /css/global-style.css
+4:47:03 PM [32mGET[39m /modules/contentLoader.mjs
+4:47:03 PM [32mGET[39m /modules/pageState.mjs
+4:47:03 PM [32mGET[39m /modules/nav.mjs
+4:47:03 PM [32mGET[39m /templates/usersettings.html
+4:47:03 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740023906
+4:47:03 PM [32mGET[39m /modules/getUserData.mjs
+4:47:03 PM [32mGET[39m /modules/deleteUser.mjs
+4:47:03 PM [32mGET[39m /modules/postTo.mjs
+4:47:03 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:49:49 PM [32mGET[39m /usersettings
+4:49:49 PM [32mGET[39m /css/global-style.css
+4:49:49 PM [32mGET[39m /modules/contentLoader.mjs
+4:49:49 PM [32mGET[39m /modules/pageState.mjs
+4:49:49 PM [32mGET[39m /modules/nav.mjs
+4:49:49 PM [32mGET[39m /templates/usersettings.html
+4:49:49 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740189653
+4:49:49 PM [32mGET[39m /modules/getUserData.mjs
+4:49:49 PM [32mGET[39m /modules/deleteUser.mjs
+4:49:49 PM [32mGET[39m /modules/postTo.mjs
+4:49:49 PM [33mPOST[39m /user/getUserData
+4:49:52 PM [32mGET[39m /templates/thecorner.html
+4:49:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740192735
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:50:54 PM [32mGET[39m /thecorner
+4:50:54 PM [32mGET[39m /css/global-style.css
+4:50:54 PM [32mGET[39m /modules/contentLoader.mjs
+4:50:54 PM [32mGET[39m /modules/pageState.mjs
+4:50:54 PM [32mGET[39m /modules/nav.mjs
+4:50:54 PM [32mGET[39m /templates/thecorner.html
+4:50:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740254924
+4:50:55 PM [32mGET[39m /templates/usersettings.html
+4:50:55 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740255674
+4:50:55 PM [32mGET[39m /modules/getUserData.mjs
+4:50:55 PM [32mGET[39m /modules/deleteUser.mjs
+4:50:55 PM [32mGET[39m /modules/postTo.mjs
+4:50:55 PM [33mPOST[39m /user/getUserData
+4:50:58 PM [32mGET[39m /templates/thecorner.html
+4:50:58 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740258900
+4:51:01 PM [32mGET[39m /thecorner
+4:51:01 PM [32mGET[39m /css/global-style.css
+4:51:01 PM [32mGET[39m /modules/contentLoader.mjs
+4:51:01 PM [32mGET[39m /modules/pageState.mjs
+4:51:01 PM [32mGET[39m /modules/nav.mjs
+4:51:01 PM [32mGET[39m /templates/thecorner.html
+4:51:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740261131
+4:51:43 PM [32mGET[39m /templates/signup.html
+4:51:43 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740303693
+4:51:43 PM [32mGET[39m /modules/postTo.mjs
+4:52:10 PM [33mPOST[39m /user/signUp
+4:52:10 PM [32mGET[39m /templates/thecorner.html
+4:52:10 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740330819
+4:56:10 PM [32mGET[39m /thecorner
+4:56:10 PM [32mGET[39m /css/global-style.css
+4:56:10 PM [32mGET[39m /modules/contentLoader.mjs
+4:56:10 PM [32mGET[39m /modules/pageState.mjs
+4:56:10 PM [32mGET[39m /modules/nav.mjs
+4:56:10 PM [32mGET[39m /templates/thecorner.html
+4:56:10 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740570476
+4:56:32 PM [32mGET[39m /templates/usersettings.html
+4:56:32 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740592053
+4:56:32 PM [32mGET[39m /modules/getUserData.mjs
+4:56:32 PM [32mGET[39m /modules/deleteUser.mjs
+4:56:32 PM [32mGET[39m /modules/postTo.mjs
+4:56:32 PM [33mPOST[39m /user/getUserData
+4:56:53 PM [32mGET[39m /templates/login.html
+4:56:53 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740613634
+4:56:56 PM [33mPOST[39m /user/login
+4:56:56 PM [32mGET[39m /templates/thecorner.html
+4:56:56 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740616519
+4:56:58 PM [32mGET[39m /templates/usersettings.html
+4:56:58 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740618838
+4:56:58 PM [33mPOST[39m /user/getUserData
+4:57:02 PM [33mPOST[39m /user/deleteUser
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:58:08 PM [32mGET[39m /usersettings
+4:58:08 PM [32mGET[39m /css/global-style.css
+4:58:08 PM [32mGET[39m /modules/contentLoader.mjs
+4:58:08 PM [32mGET[39m /modules/pageState.mjs
+4:58:08 PM [32mGET[39m /modules/nav.mjs
+4:58:08 PM [32mGET[39m /templates/usersettings.html
+4:58:08 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740688925
+4:58:08 PM [32mGET[39m /modules/getUserData.mjs
+4:58:08 PM [32mGET[39m /modules/deleteUser.mjs
+4:58:08 PM [32mGET[39m /modules/postTo.mjs
+4:58:08 PM [33mPOST[39m /user/getUserData
+4:58:12 PM [32mGET[39m /templates/thecorner.html
+4:58:12 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740692012
+4:58:15 PM [32mGET[39m /templates/signup.html
+4:58:15 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740695168
+4:58:19 PM [33mPOST[39m /user/signUp
+4:58:19 PM [32mGET[39m /templates/thecorner.html
+4:58:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740699257
+4:58:20 PM [32mGET[39m /templates/usersettings.html
+4:58:20 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740700910
+4:58:20 PM [33mPOST[39m /user/getUserData
+4:58:23 PM [33mPOST[39m /user/deleteUser
+4:58:23 PM [32mGET[39m /templates/thecorner.html
+4:58:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740703662
+4:58:28 PM [32mGET[39m /thecorner
+4:58:28 PM [32mGET[39m /css/global-style.css
+4:58:28 PM [32mGET[39m /modules/contentLoader.mjs
+4:58:28 PM [32mGET[39m /modules/pageState.mjs
+4:58:28 PM [32mGET[39m /modules/nav.mjs
+4:58:28 PM [32mGET[39m /templates/thecorner.html
+4:58:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740708202
+4:58:59 PM [32mGET[39m /thecorner
+4:58:59 PM [32mGET[39m /css/global-style.css
+4:58:59 PM [32mGET[39m /modules/pageState.mjs
+4:58:59 PM [32mGET[39m /modules/contentLoader.mjs
+4:58:59 PM [32mGET[39m /modules/nav.mjs
+4:58:59 PM [32mGET[39m /templates/thecorner.html
+4:58:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740739814
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+4:59:46 PM [32mGET[39m /thecorner
+4:59:46 PM [32mGET[39m /css/global-style.css
+4:59:46 PM [32mGET[39m /modules/contentLoader.mjs
+4:59:46 PM [32mGET[39m /modules/pageState.mjs
+4:59:46 PM [32mGET[39m /modules/nav.mjs
+4:59:46 PM [32mGET[39m /templates/thecorner.html
+4:59:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740786574
+4:59:51 PM [32mGET[39m /templates/signup.html
+4:59:51 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740791825
+4:59:51 PM [32mGET[39m /modules/postTo.mjs
+4:59:55 PM [33mPOST[39m /user/signUp
+4:59:55 PM [32mGET[39m /templates/thecorner.html
+4:59:55 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740795346
+4:59:57 PM [32mGET[39m /templates/usersettings.html
+4:59:57 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740797913
+4:59:57 PM [32mGET[39m /modules/getUserData.mjs
+4:59:57 PM [32mGET[39m /modules/deleteUser.mjs
+4:59:57 PM [33mPOST[39m /user/getUserData
+5:00:04 PM [33mPOST[39m /user/deleteUser
+5:00:04 PM [32mGET[39m /templates/thecorner.html
+5:00:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740804551
+5:00:07 PM [32mGET[39m /thecorner
+5:00:07 PM [32mGET[39m /css/global-style.css
+5:00:07 PM [32mGET[39m /modules/contentLoader.mjs
+5:00:07 PM [32mGET[39m /modules/pageState.mjs
+5:00:07 PM [32mGET[39m /modules/nav.mjs
+5:00:07 PM [32mGET[39m /templates/thecorner.html
+5:00:07 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740807952
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+5:00:37 PM [32mGET[39m /thecorner
+5:00:37 PM [32mGET[39m /css/global-style.css
+5:00:37 PM [32mGET[39m /modules/contentLoader.mjs
+5:00:37 PM [32mGET[39m /modules/pageState.mjs
+5:00:37 PM [32mGET[39m /modules/nav.mjs
+5:00:37 PM [32mGET[39m /templates/thecorner.html
+5:00:37 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740837444
+5:00:42 PM [32mGET[39m /usersettings
+5:00:42 PM [32mGET[39m /css/global-style.css
+5:00:42 PM [32mGET[39m /modules/contentLoader.mjs
+5:00:42 PM [32mGET[39m /modules/pageState.mjs
+5:00:42 PM [32mGET[39m /modules/nav.mjs
+5:00:42 PM [32mGET[39m /templates/thecorner.html
+5:00:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740842608
+5:00:44 PM [32mGET[39m /thecorner
+5:00:44 PM [32mGET[39m /css/global-style.css
+5:00:44 PM [32mGET[39m /modules/contentLoader.mjs
+5:00:44 PM [32mGET[39m /modules/pageState.mjs
+5:00:44 PM [32mGET[39m /modules/nav.mjs
+5:00:44 PM [32mGET[39m /templates/thecorner.html
+5:00:44 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740844556
+5:00:47 PM [32mGET[39m /templates/signup.html
+5:00:47 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740847272
+5:00:47 PM [32mGET[39m /modules/postTo.mjs
+5:00:48 PM [32mGET[39m /templates/login.html
+5:00:48 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740848312
+5:00:49 PM [32mGET[39m /templates/signup.html
+5:00:49 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740849474
+5:00:50 PM [32mGET[39m /templates/login.html
+5:00:50 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740850473
+5:00:59 PM [33mPOST[39m /user/login
+5:01:02 PM [33mPOST[39m /user/login
+5:01:23 PM [32mGET[39m /login
+5:01:23 PM [32mGET[39m /css/global-style.css
+5:01:23 PM [32mGET[39m /modules/contentLoader.mjs
+5:01:23 PM [32mGET[39m /modules/pageState.mjs
+5:01:23 PM [32mGET[39m /modules/nav.mjs
+5:01:23 PM [32mGET[39m /templates/login.html
+5:01:23 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740883715
+5:01:23 PM [32mGET[39m /modules/postTo.mjs
+5:01:25 PM [32mGET[39m /templates/signup.html
+5:01:25 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740885199
+5:01:42 PM [33mPOST[39m /user/signUp
+5:01:42 PM [32mGET[39m /templates/thecorner.html
+5:01:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740902924
+5:01:45 PM [32mGET[39m /templates/usersettings.html
+5:01:45 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740905044
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+5:02:02 PM [32mGET[39m /usersettings
+5:02:02 PM [32mGET[39m /css/global-style.css
+5:02:02 PM [32mGET[39m /modules/contentLoader.mjs
+5:02:02 PM [32mGET[39m /modules/pageState.mjs
+5:02:02 PM [32mGET[39m /modules/nav.mjs
+5:02:02 PM [32mGET[39m /templates/usersettings.html
+5:02:02 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740922107
+5:02:02 PM [32mGET[39m /modules/getUserData.mjs
+5:02:02 PM [32mGET[39m /modules/deleteUser.mjs
+5:02:02 PM [32mGET[39m /modules/postTo.mjs
+5:02:02 PM [33mPOST[39m /user/getUserData
+5:02:04 PM [32mGET[39m /templates/login.html
+5:02:04 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740924283
+5:02:18 PM [33mPOST[39m /user/login
+5:02:26 PM [33mPOST[39m /user/login
+5:02:35 PM [33mPOST[39m /user/login
+5:02:48 PM [32mGET[39m /templates/signup.html
+5:02:48 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740968192
+5:02:52 PM [33mPOST[39m /user/signUp
+5:02:53 PM [32mGET[39m /templates/thecorner.html
+5:02:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740973042
+5:02:54 PM [32mGET[39m /templates/usersettings.html
+5:02:54 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740974442
+5:02:54 PM [33mPOST[39m /user/getUserData
+5:02:56 PM [32mGET[39m /templates/login.html
+5:02:56 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740976664
+5:02:59 PM [33mPOST[39m /user/login
+5:02:59 PM [32mGET[39m /templates/thecorner.html
+5:02:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740979672
+5:03:00 PM [32mGET[39m /templates/usersettings.html
+5:03:00 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709740980847
+5:03:00 PM [33mPOST[39m /user/getUserData
+5:03:02 PM [33mPOST[39m /user/deleteUser
+5:03:02 PM [32mGET[39m /templates/thecorner.html
+5:03:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709740982273
+5:03:14 PM [32mGET[39m /templates/login.html
+5:03:14 PM [32mGET[39m /scripts/login.mjs?timestamp=1709740994727
+5:03:16 PM [32mGET[39m /templates/signup.html
+5:03:16 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709740996564
+5:03:45 PM [33mPOST[39m /user/signUp
+5:03:45 PM [32mGET[39m /templates/thecorner.html
+5:03:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709741025532
+5:03:46 PM [32mGET[39m /templates/usersettings.html
+5:03:46 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709741026867
+5:03:46 PM [33mPOST[39m /user/getUserData
+5:03:49 PM [32mGET[39m /templates/login.html
+5:03:49 PM [32mGET[39m /scripts/login.mjs?timestamp=1709741029188
+5:04:05 PM [33mPOST[39m /user/login
+5:04:53 PM [32mGET[39m /login
+5:04:53 PM [32mGET[39m /css/global-style.css
+5:04:53 PM [32mGET[39m /modules/contentLoader.mjs
+5:04:53 PM [32mGET[39m /modules/pageState.mjs
+5:04:53 PM [32mGET[39m /modules/nav.mjs
+5:04:53 PM [32mGET[39m /templates/login.html
+5:04:53 PM [32mGET[39m /scripts/login.mjs?timestamp=1709741093556
+5:04:53 PM [32mGET[39m /modules/postTo.mjs
+5:05:13 PM [33mPOST[39m /user/login
+5:05:19 PM [33mPOST[39m /user/login
+5:05:38 PM [32mGET[39m /login
+5:05:38 PM [32mGET[39m /css/global-style.css
+5:05:38 PM [32mGET[39m /modules/contentLoader.mjs
+5:05:38 PM [32mGET[39m /modules/pageState.mjs
+5:05:38 PM [32mGET[39m /modules/nav.mjs
+5:05:38 PM [32mGET[39m /templates/login.html
+5:05:38 PM [32mGET[39m /scripts/login.mjs?timestamp=1709741138406
+5:05:38 PM [32mGET[39m /modules/postTo.mjs
+5:05:47 PM [32mGET[39m /templates/signup.html
+5:05:47 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709741147216
+5:06:06 PM [33mPOST[39m /user/signUp
+5:06:06 PM [32mGET[39m /templates/thecorner.html
+5:06:06 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709741166132
+5:06:07 PM [32mGET[39m /templates/usersettings.html
+5:06:07 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709741167862
+5:06:07 PM [32mGET[39m /modules/getUserData.mjs
+5:06:07 PM [32mGET[39m /modules/deleteUser.mjs
+5:06:07 PM [33mPOST[39m /user/getUserData
+5:06:09 PM [32mGET[39m /templates/login.html
+5:06:09 PM [32mGET[39m /scripts/login.mjs?timestamp=1709741169823
+5:06:15 PM [33mPOST[39m /user/login
+5:06:16 PM [32mGET[39m /templates/thecorner.html
+5:06:16 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709741176013
+5:06:19 PM [32mGET[39m /templates/usersettings.html
+5:06:19 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709741179466
+5:06:19 PM [33mPOST[39m /user/getUserData
+5:06:21 PM [33mPOST[39m /user/deleteUser
+5:06:21 PM [32mGET[39m /templates/thecorner.html
+5:06:21 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709741181848
+5:06:32 PM [32mGET[39m /templates/signup.html
+5:06:32 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709741192394
+5:06:32 PM [32mGET[39m /templates/login.html
+5:06:32 PM [32mGET[39m /scripts/login.mjs?timestamp=1709741192792
+5:06:33 PM [32mGET[39m /templates/thecorner.html
+5:06:33 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709741193281
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+5:13:21 PM [32mGET[39m /thecorner
+5:13:21 PM [32mGET[39m /css/global-style.css
+5:13:21 PM [32mGET[39m /modules/pageState.mjs
+5:13:21 PM [32mGET[39m /modules/contentLoader.mjs
+5:13:21 PM [32mGET[39m /modules/nav.mjs
+5:13:21 PM [32mGET[39m /templates/thecorner.html
+5:13:21 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709741601764
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+5:31:38 PM [32mGET[39m /thecorner
+5:31:38 PM [32mGET[39m /css/global-style.css
+5:31:38 PM [32mGET[39m /modules/contentLoader.mjs
+5:31:38 PM [32mGET[39m /modules/pageState.mjs
+5:31:38 PM [32mGET[39m /modules/nav.mjs
+5:31:38 PM [32mGET[39m /templates/thecorner.html
+5:31:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742698382
+5:32:46 PM [32mGET[39m /thecorner
+5:32:46 PM [32mGET[39m /css/global-style.css
+5:32:46 PM [32mGET[39m /modules/pageState.mjs
+5:32:46 PM [32mGET[39m /modules/contentLoader.mjs
+5:32:46 PM [32mGET[39m /modules/nav.mjs
+5:32:46 PM [32mGET[39m /templates/thecorner.html
+5:32:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742766422
+5:33:04 PM [32mGET[39m /thecorner
+5:33:04 PM [32mGET[39m /css/global-style.css
+5:33:04 PM [32mGET[39m /modules/contentLoader.mjs
+5:33:04 PM [32mGET[39m /modules/pageState.mjs
+5:33:04 PM [32mGET[39m /modules/nav.mjs
+5:33:04 PM [32mGET[39m /templates/thecorner.html
+5:33:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742784231
+5:33:18 PM [32mGET[39m /thecorner
+5:33:18 PM [32mGET[39m /css/global-style.css
+5:33:18 PM [32mGET[39m /modules/contentLoader.mjs
+5:33:18 PM [32mGET[39m /modules/pageState.mjs
+5:33:18 PM [32mGET[39m /modules/nav.mjs
+5:33:18 PM [32mGET[39m /templates/thecorner.html
+5:33:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742798880
+5:33:33 PM [32mGET[39m /thecorner
+5:33:33 PM [32mGET[39m /css/global-style.css
+5:33:33 PM [32mGET[39m /modules/contentLoader.mjs
+5:33:33 PM [32mGET[39m /modules/pageState.mjs
+5:33:33 PM [32mGET[39m /modules/nav.mjs
+5:33:33 PM [32mGET[39m /templates/thecorner.html
+5:33:33 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742813750
+5:33:41 PM [32mGET[39m /thecorner
+5:33:41 PM [32mGET[39m /css/global-style.css
+5:33:41 PM [32mGET[39m /modules/contentLoader.mjs
+5:33:41 PM [32mGET[39m /modules/pageState.mjs
+5:33:41 PM [32mGET[39m /modules/nav.mjs
+5:33:41 PM [32mGET[39m /templates/thecorner.html
+5:33:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742822003
+5:33:50 PM [32mGET[39m /thecorner
+5:33:50 PM [32mGET[39m /css/global-style.css
+5:33:50 PM [32mGET[39m /modules/pageState.mjs
+5:33:50 PM [32mGET[39m /modules/contentLoader.mjs
+5:33:50 PM [32mGET[39m /modules/nav.mjs
+5:33:50 PM [32mGET[39m /templates/thecorner.html
+5:33:50 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742830349
+5:33:59 PM [32mGET[39m /thecorner
+5:33:59 PM [32mGET[39m /css/global-style.css
+5:33:59 PM [32mGET[39m /modules/contentLoader.mjs
+5:33:59 PM [32mGET[39m /modules/pageState.mjs
+5:33:59 PM [32mGET[39m /modules/nav.mjs
+5:33:59 PM [32mGET[39m /templates/thecorner.html
+5:33:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742839535
+5:34:09 PM [32mGET[39m /thecorner
+5:34:09 PM [32mGET[39m /css/global-style.css
+5:34:09 PM [32mGET[39m /modules/pageState.mjs
+5:34:09 PM [32mGET[39m /modules/contentLoader.mjs
+5:34:09 PM [32mGET[39m /modules/nav.mjs
+5:34:09 PM [32mGET[39m /templates/thecorner.html
+5:34:09 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742849119
+5:34:41 PM [32mGET[39m /thecorner
+5:34:41 PM [32mGET[39m /css/global-style.css
+5:34:41 PM [32mGET[39m /modules/contentLoader.mjs
+5:34:41 PM [32mGET[39m /modules/pageState.mjs
+5:34:41 PM [32mGET[39m /modules/nav.mjs
+5:34:41 PM [32mGET[39m /templates/thecorner.html
+5:34:41 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742881606
+5:34:48 PM [32mGET[39m /thecorner
+5:34:48 PM [32mGET[39m /css/global-style.css
+5:34:48 PM [32mGET[39m /modules/contentLoader.mjs
+5:34:48 PM [32mGET[39m /modules/pageState.mjs
+5:34:48 PM [32mGET[39m /modules/nav.mjs
+5:34:48 PM [32mGET[39m /templates/thecorner.html
+5:34:48 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742888727
+5:34:55 PM [32mGET[39m /thecorner
+5:34:55 PM [32mGET[39m /css/global-style.css
+5:34:55 PM [32mGET[39m /modules/pageState.mjs
+5:34:55 PM [32mGET[39m /modules/contentLoader.mjs
+5:34:55 PM [32mGET[39m /modules/nav.mjs
+5:34:55 PM [32mGET[39m /templates/thecorner.html
+5:34:55 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742895984
+5:35:23 PM [32mGET[39m /thecorner
+5:35:23 PM [32mGET[39m /css/global-style.css
+5:35:23 PM [32mGET[39m /modules/contentLoader.mjs
+5:35:23 PM [32mGET[39m /modules/pageState.mjs
+5:35:23 PM [32mGET[39m /modules/nav.mjs
+5:35:23 PM [32mGET[39m /templates/thecorner.html
+5:35:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742923244
+5:35:28 PM [32mGET[39m /thecorner
+5:35:28 PM [32mGET[39m /css/global-style.css
+5:35:28 PM [32mGET[39m /modules/contentLoader.mjs
+5:35:28 PM [32mGET[39m /modules/pageState.mjs
+5:35:28 PM [32mGET[39m /modules/nav.mjs
+5:35:28 PM [32mGET[39m /templates/thecorner.html
+5:35:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742928540
+5:35:42 PM [32mGET[39m /thecorner
+5:35:42 PM [32mGET[39m /css/global-style.css
+5:35:42 PM [32mGET[39m /modules/contentLoader.mjs
+5:35:42 PM [32mGET[39m /modules/pageState.mjs
+5:35:42 PM [32mGET[39m /modules/nav.mjs
+5:35:42 PM [32mGET[39m /templates/thecorner.html
+5:35:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709742942255
+5:37:04 PM [32mGET[39m /thecorner
+5:37:04 PM [32mGET[39m /css/global-style.css
+5:37:04 PM [32mGET[39m /modules/contentLoader.mjs
+5:37:04 PM [32mGET[39m /modules/pageState.mjs
+5:37:04 PM [32mGET[39m /modules/nav.mjs
+5:37:04 PM [32mGET[39m /templates/thecorner.html
+5:37:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743024605
+5:37:46 PM [32mGET[39m /thecorner
+5:37:46 PM [32mGET[39m /css/global-style.css
+5:37:46 PM [32mGET[39m /modules/contentLoader.mjs
+5:37:46 PM [32mGET[39m /modules/pageState.mjs
+5:37:46 PM [32mGET[39m /modules/nav.mjs
+5:37:46 PM [32mGET[39m /templates/thecorner.html
+5:37:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743066468
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+5:40:07 PM [32mGET[39m /thecorner
+5:40:07 PM [32mGET[39m /css/global-style.css
+5:40:07 PM [32mGET[39m /modules/contentLoader.mjs
+5:40:07 PM [32mGET[39m /modules/pageState.mjs
+5:40:07 PM [32mGET[39m /modules/nav.mjs
+5:40:07 PM [32mGET[39m /templates/thecorner.html
+5:40:07 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743207419
+5:40:10 PM [32mGET[39m /templates/signup.html
+5:40:10 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709743210345
+5:40:10 PM [32mGET[39m /modules/postTo.mjs
+5:40:12 PM [32mGET[39m /templates/thecorner.html
+5:40:12 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743212263
+5:40:13 PM [32mGET[39m /templates/login.html
+5:40:13 PM [32mGET[39m /scripts/login.mjs?timestamp=1709743213538
+5:40:14 PM [32mGET[39m /templates/thecorner.html
+5:40:14 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743214980
+5:41:57 PM [32mGET[39m /thecorner
+5:41:57 PM [32mGET[39m /css/global-style.css
+5:41:57 PM [32mGET[39m /modules/contentLoader.mjs
+5:41:57 PM [32mGET[39m /modules/pageState.mjs
+5:41:57 PM [32mGET[39m /modules/nav.mjs
+5:41:57 PM [32mGET[39m /templates/thecorner.html
+5:41:57 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743317578
+5:42:02 PM [32mGET[39m /thecorner
+5:42:02 PM [32mGET[39m /css/global-style.css
+5:42:02 PM [32mGET[39m /modules/contentLoader.mjs
+5:42:02 PM [32mGET[39m /modules/pageState.mjs
+5:42:02 PM [32mGET[39m /modules/nav.mjs
+5:42:02 PM [32mGET[39m /templates/thecorner.html
+5:42:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743322519
+5:42:08 PM [32mGET[39m /thecorner
+5:42:08 PM [32mGET[39m /css/global-style.css
+5:42:08 PM [32mGET[39m /modules/contentLoader.mjs
+5:42:08 PM [32mGET[39m /modules/pageState.mjs
+5:42:08 PM [32mGET[39m /modules/nav.mjs
+5:42:08 PM [32mGET[39m /templates/thecorner.html
+5:42:08 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743328879
+5:42:29 PM [32mGET[39m /thecorner
+5:42:29 PM [32mGET[39m /css/global-style.css
+5:42:29 PM [32mGET[39m /modules/contentLoader.mjs
+5:42:29 PM [32mGET[39m /modules/pageState.mjs
+5:42:29 PM [32mGET[39m /modules/nav.mjs
+5:42:29 PM [32mGET[39m /templates/thecorner.html
+5:42:29 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743349551
+5:42:40 PM [32mGET[39m /thecorner
+5:42:40 PM [32mGET[39m /css/global-style.css
+5:42:40 PM [32mGET[39m /modules/contentLoader.mjs
+5:42:40 PM [32mGET[39m /modules/pageState.mjs
+5:42:40 PM [32mGET[39m /modules/nav.mjs
+5:42:40 PM [32mGET[39m /templates/thecorner.html
+5:42:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743360218
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+5:43:48 PM [32mGET[39m /thecorner
+5:43:48 PM [32mGET[39m /css/global-style.css
+5:43:48 PM [32mGET[39m /modules/contentLoader.mjs
+5:43:48 PM [32mGET[39m /modules/pageState.mjs
+5:43:48 PM [32mGET[39m /modules/nav.mjs
+5:43:48 PM [32mGET[39m /templates/thecorner.html
+5:43:48 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743428983
+5:43:57 PM [32mGET[39m /templates/signup.html
+5:43:57 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709743437074
+5:43:57 PM [32mGET[39m /modules/postTo.mjs
+5:44:01 PM [33mPOST[39m /user/signUp
+5:44:01 PM [32mGET[39m /templates/thecorner.html
+5:44:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743441361
+5:44:14 PM [32mGET[39m /thecorner
+5:44:14 PM [32mGET[39m /css/global-style.css
+5:44:14 PM [32mGET[39m /modules/pageState.mjs
+5:44:14 PM [32mGET[39m /modules/contentLoader.mjs
+5:44:14 PM [32mGET[39m /modules/nav.mjs
+5:44:14 PM [32mGET[39m /templates/thecorner.html
+5:44:14 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743454768
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+5:51:33 PM [32mGET[39m /thecorner
+5:51:33 PM [32mGET[39m /modules/contentLoader.mjs
+5:51:33 PM [32mGET[39m /modules/pageState.mjs
+5:51:33 PM [32mGET[39m /css/global-style.css
+5:51:33 PM [32mGET[39m /modules/nav.mjs
+5:51:33 PM [32mGET[39m /templates/thecorner.html
+5:51:33 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743893585
+5:51:36 PM [32mGET[39m /templates/usersettings.html
+5:51:36 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709743896507
+5:51:36 PM [32mGET[39m /modules/getUserData.mjs
+5:51:36 PM [32mGET[39m /modules/deleteUser.mjs
+5:51:36 PM [32mGET[39m /modules/postTo.mjs
+5:51:36 PM [33mPOST[39m /user/getUserData
+5:51:37 PM [32mGET[39m /templates/login.html
+5:51:37 PM [32mGET[39m /scripts/login.mjs?timestamp=1709743897376
+5:51:38 PM [32mGET[39m /templates/thecorner.html
+5:51:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743898270
+5:51:46 PM [32mGET[39m /thecorner
+5:51:46 PM [32mGET[39m /css/global-style.css
+5:51:46 PM [32mGET[39m /modules/pageState.mjs
+5:51:46 PM [32mGET[39m /modules/contentLoader.mjs
+5:51:46 PM [32mGET[39m /modules/nav.mjs
+5:51:46 PM [32mGET[39m /templates/thecorner.html
+5:51:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743906592
+5:51:48 PM [32mGET[39m /templates/login.html
+5:51:48 PM [32mGET[39m /scripts/login.mjs?timestamp=1709743908626
+5:51:48 PM [32mGET[39m /modules/postTo.mjs
+5:51:54 PM [33mPOST[39m /user/login
+5:51:54 PM [32mGET[39m /templates/thecorner.html
+5:51:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743914890
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+5:52:17 PM [32mGET[39m /thecorner
+5:52:17 PM [32mGET[39m /css/global-style.css
+5:52:17 PM [32mGET[39m /modules/contentLoader.mjs
+5:52:17 PM [32mGET[39m /modules/pageState.mjs
+5:52:17 PM [32mGET[39m /modules/nav.mjs
+5:52:17 PM [32mGET[39m /templates/thecorner.html
+5:52:17 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743937070
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+5:52:47 PM [32mGET[39m /thecorner
+5:52:47 PM [32mGET[39m /css/global-style.css
+5:52:47 PM [32mGET[39m /modules/contentLoader.mjs
+5:52:47 PM [32mGET[39m /modules/pageState.mjs
+5:52:47 PM [32mGET[39m /modules/nav.mjs
+5:52:47 PM [32mGET[39m /templates/thecorner.html
+5:52:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709743967540
+5:53:20 PM [32mGET[39m /thecorner
+5:53:20 PM [32mGET[39m /css/global-style.css
+5:53:20 PM [32mGET[39m /modules/contentLoader.mjs
+5:53:20 PM [32mGET[39m /modules/pageState.mjs
+5:53:20 PM [32mGET[39m /modules/nav.mjs
+5:53:20 PM [32mGET[39m /templates/thecorner.html
+5:53:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744000583
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+5:53:26 PM [32mGET[39m /templates/usersettings.html
+5:53:26 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744006833
+5:53:26 PM [32mGET[39m /modules/getUserData.mjs
+5:53:26 PM [32mGET[39m /modules/deleteUser.mjs
+5:53:26 PM [32mGET[39m /modules/postTo.mjs
+5:53:26 PM [33mPOST[39m /user/getUserData
+5:53:27 PM [32mGET[39m /templates/login.html
+5:53:27 PM [32mGET[39m /scripts/login.mjs?timestamp=1709744007755
+5:53:28 PM [32mGET[39m /templates/thecorner.html
+5:53:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744008492
+5:53:56 PM [32mGET[39m /templates/login.html
+5:53:56 PM [32mGET[39m /scripts/login.mjs?timestamp=1709744036818
+5:53:57 PM [32mGET[39m /templates/signup.html
+5:53:57 PM [32mGET[39m /scripts/signup.mjs?timestamp=1709744037520
+5:53:58 PM [32mGET[39m /templates/thecorner.html
+5:53:58 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744038413
+5:53:59 PM [32mGET[39m /templates/login.html
+5:53:59 PM [32mGET[39m /scripts/login.mjs?timestamp=1709744039376
+5:54:01 PM [33mPOST[39m /user/login
+5:54:01 PM [32mGET[39m /templates/thecorner.html
+5:54:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744041643
+5:54:08 PM [32mGET[39m /thecorner
+5:54:08 PM [32mGET[39m /css/global-style.css
+5:54:08 PM [32mGET[39m /modules/contentLoader.mjs
+5:54:08 PM [32mGET[39m /modules/pageState.mjs
+5:54:08 PM [32mGET[39m /modules/nav.mjs
+5:54:08 PM [32mGET[39m /templates/thecorner.html
+5:54:08 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744048400
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+5:54:30 PM [32mGET[39m /thecorner
+5:54:31 PM [32mGET[39m /css/global-style.css
+5:54:31 PM [32mGET[39m /modules/contentLoader.mjs
+5:54:31 PM [32mGET[39m /modules/pageState.mjs
+5:54:31 PM [32mGET[39m /modules/nav.mjs
+5:54:31 PM [32mGET[39m /templates/thecorner.html
+5:54:31 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744071025
+5:54:34 PM [32mGET[39m /templates/usersettings.html
+5:54:34 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744074367
+5:54:34 PM [32mGET[39m /modules/getUserData.mjs
+5:54:34 PM [32mGET[39m /modules/deleteUser.mjs
+5:54:34 PM [32mGET[39m /modules/postTo.mjs
+5:54:34 PM [33mPOST[39m /user/getUserData
+5:54:35 PM [32mGET[39m /templates/thecorner.html
+5:54:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744075380
+5:54:40 PM [32mGET[39m /templates/usersettings.html
+5:54:40 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744080248
+5:54:40 PM [33mPOST[39m /user/getUserData
+5:54:41 PM [32mGET[39m /templates/login.html
+5:54:41 PM [32mGET[39m /scripts/login.mjs?timestamp=1709744081463
+5:54:42 PM [32mGET[39m /templates/thecorner.html
+5:54:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744082226
+5:54:43 PM [32mGET[39m /templates/login.html
+5:54:43 PM [32mGET[39m /scripts/login.mjs?timestamp=1709744083382
+5:54:47 PM [33mPOST[39m /user/login
+5:54:47 PM [32mGET[39m /templates/thecorner.html
+5:54:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744087275
+5:54:49 PM [32mGET[39m /templates/usersettings.html
+5:54:49 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744089773
+5:54:49 PM [33mPOST[39m /user/getUserData
+5:54:53 PM [32mGET[39m /templates/thecorner.html
+5:54:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744093946
+5:54:55 PM [32mGET[39m /templates/usersettings.html
+5:54:55 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744095104
+5:54:55 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+5:55:28 PM [32mGET[39m /usersettings
+5:55:28 PM [32mGET[39m /css/global-style.css
+5:55:28 PM [32mGET[39m /modules/contentLoader.mjs
+5:55:28 PM [32mGET[39m /modules/pageState.mjs
+5:55:28 PM [32mGET[39m /modules/nav.mjs
+5:55:28 PM [32mGET[39m /templates/usersettings.html
+5:55:28 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744128979
+5:55:28 PM [32mGET[39m /modules/getUserData.mjs
+5:55:28 PM [32mGET[39m /modules/deleteUser.mjs
+5:55:28 PM [32mGET[39m /modules/postTo.mjs
+5:55:28 PM [33mPOST[39m /user/getUserData
+5:56:00 PM [32mGET[39m /usersettings
+5:56:01 PM [32mGET[39m /css/global-style.css
+5:56:01 PM [32mGET[39m /modules/contentLoader.mjs
+5:56:01 PM [32mGET[39m /modules/pageState.mjs
+5:56:01 PM [32mGET[39m /modules/nav.mjs
+5:56:01 PM [32mGET[39m /templates/usersettings.html
+5:56:01 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744161034
+5:56:01 PM [32mGET[39m /modules/getUserData.mjs
+5:56:01 PM [32mGET[39m /modules/deleteUser.mjs
+5:56:01 PM [32mGET[39m /modules/postTo.mjs
+5:56:01 PM [33mPOST[39m /user/getUserData
+5:56:15 PM [32mGET[39m /usersettings
+5:56:15 PM [32mGET[39m /css/global-style.css
+5:56:15 PM [32mGET[39m /modules/contentLoader.mjs
+5:56:15 PM [32mGET[39m /modules/pageState.mjs
+5:56:15 PM [32mGET[39m /modules/nav.mjs
+5:56:15 PM [32mGET[39m /templates/usersettings.html
+5:56:15 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744175135
+5:56:15 PM [32mGET[39m /modules/getUserData.mjs
+5:56:15 PM [32mGET[39m /modules/deleteUser.mjs
+5:56:15 PM [32mGET[39m /modules/postTo.mjs
+5:56:15 PM [33mPOST[39m /user/getUserData
+5:57:28 PM [32mGET[39m /usersettings
+5:57:28 PM [32mGET[39m /css/global-style.css
+5:57:28 PM [32mGET[39m /modules/contentLoader.mjs
+5:57:28 PM [32mGET[39m /modules/pageState.mjs
+5:57:28 PM [32mGET[39m /modules/nav.mjs
+5:57:28 PM [32mGET[39m /templates/usersettings.html
+5:57:28 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744248415
+5:57:28 PM [32mGET[39m /modules/getUserData.mjs
+5:57:28 PM [32mGET[39m /modules/deleteUser.mjs
+5:57:28 PM [32mGET[39m /modules/postTo.mjs
+5:57:28 PM [33mPOST[39m /user/getUserData
+5:57:38 PM [32mGET[39m /templates/thecorner.html
+5:57:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744258627
+5:57:39 PM [32mGET[39m /templates/usersettings.html
+5:57:39 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744259853
+5:57:39 PM [33mPOST[39m /user/getUserData
+5:57:40 PM [32mGET[39m /templates/thecorner.html
+5:57:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1709744260328
+5:57:41 PM [32mGET[39m /templates/usersettings.html
+5:57:41 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744261586
+5:57:41 PM [33mPOST[39m /user/getUserData
+5:59:20 PM [32mGET[39m /usersettings
+5:59:20 PM [32mGET[39m /css/global-style.css
+5:59:20 PM [32mGET[39m /modules/contentLoader.mjs
+5:59:20 PM [32mGET[39m /modules/pageState.mjs
+5:59:20 PM [32mGET[39m /modules/nav.mjs
+5:59:20 PM [32mGET[39m /templates/usersettings.html
+5:59:20 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744360963
+5:59:20 PM [32mGET[39m /modules/getUserData.mjs
+5:59:20 PM [32mGET[39m /modules/deleteUser.mjs
+5:59:20 PM [32mGET[39m /modules/postTo.mjs
+5:59:20 PM [33mPOST[39m /user/getUserData
+6:00:48 PM [32mGET[39m /usersettings
+6:00:48 PM [32mGET[39m /css/global-style.css
+6:00:48 PM [32mGET[39m /modules/contentLoader.mjs
+6:00:48 PM [32mGET[39m /modules/pageState.mjs
+6:00:48 PM [32mGET[39m /modules/nav.mjs
+6:00:48 PM [32mGET[39m /templates/usersettings.html
+6:00:48 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1709744448648
+6:00:48 PM [32mGET[39m /modules/getUserData.mjs
+6:00:48 PM [32mGET[39m /modules/deleteUser.mjs
+6:00:48 PM [32mGET[39m /modules/postTo.mjs
+6:00:48 PM [33mPOST[39m /user/getUserData

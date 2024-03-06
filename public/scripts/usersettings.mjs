@@ -1,8 +1,17 @@
-import postTo from "../modules/postTo.mjs";
-import {displayLoggedIn} from "../modules/nav.mjs";
 import {updatePageState} from "../modules/pageState.mjs";
+import getUserData from "../modules/getUserData.mjs";
+import deleteUser from "../modules/deleteUser.mjs";
+import {displayLoggedIn} from "../modules/nav.mjs";
 
-const token = localStorage.getItem("token");
+const userData = await getUserData();
+
+if (typeof userData === "string") {
+	localStorage.removeItem("token");
+	displayLoggedIn(false);
+	displayError(userData);
+} else {
+	displayUserData(userData);
+}
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
 	localStorage.removeItem("token");
@@ -10,22 +19,9 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 	updatePageState("login");
 });
 
-try {
-	const response = await postTo("/user/getUserData", {token});
-	console.log(response);
-	if (response.status !== 400) {
-		const data = await response.json();
-
-		const userData = JSON.parse(data)[0];
-
-		displayUserData(userData);
-	} else {
-		console.log("Error...");
-		displayError("Wrong Username or Password");
-	}
-} catch (error) {
-	displayError("Something went wrong on the server... If the error persists, contact the creator of the page");
-}
+document.getElementById("deleteUserBtn").addEventListener("click", () => {
+	deleteUser();
+});
 
 function displayUserData(userData) {
 	console.log(userData.name);
@@ -35,4 +31,7 @@ function displayUserData(userData) {
 
 function displayError(msg) {
 	document.getElementById("errorDisplay").innerText = msg;
+	setTimeout(() => {
+		updatePageState("thecorner");
+	}, 3000);
 }

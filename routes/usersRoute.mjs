@@ -4,7 +4,7 @@ import {HTTPCodes} from "../modules/httpConstants.mjs";
 import SuperLogger from "../modules/SuperLogger.mjs";
 import {createHashPassword} from "../modules/hashPassword.mjs";
 import DBManager from "../modules/storageManager.mjs";
-import chalk from "chalk";
+import decryptUserToken from "../middleware/decryptUserToken.mjs";
 
 const USER_API = express.Router();
 USER_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
@@ -73,24 +73,29 @@ USER_API.post("/login", async (req, res, next) => {
 	}
 });
 
-USER_API.post("/getUserData", async (req, res, next) => {
+USER_API.post("/getUserData", decryptUserToken, async (req, res, next) => {
+	let user = req.user;
 	// This is using javascript object destructuring.
 	// Recomend reading up https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#syntax
 	// https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
-	const {token} = req.body;
-
-	if (token != "") {
-		const decryptedToken = atob(token);
-
-		const userData = decryptedToken.split(" ");
-
-		let user = new User();
-
-		user.email = userData[0];
-
-		user.pswHash = userData[1];
-
+	if (user) {
 		user = await user.getUserData();
+
+		if (user.length !== 0) {
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
+		} else {
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Wrong Username or Password").end();
+		}
+	} else {
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing Data Fields").end();
+	}
+});
+
+USER_API.post("/deleteUser", decryptUserToken, async (req, res, next) => {
+	let user = req.user;
+
+	if (user) {
+		user = await user.delete();
 
 		if (user.length !== 0) {
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
@@ -106,12 +111,6 @@ USER_API.post("/:id", (req, res, next) => {
 	/// TODO: Edit user
 	const user = new User(); //TODO: The user info comes as part of the request
 	user.save();
-});
-
-USER_API.delete("/:id", (req, res) => {
-	/// TODO: Delete user.
-	const user = new User(); //TODO: Actual user
-	user.delete();
 });
 
 export default USER_API;

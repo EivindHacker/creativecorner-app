@@ -3,14 +3,14 @@ import {setNavBtns} from "./nav.mjs";
 export default async function updatePageContent(pageState) {
 	try {
 		console.log(pageState);
-		await insertTemplatesFrom(pageState);
+		await insertTemplate(pageState);
 		updateURL(pageState); // Update the URL based on the page state
 	} catch (error) {
 		console.error("Error updating page content:", error);
 	}
 }
 
-async function insertTemplatesFrom(pageState) {
+async function insertTemplate(pageState) {
 	const content = await fetch(`./templates/${pageState}.html`).then((d) => d.text());
 	document.querySelector("main").innerHTML = content;
 	loadScripts(pageState);

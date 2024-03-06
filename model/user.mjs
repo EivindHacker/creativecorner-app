@@ -20,9 +20,8 @@ class User {
 		}
 	}
 
-	delete() {
-		/// TODO: What happens if the DBManager fails to complete its task?
-		DBManager.deleteUser(this);
+	async delete() {
+		return await DBManager.deleteUser(this);
 	}
 
 	async getUser() {

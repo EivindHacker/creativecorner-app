@@ -61,16 +61,17 @@ class DBManager {
 	async getUserData(user) {
 		const client = new pg.Client(this.#credentials);
 
-		console.log(user);
-
 		try {
 			await client.connect();
+
 			const output = await client.query('SELECT * from "public"."Users"  where email = $1 AND password = $2;', [user.email, user.pswHash]);
+
+			console.log(output.rows);
+
 			return output.rows;
+
 			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
 			// Of special intrest is the rows and rowCount properties of this object.
-
-			//TODO: Did the user get deleted?
 		} catch (error) {
 			//TODO : Error handling?? Remember that this is a module seperate from your server
 		} finally {
@@ -85,14 +86,23 @@ class DBManager {
 
 		try {
 			await client.connect();
-			const output = await client.query('Delete from "public"."Users"  where id = $1;', [user.id]);
+			//const output = await client.query('Delete from "public"."Users"  where id = $1;', [user.id]);
+
+			const output = await client.query(
+				'UPDATE "public"."Users" SET email = NULL, name = NULL, password = NULL WHERE email = $1 AND password = $2;',
+				[user.email, user.pswHash]
+			);
+
+			const msg = "User deleted successfully";
+
+			return msg;
 
 			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
 			// Of special intrest is the rows and rowCount properties of this object.
 
 			//TODO: Did the user get deleted?
 		} catch (error) {
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			console.log(error);
 		} finally {
 			client.end(); // Always disconnect from the database.
 		}
