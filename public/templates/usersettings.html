@@ -1,20 +1,30 @@
 <div class="appear sm cont">
 	<h1>Your Info</h1>
-	<div style="display: flex; flex-direction: column; gap: 10px; width: 100%">
-		<div><label>Name: </label><span id="nameDisplay"></span></div>
-		<div><label>Email: </label><span id="emailDisplay"></span></div>
+	<div id="userInfoWrapper" style="display: flex; flex-direction: column; gap: 10px; width: 100%">
+		<div><label>Name </label><span id="nameDisplay"></span></div>
+		<div><label>Email </label><span id="emailDisplay"></span></div>
 	</div>
-	<div>
-		<div><label>Name: </label><input type="text" /></div>
-		<div><label>Email: </label><input type="text" /></div>
-		<button>Change Password</button>
-		<div>
+	<div id="editUserWrapper" style="display: none; flex-direction: column; gap: 10px">
+		<div id="editUserInfoWrapper" style="display: flex; flex-direction: column; gap: 10px">
+			<div><label>Name </label><input type="text" /></div>
+			<div><label>Email </label><input type="text" /></div>
+			<label>User Type</label>
+			<div style="display: flex; gap: 10px; margin-top: -5px; margin-bottom: 5px">
+				<div><label>Writer</label><input type="radio" id="" name="user-type" checked="true" /></div>
+				<div><label>Musician</label><input type="radio" id="user-type" name="user-type" /></div>
+			</div>
+		</div>
+
+		<div id="changePasswordWrapper" style="display: none">
 			<div><label>Old Password: </label><input type="text" /></div>
 			<div><label>New Password: </label><input type="text" /></div>
 		</div>
+
+		<button id="submitChangesBtn">Submit Changes</button>
+		<button id="changePasswordBtn">Change Password</button>
+		<button id="deleteUserBtn" style="color: red; border-color: red">Delete Account</button>
 	</div>
 	<button id="editUserBtn">Edit User</button>
 	<button id="logoutBtn" class="cancel">Log Out</button>
-	<button id="deleteUserBtn" style="margin-top: 20px; color: red; border-color: red">Delete Account</button>
 </div>
 <div style="margin: auto; margin-top: 25px" class="sm"><h3 id="errorDisplay" class="err"></h3></div>
