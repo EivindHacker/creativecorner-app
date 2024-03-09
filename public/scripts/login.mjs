@@ -11,12 +11,12 @@ document.getElementById("goToSignUpBtn").addEventListener("click", async () => {
 document.getElementById("loginBtn").addEventListener("click", async () => {
 	clearErrorDisplay();
 	const email = document.getElementById("emailInputLogin").value;
-	const pswHash = document.getElementById("emailInputLogin").value;
+	const pswHash = document.getElementById("pswHashInputLogin").value;
 
 	const user = {email, pswHash};
 	try {
 		const response = await postTo("/user/login", user);
-		if (response.status !== 400) {
+		if (response.ok) {
 			const data = await response.json();
 
 			const token = JSON.parse(data);
@@ -25,11 +25,9 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
 
 			displayLoggedIn(true);
 			updatePageState("thecorner");
-		} else {
-			displayError("Wrong Username or Password");
 		}
 	} catch (error) {
-		displayError("Something went wrong on the server... If the error persists, contact the creator of the page");
+		displayError(error.message);
 	}
 });
 

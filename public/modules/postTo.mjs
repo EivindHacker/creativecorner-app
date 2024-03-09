@@ -7,6 +7,11 @@ export default async function postTo(url, data) {
 		body: JSON.stringify(data),
 	};
 
-	const respon = await fetch(url, header);
-	return respon;
+	const response = await fetch(url, header);
+
+	if (!response.ok) {
+		const errorMessage = await response.text(); // Extract the error message
+		throw new Error(errorMessage); // Throw error with error message
+	}
+	return response;
 }

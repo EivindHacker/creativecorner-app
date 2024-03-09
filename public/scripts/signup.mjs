@@ -13,12 +13,21 @@ document.getElementById("createUserButton").onclick = async function (e) {
 	const email = document.getElementById("emailInputSignUp").value;
 	const pswHash = document.getElementById("pswHashInputSignUp").value;
 
-	const user = {name, email, pswHash};
+	const writerInput = document.getElementById("writerInput");
+	const musicianInput = document.getElementById("musicianInput");
+
+	let user = {};
+
+	if (writerInput.checked) {
+		user = {name, email, pswHash, role: "Writer"};
+	} else {
+		user = {name, email, pswHash, role: "Musician"};
+	}
+
 	try {
 		const response = await postTo("/user/signUp", user);
 		console.log(response);
-		if (response.status === 200) {
-			console.log("kommer inn");
+		if (response.ok) {
 			const data = await response.json();
 
 			const token = JSON.parse(data);
@@ -27,11 +36,9 @@ document.getElementById("createUserButton").onclick = async function (e) {
 
 			displayLoggedIn(true);
 			updatePageState("thecorner");
-		} else {
-			displayError("Something went wrong on the server... If the error persists, contact the creator of the page");
 		}
 	} catch (error) {
-		displayError("Something went wrong on the server... If the error persists, contact the creator of the page");
+		displayError(error.message);
 	}
 };
 function displayError(msg) {

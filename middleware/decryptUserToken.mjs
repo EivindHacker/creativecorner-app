@@ -12,7 +12,7 @@ export default function decryptUserToken(req, res, next) {
 
 	user.pswHash = userData[1];
 
-	req.user = user;
+	req.token = user;
 
 	next();
 }

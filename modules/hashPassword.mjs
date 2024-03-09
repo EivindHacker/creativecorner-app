@@ -5,5 +5,3 @@ function createHashPassword(pass) {
 	hmac.update(pass);
 	return hmac.digest("hex");
 }
-
-export {createHashPassword};

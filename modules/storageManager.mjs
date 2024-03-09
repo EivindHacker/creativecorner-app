@@ -13,23 +13,21 @@ class DBManager {
 		};
 	}
 
-	async updateUser(user) {
+	async createUser(user) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
-			const output = await client.query('Update "public"."Users" set "name" = $1, "email" = $2, "password" = $3 where id = $4;', [
-				user.name,
-				user.email,
-				user.pswHash,
-				user.id,
-			]);
+			const output = await client.query(
+				'INSERT INTO "public"."Users"("name", "email", "password", "role") VALUES($1::Text, $2::Text, $3::Text, $4::Text) RETURNING id;',
+				[user.name, user.email, user.pswHash, user.role]
+			);
 
-			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
-			// Of special intrest is the rows and rowCount properties of this object.
-
-			//TODO Did we update the user?
+			if (output.rows.length == 1) {
+				user.id = output.rows[0].id;
+			}
 		} catch (error) {
+			console.error(error);
 			//TODO : Error handling?? Remember that this is a module seperate from your server
 		} finally {
 			client.end(); // Always disconnect from the database.
@@ -38,12 +36,36 @@ class DBManager {
 		return user;
 	}
 
-	async getUser(user) {
+	async checkUserExistence(user) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
-			const output = await client.query('SELECT * from "public"."Users"  where password = $1;', [user.pswHash]);
+			const output = await client.query('SELECT EXISTS (SELECT 1 FROM "public"."Users" WHERE email = $1::Text)', [user.email]);
+
+			console.log(output.rows[0].exists);
+
+			if (output.rows[0].exists) {
+				console.log("User already exists");
+				return true;
+			} else {
+				console.log("User does not exists");
+				return false;
+			}
+		} catch (error) {
+			console.error(error);
+			//TODO : Error handling?? Remember that this is a module seperate from your server
+		} finally {
+			client.end(); // Always disconnect from the database.
+		}
+	}
+
+	async login(user) {
+		const client = new pg.Client(this.#credentials);
+
+		try {
+			await client.connect();
+			const output = await client.query('SELECT * from "public"."Users"  where password = $1 AND email = $2;', [user.pswHash, user.email]);
 			return output.rows;
 			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
 			// Of special intrest is the rows and rowCount properties of this object.
@@ -69,9 +91,6 @@ class DBManager {
 			console.log(output.rows);
 
 			return output.rows;
-
-			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
-			// Of special intrest is the rows and rowCount properties of this object.
 		} catch (error) {
 			//TODO : Error handling?? Remember that this is a module seperate from your server
 		} finally {
@@ -89,16 +108,13 @@ class DBManager {
 			//const output = await client.query('Delete from "public"."Users"  where id = $1;', [user.id]);
 
 			const output = await client.query(
-				'UPDATE "public"."Users" SET email = NULL, name = NULL, password = NULL WHERE email = $1 AND password = $2;',
+				'UPDATE "public"."Users" SET email = NULL, name = NULL, password = NULL, role = NULL WHERE email = $1 AND password = $2;',
 				[user.email, user.pswHash]
 			);
 
 			const msg = "User deleted successfully";
 
 			return msg;
-
-			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
-			// Of special intrest is the rows and rowCount properties of this object.
 
 			//TODO: Did the user get deleted?
 		} catch (error) {
@@ -110,18 +126,45 @@ class DBManager {
 		return user;
 	}
 
-	async createUser(user) {
+	async updateUserInfo(user) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
 			const output = await client.query(
-				'INSERT INTO "public"."Users"("name", "email", "password") VALUES($1::Text, $2::Text, $3::Text) RETURNING id;',
-				[user.name, user.email, user.pswHash]
+				`UPDATE "public"."Users"
+				SET "name" = $1::Text, 
+					"email" = $2::Text,
+					"role" = $3::Text
+				WHERE password = $4::Text AND email = $5::Text;`,
+				[user.name, user.newEmail, user.role, user.pswHash, user.email]
 			);
 
-			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
-			// Of special intrest is the rows and rowCount properties of this object.
+			if (output.rows.length == 1) {
+				// We stored the user in the DB.
+				user.id = output.rows[0].id;
+			}
+		} catch (error) {
+			console.error(error);
+			//TODO : Error handling?? Remember that this is a module seperate from your server
+		} finally {
+			client.end(); // Always disconnect from the database.
+		}
+
+		return user;
+	}
+
+	async updateUserPassword(user) {
+		const client = new pg.Client(this.#credentials);
+
+		try {
+			await client.connect();
+			const output = await client.query(
+				`UPDATE "public"."Users"
+				SET "password" = $1::Text
+				WHERE password = $2::Text AND email = $3::Text;`,
+				[user.newPass, user.pswHash, user.email]
+			);
 
 			if (output.rows.length == 1) {
 				// We stored the user in the DB.
@@ -160,5 +203,3 @@ if (connectionString == undefined) {
 }
 
 export default new DBManager(connectionString);
-
-//

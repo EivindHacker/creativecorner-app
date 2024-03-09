@@ -18,6 +18,6 @@ export default async function deleteUser() {
 
 		return data;
 	} catch (error) {
-		return "Something went wrong on the server... If the error persists, contact the creator of the page";
+		return error.message;
 	}
 }
