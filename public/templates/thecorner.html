@@ -21,31 +21,32 @@
 
 <!-- CREATE SONG IDEA -->
 
-<div class="appear lg cont" style="display: none">
+<div class="appear lg cont" id="createIdeaWrapper" style="display: none">
 	<h2>Create Song Idea</h2>
 	<div class="song-input-card">
-		<div><label>Title: </label> <input type="text" id="emailTitle" /><br /></div>
+		<div><label>Title: </label> <input type="text" id="titleInput" /><br /></div>
 		<label>Description: </label>
 		<textarea style="margin-top: -15px" id="descriptionInput"></textarea>
 		<h4>Genre Suggestions</h4>
 		<div style="margin-top: -45px; margin-bottom: 10px">
-			<input type="text" />
-			<button>Add Genre</button>
+			<input id="genreInput" type="text" />
+			<button id="addGenreBtn">Add Genre</button>
 		</div>
-		<div class="genre-wrapper">
-			<span class="genre">EDM</span>
-			<span class="genre">Electronic</span>
-			<span class="genre">Hyper Pop</span>
-		</div>
+		<div id="genreInputDisplay" class="genre-wrapper"></div>
 	</div>
-	<button style="font-size: x-large; margin-top: 20px">Save Idea</button>
+	<button id="saveIdeaBtn" style="margin-top: 20px; border-color: greenyellow; color: greenyellow">Save Idea</button>
 </div>
 
 <!-- THE CORNER -->
 
-<div class="appear lg cont">
+<div style="margin: auto; margin-top: 25px; text-align: center" class="sm"><h3 id="errorDisplay" class="err"></h3></div>
+
+<div id="ideasList" class="appear lg cont">
 	<h2>Song Ideas</h2>
-	<div class="song-card">
+
+	<!--
+
+	<div class="idea-card">
 		<h3 id="title">Carrots on Mars</h3>
 		<div class="creator-wrapper">
 			<span>By:</span>
@@ -86,7 +87,7 @@
 				</li>
 			</ul>
 
-			<!-- Only Visible for Musicians -->
+			 Only Visible for Musicians
 
 			<div id="addCreationWrapper" style="display: none" class="add-creation-wrapper">
 				<h4>Add Creation</h4>
@@ -98,4 +99,5 @@
 			<button id="addCreationBtn" style="margin-top: 10px; display: block">Add Creation</button>
 		</div>
 	</div>
+	-->
 </div>

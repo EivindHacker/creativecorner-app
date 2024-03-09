@@ -7,6 +7,7 @@ import printDeveloperStartupInportantInformationMSG from "./modules/developerHel
 
 // Import USER_API and other route handlers as needed
 import USER_API from "./routes/usersRoute.mjs";
+import IDEA_API from "./routes/IdeasRoute.mjs";
 
 printDeveloperStartupInportantInformationMSG();
 
@@ -29,6 +30,7 @@ server.use(express.static(path.join(__dirname, "public")));
 
 // Telling the server to use the USER_API
 server.use("/user", USER_API);
+server.use("/idea", IDEA_API);
 
 // Route all requests to the main HTML file
 server.get("*", (req, res) => {

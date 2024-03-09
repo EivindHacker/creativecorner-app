@@ -9,8 +9,6 @@ function createHashPassword(req, res, next) {
 		return hmac.digest("hex");
 	}
 
-	console.log("Running");
-
 	if (pswHash) {
 		req.hashedPassword = hasher(pswHash);
 	}

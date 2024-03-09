@@ -8,8 +8,6 @@ import decryptUserToken from "../middleware/decryptUserToken.mjs";
 const USER_API = express.Router();
 USER_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
 
-const users = [];
-
 USER_API.get("/", (req, res, next) => {
 	SuperLogger.log("Demo of logging tool");
 	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);

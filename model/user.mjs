@@ -11,12 +11,7 @@ class User {
 	}
 
 	async createUser() {
-		/// TODO: What happens if the DBManager fails to complete its task?
-		if (this.id == null) {
-			return await DBManager.createUser(this);
-		} else {
-			return await DBManager.updateUser(this);
-		}
+		return await DBManager.createUser(this);
 	}
 
 	async login() {

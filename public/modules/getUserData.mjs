@@ -6,7 +6,7 @@ export default async function getUserData() {
 	try {
 		const response = await postTo("/user/getUserData", {token});
 		console.log(response);
-		if (response.status !== 400) {
+		if (response.ok) {
 			const data = await response.json();
 
 			const userData = JSON.parse(data)[0];

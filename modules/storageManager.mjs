@@ -154,21 +154,34 @@ class DBManager {
 		return user;
 	}
 
-	async updateUserPassword(user) {
+	async getIdeas() {
+		const client = new pg.Client(this.#credentials);
+
+		try {
+			await client.connect();
+
+			const output = await client.query('SELECT * FROM "public"."Ideas" ORDER BY id DESC;');
+
+			return output.rows;
+		} catch (error) {
+			//TODO : Error handling?? Remember that this is a module seperate from your server
+		} finally {
+			client.end(); // Always disconnect from the database.
+		}
+	}
+
+	async createIdea(idea) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
 			const output = await client.query(
-				`UPDATE "public"."Users"
-				SET "password" = $1::Text
-				WHERE password = $2::Text AND email = $3::Text;`,
-				[user.newPass, user.pswHash, user.email]
+				'INSERT INTO "public"."Ideas"("title", "creator_id", "creator_name", "genres", description) VALUES($1::Text, $2::Integer, $3::Text, $4::Text, $5::Text) RETURNING id;',
+				[idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.description]
 			);
 
 			if (output.rows.length == 1) {
-				// We stored the user in the DB.
-				user.id = output.rows[0].id;
+				idea.id = output.rows[0].id;
 			}
 		} catch (error) {
 			console.error(error);
@@ -177,25 +190,12 @@ class DBManager {
 			client.end(); // Always disconnect from the database.
 		}
 
-		return user;
+		return idea;
 	}
 }
 
-// The following is thre examples of how to get the db connection string from the enviorment variables.
-// They accomplish the same thing but in different ways.
-// It is a judgment call which one is the best. But go for the one you understand the best.
-
 // 1:
 let connectionString = process.env.ENVIORMENT == "local" ? process.env.DB_CONNECTIONSTRING_LOCAL : process.env.DB_CONNECTIONSTRING_PROD;
-
-// 2:
-connectionString = process.env.DB_CONNECTIONSTRING_LOCAL;
-if (process.env.ENVIORMENT != "local") {
-	connectionString = process.env.DB_CONNECTIONSTRING_PROD;
-}
-
-//3:
-connectionString = process.env["DB_CONNECTIONSTRING_" + process.env.ENVIORMENT.toUpperCase()];
 
 // We are using an enviorment variable to get the db credentials
 if (connectionString == undefined) {
