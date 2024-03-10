@@ -1,5 +1,4 @@
 import pg from "pg";
-import SuperLogger from "./SuperLogger.mjs";
 
 /// TODO: is the structure / design of the DBManager as good as it could be?
 
@@ -154,13 +153,18 @@ class DBManager {
 		return user;
 	}
 
-	async getIdeas() {
+	async getIdeas(idea) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
 
-			const output = await client.query('SELECT * FROM "public"."Ideas" ORDER BY id DESC;');
+			let output = await client.query('SELECT * FROM "public"."Ideas" ORDER BY id DESC;');
+
+			if (idea.id !== "null") {
+				console.log("id", idea.id);
+				output = await client.query('SELECT * FROM "public"."Ideas" WHERE creator_id = $1::Integer ORDER BY id DESC;', [idea.id]);
+			}
 
 			return output.rows;
 		} catch (error) {
@@ -183,6 +187,49 @@ class DBManager {
 			if (output.rows.length == 1) {
 				idea.id = output.rows[0].id;
 			}
+		} catch (error) {
+			console.error(error);
+			//TODO : Error handling?? Remember that this is a module seperate from your server
+		} finally {
+			client.end(); // Always disconnect from the database.
+		}
+
+		return idea;
+	}
+
+	async getIdea(idea) {
+		const client = new pg.Client(this.#credentials);
+
+		try {
+			await client.connect();
+
+			const output = await client.query('SELECT * FROM "public"."Ideas" where id = $1', [idea.id]);
+
+			const aIdea = output.rows[0];
+
+			return aIdea;
+		} catch (error) {
+			console.error(error);
+		} finally {
+			client.end();
+		}
+
+		return idea;
+	}
+
+	async rateIdea(idea) {
+		const client = new pg.Client(this.#credentials);
+
+		try {
+			await client.connect();
+
+			const output = await client.query(`UPDATE "public"."Ideas" SET "rating" = $1::Text WHERE "id" = $2::Integer;`, [idea.rating, idea.id]);
+
+			if (output.rows.length == 1) {
+				idea.id = output.rows[0].id;
+			}
+
+			return idea;
 		} catch (error) {
 			console.error(error);
 			//TODO : Error handling?? Remember that this is a module seperate from your server

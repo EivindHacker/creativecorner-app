@@ -1,36 +1,4 @@
-import calcRatingAverage from "../modules/calcRatingAverage.mjs";
-
-export default function createIdeaCard(data, index) {
-	console.log(data);
-
-	const genres = data.genres.split(",");
-
-	let genreHtml = "";
-
-	genres.forEach((genre) => {
-		genreHtml += `<span class="genre">${genre}</span>`;
-	});
-
-	let creationsHtml = "";
-
-	if (data.creations !== null) {
-		const creations = data.creations.split(",");
-
-		creations.forEach((creation) => {
-			const creationElements = creation.split("|");
-
-			creationsHtml += `<li>
-            Title: <span>${creationElements[0]}</span>&nbsp;By: <span>${creationElements[1]}</span>&nbsp;Link: <a href="${creationElements[2]}">${creationElements[2]}</a>
-        </li>`;
-		});
-	} else {
-		creationsHtml = "No creations yet...";
-	}
-
-	const ratingAverage = calcRatingAverage(data.rating);
-
-	const ideaCard = `
-    <div class="idea-card appear" style="animation-delay: ${index / 5}s" id="card_${data.id}">
+<div class="idea-card" id="card_${data.id}">
 	<h3 id="title">${data.title}</h3>
 	<div class="creator-wrapper">
 		<span>By:</span>
@@ -42,22 +10,23 @@ export default function createIdeaCard(data, index) {
 	<div class="genre-wrapper">${genreHtml}</div>
 	<div class="rating-wrapper">
 		<h4>Rating</h4>
-		<span>⭐️</span><span id="rating_${data.id}" class="rating">${ratingAverage ? ratingAverage : "-"}</span>
+		<span>⭐️</span><span class="rating">${data.rating ? data.rating : "-"}</span>
 	</div>
 	<div id="cardUserInteractivesWrapper" style="display: none">
 		<div class="rating-input-wrapper">
 			<input id="ratingInput_${data.id}" style="width: 40px" type="number" min="0" max="5" />
 			<button
-				id="submitRatingBtn_${data.id}">
+				id="submitRatingBtn_${
+    data.id
+}">
 				Submit Rating
 			</button>
 		</div>
-        <div style="margin-top: -15px">
-		    <h4>Creations</h4>
-		    <ul class="creations-wrapper" >
-		    	${creationsHtml}
-		    </ul>
-        </div>
+		<h4>Creations</h4>
+		<ul class="creations-wrapper">
+			${creationsHtml}
+		</ul>
+
 		<!-- Only Visible for Musicians -->
 
 		<div id="addCreationWrapper_${data.id}" style="display: none" class="add-creation-wrapper">
@@ -70,7 +39,3 @@ export default function createIdeaCard(data, index) {
 		<button id="addCreationBtn_${data.id}" style="margin-top: 10px; display: block">Add Creation</button>
 	</div>
 </div>
-`;
-
-	return ideaCard;
-}

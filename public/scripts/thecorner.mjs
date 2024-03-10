@@ -1,4 +1,6 @@
+import calcRatingAverage from "../modules/calcRatingAverage.mjs";
 import getIdeas from "../modules/getIdeas.mjs";
+import getUserData from "../modules/getUserData.mjs";
 import {updatePageState} from "../modules/pageState.mjs";
 import submitCreation from "../modules/submitCreation.mjs";
 import submitIdea from "../modules/submitIdea.mjs";
@@ -34,6 +36,13 @@ createIdeaBtn.addEventListener("click", () => {
 	createIdeaBtn.style.display = "none";
 });
 
+document.getElementById("cancelIdeaBtn").addEventListener("click", hideCreateIdeaWrapper);
+
+function hideCreateIdeaWrapper() {
+	document.getElementById("createIdeaWrapper").style.display = "none";
+	createIdeaBtn.style.display = "block";
+}
+
 const genreSuggestions = [];
 
 document.getElementById("addGenreBtn").addEventListener("click", () => {
@@ -46,14 +55,24 @@ document.getElementById("addGenreBtn").addEventListener("click", () => {
 	genreInput.value = "";
 });
 
-document.getElementById("saveIdeaBtn").addEventListener("click", () => {
+document.getElementById("saveIdeaBtn").addEventListener("click", async () => {
 	const idea = {
 		title: document.getElementById("titleInput").value,
 		description: document.getElementById("descriptionInput").value,
 		genres: genreSuggestions,
 	};
 
-	submitIdea(idea);
+	const response = await submitIdea(idea);
+
+	const ideaResponse = JSON.parse(response);
+
+	ideaResponse.creations = null;
+
+	if (typeof ideaResponse === "object") {
+		clearIdeasDisplay();
+		getAllIdeas();
+		hideCreateIdeaWrapper();
+	}
 });
 
 //----------- IDEA CARDS -----------
@@ -63,9 +82,14 @@ function createCardListeners(id) {
 		toggleCreationsWrapper(id);
 	});
 
-	document.getElementById(`submitRatingBtn_${id}`).addEventListener("click", () => {
+	document.getElementById(`submitRatingBtn_${id}`).addEventListener("click", async () => {
 		const rating = document.getElementById(`ratingInput_${id}`).value;
-		submitRating(parseInt(rating));
+		const ratingObject = {rating, id};
+		const response = await submitRating(ratingObject);
+
+		const updatedRatings = JSON.parse(response);
+		const updatedRatingAverage = calcRatingAverage(updatedRatings.rating);
+		document.getElementById(`rating_${id}`).textContent = updatedRatingAverage;
 	});
 
 	document.getElementById(`saveCreationBtn_${id}`).addEventListener("click", () => {
@@ -73,7 +97,8 @@ function createCardListeners(id) {
 		const artist = document.getElementById(`creationArtistInput_${id}`).value;
 		const link = document.getElementById(`crationLinkInput_${id}`).value;
 		const inputObject = {title, artist, link};
-		submitCreation(inputObject);
+		const response = submitCreation(inputObject);
+		console.log(JSON.parse(response));
 	});
 }
 
@@ -94,30 +119,39 @@ function toggleCreationsWrapper(id) {
 
 const ideasList = document.getElementById("ideasList");
 
-async function displayIdeas() {
+async function getAllIdeas() {
 	const response = await getIdeas();
 
-	if (Array.isArray(response)) {
-		response.forEach((idea) => {
-			const ideaCardHtml = createIdeaCard(idea);
+	displayIdeas(response);
+}
+
+function displayIdeas(ideas) {
+	if (Array.isArray(ideas)) {
+		ideas.forEach((idea, index) => {
+			const ideaCardHtml = createIdeaCard(idea, index);
 			ideasList.insertAdjacentHTML("beforeend", ideaCardHtml);
 			createCardListeners(idea.id);
 		});
 	} else {
 		errorDisplay.textContent = response;
 	}
-
-	const cardUserInteractivesWrapper = document.querySelectorAll("#cardUserInteractivesWrapper");
-
-	console.log(cardUserInteractivesWrapper);
-
-	cardUserInteractivesWrapper.forEach((card) => {
-		if (localStorage.getItem("token")) {
-			card.style.display = "block";
-		} else {
-			card.style.display = "none";
-		}
-	});
 }
 
-displayIdeas();
+getAllIdeas();
+
+function clearIdeasDisplay() {
+	ideasList.innerHTML = "";
+}
+
+const showUserIdeasBtn = document.getElementById("showUserIdeasBtn");
+
+showUserIdeasBtn.addEventListener("click", async () => {
+	const userData = await getUserData();
+
+	const ideasResponse = await getIdeas(userData.id);
+	if (typeof ideasResponse === "object") {
+		clearIdeasDisplay();
+		displayIdeas(ideasResponse);
+		hideCreateIdeaWrapper();
+	}
+});

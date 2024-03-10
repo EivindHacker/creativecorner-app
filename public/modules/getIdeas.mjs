@@ -1,10 +1,14 @@
 import getFrom from "./getFrom.mjs";
 
-export default async function getIdeas() {
-	console.log("getting ideas...");
+export default async function getIdeas(id) {
+	let url = "idea/getIdeas/null";
+
+	if (id) {
+		url = `idea/getIdeas/${id}`;
+	}
 
 	try {
-		const response = await getFrom("idea/getIdeas");
+		const response = await getFrom(url);
 		if (response.ok) {
 			const data = await response.json();
 

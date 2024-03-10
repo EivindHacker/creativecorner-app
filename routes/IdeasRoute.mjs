@@ -15,9 +15,20 @@ IDEA_API.get("/", (req, res, next) => {
 	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
 });
 
-IDEA_API.get("/getIdeas", async (req, res, next) => {
+IDEA_API.get("/getIdeas/:id", async (req, res, next) => {
+	const {id} = req.params;
+
 	let ideas = new Idea();
+
+	if (id) {
+		ideas.id = id;
+	}
+
+	console.log(ideas.id);
+
 	ideas = await ideas.getIdeas();
+
+	console.log(ideas);
 
 	if (ideas.length !== 0) {
 		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
@@ -27,12 +38,12 @@ IDEA_API.get("/getIdeas", async (req, res, next) => {
 });
 
 IDEA_API.post("/createIdea", decryptUserToken, async (req, res, next) => {
-	const userData = req.body;
+	const ideaInput = req.body;
 
 	let idea = new Idea();
-	idea.title = userData.title;
-	idea.description = userData.description;
-	idea.genres = createGenreString(userData.genres);
+	idea.title = ideaInput.title;
+	idea.description = ideaInput.description;
+	idea.genres = createGenreString(ideaInput.genres);
 
 	let user = new User();
 
@@ -54,6 +65,45 @@ IDEA_API.post("/createIdea", decryptUserToken, async (req, res, next) => {
 				.status(HTTPCodes.ClientSideErrorRespons.BadRequest)
 				.send("Could not create Idea, if the error persist, contact the creator of the page...")
 				.end();
+		}
+	} else {
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Your authentication token is not valid, try to re-login...").end();
+	}
+});
+
+IDEA_API.post("/rateIdea", decryptUserToken, async (req, res, next) => {
+	let user = new User();
+
+	user.email = req.token.email;
+	user.pswHash = req.token.pswHash;
+
+	user = await user.getUserData();
+
+	if (user.length !== 0) {
+		let idea = new Idea();
+
+		idea.id = req.body.id;
+
+		const selectedIdeaData = await idea.getIdea();
+
+		const prevRatings = selectedIdeaData.rating;
+
+		if (prevRatings) {
+			const updatedRatings = prevRatings + "," + req.body.rating;
+
+			idea.rating = updatedRatings;
+
+			idea = await idea.rateIdea();
+		} else {
+			idea.rating = req.body.rating;
+
+			idea = await idea.rateIdea();
+		}
+
+		if (typeof idea.id === "number" && idea.rating != prevRatings) {
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
+		} else {
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Could not rate idea...").end();
 		}
 	} else {
 		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Your authentication token is not valid, try to re-login...").end();

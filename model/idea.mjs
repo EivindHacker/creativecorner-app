@@ -19,6 +19,14 @@ class Idea {
 	async getIdeas() {
 		return await DBManager.getIdeas(this);
 	}
+
+	async getIdea() {
+		return await DBManager.getIdea(this);
+	}
+
+	async rateIdea() {
+		return await DBManager.rateIdea(this);
+	}
 }
 
 export default Idea;

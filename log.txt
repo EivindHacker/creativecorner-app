@@ -20742,3 +20742,4400 @@ Database connection  postgresql://localhost/CC-DB
 Server enviorment local
 Database connection  postgresql://localhost/CC-DB
 ####################
+12:42:33 AM [32mGET[39m /usersettings
+12:42:33 AM [32mGET[39m /css/global-style.css
+12:42:33 AM [32mGET[39m /modules/contentLoader.mjs
+12:42:33 AM [32mGET[39m /modules/pageState.mjs
+12:42:33 AM [32mGET[39m /modules/nav.mjs
+12:42:33 AM [32mGET[39m /templates/usersettings.html
+12:42:33 AM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710027753757
+12:42:33 AM [32mGET[39m /modules/getUserData.mjs
+12:42:33 AM [32mGET[39m /modules/deleteUser.mjs
+12:42:33 AM [32mGET[39m /modules/editUser.mjs
+12:42:33 AM [32mGET[39m /modules/postTo.mjs
+12:42:33 AM [33mPOST[39m /user/getUserData
+12:42:35 AM [32mGET[39m /templates/thecorner.html
+12:42:35 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710027755030
+12:42:35 AM [32mGET[39m /modules/getIdeas.mjs
+12:42:35 AM [32mGET[39m /modules/submitCreation.mjs
+12:42:35 AM [32mGET[39m /modules/submitIdea.mjs
+12:42:35 AM [32mGET[39m /modules/submitRating.mjs
+12:42:35 AM [32mGET[39m /modules/getFrom.mjs
+12:42:35 AM [32mGET[39m /scripts/ideasList.mjs
+12:42:35 AM [32mGET[39m /idea/getIdeas
+12:42:51 AM [32mGET[39m /thecorner
+12:42:51 AM [32mGET[39m /css/global-style.css
+12:42:51 AM [32mGET[39m /modules/contentLoader.mjs
+12:42:51 AM [32mGET[39m /modules/pageState.mjs
+12:42:51 AM [32mGET[39m /modules/nav.mjs
+12:42:51 AM [32mGET[39m /templates/thecorner.html
+12:42:51 AM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710027771758
+12:42:51 AM [32mGET[39m /modules/getIdeas.mjs
+12:42:51 AM [32mGET[39m /modules/submitCreation.mjs
+12:42:51 AM [32mGET[39m /modules/submitIdea.mjs
+12:42:51 AM [32mGET[39m /modules/submitRating.mjs
+12:42:51 AM [32mGET[39m /scripts/ideasList.mjs
+12:42:51 AM [32mGET[39m /modules/getFrom.mjs
+12:42:51 AM [32mGET[39m /modules/postTo.mjs
+12:42:51 AM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+12:51:37 PM [32mGET[39m /templates/usersettings.html
+12:51:37 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710071497153
+12:51:37 PM [32mGET[39m /modules/getUserData.mjs
+12:51:37 PM [32mGET[39m /modules/deleteUser.mjs
+12:51:37 PM [32mGET[39m /modules/editUser.mjs
+12:51:37 PM [33mPOST[39m /user/getUserData
+12:51:38 PM [32mGET[39m /templates/login.html
+12:51:38 PM [32mGET[39m /scripts/login.mjs?timestamp=1710071498836
+12:51:40 PM [32mGET[39m /templates/thecorner.html
+12:51:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710071500382
+12:51:40 PM [32mGET[39m /idea/getIdeas
+12:51:46 PM [32mGET[39m /templates/login.html
+12:51:46 PM [32mGET[39m /scripts/login.mjs?timestamp=1710071506104
+12:51:53 PM [33mPOST[39m /user/login
+12:51:53 PM [32mGET[39m /templates/thecorner.html
+12:51:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710071513633
+12:51:53 PM [32mGET[39m /idea/getIdeas
+1:15:38 PM [32mGET[39m /templates/usersettings.html
+1:15:38 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710072938947
+1:15:38 PM [33mPOST[39m /user/getUserData
+1:15:39 PM [32mGET[39m /templates/thecorner.html
+1:15:39 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710072939416
+1:15:39 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+1:26:00 PM [32mGET[39m /thecorner
+1:26:00 PM [32mGET[39m /css/global-style.css
+1:26:00 PM [32mGET[39m /modules/contentLoader.mjs
+1:26:00 PM [32mGET[39m /modules/pageState.mjs
+1:26:00 PM [32mGET[39m /modules/nav.mjs
+1:26:00 PM [32mGET[39m /templates/thecorner.html
+1:26:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073560158
+1:26:00 PM [32mGET[39m /modules/getIdeas.mjs
+1:26:00 PM [32mGET[39m /modules/submitCreation.mjs
+1:26:00 PM [32mGET[39m /modules/submitIdea.mjs
+1:26:00 PM [32mGET[39m /modules/submitRating.mjs
+1:26:00 PM [32mGET[39m /scripts/ideasList.mjs
+1:26:00 PM [32mGET[39m /modules/getFrom.mjs
+1:26:00 PM [32mGET[39m /modules/postTo.mjs
+1:26:00 PM [32mGET[39m /idea/getIdeas
+1:26:14 PM [32mGET[39m /thecorner
+1:26:14 PM [32mGET[39m /css/global-style.css
+1:26:14 PM [32mGET[39m /modules/contentLoader.mjs
+1:26:14 PM [32mGET[39m /modules/pageState.mjs
+1:26:14 PM [32mGET[39m /modules/nav.mjs
+1:26:14 PM [32mGET[39m /templates/thecorner.html
+1:26:14 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073574260
+1:26:14 PM [32mGET[39m /modules/getIdeas.mjs
+1:26:14 PM [32mGET[39m /modules/submitCreation.mjs
+1:26:14 PM [32mGET[39m /modules/submitIdea.mjs
+1:26:14 PM [32mGET[39m /modules/submitRating.mjs
+1:26:14 PM [32mGET[39m /scripts/ideasList.mjs
+1:26:14 PM [32mGET[39m /modules/getFrom.mjs
+1:26:14 PM [32mGET[39m /modules/postTo.mjs
+1:26:14 PM [32mGET[39m /idea/getIdeas
+1:26:38 PM [32mGET[39m /thecorner
+1:26:38 PM [32mGET[39m /css/global-style.css
+1:26:38 PM [32mGET[39m /modules/contentLoader.mjs
+1:26:38 PM [32mGET[39m /modules/pageState.mjs
+1:26:38 PM [32mGET[39m /modules/nav.mjs
+1:26:38 PM [32mGET[39m /templates/thecorner.html
+1:26:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073598307
+1:26:38 PM [32mGET[39m /modules/getIdeas.mjs
+1:26:38 PM [32mGET[39m /modules/submitCreation.mjs
+1:26:38 PM [32mGET[39m /modules/submitIdea.mjs
+1:26:38 PM [32mGET[39m /modules/submitRating.mjs
+1:26:38 PM [32mGET[39m /scripts/ideasList.mjs
+1:26:38 PM [32mGET[39m /modules/getFrom.mjs
+1:26:38 PM [32mGET[39m /modules/postTo.mjs
+1:26:38 PM [32mGET[39m /idea/getIdeas
+1:26:56 PM [32mGET[39m /thecorner
+1:26:56 PM [32mGET[39m /css/global-style.css
+1:26:56 PM [32mGET[39m /modules/contentLoader.mjs
+1:26:56 PM [32mGET[39m /modules/pageState.mjs
+1:26:56 PM [32mGET[39m /modules/nav.mjs
+1:26:56 PM [32mGET[39m /templates/thecorner.html
+1:26:56 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073616548
+1:26:56 PM [32mGET[39m /modules/getIdeas.mjs
+1:26:56 PM [32mGET[39m /modules/submitCreation.mjs
+1:26:56 PM [32mGET[39m /modules/submitIdea.mjs
+1:26:56 PM [32mGET[39m /modules/submitRating.mjs
+1:26:56 PM [32mGET[39m /scripts/ideasList.mjs
+1:26:56 PM [32mGET[39m /modules/getFrom.mjs
+1:26:56 PM [32mGET[39m /modules/postTo.mjs
+1:26:56 PM [32mGET[39m /idea/getIdeas
+1:27:05 PM [32mGET[39m /thecorner
+1:27:05 PM [32mGET[39m /css/global-style.css
+1:27:05 PM [32mGET[39m /modules/contentLoader.mjs
+1:27:05 PM [32mGET[39m /modules/pageState.mjs
+1:27:05 PM [32mGET[39m /modules/nav.mjs
+1:27:05 PM [32mGET[39m /templates/thecorner.html
+1:27:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073625509
+1:27:05 PM [32mGET[39m /modules/getIdeas.mjs
+1:27:05 PM [32mGET[39m /modules/submitCreation.mjs
+1:27:05 PM [32mGET[39m /modules/submitIdea.mjs
+1:27:05 PM [32mGET[39m /modules/submitRating.mjs
+1:27:05 PM [32mGET[39m /scripts/ideasList.mjs
+1:27:05 PM [32mGET[39m /modules/getFrom.mjs
+1:27:05 PM [32mGET[39m /modules/postTo.mjs
+1:27:05 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+1:28:00 PM [32mGET[39m /thecorner
+1:28:00 PM [32mGET[39m /css/global-style.css
+1:28:00 PM [32mGET[39m /modules/contentLoader.mjs
+1:28:00 PM [32mGET[39m /modules/pageState.mjs
+1:28:00 PM [32mGET[39m /modules/nav.mjs
+1:28:00 PM [32mGET[39m /templates/thecorner.html
+1:28:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073680903
+1:28:00 PM [32mGET[39m /modules/getIdeas.mjs
+1:28:00 PM [32mGET[39m /modules/submitCreation.mjs
+1:28:00 PM [32mGET[39m /modules/submitIdea.mjs
+1:28:00 PM [32mGET[39m /scripts/ideasList.mjs
+1:28:00 PM [32mGET[39m /modules/submitRating.mjs
+1:28:00 PM [32mGET[39m /modules/getFrom.mjs
+1:28:00 PM [32mGET[39m /modules/postTo.mjs
+1:28:00 PM [32mGET[39m /idea/getIdeas
+1:28:44 PM [32mGET[39m /thecorner
+1:28:44 PM [32mGET[39m /css/global-style.css
+1:28:44 PM [32mGET[39m /modules/contentLoader.mjs
+1:28:44 PM [32mGET[39m /modules/pageState.mjs
+1:28:44 PM [32mGET[39m /modules/nav.mjs
+1:28:44 PM [32mGET[39m /templates/thecorner.html
+1:28:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710073724998
+1:28:45 PM [32mGET[39m /modules/getIdeas.mjs
+1:28:45 PM [32mGET[39m /modules/submitCreation.mjs
+1:28:45 PM [32mGET[39m /modules/submitIdea.mjs
+1:28:45 PM [32mGET[39m /modules/getFrom.mjs
+1:28:45 PM [32mGET[39m /modules/submitRating.mjs
+1:28:45 PM [32mGET[39m /modules/postTo.mjs
+1:28:45 PM [32mGET[39m /scripts/ideasList.mjs
+1:28:45 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:05:56 PM [32mGET[39m /templates/usersettings.html
+6:05:56 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710090356282
+6:05:56 PM [32mGET[39m /modules/getUserData.mjs
+6:05:56 PM [32mGET[39m /modules/deleteUser.mjs
+6:05:56 PM [32mGET[39m /modules/editUser.mjs
+6:05:56 PM [33mPOST[39m /user/getUserData
+6:05:57 PM [32mGET[39m /templates/login.html
+6:05:57 PM [32mGET[39m /scripts/login.mjs?timestamp=1710090357900
+6:06:03 PM [32mGET[39m /templates/thecorner.html
+6:06:03 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090363433
+6:06:03 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+6:10:42 PM [32mGET[39m /thecorner
+6:10:43 PM [32mGET[39m /css/global-style.css
+6:10:43 PM [32mGET[39m /modules/contentLoader.mjs
+6:10:43 PM [32mGET[39m /modules/pageState.mjs
+6:10:43 PM [32mGET[39m /modules/nav.mjs
+6:10:43 PM [32mGET[39m /templates/thecorner.html
+6:10:43 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090643046
+6:10:43 PM [32mGET[39m /modules/getIdeas.mjs
+6:10:43 PM [32mGET[39m /modules/submitCreation.mjs
+6:10:43 PM [32mGET[39m /modules/submitIdea.mjs
+6:10:43 PM [32mGET[39m /modules/submitRating.mjs
+6:10:43 PM [32mGET[39m /scripts/ideasList.mjs
+6:10:43 PM [32mGET[39m /modules/getFrom.mjs
+6:10:43 PM [32mGET[39m /modules/postTo.mjs
+6:10:43 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+6:11:23 PM [32mGET[39m /thecorner
+6:11:23 PM [32mGET[39m /css/global-style.css
+6:11:23 PM [32mGET[39m /modules/contentLoader.mjs
+6:11:23 PM [32mGET[39m /modules/pageState.mjs
+6:11:23 PM [32mGET[39m /modules/nav.mjs
+6:11:23 PM [32mGET[39m /templates/thecorner.html
+6:11:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090683926
+6:11:23 PM [32mGET[39m /modules/getIdeas.mjs
+6:11:23 PM [32mGET[39m /modules/submitCreation.mjs
+6:11:23 PM [32mGET[39m /modules/submitIdea.mjs
+6:11:23 PM [32mGET[39m /modules/submitRating.mjs
+6:11:23 PM [32mGET[39m /scripts/ideasList.mjs
+6:11:23 PM [32mGET[39m /modules/getFrom.mjs
+6:11:23 PM [32mGET[39m /modules/postTo.mjs
+6:11:23 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:11:36 PM [32mGET[39m /thecorner
+6:11:36 PM [32mGET[39m /css/global-style.css
+6:11:36 PM [32mGET[39m /modules/contentLoader.mjs
+6:11:36 PM [32mGET[39m /modules/pageState.mjs
+6:11:36 PM [32mGET[39m /modules/nav.mjs
+6:11:36 PM [32mGET[39m /templates/thecorner.html
+6:11:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090696215
+6:11:36 PM [32mGET[39m /modules/getIdeas.mjs
+6:11:36 PM [32mGET[39m /modules/submitCreation.mjs
+6:11:36 PM [32mGET[39m /modules/submitIdea.mjs
+6:11:36 PM [32mGET[39m /modules/submitRating.mjs
+6:11:36 PM [32mGET[39m /scripts/ideasList.mjs
+6:11:36 PM [32mGET[39m /modules/getFrom.mjs
+6:11:36 PM [32mGET[39m /modules/postTo.mjs
+6:11:36 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:12:52 PM [32mGET[39m /thecorner
+6:12:52 PM [32mGET[39m /css/global-style.css
+6:12:52 PM [32mGET[39m /modules/contentLoader.mjs
+6:12:52 PM [32mGET[39m /modules/pageState.mjs
+6:12:52 PM [32mGET[39m /modules/nav.mjs
+6:12:52 PM [32mGET[39m /templates/thecorner.html
+6:12:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090772351
+6:12:52 PM [32mGET[39m /modules/getIdeas.mjs
+6:12:52 PM [32mGET[39m /modules/submitCreation.mjs
+6:12:52 PM [32mGET[39m /modules/submitIdea.mjs
+6:12:52 PM [32mGET[39m /modules/submitRating.mjs
+6:12:52 PM [32mGET[39m /scripts/ideasList.mjs
+6:12:52 PM [32mGET[39m /modules/getFrom.mjs
+6:12:52 PM [32mGET[39m /modules/postTo.mjs
+6:12:52 PM [32mGET[39m /idea/getIdeas
+6:13:05 PM [32mGET[39m /thecorner
+6:13:05 PM [32mGET[39m /css/global-style.css
+6:13:05 PM [32mGET[39m /modules/contentLoader.mjs
+6:13:05 PM [32mGET[39m /modules/pageState.mjs
+6:13:05 PM [32mGET[39m /modules/nav.mjs
+6:13:05 PM [32mGET[39m /templates/thecorner.html
+6:13:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090785484
+6:13:05 PM [32mGET[39m /modules/getIdeas.mjs
+6:13:05 PM [32mGET[39m /modules/submitCreation.mjs
+6:13:05 PM [32mGET[39m /modules/submitIdea.mjs
+6:13:05 PM [32mGET[39m /modules/submitRating.mjs
+6:13:05 PM [32mGET[39m /scripts/ideasList.mjs
+6:13:05 PM [32mGET[39m /modules/getFrom.mjs
+6:13:05 PM [32mGET[39m /modules/postTo.mjs
+6:13:05 PM [32mGET[39m /idea/getIdeas
+6:13:12 PM [32mGET[39m /thecorner
+6:13:12 PM [32mGET[39m /css/global-style.css
+6:13:12 PM [32mGET[39m /modules/contentLoader.mjs
+6:13:12 PM [32mGET[39m /modules/pageState.mjs
+6:13:12 PM [32mGET[39m /modules/nav.mjs
+6:13:12 PM [32mGET[39m /templates/thecorner.html
+6:13:12 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090792536
+6:13:12 PM [32mGET[39m /modules/getIdeas.mjs
+6:13:12 PM [32mGET[39m /modules/submitCreation.mjs
+6:13:12 PM [32mGET[39m /modules/submitIdea.mjs
+6:13:12 PM [32mGET[39m /modules/submitRating.mjs
+6:13:12 PM [32mGET[39m /scripts/ideasList.mjs
+6:13:12 PM [32mGET[39m /modules/getFrom.mjs
+6:13:12 PM [32mGET[39m /modules/postTo.mjs
+6:13:12 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:14:30 PM [32mGET[39m /thecorner
+6:14:30 PM [32mGET[39m /css/global-style.css
+6:14:30 PM [32mGET[39m /modules/contentLoader.mjs
+6:14:30 PM [32mGET[39m /modules/pageState.mjs
+6:14:30 PM [32mGET[39m /modules/nav.mjs
+6:14:30 PM [32mGET[39m /templates/thecorner.html
+6:14:30 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090870092
+6:14:30 PM [32mGET[39m /modules/getIdeas.mjs
+6:14:30 PM [32mGET[39m /modules/submitCreation.mjs
+6:14:30 PM [32mGET[39m /modules/submitIdea.mjs
+6:14:30 PM [32mGET[39m /modules/submitRating.mjs
+6:14:30 PM [32mGET[39m /scripts/ideasList.mjs
+6:14:30 PM [32mGET[39m /modules/getFrom.mjs
+6:14:30 PM [32mGET[39m /modules/postTo.mjs
+6:14:30 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:15:13 PM [32mGET[39m /thecorner
+6:15:13 PM [32mGET[39m /css/global-style.css
+6:15:13 PM [32mGET[39m /modules/contentLoader.mjs
+6:15:13 PM [32mGET[39m /modules/pageState.mjs
+6:15:13 PM [32mGET[39m /modules/nav.mjs
+6:15:13 PM [32mGET[39m /templates/thecorner.html
+6:15:13 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090913370
+6:15:13 PM [32mGET[39m /modules/getIdeas.mjs
+6:15:13 PM [32mGET[39m /modules/submitCreation.mjs
+6:15:13 PM [32mGET[39m /modules/submitIdea.mjs
+6:15:13 PM [32mGET[39m /modules/submitRating.mjs
+6:15:13 PM [32mGET[39m /scripts/ideasList.mjs
+6:15:13 PM [32mGET[39m /modules/getFrom.mjs
+6:15:13 PM [32mGET[39m /modules/postTo.mjs
+6:15:13 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:15:34 PM [32mGET[39m /templates/login.html
+6:15:34 PM [32mGET[39m /scripts/login.mjs?timestamp=1710090934853
+6:15:37 PM [33mPOST[39m /user/login
+6:15:37 PM [32mGET[39m /templates/thecorner.html
+6:15:37 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090937319
+6:15:37 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:16:32 PM [32mGET[39m /thecorner
+6:16:32 PM [32mGET[39m /css/global-style.css
+6:16:32 PM [32mGET[39m /modules/contentLoader.mjs
+6:16:32 PM [32mGET[39m /modules/pageState.mjs
+6:16:32 PM [32mGET[39m /modules/nav.mjs
+6:16:32 PM [32mGET[39m /templates/thecorner.html
+6:16:32 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710090992596
+6:16:32 PM [32mGET[39m /modules/getIdeas.mjs
+6:16:32 PM [32mGET[39m /modules/submitCreation.mjs
+6:16:32 PM [32mGET[39m /modules/submitIdea.mjs
+6:16:32 PM [32mGET[39m /scripts/ideasList.mjs
+6:16:32 PM [32mGET[39m /modules/submitRating.mjs
+6:16:32 PM [32mGET[39m /modules/getFrom.mjs
+6:16:32 PM [32mGET[39m /modules/postTo.mjs
+6:16:32 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+6:16:54 PM [32mGET[39m /thecorner
+6:16:54 PM [32mGET[39m /css/global-style.css
+6:16:54 PM [32mGET[39m /modules/contentLoader.mjs
+6:16:54 PM [32mGET[39m /modules/pageState.mjs
+6:16:54 PM [32mGET[39m /modules/nav.mjs
+6:16:54 PM [32mGET[39m /templates/thecorner.html
+6:16:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091014107
+6:16:54 PM [32mGET[39m /modules/getIdeas.mjs
+6:16:54 PM [32mGET[39m /modules/submitCreation.mjs
+6:16:54 PM [32mGET[39m /scripts/ideasList.mjs
+6:16:54 PM [32mGET[39m /modules/submitRating.mjs
+6:16:54 PM [32mGET[39m /modules/submitIdea.mjs
+6:16:54 PM [32mGET[39m /modules/getFrom.mjs
+6:16:54 PM [32mGET[39m /modules/postTo.mjs
+6:16:54 PM [32mGET[39m /idea/getIdeas
+6:17:00 PM [32mGET[39m /thecorner
+6:17:00 PM [32mGET[39m /css/global-style.css
+6:17:00 PM [32mGET[39m /modules/contentLoader.mjs
+6:17:00 PM [32mGET[39m /modules/pageState.mjs
+6:17:00 PM [32mGET[39m /modules/nav.mjs
+6:17:00 PM [32mGET[39m /templates/thecorner.html
+6:17:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091020556
+6:17:00 PM [32mGET[39m /modules/getIdeas.mjs
+6:17:00 PM [32mGET[39m /modules/submitCreation.mjs
+6:17:00 PM [32mGET[39m /modules/submitIdea.mjs
+6:17:00 PM [32mGET[39m /modules/submitRating.mjs
+6:17:00 PM [32mGET[39m /modules/getFrom.mjs
+6:17:00 PM [32mGET[39m /modules/postTo.mjs
+6:17:00 PM [32mGET[39m /scripts/ideasList.mjs
+6:17:00 PM [32mGET[39m /idea/getIdeas
+6:17:22 PM [32mGET[39m /thecorner
+6:17:22 PM [32mGET[39m /css/global-style.css
+6:17:23 PM [32mGET[39m /modules/contentLoader.mjs
+6:17:23 PM [32mGET[39m /modules/pageState.mjs
+6:17:23 PM [32mGET[39m /modules/nav.mjs
+6:17:23 PM [32mGET[39m /templates/thecorner.html
+6:17:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091043017
+6:17:23 PM [32mGET[39m /modules/getIdeas.mjs
+6:17:23 PM [32mGET[39m /modules/submitCreation.mjs
+6:17:23 PM [32mGET[39m /modules/submitIdea.mjs
+6:17:23 PM [32mGET[39m /modules/submitRating.mjs
+6:17:23 PM [32mGET[39m /modules/getFrom.mjs
+6:17:23 PM [32mGET[39m /modules/postTo.mjs
+6:17:23 PM [32mGET[39m /scripts/ideasList.mjs
+6:17:23 PM [32mGET[39m /idea/getIdeas
+6:17:23 PM [32mGET[39m /templates/usersettings.html
+6:17:23 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710091043956
+6:17:23 PM [32mGET[39m /modules/getUserData.mjs
+6:17:23 PM [32mGET[39m /modules/deleteUser.mjs
+6:17:23 PM [32mGET[39m /modules/editUser.mjs
+6:17:23 PM [33mPOST[39m /user/getUserData
+6:17:25 PM [32mGET[39m /templates/login.html
+6:17:25 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091045238
+6:17:26 PM [32mGET[39m /templates/thecorner.html
+6:17:26 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091046471
+6:17:26 PM [32mGET[39m /idea/getIdeas
+6:17:31 PM [32mGET[39m /templates/login.html
+6:17:31 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091051267
+6:17:33 PM [33mPOST[39m /user/login
+6:17:33 PM [32mGET[39m /templates/thecorner.html
+6:17:33 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091053514
+6:17:33 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:20:08 PM [32mGET[39m /thecorner
+6:20:09 PM [32mGET[39m /css/global-style.css
+6:20:09 PM [32mGET[39m /modules/contentLoader.mjs
+6:20:09 PM [32mGET[39m /modules/pageState.mjs
+6:20:09 PM [32mGET[39m /modules/nav.mjs
+6:20:09 PM [32mGET[39m /templates/thecorner.html
+6:20:09 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091209056
+6:20:09 PM [32mGET[39m /modules/getIdeas.mjs
+6:20:09 PM [32mGET[39m /modules/submitCreation.mjs
+6:20:09 PM [32mGET[39m /modules/submitIdea.mjs
+6:20:09 PM [32mGET[39m /modules/submitRating.mjs
+6:20:09 PM [32mGET[39m /scripts/ideasList.mjs
+6:20:09 PM [32mGET[39m /modules/getFrom.mjs
+6:20:09 PM [32mGET[39m /modules/postTo.mjs
+6:20:09 PM [32mGET[39m /idea/getIdeas
+6:20:38 PM [32mGET[39m /thecorner
+6:20:38 PM [32mGET[39m /css/global-style.css
+6:20:38 PM [32mGET[39m /modules/contentLoader.mjs
+6:20:38 PM [32mGET[39m /modules/pageState.mjs
+6:20:38 PM [32mGET[39m /modules/nav.mjs
+6:20:38 PM [32mGET[39m /templates/thecorner.html
+6:20:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091238096
+6:20:38 PM [32mGET[39m /modules/getIdeas.mjs
+6:20:38 PM [32mGET[39m /modules/submitCreation.mjs
+6:20:38 PM [32mGET[39m /modules/submitIdea.mjs
+6:20:38 PM [32mGET[39m /modules/submitRating.mjs
+6:20:38 PM [32mGET[39m /scripts/ideasList.mjs
+6:20:38 PM [32mGET[39m /modules/getFrom.mjs
+6:20:38 PM [32mGET[39m /modules/postTo.mjs
+6:20:38 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:21:53 PM [32mGET[39m /thecorner
+6:21:53 PM [32mGET[39m /css/global-style.css
+6:21:53 PM [32mGET[39m /modules/contentLoader.mjs
+6:21:53 PM [32mGET[39m /modules/pageState.mjs
+6:21:53 PM [32mGET[39m /modules/nav.mjs
+6:21:53 PM [32mGET[39m /templates/thecorner.html
+6:21:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091313305
+6:21:53 PM [32mGET[39m /modules/getIdeas.mjs
+6:21:53 PM [32mGET[39m /modules/submitCreation.mjs
+6:21:53 PM [32mGET[39m /modules/submitIdea.mjs
+6:21:53 PM [32mGET[39m /modules/submitRating.mjs
+6:21:53 PM [32mGET[39m /scripts/ideasList.mjs
+6:21:53 PM [32mGET[39m /modules/getFrom.mjs
+6:21:53 PM [32mGET[39m /modules/postTo.mjs
+6:21:53 PM [32mGET[39m /idea/getIdeas
+6:22:42 PM [32mGET[39m /templates/usersettings.html
+6:22:42 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710091362127
+6:22:42 PM [32mGET[39m /modules/getUserData.mjs
+6:22:42 PM [32mGET[39m /modules/deleteUser.mjs
+6:22:42 PM [32mGET[39m /modules/editUser.mjs
+6:22:42 PM [33mPOST[39m /user/getUserData
+6:22:43 PM [32mGET[39m /templates/login.html
+6:22:43 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091363872
+6:22:44 PM [32mGET[39m /templates/thecorner.html
+6:22:44 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091364721
+6:22:44 PM [32mGET[39m /idea/getIdeas
+6:23:48 PM [32mGET[39m /thecorner
+6:23:48 PM [32mGET[39m /css/global-style.css
+6:23:48 PM [32mGET[39m /modules/contentLoader.mjs
+6:23:48 PM [32mGET[39m /modules/pageState.mjs
+6:23:48 PM [32mGET[39m /modules/nav.mjs
+6:23:48 PM [32mGET[39m /templates/thecorner.html
+6:23:48 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091428659
+6:23:48 PM [32mGET[39m /modules/getIdeas.mjs
+6:23:48 PM [32mGET[39m /modules/submitCreation.mjs
+6:23:48 PM [32mGET[39m /modules/submitIdea.mjs
+6:23:48 PM [32mGET[39m /modules/submitRating.mjs
+6:23:48 PM [32mGET[39m /modules/getFrom.mjs
+6:23:48 PM [32mGET[39m /modules/postTo.mjs
+6:23:48 PM [32mGET[39m /scripts/ideasList.mjs
+6:23:48 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:24:24 PM [32mGET[39m /thecorner
+6:24:24 PM [32mGET[39m /css/global-style.css
+6:24:24 PM [32mGET[39m /modules/contentLoader.mjs
+6:24:24 PM [32mGET[39m /modules/pageState.mjs
+6:24:24 PM [32mGET[39m /modules/nav.mjs
+6:24:24 PM [32mGET[39m /templates/thecorner.html
+6:24:24 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091464474
+6:24:24 PM [32mGET[39m /modules/getIdeas.mjs
+6:24:24 PM [32mGET[39m /modules/submitCreation.mjs
+6:24:24 PM [32mGET[39m /modules/submitIdea.mjs
+6:24:24 PM [32mGET[39m /modules/submitRating.mjs
+6:24:24 PM [32mGET[39m /scripts/ideasList.mjs
+6:24:24 PM [32mGET[39m /modules/getFrom.mjs
+6:24:24 PM [32mGET[39m /modules/postTo.mjs
+6:24:24 PM [32mGET[39m /idea/getIdeas
+6:24:28 PM [32mGET[39m /templates/login.html
+6:24:28 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091468926
+6:24:33 PM [33mPOST[39m /user/login
+6:24:38 PM [33mPOST[39m /user/login
+6:24:39 PM [33mPOST[39m /user/login
+6:24:39 PM [33mPOST[39m /user/login
+6:24:39 PM [33mPOST[39m /user/login
+6:24:59 PM [32mGET[39m /templates/thecorner.html
+6:24:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091499355
+6:24:59 PM [32mGET[39m /idea/getIdeas
+6:25:00 PM [32mGET[39m /thecorner
+6:25:00 PM [32mGET[39m /css/global-style.css
+6:25:00 PM [32mGET[39m /modules/contentLoader.mjs
+6:25:00 PM [32mGET[39m /modules/pageState.mjs
+6:25:00 PM [32mGET[39m /modules/nav.mjs
+6:25:00 PM [32mGET[39m /templates/thecorner.html
+6:25:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091500844
+6:25:00 PM [32mGET[39m /modules/getIdeas.mjs
+6:25:00 PM [32mGET[39m /modules/submitCreation.mjs
+6:25:00 PM [32mGET[39m /modules/submitIdea.mjs
+6:25:00 PM [32mGET[39m /modules/submitRating.mjs
+6:25:00 PM [32mGET[39m /modules/getFrom.mjs
+6:25:00 PM [32mGET[39m /scripts/ideasList.mjs
+6:25:00 PM [32mGET[39m /modules/postTo.mjs
+6:25:00 PM [32mGET[39m /idea/getIdeas
+6:25:02 PM [32mGET[39m /templates/login.html
+6:25:02 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091502410
+6:25:04 PM [33mPOST[39m /user/login
+6:25:14 PM [32mGET[39m /login
+6:25:14 PM [32mGET[39m /css/global-style.css
+6:25:14 PM [32mGET[39m /modules/contentLoader.mjs
+6:25:14 PM [32mGET[39m /modules/pageState.mjs
+6:25:14 PM [32mGET[39m /modules/nav.mjs
+6:25:14 PM [32mGET[39m /templates/login.html
+6:25:14 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091514338
+6:25:14 PM [32mGET[39m /modules/postTo.mjs
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:25:26 PM [32mGET[39m /login
+6:25:26 PM [32mGET[39m /css/global-style.css
+6:25:26 PM [32mGET[39m /modules/contentLoader.mjs
+6:25:26 PM [32mGET[39m /modules/pageState.mjs
+6:25:26 PM [32mGET[39m /modules/nav.mjs
+6:25:26 PM [32mGET[39m /templates/login.html
+6:25:26 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091526546
+6:25:26 PM [32mGET[39m /modules/postTo.mjs
+6:25:29 PM [33mPOST[39m /user/login
+6:28:01 PM [32mGET[39m /login
+6:28:01 PM [32mGET[39m /css/global-style.css
+6:28:01 PM [32mGET[39m /modules/contentLoader.mjs
+6:28:01 PM [32mGET[39m /modules/pageState.mjs
+6:28:01 PM [32mGET[39m /modules/nav.mjs
+6:28:01 PM [32mGET[39m /templates/login.html
+6:28:01 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091681689
+6:28:01 PM [32mGET[39m /modules/postTo.mjs
+6:28:02 PM [32mGET[39m /templates/thecorner.html
+6:28:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091682947
+6:28:02 PM [32mGET[39m /modules/getIdeas.mjs
+6:28:02 PM [32mGET[39m /modules/submitCreation.mjs
+6:28:02 PM [32mGET[39m /modules/submitIdea.mjs
+6:28:02 PM [32mGET[39m /modules/submitRating.mjs
+6:28:02 PM [32mGET[39m /scripts/ideasList.mjs
+6:28:02 PM [32mGET[39m /modules/getFrom.mjs
+6:28:02 PM [32mGET[39m /idea/getIdeas
+6:28:05 PM [32mGET[39m /templates/login.html
+6:28:05 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091685957
+6:28:08 PM [33mPOST[39m /user/login
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:28:25 PM [32mGET[39m /login
+6:28:25 PM [32mGET[39m /css/global-style.css
+6:28:25 PM [32mGET[39m /modules/contentLoader.mjs
+6:28:25 PM [32mGET[39m /modules/pageState.mjs
+6:28:25 PM [32mGET[39m /modules/nav.mjs
+6:28:25 PM [32mGET[39m /templates/login.html
+6:28:25 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091705690
+6:28:25 PM [32mGET[39m /modules/postTo.mjs
+6:28:28 PM [33mPOST[39m /user/login
+6:28:39 PM [32mGET[39m /templates/signup.html
+6:28:39 PM [32mGET[39m /scripts/signup.mjs?timestamp=1710091719585
+6:28:40 PM [32mGET[39m /templates/login.html
+6:28:40 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091720127
+6:28:51 PM [33mPOST[39m /user/login
+6:28:57 PM [33mPOST[39m /user/login
+6:28:57 PM [32mGET[39m /templates/thecorner.html
+6:28:57 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091737690
+6:28:57 PM [32mGET[39m /modules/getIdeas.mjs
+6:28:57 PM [32mGET[39m /modules/submitCreation.mjs
+6:28:57 PM [32mGET[39m /modules/submitIdea.mjs
+6:28:57 PM [32mGET[39m /modules/getFrom.mjs
+6:28:57 PM [32mGET[39m /scripts/ideasList.mjs
+6:28:57 PM [32mGET[39m /modules/submitRating.mjs
+6:28:57 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:29:17 PM [32mGET[39m /thecorner
+6:29:17 PM [32mGET[39m /css/global-style.css
+6:29:17 PM [32mGET[39m /modules/contentLoader.mjs
+6:29:17 PM [32mGET[39m /modules/pageState.mjs
+6:29:17 PM [32mGET[39m /modules/nav.mjs
+6:29:17 PM [32mGET[39m /templates/thecorner.html
+6:29:17 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091757150
+6:29:17 PM [32mGET[39m /modules/getIdeas.mjs
+6:29:17 PM [32mGET[39m /modules/submitCreation.mjs
+6:29:17 PM [32mGET[39m /modules/submitIdea.mjs
+6:29:17 PM [32mGET[39m /modules/submitRating.mjs
+6:29:17 PM [32mGET[39m /modules/getFrom.mjs
+6:29:17 PM [32mGET[39m /scripts/ideasList.mjs
+6:29:17 PM [32mGET[39m /modules/postTo.mjs
+6:29:17 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:30:19 PM [32mGET[39m /thecorner
+6:30:20 PM [32mGET[39m /css/global-style.css
+6:30:20 PM [32mGET[39m /modules/contentLoader.mjs
+6:30:20 PM [32mGET[39m /modules/pageState.mjs
+6:30:20 PM [32mGET[39m /modules/nav.mjs
+6:30:20 PM [32mGET[39m /templates/thecorner.html
+6:30:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091820068
+6:30:20 PM [32mGET[39m /modules/getIdeas.mjs
+6:30:20 PM [32mGET[39m /modules/submitCreation.mjs
+6:30:20 PM [32mGET[39m /modules/submitIdea.mjs
+6:30:20 PM [32mGET[39m /modules/submitRating.mjs
+6:30:20 PM [32mGET[39m /scripts/ideasList.mjs
+6:30:20 PM [32mGET[39m /modules/getFrom.mjs
+6:30:20 PM [32mGET[39m /modules/postTo.mjs
+6:30:20 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:31:25 PM [32mGET[39m /thecorner
+6:31:25 PM [32mGET[39m /css/global-style.css
+6:31:25 PM [32mGET[39m /modules/contentLoader.mjs
+6:31:25 PM [32mGET[39m /modules/pageState.mjs
+6:31:25 PM [32mGET[39m /modules/nav.mjs
+6:31:25 PM [32mGET[39m /templates/thecorner.html
+6:31:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091885487
+6:31:25 PM [32mGET[39m /modules/getIdeas.mjs
+6:31:25 PM [32mGET[39m /modules/submitCreation.mjs
+6:31:25 PM [32mGET[39m /modules/submitIdea.mjs
+6:31:25 PM [32mGET[39m /modules/submitRating.mjs
+6:31:25 PM [32mGET[39m /scripts/ideasList.mjs
+6:31:25 PM [32mGET[39m /modules/getFrom.mjs
+6:31:25 PM [32mGET[39m /modules/postTo.mjs
+6:31:25 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+6:31:35 PM [32mGET[39m /thecorner
+6:31:35 PM [32mGET[39m /css/global-style.css
+6:31:35 PM [32mGET[39m /modules/contentLoader.mjs
+6:31:35 PM [32mGET[39m /modules/pageState.mjs
+6:31:35 PM [32mGET[39m /modules/nav.mjs
+6:31:35 PM [32mGET[39m /templates/thecorner.html
+6:31:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091895138
+6:31:35 PM [32mGET[39m /modules/getIdeas.mjs
+6:31:35 PM [32mGET[39m /modules/submitCreation.mjs
+6:31:35 PM [32mGET[39m /modules/submitIdea.mjs
+6:31:35 PM [32mGET[39m /modules/submitRating.mjs
+6:31:35 PM [32mGET[39m /scripts/ideasList.mjs
+6:31:35 PM [32mGET[39m /modules/getFrom.mjs
+6:31:35 PM [32mGET[39m /modules/postTo.mjs
+6:31:35 PM [32mGET[39m /idea/getIdeas
+6:31:38 PM [32mGET[39m /templates/usersettings.html
+6:31:38 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710091898711
+6:31:38 PM [32mGET[39m /modules/getUserData.mjs
+6:31:38 PM [32mGET[39m /modules/deleteUser.mjs
+6:31:38 PM [32mGET[39m /modules/editUser.mjs
+6:31:38 PM [33mPOST[39m /user/getUserData
+6:31:42 PM [32mGET[39m /templates/login.html
+6:31:42 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091902755
+6:31:43 PM [32mGET[39m /templates/thecorner.html
+6:31:43 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091903834
+6:31:43 PM [32mGET[39m /idea/getIdeas
+6:31:47 PM [32mGET[39m /templates/login.html
+6:31:47 PM [32mGET[39m /scripts/login.mjs?timestamp=1710091907107
+6:31:49 PM [33mPOST[39m /user/login
+6:31:49 PM [32mGET[39m /templates/thecorner.html
+6:31:49 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091909426
+6:31:49 PM [32mGET[39m /idea/getIdeas
+6:31:55 PM [32mGET[39m /templates/usersettings.html
+6:31:55 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710091915836
+6:31:55 PM [33mPOST[39m /user/getUserData
+6:32:30 PM [32mGET[39m /usersettings
+6:32:30 PM [32mGET[39m /css/global-style.css
+6:32:30 PM [32mGET[39m /modules/contentLoader.mjs
+6:32:30 PM [32mGET[39m /modules/pageState.mjs
+6:32:30 PM [32mGET[39m /modules/nav.mjs
+6:32:30 PM [32mGET[39m /templates/usersettings.html
+6:32:30 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710091950954
+6:32:30 PM [32mGET[39m /modules/getUserData.mjs
+6:32:30 PM [32mGET[39m /modules/deleteUser.mjs
+6:32:30 PM [32mGET[39m /modules/editUser.mjs
+6:32:30 PM [32mGET[39m /modules/postTo.mjs
+6:32:30 PM [33mPOST[39m /user/getUserData
+6:32:57 PM [32mGET[39m /usersettings
+6:32:57 PM [32mGET[39m /css/global-style.css
+6:32:57 PM [32mGET[39m /modules/contentLoader.mjs
+6:32:57 PM [32mGET[39m /modules/pageState.mjs
+6:32:57 PM [32mGET[39m /modules/nav.mjs
+6:32:57 PM [32mGET[39m /templates/usersettings.html
+6:32:57 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710091977150
+6:32:57 PM [32mGET[39m /modules/getUserData.mjs
+6:32:57 PM [32mGET[39m /modules/deleteUser.mjs
+6:32:57 PM [32mGET[39m /modules/editUser.mjs
+6:32:57 PM [32mGET[39m /modules/postTo.mjs
+6:32:57 PM [33mPOST[39m /user/getUserData
+6:32:59 PM [32mGET[39m /templates/thecorner.html
+6:32:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710091979238
+6:32:59 PM [32mGET[39m /modules/getIdeas.mjs
+6:32:59 PM [32mGET[39m /modules/submitCreation.mjs
+6:32:59 PM [32mGET[39m /modules/submitIdea.mjs
+6:32:59 PM [32mGET[39m /modules/submitRating.mjs
+6:32:59 PM [32mGET[39m /scripts/ideasList.mjs
+6:32:59 PM [32mGET[39m /modules/getFrom.mjs
+6:32:59 PM [32mGET[39m /idea/getIdeas
+6:34:16 PM [32mGET[39m /templates/usersettings.html
+6:34:16 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710092056975
+6:34:16 PM [33mPOST[39m /user/getUserData
+6:34:25 PM [32mGET[39m /templates/thecorner.html
+6:34:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092065170
+6:34:25 PM [32mGET[39m /idea/getIdeas
+6:38:43 PM [32mGET[39m /thecorner
+6:38:43 PM [32mGET[39m /css/global-style.css
+6:38:43 PM [32mGET[39m /modules/contentLoader.mjs
+6:38:43 PM [32mGET[39m /modules/pageState.mjs
+6:38:43 PM [32mGET[39m /modules/nav.mjs
+6:38:43 PM [32mGET[39m /templates/thecorner.html
+6:38:43 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092323261
+6:38:43 PM [32mGET[39m /modules/getIdeas.mjs
+6:38:43 PM [32mGET[39m /modules/submitCreation.mjs
+6:38:43 PM [32mGET[39m /modules/submitIdea.mjs
+6:38:43 PM [32mGET[39m /modules/submitRating.mjs
+6:38:43 PM [32mGET[39m /scripts/ideasList.mjs
+6:38:43 PM [32mGET[39m /modules/getFrom.mjs
+6:38:43 PM [32mGET[39m /modules/postTo.mjs
+6:38:43 PM [32mGET[39m /idea/getIdeas
+6:39:08 PM [32mGET[39m /templates/usersettings.html
+6:39:08 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710092348114
+6:39:08 PM [32mGET[39m /modules/getUserData.mjs
+6:39:08 PM [32mGET[39m /modules/deleteUser.mjs
+6:39:08 PM [32mGET[39m /modules/editUser.mjs
+6:39:08 PM [33mPOST[39m /user/getUserData
+6:39:08 PM [32mGET[39m /templates/thecorner.html
+6:39:08 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092348620
+6:39:08 PM [32mGET[39m /idea/getIdeas
+6:39:22 PM [32mGET[39m /thecorner
+6:39:22 PM [32mGET[39m /css/global-style.css
+6:39:22 PM [32mGET[39m /modules/contentLoader.mjs
+6:39:22 PM [32mGET[39m /modules/pageState.mjs
+6:39:22 PM [32mGET[39m /modules/nav.mjs
+6:39:22 PM [32mGET[39m /templates/thecorner.html
+6:39:22 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092362442
+6:39:22 PM [32mGET[39m /modules/getIdeas.mjs
+6:39:22 PM [32mGET[39m /modules/submitCreation.mjs
+6:39:22 PM [32mGET[39m /modules/submitIdea.mjs
+6:39:22 PM [32mGET[39m /modules/submitRating.mjs
+6:39:22 PM [32mGET[39m /scripts/ideasList.mjs
+6:39:22 PM [32mGET[39m /modules/getFrom.mjs
+6:39:22 PM [32mGET[39m /modules/postTo.mjs
+6:39:22 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:45:19 PM [32mGET[39m /thecorner
+6:45:19 PM [32mGET[39m /css/global-style.css
+6:45:19 PM [32mGET[39m /modules/contentLoader.mjs
+6:45:19 PM [32mGET[39m /modules/pageState.mjs
+6:45:19 PM [32mGET[39m /modules/nav.mjs
+6:45:19 PM [32mGET[39m /templates/thecorner.html
+6:45:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092719492
+6:45:19 PM [32mGET[39m /modules/getIdeas.mjs
+6:45:19 PM [32mGET[39m /modules/submitCreation.mjs
+6:45:19 PM [32mGET[39m /modules/submitIdea.mjs
+6:45:19 PM [32mGET[39m /modules/submitRating.mjs
+6:45:19 PM [32mGET[39m /scripts/ideasList.mjs
+6:45:19 PM [32mGET[39m /modules/getFrom.mjs
+6:45:19 PM [32mGET[39m /modules/postTo.mjs
+6:45:19 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:45:47 PM [32mGET[39m /thecorner
+6:45:47 PM [32mGET[39m /css/global-style.css
+6:45:47 PM [32mGET[39m /modules/contentLoader.mjs
+6:45:47 PM [32mGET[39m /modules/pageState.mjs
+6:45:47 PM [32mGET[39m /modules/nav.mjs
+6:45:47 PM [32mGET[39m /templates/thecorner.html
+6:45:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092747453
+6:45:47 PM [32mGET[39m /modules/getIdeas.mjs
+6:45:47 PM [32mGET[39m /modules/submitCreation.mjs
+6:45:47 PM [32mGET[39m /modules/submitIdea.mjs
+6:45:47 PM [32mGET[39m /modules/submitRating.mjs
+6:45:47 PM [32mGET[39m /scripts/ideasList.mjs
+6:45:47 PM [32mGET[39m /modules/getFrom.mjs
+6:45:47 PM [32mGET[39m /modules/postTo.mjs
+6:45:47 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:46:13 PM [32mGET[39m /thecorner
+6:46:13 PM [32mGET[39m /css/global-style.css
+6:46:13 PM [32mGET[39m /modules/contentLoader.mjs
+6:46:13 PM [32mGET[39m /modules/pageState.mjs
+6:46:13 PM [32mGET[39m /modules/nav.mjs
+6:46:13 PM [32mGET[39m /templates/thecorner.html
+6:46:14 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092773996
+6:46:14 PM [32mGET[39m /modules/getIdeas.mjs
+6:46:14 PM [32mGET[39m /modules/submitCreation.mjs
+6:46:14 PM [32mGET[39m /modules/submitRating.mjs
+6:46:14 PM [32mGET[39m /scripts/ideasList.mjs
+6:46:14 PM [32mGET[39m /modules/submitIdea.mjs
+6:46:14 PM [32mGET[39m /modules/getFrom.mjs
+6:46:14 PM [32mGET[39m /modules/postTo.mjs
+6:46:14 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:46:46 PM [32mGET[39m /thecorner
+6:46:46 PM [32mGET[39m /css/global-style.css
+6:46:46 PM [32mGET[39m /modules/contentLoader.mjs
+6:46:46 PM [32mGET[39m /modules/pageState.mjs
+6:46:46 PM [32mGET[39m /modules/nav.mjs
+6:46:46 PM [32mGET[39m /templates/thecorner.html
+6:46:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092806785
+6:46:46 PM [32mGET[39m /modules/getIdeas.mjs
+6:46:46 PM [32mGET[39m /modules/submitCreation.mjs
+6:46:46 PM [32mGET[39m /modules/submitIdea.mjs
+6:46:46 PM [32mGET[39m /modules/submitRating.mjs
+6:46:46 PM [32mGET[39m /scripts/ideasList.mjs
+6:46:46 PM [32mGET[39m /modules/getFrom.mjs
+6:46:46 PM [32mGET[39m /modules/postTo.mjs
+6:46:46 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:47:28 PM [32mGET[39m /thecorner
+6:47:28 PM [32mGET[39m /css/global-style.css
+6:47:28 PM [32mGET[39m /modules/contentLoader.mjs
+6:47:28 PM [32mGET[39m /modules/pageState.mjs
+6:47:28 PM [32mGET[39m /modules/nav.mjs
+6:47:28 PM [32mGET[39m /templates/thecorner.html
+6:47:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092848603
+6:47:28 PM [32mGET[39m /modules/getIdeas.mjs
+6:47:28 PM [32mGET[39m /modules/submitCreation.mjs
+6:47:28 PM [32mGET[39m /modules/submitIdea.mjs
+6:47:28 PM [32mGET[39m /modules/submitRating.mjs
+6:47:28 PM [32mGET[39m /scripts/ideasList.mjs
+6:47:28 PM [32mGET[39m /modules/getFrom.mjs
+6:47:28 PM [32mGET[39m /modules/postTo.mjs
+6:47:28 PM [32mGET[39m /idea/getIdeas
+6:47:31 PM [32mGET[39m /templates/usersettings.html
+6:47:31 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710092851705
+6:47:31 PM [32mGET[39m /modules/getUserData.mjs
+6:47:31 PM [32mGET[39m /modules/deleteUser.mjs
+6:47:31 PM [32mGET[39m /modules/editUser.mjs
+6:47:31 PM [33mPOST[39m /user/getUserData
+6:47:32 PM [32mGET[39m /templates/thecorner.html
+6:47:32 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710092852483
+6:47:32 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:50:19 PM [32mGET[39m /thecorner
+6:50:19 PM [32mGET[39m /css/global-style.css
+6:50:19 PM [32mGET[39m /modules/contentLoader.mjs
+6:50:19 PM [32mGET[39m /modules/pageState.mjs
+6:50:19 PM [32mGET[39m /modules/nav.mjs
+6:50:19 PM [32mGET[39m /templates/thecorner.html
+6:50:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710093019668
+6:50:19 PM [32mGET[39m /modules/getIdeas.mjs
+6:50:19 PM [32mGET[39m /modules/submitCreation.mjs
+6:50:19 PM [32mGET[39m /modules/submitIdea.mjs
+6:50:19 PM [32mGET[39m /modules/submitRating.mjs
+6:50:19 PM [32mGET[39m /scripts/ideasList.mjs
+6:50:19 PM [32mGET[39m /modules/getFrom.mjs
+6:50:19 PM [32mGET[39m /modules/postTo.mjs
+6:50:19 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:50:26 PM [32mGET[39m /thecorner
+6:50:26 PM [32mGET[39m /css/global-style.css
+6:50:26 PM [32mGET[39m /modules/contentLoader.mjs
+6:50:26 PM [32mGET[39m /modules/pageState.mjs
+6:50:26 PM [32mGET[39m /modules/nav.mjs
+6:50:26 PM [32mGET[39m /templates/thecorner.html
+6:50:26 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710093026988
+6:50:27 PM [32mGET[39m /modules/getIdeas.mjs
+6:50:27 PM [32mGET[39m /modules/submitCreation.mjs
+6:50:27 PM [32mGET[39m /modules/submitIdea.mjs
+6:50:27 PM [32mGET[39m /modules/submitRating.mjs
+6:50:27 PM [32mGET[39m /scripts/ideasList.mjs
+6:50:27 PM [32mGET[39m /modules/getFrom.mjs
+6:50:27 PM [32mGET[39m /modules/postTo.mjs
+6:50:27 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:56:18 PM [32mGET[39m /thecorner
+6:56:18 PM [32mGET[39m /css/global-style.css
+6:56:18 PM [32mGET[39m /modules/contentLoader.mjs
+6:56:18 PM [32mGET[39m /modules/pageState.mjs
+6:56:18 PM [32mGET[39m /modules/nav.mjs
+6:56:18 PM [32mGET[39m /templates/thecorner.html
+6:56:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710093378516
+6:56:18 PM [32mGET[39m /modules/getIdeas.mjs
+6:56:18 PM [32mGET[39m /modules/submitCreation.mjs
+6:56:18 PM [32mGET[39m /modules/submitIdea.mjs
+6:56:18 PM [32mGET[39m /modules/submitRating.mjs
+6:56:18 PM [32mGET[39m /scripts/ideasList.mjs
+6:56:18 PM [32mGET[39m /modules/getFrom.mjs
+6:56:18 PM [32mGET[39m /modules/postTo.mjs
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:56:40 PM [32mGET[39m /thecorner
+6:56:40 PM [32mGET[39m /css/global-style.css
+6:56:40 PM [32mGET[39m /modules/contentLoader.mjs
+6:56:40 PM [32mGET[39m /modules/pageState.mjs
+6:56:40 PM [32mGET[39m /modules/nav.mjs
+6:56:40 PM [32mGET[39m /templates/thecorner.html
+6:56:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710093400898
+6:56:40 PM [32mGET[39m /modules/getIdeas.mjs
+6:56:40 PM [32mGET[39m /modules/submitCreation.mjs
+6:56:40 PM [32mGET[39m /modules/submitIdea.mjs
+6:56:40 PM [32mGET[39m /modules/submitRating.mjs
+6:56:40 PM [32mGET[39m /scripts/ideasList.mjs
+6:56:40 PM [32mGET[39m /modules/getFrom.mjs
+6:56:40 PM [32mGET[39m /modules/postTo.mjs
+6:56:40 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+6:57:16 PM [32mGET[39m /thecorner
+6:57:16 PM [32mGET[39m /css/global-style.css
+6:57:16 PM [32mGET[39m /modules/contentLoader.mjs
+6:57:16 PM [32mGET[39m /modules/pageState.mjs
+6:57:16 PM [32mGET[39m /modules/nav.mjs
+6:57:16 PM [32mGET[39m /templates/thecorner.html
+6:57:16 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710093436454
+6:57:16 PM [32mGET[39m /modules/getIdeas.mjs
+6:57:16 PM [32mGET[39m /modules/submitCreation.mjs
+6:57:16 PM [32mGET[39m /modules/submitIdea.mjs
+6:57:16 PM [32mGET[39m /modules/submitRating.mjs
+6:57:16 PM [32mGET[39m /scripts/ideasList.mjs
+6:57:16 PM [32mGET[39m /modules/getFrom.mjs
+6:57:16 PM [32mGET[39m /modules/postTo.mjs
+6:57:16 PM [32mGET[39m /idea/getIdeas
+6:57:20 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:14:15 PM [32mGET[39m /thecorner
+7:14:15 PM [32mGET[39m /css/global-style.css
+7:14:15 PM [32mGET[39m /modules/contentLoader.mjs
+7:14:15 PM [32mGET[39m /modules/pageState.mjs
+7:14:15 PM [32mGET[39m /modules/nav.mjs
+7:14:15 PM [32mGET[39m /templates/thecorner.html
+7:14:15 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710094455925
+7:14:15 PM [32mGET[39m /modules/getIdeas.mjs
+7:14:15 PM [32mGET[39m /modules/submitCreation.mjs
+7:14:15 PM [32mGET[39m /modules/submitIdea.mjs
+7:14:15 PM [32mGET[39m /modules/submitRating.mjs
+7:14:15 PM [32mGET[39m /scripts/ideasList.mjs
+7:14:15 PM [32mGET[39m /modules/getFrom.mjs
+7:14:15 PM [32mGET[39m /modules/postTo.mjs
+7:14:16 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:17:36 PM [32mGET[39m /thecorner
+7:17:36 PM [32mGET[39m /css/global-style.css
+7:17:36 PM [32mGET[39m /modules/contentLoader.mjs
+7:17:36 PM [32mGET[39m /modules/pageState.mjs
+7:17:36 PM [32mGET[39m /modules/nav.mjs
+7:17:36 PM [32mGET[39m /templates/thecorner.html
+7:17:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710094656106
+7:17:36 PM [32mGET[39m /modules/getIdeas.mjs
+7:17:36 PM [32mGET[39m /modules/submitCreation.mjs
+7:17:36 PM [32mGET[39m /modules/submitIdea.mjs
+7:17:36 PM [32mGET[39m /modules/submitRating.mjs
+7:17:36 PM [32mGET[39m /scripts/ideasList.mjs
+7:17:36 PM [32mGET[39m /modules/postTo.mjs
+7:17:36 PM [32mGET[39m /modules/getFrom.mjs
+7:17:36 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:19:19 PM [32mGET[39m /thecorner
+7:19:19 PM [32mGET[39m /css/global-style.css
+7:19:19 PM [32mGET[39m /modules/contentLoader.mjs
+7:19:19 PM [32mGET[39m /modules/pageState.mjs
+7:19:19 PM [32mGET[39m /modules/nav.mjs
+7:19:19 PM [32mGET[39m /templates/thecorner.html
+7:19:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710094759476
+7:19:19 PM [32mGET[39m /modules/getIdeas.mjs
+7:19:19 PM [32mGET[39m /modules/submitCreation.mjs
+7:19:19 PM [32mGET[39m /modules/submitIdea.mjs
+7:19:19 PM [32mGET[39m /modules/submitRating.mjs
+7:19:19 PM [32mGET[39m /scripts/ideasList.mjs
+7:19:19 PM [32mGET[39m /modules/getFrom.mjs
+7:19:19 PM [32mGET[39m /modules/postTo.mjs
+7:19:19 PM [32mGET[39m /idea/getIdeas
+7:19:35 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:20:22 PM [33mPOST[39m /idea/rateIdea
+7:25:34 PM [32mGET[39m /templates/thecorner.html
+7:25:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095134473
+7:25:34 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:26:59 PM [32mGET[39m /thecorner
+7:26:59 PM [32mGET[39m /css/global-style.css
+7:26:59 PM [32mGET[39m /modules/contentLoader.mjs
+7:26:59 PM [32mGET[39m /modules/pageState.mjs
+7:27:00 PM [32mGET[39m /modules/nav.mjs
+7:27:00 PM [32mGET[39m /templates/thecorner.html
+7:27:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095220011
+7:27:00 PM [32mGET[39m /modules/getIdeas.mjs
+7:27:00 PM [32mGET[39m /modules/submitCreation.mjs
+7:27:00 PM [32mGET[39m /modules/submitIdea.mjs
+7:27:00 PM [32mGET[39m /modules/submitRating.mjs
+7:27:00 PM [32mGET[39m /scripts/ideasList.mjs
+7:27:00 PM [32mGET[39m /modules/getFrom.mjs
+7:27:00 PM [32mGET[39m /modules/postTo.mjs
+7:27:00 PM [32mGET[39m /idea/getIdeas
+7:27:06 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+7:27:34 PM [32mGET[39m /thecorner
+7:27:34 PM [32mGET[39m /css/global-style.css
+7:27:34 PM [32mGET[39m /modules/contentLoader.mjs
+7:27:34 PM [32mGET[39m /modules/pageState.mjs
+7:27:34 PM [32mGET[39m /modules/nav.mjs
+7:27:34 PM [32mGET[39m /templates/thecorner.html
+7:27:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095255001
+7:27:35 PM [32mGET[39m /modules/getIdeas.mjs
+7:27:35 PM [32mGET[39m /modules/submitCreation.mjs
+7:27:35 PM [32mGET[39m /modules/submitIdea.mjs
+7:27:35 PM [32mGET[39m /scripts/ideasList.mjs
+7:27:35 PM [32mGET[39m /modules/submitRating.mjs
+7:27:35 PM [32mGET[39m /modules/getFrom.mjs
+7:27:35 PM [32mGET[39m /modules/postTo.mjs
+7:27:35 PM [32mGET[39m /idea/getIdeas
+7:27:38 PM [33mPOST[39m /idea/rateIdea
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:27:59 PM [32mGET[39m /thecorner
+7:27:59 PM [32mGET[39m /css/global-style.css
+7:27:59 PM [32mGET[39m /modules/contentLoader.mjs
+7:27:59 PM [32mGET[39m /modules/pageState.mjs
+7:27:59 PM [32mGET[39m /modules/nav.mjs
+7:27:59 PM [32mGET[39m /templates/thecorner.html
+7:27:59 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095279985
+7:28:00 PM [32mGET[39m /modules/getIdeas.mjs
+7:28:00 PM [32mGET[39m /modules/submitCreation.mjs
+7:28:00 PM [32mGET[39m /modules/submitIdea.mjs
+7:28:00 PM [32mGET[39m /modules/submitRating.mjs
+7:28:00 PM [32mGET[39m /scripts/ideasList.mjs
+7:28:00 PM [32mGET[39m /modules/getFrom.mjs
+7:28:00 PM [32mGET[39m /modules/postTo.mjs
+7:28:00 PM [32mGET[39m /idea/getIdeas
+7:28:02 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:29:44 PM [32mGET[39m /thecorner
+7:29:44 PM [32mGET[39m /css/global-style.css
+7:29:44 PM [32mGET[39m /modules/contentLoader.mjs
+7:29:44 PM [32mGET[39m /modules/pageState.mjs
+7:29:44 PM [32mGET[39m /modules/nav.mjs
+7:29:44 PM [32mGET[39m /templates/thecorner.html
+7:29:44 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095384161
+7:29:44 PM [32mGET[39m /modules/getIdeas.mjs
+7:29:44 PM [32mGET[39m /modules/submitCreation.mjs
+7:29:44 PM [32mGET[39m /modules/submitIdea.mjs
+7:29:44 PM [32mGET[39m /modules/submitRating.mjs
+7:29:44 PM [32mGET[39m /scripts/ideasList.mjs
+7:29:44 PM [32mGET[39m /modules/getFrom.mjs
+7:29:44 PM [32mGET[39m /modules/postTo.mjs
+7:29:44 PM [32mGET[39m /idea/getIdeas
+7:29:46 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:30:04 PM [32mGET[39m /thecorner
+7:30:04 PM [32mGET[39m /css/global-style.css
+7:30:04 PM [32mGET[39m /modules/contentLoader.mjs
+7:30:04 PM [32mGET[39m /modules/pageState.mjs
+7:30:04 PM [32mGET[39m /modules/nav.mjs
+7:30:04 PM [32mGET[39m /templates/thecorner.html
+7:30:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095404093
+7:30:04 PM [32mGET[39m /modules/getIdeas.mjs
+7:30:04 PM [32mGET[39m /modules/submitCreation.mjs
+7:30:04 PM [32mGET[39m /modules/submitIdea.mjs
+7:30:04 PM [32mGET[39m /modules/submitRating.mjs
+7:30:04 PM [32mGET[39m /scripts/ideasList.mjs
+7:30:04 PM [32mGET[39m /modules/getFrom.mjs
+7:30:04 PM [32mGET[39m /modules/postTo.mjs
+7:30:04 PM [32mGET[39m /idea/getIdeas
+7:30:06 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:30:32 PM [32mGET[39m /thecorner
+7:30:32 PM [32mGET[39m /css/global-style.css
+7:30:32 PM [32mGET[39m /modules/contentLoader.mjs
+7:30:32 PM [32mGET[39m /modules/pageState.mjs
+7:30:32 PM [32mGET[39m /modules/nav.mjs
+7:30:32 PM [32mGET[39m /templates/thecorner.html
+7:30:32 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095432474
+7:30:32 PM [32mGET[39m /modules/getIdeas.mjs
+7:30:32 PM [32mGET[39m /modules/submitCreation.mjs
+7:30:32 PM [32mGET[39m /modules/submitIdea.mjs
+7:30:32 PM [32mGET[39m /modules/submitRating.mjs
+7:30:32 PM [32mGET[39m /scripts/ideasList.mjs
+7:30:32 PM [32mGET[39m /modules/getFrom.mjs
+7:30:32 PM [32mGET[39m /modules/postTo.mjs
+7:30:32 PM [32mGET[39m /idea/getIdeas
+7:30:35 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:31:53 PM [32mGET[39m /thecorner
+7:31:53 PM [32mGET[39m /css/global-style.css
+7:31:53 PM [32mGET[39m /modules/contentLoader.mjs
+7:31:53 PM [32mGET[39m /modules/pageState.mjs
+7:31:53 PM [32mGET[39m /modules/nav.mjs
+7:31:53 PM [32mGET[39m /templates/thecorner.html
+7:31:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095513750
+7:31:53 PM [32mGET[39m /modules/getIdeas.mjs
+7:31:53 PM [32mGET[39m /modules/submitCreation.mjs
+7:31:53 PM [32mGET[39m /modules/submitIdea.mjs
+7:31:53 PM [32mGET[39m /modules/submitRating.mjs
+7:31:53 PM [32mGET[39m /scripts/ideasList.mjs
+7:31:53 PM [32mGET[39m /modules/getFrom.mjs
+7:31:53 PM [32mGET[39m /modules/postTo.mjs
+7:31:53 PM [32mGET[39m /idea/getIdeas
+7:31:59 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:32:15 PM [32mGET[39m /thecorner
+7:32:15 PM [32mGET[39m /css/global-style.css
+7:32:15 PM [32mGET[39m /modules/contentLoader.mjs
+7:32:15 PM [32mGET[39m /modules/pageState.mjs
+7:32:15 PM [32mGET[39m /modules/nav.mjs
+7:32:15 PM [32mGET[39m /templates/thecorner.html
+7:32:15 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095535921
+7:32:15 PM [32mGET[39m /modules/getIdeas.mjs
+7:32:15 PM [32mGET[39m /modules/submitCreation.mjs
+7:32:15 PM [32mGET[39m /modules/submitIdea.mjs
+7:32:15 PM [32mGET[39m /modules/submitRating.mjs
+7:32:15 PM [32mGET[39m /scripts/ideasList.mjs
+7:32:15 PM [32mGET[39m /modules/getFrom.mjs
+7:32:15 PM [32mGET[39m /modules/postTo.mjs
+7:32:15 PM [32mGET[39m /idea/getIdeas
+7:32:19 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:33:18 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:34:40 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:35:05 PM [32mGET[39m /thecorner
+7:35:05 PM [32mGET[39m /css/global-style.css
+7:35:05 PM [32mGET[39m /modules/pageState.mjs
+7:35:05 PM [32mGET[39m /modules/contentLoader.mjs
+7:35:05 PM [32mGET[39m /modules/nav.mjs
+7:35:05 PM [32mGET[39m /templates/thecorner.html
+7:35:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095705367
+7:35:05 PM [32mGET[39m /modules/getIdeas.mjs
+7:35:05 PM [32mGET[39m /modules/submitCreation.mjs
+7:35:05 PM [32mGET[39m /modules/submitIdea.mjs
+7:35:05 PM [32mGET[39m /modules/submitRating.mjs
+7:35:05 PM [32mGET[39m /scripts/ideasList.mjs
+7:35:05 PM [32mGET[39m /modules/getFrom.mjs
+7:35:05 PM [32mGET[39m /modules/postTo.mjs
+7:35:05 PM [32mGET[39m /idea/getIdeas
+7:35:10 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:39:57 PM [32mGET[39m /thecorner
+7:39:57 PM [32mGET[39m /css/global-style.css
+7:39:57 PM [32mGET[39m /modules/contentLoader.mjs
+7:39:57 PM [32mGET[39m /modules/pageState.mjs
+7:39:57 PM [32mGET[39m /modules/nav.mjs
+7:39:57 PM [32mGET[39m /templates/thecorner.html
+7:39:57 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710095997524
+7:39:57 PM [32mGET[39m /modules/getIdeas.mjs
+7:39:57 PM [32mGET[39m /modules/submitCreation.mjs
+7:39:57 PM [32mGET[39m /modules/submitIdea.mjs
+7:39:57 PM [32mGET[39m /modules/submitRating.mjs
+7:39:57 PM [32mGET[39m /scripts/ideasList.mjs
+7:39:57 PM [32mGET[39m /modules/getFrom.mjs
+7:39:57 PM [32mGET[39m /modules/postTo.mjs
+7:39:57 PM [32mGET[39m /idea/getIdeas
+7:40:09 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:42:03 PM [32mGET[39m /thecorner
+7:42:03 PM [32mGET[39m /css/global-style.css
+7:42:03 PM [32mGET[39m /modules/contentLoader.mjs
+7:42:03 PM [32mGET[39m /modules/pageState.mjs
+7:42:03 PM [32mGET[39m /modules/nav.mjs
+7:42:03 PM [32mGET[39m /templates/thecorner.html
+7:42:03 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710096123491
+7:42:03 PM [32mGET[39m /modules/getIdeas.mjs
+7:42:03 PM [32mGET[39m /modules/submitCreation.mjs
+7:42:03 PM [32mGET[39m /modules/submitIdea.mjs
+7:42:03 PM [32mGET[39m /modules/submitRating.mjs
+7:42:03 PM [32mGET[39m /scripts/ideasList.mjs
+7:42:03 PM [32mGET[39m /modules/getFrom.mjs
+7:42:03 PM [32mGET[39m /modules/postTo.mjs
+7:42:03 PM [32mGET[39m /idea/getIdeas
+7:42:15 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:46:37 PM [32mGET[39m /thecorner
+7:46:37 PM [32mGET[39m /css/global-style.css
+7:46:37 PM [32mGET[39m /modules/contentLoader.mjs
+7:46:37 PM [32mGET[39m /modules/pageState.mjs
+7:46:37 PM [32mGET[39m /modules/nav.mjs
+7:46:37 PM [32mGET[39m /templates/thecorner.html
+7:46:37 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710096397087
+7:46:37 PM [32mGET[39m /modules/getIdeas.mjs
+7:46:37 PM [32mGET[39m /modules/submitCreation.mjs
+7:46:37 PM [32mGET[39m /scripts/ideasList.mjs
+7:46:37 PM [32mGET[39m /modules/submitIdea.mjs
+7:46:37 PM [32mGET[39m /modules/submitRating.mjs
+7:46:37 PM [32mGET[39m /modules/getFrom.mjs
+7:46:37 PM [32mGET[39m /modules/postTo.mjs
+7:46:37 PM [32mGET[39m /idea/getIdeas
+7:46:41 PM [33mPOST[39m /idea/rateIdea
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:56:21 PM [32mGET[39m /thecorner
+7:56:21 PM [32mGET[39m /css/global-style.css
+7:56:21 PM [32mGET[39m /modules/contentLoader.mjs
+7:56:21 PM [32mGET[39m /modules/pageState.mjs
+7:56:21 PM [32mGET[39m /modules/nav.mjs
+7:56:21 PM [32mGET[39m /templates/thecorner.html
+7:56:21 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710096981467
+7:56:21 PM [32mGET[39m /modules/getIdeas.mjs
+7:56:21 PM [32mGET[39m /modules/submitCreation.mjs
+7:56:21 PM [32mGET[39m /modules/submitIdea.mjs
+7:56:21 PM [32mGET[39m /modules/submitRating.mjs
+7:56:21 PM [32mGET[39m /scripts/ideasList.mjs
+7:56:21 PM [32mGET[39m /modules/getFrom.mjs
+7:56:21 PM [32mGET[39m /modules/postTo.mjs
+7:56:21 PM [32mGET[39m /idea/getIdeas
+7:56:25 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:56:44 PM [32mGET[39m /thecorner
+7:56:44 PM [32mGET[39m /css/global-style.css
+7:56:44 PM [32mGET[39m /modules/contentLoader.mjs
+7:56:44 PM [32mGET[39m /modules/pageState.mjs
+7:56:44 PM [32mGET[39m /modules/nav.mjs
+7:56:44 PM [32mGET[39m /templates/thecorner.html
+7:56:44 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097004871
+7:56:44 PM [32mGET[39m /modules/getIdeas.mjs
+7:56:44 PM [32mGET[39m /modules/submitCreation.mjs
+7:56:44 PM [32mGET[39m /modules/submitIdea.mjs
+7:56:44 PM [32mGET[39m /modules/submitRating.mjs
+7:56:44 PM [32mGET[39m /scripts/ideasList.mjs
+7:56:44 PM [32mGET[39m /modules/getFrom.mjs
+7:56:44 PM [32mGET[39m /modules/postTo.mjs
+7:56:44 PM [32mGET[39m /idea/getIdeas
+7:56:48 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:57:42 PM [32mGET[39m /thecorner
+7:57:42 PM [32mGET[39m /css/global-style.css
+7:57:42 PM [32mGET[39m /modules/contentLoader.mjs
+7:57:42 PM [32mGET[39m /modules/pageState.mjs
+7:57:42 PM [32mGET[39m /modules/nav.mjs
+7:57:42 PM [32mGET[39m /templates/thecorner.html
+7:57:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097062691
+7:57:42 PM [32mGET[39m /modules/getIdeas.mjs
+7:57:42 PM [32mGET[39m /modules/submitCreation.mjs
+7:57:42 PM [32mGET[39m /modules/submitIdea.mjs
+7:57:42 PM [32mGET[39m /modules/submitRating.mjs
+7:57:42 PM [32mGET[39m /scripts/ideasList.mjs
+7:57:42 PM [32mGET[39m /modules/getFrom.mjs
+7:57:42 PM [32mGET[39m /modules/postTo.mjs
+7:57:42 PM [32mGET[39m /idea/getIdeas
+7:57:48 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+7:59:09 PM [32mGET[39m /thecorner
+7:59:09 PM [32mGET[39m /css/global-style.css
+7:59:09 PM [32mGET[39m /modules/pageState.mjs
+7:59:09 PM [32mGET[39m /modules/contentLoader.mjs
+7:59:09 PM [32mGET[39m /modules/nav.mjs
+7:59:09 PM [32mGET[39m /templates/thecorner.html
+7:59:09 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097149303
+7:59:09 PM [32mGET[39m /modules/getIdeas.mjs
+7:59:09 PM [32mGET[39m /modules/submitCreation.mjs
+7:59:09 PM [32mGET[39m /modules/submitIdea.mjs
+7:59:09 PM [32mGET[39m /modules/submitRating.mjs
+7:59:09 PM [32mGET[39m /scripts/ideasList.mjs
+7:59:09 PM [32mGET[39m /modules/getFrom.mjs
+7:59:09 PM [32mGET[39m /modules/postTo.mjs
+7:59:09 PM [32mGET[39m /idea/getIdeas
+7:59:29 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:00:57 PM [32mGET[39m /thecorner
+8:00:57 PM [32mGET[39m /css/global-style.css
+8:00:57 PM [32mGET[39m /modules/contentLoader.mjs
+8:00:57 PM [32mGET[39m /modules/pageState.mjs
+8:00:57 PM [32mGET[39m /modules/nav.mjs
+8:00:57 PM [32mGET[39m /templates/thecorner.html
+8:00:57 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097257606
+8:00:57 PM [32mGET[39m /modules/getIdeas.mjs
+8:00:57 PM [32mGET[39m /modules/submitCreation.mjs
+8:00:57 PM [32mGET[39m /modules/submitIdea.mjs
+8:00:57 PM [32mGET[39m /modules/submitRating.mjs
+8:00:57 PM [32mGET[39m /scripts/ideasList.mjs
+8:00:57 PM [32mGET[39m /modules/getFrom.mjs
+8:00:57 PM [32mGET[39m /modules/postTo.mjs
+8:00:57 PM [32mGET[39m /idea/getIdeas
+8:01:12 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+8:02:05 PM [32mGET[39m /thecorner
+8:02:05 PM [32mGET[39m /css/global-style.css
+8:02:05 PM [32mGET[39m /modules/contentLoader.mjs
+8:02:05 PM [32mGET[39m /modules/pageState.mjs
+8:02:05 PM [32mGET[39m /modules/nav.mjs
+8:02:05 PM [32mGET[39m /templates/thecorner.html
+8:02:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097325177
+8:02:05 PM [32mGET[39m /modules/getIdeas.mjs
+8:02:05 PM [32mGET[39m /modules/submitCreation.mjs
+8:02:05 PM [32mGET[39m /modules/submitIdea.mjs
+8:02:05 PM [32mGET[39m /modules/submitRating.mjs
+8:02:05 PM [32mGET[39m /scripts/ideasList.mjs
+8:02:05 PM [32mGET[39m /modules/getFrom.mjs
+8:02:05 PM [32mGET[39m /modules/postTo.mjs
+8:02:05 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:02:54 PM [32mGET[39m /thecorner
+8:02:54 PM [32mGET[39m /css/global-style.css
+8:02:54 PM [32mGET[39m /modules/contentLoader.mjs
+8:02:54 PM [32mGET[39m /modules/pageState.mjs
+8:02:54 PM [32mGET[39m /modules/nav.mjs
+8:02:54 PM [32mGET[39m /templates/thecorner.html
+8:02:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097374168
+8:02:54 PM [32mGET[39m /modules/getIdeas.mjs
+8:02:54 PM [32mGET[39m /modules/submitCreation.mjs
+8:02:54 PM [32mGET[39m /modules/submitRating.mjs
+8:02:54 PM [32mGET[39m /scripts/ideasList.mjs
+8:02:54 PM [32mGET[39m /modules/submitIdea.mjs
+8:02:54 PM [32mGET[39m /modules/getFrom.mjs
+8:02:54 PM [32mGET[39m /modules/postTo.mjs
+8:02:54 PM [32mGET[39m /idea/getIdeas
+8:03:09 PM [32mGET[39m /thecorner
+8:03:09 PM [32mGET[39m /css/global-style.css
+8:03:09 PM [32mGET[39m /modules/contentLoader.mjs
+8:03:09 PM [32mGET[39m /modules/pageState.mjs
+8:03:09 PM [32mGET[39m /modules/nav.mjs
+8:03:09 PM [32mGET[39m /templates/thecorner.html
+8:03:09 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097389986
+8:03:09 PM [32mGET[39m /modules/getIdeas.mjs
+8:03:09 PM [32mGET[39m /modules/submitCreation.mjs
+8:03:10 PM [32mGET[39m /modules/submitIdea.mjs
+8:03:10 PM [32mGET[39m /modules/submitRating.mjs
+8:03:10 PM [32mGET[39m /modules/getFrom.mjs
+8:03:10 PM [32mGET[39m /scripts/ideasList.mjs
+8:03:10 PM [32mGET[39m /modules/postTo.mjs
+8:03:10 PM [32mGET[39m /idea/getIdeas
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+8:03:35 PM [33mPOST[39m /idea/rateIdea
+8:06:28 PM [32mGET[39m /thecorner
+8:06:28 PM [32mGET[39m /css/global-style.css
+8:06:28 PM [32mGET[39m /modules/contentLoader.mjs
+8:06:28 PM [32mGET[39m /modules/pageState.mjs
+8:06:28 PM [32mGET[39m /modules/nav.mjs
+8:06:28 PM [32mGET[39m /templates/thecorner.html
+8:06:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097588445
+8:06:28 PM [32mGET[39m /modules/getIdeas.mjs
+8:06:28 PM [32mGET[39m /modules/submitCreation.mjs
+8:06:28 PM [32mGET[39m /modules/submitIdea.mjs
+8:06:28 PM [32mGET[39m /modules/submitRating.mjs
+8:06:28 PM [32mGET[39m /scripts/ideasList.mjs
+8:06:28 PM [32mGET[39m /modules/getFrom.mjs
+8:06:28 PM [32mGET[39m /modules/postTo.mjs
+8:06:28 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:08:12 PM [33mPOST[39m /idea/rateIdea
+8:08:32 PM [32mGET[39m /thecorner
+8:08:32 PM [32mGET[39m /css/global-style.css
+8:08:32 PM [32mGET[39m /modules/contentLoader.mjs
+8:08:32 PM [32mGET[39m /modules/pageState.mjs
+8:08:32 PM [32mGET[39m /modules/nav.mjs
+8:08:32 PM [32mGET[39m /templates/thecorner.html
+8:08:32 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097712574
+8:08:32 PM [32mGET[39m /modules/getIdeas.mjs
+8:08:32 PM [32mGET[39m /modules/submitCreation.mjs
+8:08:32 PM [32mGET[39m /modules/submitIdea.mjs
+8:08:32 PM [32mGET[39m /modules/submitRating.mjs
+8:08:32 PM [32mGET[39m /scripts/ideasList.mjs
+8:08:32 PM [32mGET[39m /modules/getFrom.mjs
+8:08:32 PM [32mGET[39m /modules/postTo.mjs
+8:08:32 PM [32mGET[39m /idea/getIdeas
+8:08:37 PM [33mPOST[39m /idea/rateIdea
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+8:09:05 PM [32mGET[39m /thecorner
+8:09:05 PM [32mGET[39m /css/global-style.css
+8:09:05 PM [32mGET[39m /modules/contentLoader.mjs
+8:09:05 PM [32mGET[39m /modules/pageState.mjs
+8:09:05 PM [32mGET[39m /modules/nav.mjs
+8:09:05 PM [32mGET[39m /templates/thecorner.html
+8:09:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097745325
+8:09:05 PM [32mGET[39m /modules/getIdeas.mjs
+8:09:05 PM [32mGET[39m /modules/submitCreation.mjs
+8:09:05 PM [32mGET[39m /modules/submitIdea.mjs
+8:09:05 PM [32mGET[39m /scripts/ideasList.mjs
+8:09:05 PM [32mGET[39m /modules/submitRating.mjs
+8:09:05 PM [32mGET[39m /modules/getFrom.mjs
+8:09:05 PM [32mGET[39m /modules/postTo.mjs
+8:09:05 PM [32mGET[39m /idea/getIdeas
+8:09:09 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:11:17 PM [32mGET[39m /thecorner
+8:11:17 PM [32mGET[39m /css/global-style.css
+8:11:17 PM [32mGET[39m /modules/contentLoader.mjs
+8:11:17 PM [32mGET[39m /modules/pageState.mjs
+8:11:17 PM [32mGET[39m /modules/nav.mjs
+8:11:17 PM [32mGET[39m /templates/thecorner.html
+8:11:17 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097877658
+8:11:17 PM [32mGET[39m /modules/getIdeas.mjs
+8:11:17 PM [32mGET[39m /modules/submitCreation.mjs
+8:11:17 PM [32mGET[39m /modules/submitIdea.mjs
+8:11:17 PM [32mGET[39m /modules/submitRating.mjs
+8:11:17 PM [32mGET[39m /scripts/ideasList.mjs
+8:11:17 PM [32mGET[39m /modules/getFrom.mjs
+8:11:17 PM [32mGET[39m /modules/postTo.mjs
+8:11:17 PM [32mGET[39m /idea/getIdeas
+8:11:25 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:11:43 PM [32mGET[39m /thecorner
+8:11:43 PM [32mGET[39m /css/global-style.css
+8:11:43 PM [32mGET[39m /modules/contentLoader.mjs
+8:11:43 PM [32mGET[39m /modules/pageState.mjs
+8:11:43 PM [32mGET[39m /modules/nav.mjs
+8:11:43 PM [32mGET[39m /templates/thecorner.html
+8:11:43 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097903995
+8:11:44 PM [32mGET[39m /modules/getIdeas.mjs
+8:11:44 PM [32mGET[39m /modules/submitCreation.mjs
+8:11:44 PM [32mGET[39m /modules/submitIdea.mjs
+8:11:44 PM [32mGET[39m /modules/submitRating.mjs
+8:11:44 PM [32mGET[39m /modules/getFrom.mjs
+8:11:44 PM [32mGET[39m /scripts/ideasList.mjs
+8:11:44 PM [32mGET[39m /modules/postTo.mjs
+8:11:44 PM [32mGET[39m /idea/getIdeas
+8:11:48 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:11:56 PM [32mGET[39m /thecorner
+8:11:56 PM [32mGET[39m /css/global-style.css
+8:11:56 PM [32mGET[39m /modules/contentLoader.mjs
+8:11:56 PM [32mGET[39m /modules/pageState.mjs
+8:11:56 PM [32mGET[39m /modules/nav.mjs
+8:11:56 PM [32mGET[39m /templates/thecorner.html
+8:11:56 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097916355
+8:11:56 PM [32mGET[39m /modules/getIdeas.mjs
+8:11:56 PM [32mGET[39m /modules/submitCreation.mjs
+8:11:56 PM [32mGET[39m /modules/submitIdea.mjs
+8:11:56 PM [32mGET[39m /modules/submitRating.mjs
+8:11:56 PM [32mGET[39m /scripts/ideasList.mjs
+8:11:56 PM [32mGET[39m /modules/getFrom.mjs
+8:11:56 PM [32mGET[39m /modules/postTo.mjs
+8:11:56 PM [32mGET[39m /idea/getIdeas
+8:12:01 PM [33mPOST[39m /idea/rateIdea
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+8:13:16 PM [32mGET[39m /thecorner
+8:13:16 PM [32mGET[39m /css/global-style.css
+8:13:16 PM [32mGET[39m /modules/pageState.mjs
+8:13:16 PM [32mGET[39m /modules/contentLoader.mjs
+8:13:16 PM [32mGET[39m /modules/nav.mjs
+8:13:16 PM [32mGET[39m /templates/thecorner.html
+8:13:16 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710097996722
+8:13:16 PM [32mGET[39m /modules/getIdeas.mjs
+8:13:16 PM [32mGET[39m /modules/submitCreation.mjs
+8:13:16 PM [32mGET[39m /modules/submitIdea.mjs
+8:13:16 PM [32mGET[39m /modules/submitRating.mjs
+8:13:16 PM [32mGET[39m /scripts/ideasList.mjs
+8:13:16 PM [32mGET[39m /modules/getFrom.mjs
+8:13:16 PM [32mGET[39m /modules/postTo.mjs
+8:13:16 PM [32mGET[39m /idea/getIdeas
+8:13:21 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:15:52 PM [32mGET[39m /thecorner
+8:15:52 PM [32mGET[39m /css/global-style.css
+8:15:52 PM [32mGET[39m /modules/contentLoader.mjs
+8:15:52 PM [32mGET[39m /modules/pageState.mjs
+8:15:52 PM [32mGET[39m /modules/nav.mjs
+8:15:52 PM [32mGET[39m /templates/thecorner.html
+8:15:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098152103
+8:15:52 PM [32mGET[39m /modules/getIdeas.mjs
+8:15:52 PM [32mGET[39m /modules/submitCreation.mjs
+8:15:52 PM [32mGET[39m /modules/submitIdea.mjs
+8:15:52 PM [32mGET[39m /modules/submitRating.mjs
+8:15:52 PM [32mGET[39m /scripts/ideasList.mjs
+8:15:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:15:52 PM [32mGET[39m /modules/getFrom.mjs
+8:15:52 PM [32mGET[39m /modules/postTo.mjs
+8:15:52 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:16:20 PM [32mGET[39m /thecorner
+8:16:20 PM [32mGET[39m /css/global-style.css
+8:16:20 PM [32mGET[39m /modules/contentLoader.mjs
+8:16:20 PM [32mGET[39m /modules/pageState.mjs
+8:16:20 PM [32mGET[39m /modules/nav.mjs
+8:16:20 PM [32mGET[39m /templates/thecorner.html
+8:16:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098180127
+8:16:20 PM [32mGET[39m /modules/getIdeas.mjs
+8:16:20 PM [32mGET[39m /modules/submitCreation.mjs
+8:16:20 PM [32mGET[39m /modules/submitIdea.mjs
+8:16:20 PM [32mGET[39m /scripts/ideasList.mjs
+8:16:20 PM [32mGET[39m /modules/submitRating.mjs
+8:16:20 PM [32mGET[39m /modules/getFrom.mjs
+8:16:20 PM [32mGET[39m /modules/postTo.mjs
+8:16:20 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:16:20 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+8:18:28 PM [32mGET[39m /thecorner
+8:18:28 PM [32mGET[39m /css/global-style.css
+8:18:28 PM [32mGET[39m /modules/contentLoader.mjs
+8:18:28 PM [32mGET[39m /modules/pageState.mjs
+8:18:28 PM [32mGET[39m /modules/nav.mjs
+8:18:28 PM [32mGET[39m /templates/thecorner.html
+8:18:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098308771
+8:18:28 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:18:28 PM [32mGET[39m /modules/getIdeas.mjs
+8:18:28 PM [32mGET[39m /modules/submitCreation.mjs
+8:18:28 PM [32mGET[39m /modules/submitIdea.mjs
+8:18:28 PM [32mGET[39m /modules/getFrom.mjs
+8:18:28 PM [32mGET[39m /modules/submitRating.mjs
+8:18:28 PM [32mGET[39m /scripts/ideasList.mjs
+8:18:28 PM [32mGET[39m /modules/postTo.mjs
+8:18:28 PM [32mGET[39m /idea/getIdeas
+8:18:35 PM [33mPOST[39m /idea/rateIdea
+8:18:39 PM [33mPOST[39m /idea/rateIdea
+8:18:44 PM [33mPOST[39m /idea/rateIdea
+8:18:45 PM [32mGET[39m /thecorner
+8:18:45 PM [32mGET[39m /css/global-style.css
+8:18:45 PM [32mGET[39m /modules/contentLoader.mjs
+8:18:45 PM [32mGET[39m /modules/pageState.mjs
+8:18:45 PM [32mGET[39m /modules/nav.mjs
+8:18:45 PM [32mGET[39m /templates/thecorner.html
+8:18:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098325991
+8:18:46 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:18:46 PM [32mGET[39m /modules/getIdeas.mjs
+8:18:46 PM [32mGET[39m /modules/submitCreation.mjs
+8:18:46 PM [32mGET[39m /modules/getFrom.mjs
+8:18:46 PM [32mGET[39m /modules/submitIdea.mjs
+8:18:46 PM [32mGET[39m /modules/submitRating.mjs
+8:18:46 PM [32mGET[39m /scripts/ideasList.mjs
+8:18:46 PM [32mGET[39m /modules/postTo.mjs
+8:18:46 PM [32mGET[39m /idea/getIdeas
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+8:19:54 PM [32mGET[39m /thecorner
+8:19:54 PM [32mGET[39m /css/global-style.css
+8:19:54 PM [32mGET[39m /modules/contentLoader.mjs
+8:19:54 PM [32mGET[39m /modules/pageState.mjs
+8:19:54 PM [32mGET[39m /modules/nav.mjs
+8:19:54 PM [32mGET[39m /templates/thecorner.html
+8:19:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098394921
+8:19:54 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:19:54 PM [32mGET[39m /modules/getIdeas.mjs
+8:19:54 PM [32mGET[39m /modules/submitCreation.mjs
+8:19:54 PM [32mGET[39m /modules/submitIdea.mjs
+8:19:54 PM [32mGET[39m /modules/submitRating.mjs
+8:19:54 PM [32mGET[39m /scripts/ideasList.mjs
+8:19:54 PM [32mGET[39m /modules/getFrom.mjs
+8:19:54 PM [32mGET[39m /modules/postTo.mjs
+8:19:54 PM [32mGET[39m /idea/getIdeas
+8:19:58 PM [33mPOST[39m /idea/rateIdea
+8:20:06 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+8:21:19 PM [32mGET[39m /thecorner
+8:21:19 PM [32mGET[39m /css/global-style.css
+8:21:19 PM [32mGET[39m /modules/contentLoader.mjs
+8:21:19 PM [32mGET[39m /modules/pageState.mjs
+8:21:19 PM [32mGET[39m /modules/nav.mjs
+8:21:19 PM [32mGET[39m /templates/thecorner.html
+8:21:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098479396
+8:21:19 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:21:19 PM [32mGET[39m /modules/getIdeas.mjs
+8:21:19 PM [32mGET[39m /modules/submitCreation.mjs
+8:21:19 PM [32mGET[39m /modules/submitIdea.mjs
+8:21:19 PM [32mGET[39m /modules/submitRating.mjs
+8:21:19 PM [32mGET[39m /scripts/ideasList.mjs
+8:21:19 PM [32mGET[39m /modules/getFrom.mjs
+8:21:19 PM [32mGET[39m /modules/postTo.mjs
+8:21:19 PM [32mGET[39m /idea/getIdeas
+8:21:35 PM [32mGET[39m /thecorner
+8:21:35 PM [32mGET[39m /css/global-style.css
+8:21:35 PM [32mGET[39m /modules/contentLoader.mjs
+8:21:35 PM [32mGET[39m /modules/pageState.mjs
+8:21:35 PM [32mGET[39m /modules/nav.mjs
+8:21:35 PM [32mGET[39m /templates/thecorner.html
+8:21:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098495881
+8:21:35 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:21:35 PM [32mGET[39m /modules/getIdeas.mjs
+8:21:35 PM [32mGET[39m /modules/submitCreation.mjs
+8:21:35 PM [32mGET[39m /modules/submitIdea.mjs
+8:21:35 PM [32mGET[39m /modules/submitRating.mjs
+8:21:35 PM [32mGET[39m /scripts/ideasList.mjs
+8:21:35 PM [32mGET[39m /modules/getFrom.mjs
+8:21:35 PM [32mGET[39m /modules/postTo.mjs
+8:21:35 PM [32mGET[39m /idea/getIdeas
+8:21:39 PM [33mPOST[39m /idea/rateIdea
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+8:23:33 PM [32mGET[39m /thecorner
+8:23:33 PM [32mGET[39m /css/global-style.css
+8:23:33 PM [32mGET[39m /modules/contentLoader.mjs
+8:23:33 PM [32mGET[39m /modules/pageState.mjs
+8:23:33 PM [32mGET[39m /modules/nav.mjs
+8:23:33 PM [32mGET[39m /templates/thecorner.html
+8:23:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098613997
+8:23:34 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:23:34 PM [32mGET[39m /modules/getIdeas.mjs
+8:23:34 PM [32mGET[39m /modules/submitCreation.mjs
+8:23:34 PM [32mGET[39m /modules/submitIdea.mjs
+8:23:34 PM [32mGET[39m /modules/submitRating.mjs
+8:23:34 PM [32mGET[39m /scripts/ideasList.mjs
+8:23:34 PM [32mGET[39m /modules/getFrom.mjs
+8:23:34 PM [32mGET[39m /modules/postTo.mjs
+8:23:34 PM [32mGET[39m /idea/getIdeas
+8:23:50 PM [32mGET[39m /thecorner
+8:23:50 PM [32mGET[39m /css/global-style.css
+8:23:50 PM [32mGET[39m /modules/contentLoader.mjs
+8:23:50 PM [32mGET[39m /modules/pageState.mjs
+8:23:50 PM [32mGET[39m /modules/nav.mjs
+8:23:50 PM [32mGET[39m /templates/thecorner.html
+8:23:50 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098630668
+8:23:50 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:23:50 PM [32mGET[39m /modules/getIdeas.mjs
+8:23:50 PM [32mGET[39m /modules/submitCreation.mjs
+8:23:50 PM [32mGET[39m /modules/getFrom.mjs
+8:23:50 PM [32mGET[39m /modules/submitIdea.mjs
+8:23:50 PM [32mGET[39m /modules/submitRating.mjs
+8:23:50 PM [32mGET[39m /scripts/ideasList.mjs
+8:23:50 PM [32mGET[39m /modules/postTo.mjs
+8:23:50 PM [32mGET[39m /idea/getIdeas
+8:24:06 PM [32mGET[39m /thecorner
+8:24:06 PM [32mGET[39m /css/global-style.css
+8:24:06 PM [32mGET[39m /modules/contentLoader.mjs
+8:24:06 PM [32mGET[39m /modules/pageState.mjs
+8:24:06 PM [32mGET[39m /modules/nav.mjs
+8:24:06 PM [32mGET[39m /templates/thecorner.html
+8:24:06 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098646578
+8:24:06 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:24:06 PM [32mGET[39m /modules/getIdeas.mjs
+8:24:06 PM [32mGET[39m /modules/submitCreation.mjs
+8:24:06 PM [32mGET[39m /modules/submitIdea.mjs
+8:24:06 PM [32mGET[39m /modules/submitRating.mjs
+8:24:06 PM [32mGET[39m /modules/getFrom.mjs
+8:24:06 PM [32mGET[39m /modules/postTo.mjs
+8:24:06 PM [32mGET[39m /scripts/ideasList.mjs
+8:24:06 PM [32mGET[39m /idea/getIdeas
+8:24:09 PM [33mPOST[39m /idea/rateIdea
+8:24:13 PM [33mPOST[39m /idea/rateIdea
+8:24:19 PM [33mPOST[39m /idea/rateIdea
+8:24:21 PM [33mPOST[39m /idea/rateIdea
+8:24:24 PM [32mGET[39m /thecorner
+8:24:24 PM [32mGET[39m /css/global-style.css
+8:24:24 PM [32mGET[39m /modules/contentLoader.mjs
+8:24:24 PM [32mGET[39m /modules/pageState.mjs
+8:24:24 PM [32mGET[39m /modules/nav.mjs
+8:24:24 PM [32mGET[39m /templates/thecorner.html
+8:24:24 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098664249
+8:24:24 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:24:24 PM [32mGET[39m /modules/getIdeas.mjs
+8:24:24 PM [32mGET[39m /modules/submitCreation.mjs
+8:24:24 PM [32mGET[39m /modules/submitIdea.mjs
+8:24:24 PM [32mGET[39m /modules/submitRating.mjs
+8:24:24 PM [32mGET[39m /scripts/ideasList.mjs
+8:24:24 PM [32mGET[39m /modules/getFrom.mjs
+8:24:24 PM [32mGET[39m /modules/postTo.mjs
+8:24:24 PM [32mGET[39m /idea/getIdeas
+8:26:46 PM [32mGET[39m /thecorner
+8:26:46 PM [32mGET[39m /css/global-style.css
+8:26:46 PM [32mGET[39m /modules/contentLoader.mjs
+8:26:46 PM [32mGET[39m /modules/pageState.mjs
+8:26:46 PM [32mGET[39m /modules/nav.mjs
+8:26:46 PM [32mGET[39m /templates/thecorner.html
+8:26:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098806877
+8:26:46 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:26:46 PM [32mGET[39m /modules/submitCreation.mjs
+8:26:46 PM [32mGET[39m /modules/getIdeas.mjs
+8:26:46 PM [32mGET[39m /modules/submitIdea.mjs
+8:26:46 PM [32mGET[39m /modules/submitRating.mjs
+8:26:46 PM [32mGET[39m /scripts/ideasList.mjs
+8:26:46 PM [32mGET[39m /modules/getFrom.mjs
+8:26:46 PM [32mGET[39m /modules/postTo.mjs
+8:26:46 PM [32mGET[39m /idea/getIdeas
+8:27:49 PM [32mGET[39m /thecorner
+8:27:50 PM [32mGET[39m /css/global-style.css
+8:27:50 PM [32mGET[39m /modules/contentLoader.mjs
+8:27:50 PM [32mGET[39m /modules/pageState.mjs
+8:27:50 PM [32mGET[39m /modules/nav.mjs
+8:27:50 PM [32mGET[39m /templates/thecorner.html
+8:27:50 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710098870041
+8:27:50 PM [32mGET[39m /modules/calcRatingAverage.mjs
+8:27:50 PM [32mGET[39m /modules/getIdeas.mjs
+8:27:50 PM [32mGET[39m /modules/submitCreation.mjs
+8:27:50 PM [32mGET[39m /modules/submitIdea.mjs
+8:27:50 PM [32mGET[39m /modules/submitRating.mjs
+8:27:50 PM [32mGET[39m /scripts/ideasList.mjs
+8:27:50 PM [32mGET[39m /modules/getFrom.mjs
+8:27:50 PM [32mGET[39m /modules/postTo.mjs
+8:27:50 PM [32mGET[39m /idea/getIdeas
+9:04:34 PM [32mGET[39m /thecorner
+9:04:34 PM [32mGET[39m /css/global-style.css
+9:04:34 PM [32mGET[39m /modules/contentLoader.mjs
+9:04:34 PM [32mGET[39m /modules/pageState.mjs
+9:04:34 PM [32mGET[39m /modules/nav.mjs
+9:04:34 PM [32mGET[39m /templates/thecorner.html
+9:04:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101074787
+9:04:34 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:04:34 PM [32mGET[39m /modules/getIdeas.mjs
+9:04:34 PM [32mGET[39m /modules/submitCreation.mjs
+9:04:34 PM [32mGET[39m /modules/submitIdea.mjs
+9:04:34 PM [32mGET[39m /modules/submitRating.mjs
+9:04:34 PM [32mGET[39m /scripts/ideasList.mjs
+9:04:34 PM [32mGET[39m /modules/getFrom.mjs
+9:04:34 PM [32mGET[39m /modules/postTo.mjs
+9:04:34 PM [32mGET[39m /idea/getIdeas
+9:08:44 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:11:55 PM [33mPOST[39m /idea/createIdea
+9:12:05 PM [32mGET[39m /thecorner
+9:12:05 PM [32mGET[39m /css/global-style.css
+9:12:05 PM [32mGET[39m /modules/contentLoader.mjs
+9:12:05 PM [32mGET[39m /modules/pageState.mjs
+9:12:05 PM [32mGET[39m /modules/nav.mjs
+9:12:05 PM [32mGET[39m /templates/thecorner.html
+9:12:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101525415
+9:12:05 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:12:05 PM [32mGET[39m /modules/getIdeas.mjs
+9:12:05 PM [32mGET[39m /modules/submitCreation.mjs
+9:12:05 PM [32mGET[39m /modules/submitIdea.mjs
+9:12:05 PM [32mGET[39m /modules/getFrom.mjs
+9:12:05 PM [32mGET[39m /modules/submitRating.mjs
+9:12:05 PM [32mGET[39m /scripts/ideasList.mjs
+9:12:05 PM [32mGET[39m /modules/postTo.mjs
+9:12:05 PM [32mGET[39m /idea/getIdeas
+9:12:53 PM [32mGET[39m /templates/thecorner.html
+9:12:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101573145
+9:12:53 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:13:44 PM [32mGET[39m /thecorner
+9:13:44 PM [32mGET[39m /css/global-style.css
+9:13:44 PM [32mGET[39m /modules/pageState.mjs
+9:13:44 PM [32mGET[39m /modules/nav.mjs
+9:13:44 PM [32mGET[39m /modules/contentLoader.mjs
+9:13:44 PM [32mGET[39m /templates/thecorner.html
+9:13:44 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101624671
+9:13:44 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:13:44 PM [32mGET[39m /modules/getIdeas.mjs
+9:13:44 PM [32mGET[39m /modules/submitCreation.mjs
+9:13:44 PM [32mGET[39m /modules/submitIdea.mjs
+9:13:44 PM [32mGET[39m /modules/submitRating.mjs
+9:13:44 PM [32mGET[39m /scripts/ideasList.mjs
+9:13:44 PM [32mGET[39m /modules/getFrom.mjs
+9:13:44 PM [32mGET[39m /modules/postTo.mjs
+9:13:44 PM [32mGET[39m /idea/getIdeas
+9:13:49 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:15:37 PM [32mGET[39m /thecorner
+9:15:37 PM [32mGET[39m /css/global-style.css
+9:15:37 PM [32mGET[39m /modules/contentLoader.mjs
+9:15:37 PM [32mGET[39m /modules/pageState.mjs
+9:15:37 PM [32mGET[39m /modules/nav.mjs
+9:15:37 PM [32mGET[39m /templates/thecorner.html
+9:15:37 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101737751
+9:15:37 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:15:37 PM [32mGET[39m /modules/getIdeas.mjs
+9:15:37 PM [32mGET[39m /modules/submitCreation.mjs
+9:15:37 PM [32mGET[39m /scripts/ideasList.mjs
+9:15:37 PM [32mGET[39m /modules/submitIdea.mjs
+9:15:37 PM [32mGET[39m /modules/submitRating.mjs
+9:15:37 PM [32mGET[39m /modules/getFrom.mjs
+9:15:37 PM [32mGET[39m /modules/postTo.mjs
+9:15:37 PM [32mGET[39m /idea/getIdeas
+9:16:11 PM [32mGET[39m /thecorner
+9:16:11 PM [32mGET[39m /css/global-style.css
+9:16:11 PM [32mGET[39m /modules/contentLoader.mjs
+9:16:11 PM [32mGET[39m /modules/pageState.mjs
+9:16:11 PM [32mGET[39m /modules/nav.mjs
+9:16:11 PM [32mGET[39m /templates/thecorner.html
+9:16:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101771044
+9:16:11 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:16:11 PM [32mGET[39m /modules/getIdeas.mjs
+9:16:11 PM [32mGET[39m /modules/submitCreation.mjs
+9:16:11 PM [32mGET[39m /modules/submitIdea.mjs
+9:16:11 PM [32mGET[39m /modules/submitRating.mjs
+9:16:11 PM [32mGET[39m /scripts/ideasList.mjs
+9:16:11 PM [32mGET[39m /modules/getFrom.mjs
+9:16:11 PM [32mGET[39m /modules/postTo.mjs
+9:16:11 PM [32mGET[39m /idea/getIdeas
+9:16:25 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:16:45 PM [33mPOST[39m /idea/createIdea
+9:16:47 PM [32mGET[39m /thecorner
+9:16:47 PM [32mGET[39m /css/global-style.css
+9:16:47 PM [32mGET[39m /modules/contentLoader.mjs
+9:16:47 PM [32mGET[39m /modules/pageState.mjs
+9:16:47 PM [32mGET[39m /modules/nav.mjs
+9:16:47 PM [32mGET[39m /templates/thecorner.html
+9:16:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101807308
+9:16:47 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:16:47 PM [32mGET[39m /modules/getIdeas.mjs
+9:16:47 PM [32mGET[39m /modules/submitCreation.mjs
+9:16:47 PM [32mGET[39m /modules/submitIdea.mjs
+9:16:47 PM [32mGET[39m /modules/submitRating.mjs
+9:16:47 PM [32mGET[39m /scripts/ideasList.mjs
+9:16:47 PM [32mGET[39m /modules/getFrom.mjs
+9:16:47 PM [32mGET[39m /modules/postTo.mjs
+9:16:47 PM [32mGET[39m /idea/getIdeas
+9:17:04 PM [32mGET[39m /thecorner
+9:17:04 PM [32mGET[39m /css/global-style.css
+9:17:04 PM [32mGET[39m /modules/contentLoader.mjs
+9:17:04 PM [32mGET[39m /modules/pageState.mjs
+9:17:04 PM [32mGET[39m /modules/nav.mjs
+9:17:04 PM [32mGET[39m /templates/thecorner.html
+9:17:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710101824074
+9:17:04 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:17:04 PM [32mGET[39m /modules/getIdeas.mjs
+9:17:04 PM [32mGET[39m /modules/submitCreation.mjs
+9:17:04 PM [32mGET[39m /modules/submitIdea.mjs
+9:17:04 PM [32mGET[39m /modules/submitRating.mjs
+9:17:04 PM [32mGET[39m /modules/getFrom.mjs
+9:17:04 PM [32mGET[39m /scripts/ideasList.mjs
+9:17:04 PM [32mGET[39m /modules/postTo.mjs
+9:17:04 PM [32mGET[39m /idea/getIdeas
+9:17:09 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:22:52 PM [32mGET[39m /thecorner
+9:22:52 PM [32mGET[39m /css/global-style.css
+9:22:52 PM [32mGET[39m /modules/contentLoader.mjs
+9:22:52 PM [32mGET[39m /modules/pageState.mjs
+9:22:52 PM [32mGET[39m /modules/nav.mjs
+9:22:52 PM [32mGET[39m /templates/thecorner.html
+9:22:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102172147
+9:22:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:22:52 PM [32mGET[39m /modules/getIdeas.mjs
+9:22:52 PM [32mGET[39m /modules/submitCreation.mjs
+9:22:52 PM [32mGET[39m /modules/submitIdea.mjs
+9:22:52 PM [32mGET[39m /modules/submitRating.mjs
+9:22:52 PM [32mGET[39m /scripts/ideasList.mjs
+9:22:52 PM [32mGET[39m /modules/getFrom.mjs
+9:22:52 PM [32mGET[39m /modules/postTo.mjs
+9:22:52 PM [32mGET[39m /idea/getIdeas
+9:23:05 PM [32mGET[39m /thecorner
+9:23:05 PM [32mGET[39m /css/global-style.css
+9:23:05 PM [32mGET[39m /modules/contentLoader.mjs
+9:23:05 PM [32mGET[39m /modules/pageState.mjs
+9:23:05 PM [32mGET[39m /modules/nav.mjs
+9:23:05 PM [32mGET[39m /templates/thecorner.html
+9:23:05 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102185179
+9:23:05 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:23:05 PM [32mGET[39m /modules/getIdeas.mjs
+9:23:05 PM [32mGET[39m /modules/submitCreation.mjs
+9:23:05 PM [32mGET[39m /modules/submitIdea.mjs
+9:23:05 PM [32mGET[39m /modules/submitRating.mjs
+9:23:05 PM [32mGET[39m /scripts/ideasList.mjs
+9:23:05 PM [32mGET[39m /modules/getFrom.mjs
+9:23:05 PM [32mGET[39m /modules/postTo.mjs
+9:23:05 PM [32mGET[39m /idea/getIdeas
+9:24:38 PM [33mPOST[39m /idea/createIdea
+9:24:38 PM [32mGET[39m /thecorner
+9:24:38 PM [32mGET[39m /css/global-style.css
+9:24:38 PM [32mGET[39m /modules/contentLoader.mjs
+9:24:38 PM [32mGET[39m /modules/pageState.mjs
+9:24:38 PM [32mGET[39m /modules/nav.mjs
+9:24:38 PM [32mGET[39m /templates/thecorner.html
+9:24:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102278975
+9:24:38 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:24:38 PM [32mGET[39m /modules/getIdeas.mjs
+9:24:39 PM [32mGET[39m /modules/submitCreation.mjs
+9:24:39 PM [32mGET[39m /modules/submitIdea.mjs
+9:24:39 PM [32mGET[39m /modules/submitRating.mjs
+9:24:39 PM [32mGET[39m /scripts/ideasList.mjs
+9:24:39 PM [32mGET[39m /modules/getFrom.mjs
+9:24:39 PM [32mGET[39m /modules/postTo.mjs
+9:24:39 PM [32mGET[39m /idea/getIdeas
+9:26:16 PM [32mGET[39m /thecorner
+9:26:16 PM [32mGET[39m /css/global-style.css
+9:26:16 PM [32mGET[39m /modules/contentLoader.mjs
+9:26:16 PM [32mGET[39m /modules/pageState.mjs
+9:26:16 PM [32mGET[39m /modules/nav.mjs
+9:26:16 PM [32mGET[39m /templates/thecorner.html
+9:26:16 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102376187
+9:26:16 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:26:16 PM [32mGET[39m /modules/getIdeas.mjs
+9:26:16 PM [32mGET[39m /modules/submitCreation.mjs
+9:26:16 PM [32mGET[39m /modules/submitIdea.mjs
+9:26:16 PM [32mGET[39m /modules/submitRating.mjs
+9:26:16 PM [32mGET[39m /scripts/ideasList.mjs
+9:26:16 PM [32mGET[39m /modules/getFrom.mjs
+9:26:16 PM [32mGET[39m /modules/postTo.mjs
+9:26:16 PM [32mGET[39m /idea/getIdeas
+9:26:29 PM [32mGET[39m /thecorner
+9:26:29 PM [32mGET[39m /css/global-style.css
+9:26:29 PM [32mGET[39m /modules/contentLoader.mjs
+9:26:29 PM [32mGET[39m /modules/pageState.mjs
+9:26:29 PM [32mGET[39m /modules/nav.mjs
+9:26:29 PM [32mGET[39m /templates/thecorner.html
+9:26:29 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102389673
+9:26:29 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:26:29 PM [32mGET[39m /modules/getIdeas.mjs
+9:26:29 PM [32mGET[39m /modules/submitCreation.mjs
+9:26:29 PM [32mGET[39m /modules/submitIdea.mjs
+9:26:29 PM [32mGET[39m /modules/submitRating.mjs
+9:26:29 PM [32mGET[39m /modules/getFrom.mjs
+9:26:29 PM [32mGET[39m /scripts/ideasList.mjs
+9:26:29 PM [32mGET[39m /modules/postTo.mjs
+9:26:29 PM [32mGET[39m /idea/getIdeas
+9:26:35 PM [33mPOST[39m /idea/rateIdea
+9:26:38 PM [32mGET[39m /thecorner
+9:26:38 PM [32mGET[39m /css/global-style.css
+9:26:38 PM [32mGET[39m /modules/contentLoader.mjs
+9:26:38 PM [32mGET[39m /modules/pageState.mjs
+9:26:38 PM [32mGET[39m /modules/nav.mjs
+9:26:38 PM [32mGET[39m /templates/thecorner.html
+9:26:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102398119
+9:26:38 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:26:38 PM [32mGET[39m /modules/getIdeas.mjs
+9:26:38 PM [32mGET[39m /modules/submitCreation.mjs
+9:26:38 PM [32mGET[39m /modules/submitIdea.mjs
+9:26:38 PM [32mGET[39m /modules/submitRating.mjs
+9:26:38 PM [32mGET[39m /scripts/ideasList.mjs
+9:26:38 PM [32mGET[39m /modules/getFrom.mjs
+9:26:38 PM [32mGET[39m /modules/postTo.mjs
+9:26:38 PM [32mGET[39m /idea/getIdeas
+9:26:47 PM [32mGET[39m /thecorner
+9:26:47 PM [32mGET[39m /css/global-style.css
+9:26:47 PM [32mGET[39m /modules/contentLoader.mjs
+9:26:47 PM [32mGET[39m /modules/pageState.mjs
+9:26:47 PM [32mGET[39m /modules/nav.mjs
+9:26:47 PM [32mGET[39m /templates/thecorner.html
+9:26:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102407364
+9:26:47 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:26:47 PM [32mGET[39m /modules/getIdeas.mjs
+9:26:47 PM [32mGET[39m /modules/submitCreation.mjs
+9:26:47 PM [32mGET[39m /modules/submitIdea.mjs
+9:26:47 PM [32mGET[39m /modules/submitRating.mjs
+9:26:47 PM [32mGET[39m /scripts/ideasList.mjs
+9:26:47 PM [32mGET[39m /modules/getFrom.mjs
+9:26:47 PM [32mGET[39m /modules/postTo.mjs
+9:26:47 PM [32mGET[39m /idea/getIdeas
+9:30:41 PM [32mGET[39m /thecorner
+9:30:41 PM [32mGET[39m /css/global-style.css
+9:30:41 PM [32mGET[39m /modules/contentLoader.mjs
+9:30:41 PM [32mGET[39m /modules/pageState.mjs
+9:30:41 PM [32mGET[39m /modules/nav.mjs
+9:30:41 PM [32mGET[39m /templates/thecorner.html
+9:30:41 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102641854
+9:30:41 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:30:41 PM [32mGET[39m /modules/getIdeas.mjs
+9:30:41 PM [32mGET[39m /modules/submitCreation.mjs
+9:30:41 PM [32mGET[39m /modules/submitIdea.mjs
+9:30:41 PM [32mGET[39m /modules/submitRating.mjs
+9:30:41 PM [32mGET[39m /scripts/ideasList.mjs
+9:30:41 PM [32mGET[39m /modules/postTo.mjs
+9:30:41 PM [32mGET[39m /modules/getFrom.mjs
+9:30:41 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+9:32:14 PM [33mPOST[39m /idea/rateIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:35:09 PM [32mGET[39m /thecorner
+9:35:09 PM [32mGET[39m /css/global-style.css
+9:35:09 PM [32mGET[39m /modules/contentLoader.mjs
+9:35:09 PM [32mGET[39m /modules/pageState.mjs
+9:35:09 PM [32mGET[39m /modules/nav.mjs
+9:35:09 PM [32mGET[39m /templates/thecorner.html
+9:35:09 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102909528
+9:35:09 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:35:09 PM [32mGET[39m /modules/getIdeas.mjs
+9:35:09 PM [32mGET[39m /modules/submitCreation.mjs
+9:35:09 PM [32mGET[39m /modules/submitIdea.mjs
+9:35:09 PM [32mGET[39m /modules/submitRating.mjs
+9:35:09 PM [32mGET[39m /scripts/ideasList.mjs
+9:35:09 PM [32mGET[39m /modules/getFrom.mjs
+9:35:09 PM [32mGET[39m /modules/postTo.mjs
+9:35:09 PM [32mGET[39m /idea/getIdeas
+9:35:11 PM [32mGET[39m /templates/thecorner.html
+9:35:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102911212
+9:35:11 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:35:41 PM [32mGET[39m /templates/thecorner.html
+9:35:41 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710102941348
+9:35:41 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:38:40 PM [32mGET[39m /thecorner
+9:38:40 PM [32mGET[39m /css/global-style.css
+9:38:40 PM [32mGET[39m /modules/contentLoader.mjs
+9:38:40 PM [32mGET[39m /modules/pageState.mjs
+9:38:40 PM [32mGET[39m /modules/nav.mjs
+9:38:40 PM [32mGET[39m /templates/thecorner.html
+9:38:40 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103120864
+9:38:40 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:38:40 PM [32mGET[39m /modules/getIdeas.mjs
+9:38:40 PM [32mGET[39m /modules/submitCreation.mjs
+9:38:40 PM [32mGET[39m /modules/submitIdea.mjs
+9:38:40 PM [32mGET[39m /modules/submitRating.mjs
+9:38:40 PM [32mGET[39m /scripts/ideasList.mjs
+9:38:40 PM [32mGET[39m /modules/getFrom.mjs
+9:38:40 PM [32mGET[39m /modules/postTo.mjs
+9:38:40 PM [32mGET[39m /idea/getIdeas
+9:38:46 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:39:13 PM [32mGET[39m /thecorner
+9:39:13 PM [32mGET[39m /css/global-style.css
+9:39:13 PM [32mGET[39m /modules/contentLoader.mjs
+9:39:13 PM [32mGET[39m /modules/pageState.mjs
+9:39:13 PM [32mGET[39m /modules/nav.mjs
+9:39:13 PM [32mGET[39m /templates/thecorner.html
+9:39:13 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103153149
+9:39:13 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:39:13 PM [32mGET[39m /modules/getIdeas.mjs
+9:39:13 PM [32mGET[39m /modules/submitCreation.mjs
+9:39:13 PM [32mGET[39m /modules/submitIdea.mjs
+9:39:13 PM [32mGET[39m /modules/submitRating.mjs
+9:39:13 PM [32mGET[39m /scripts/ideasList.mjs
+9:39:13 PM [32mGET[39m /modules/getFrom.mjs
+9:39:13 PM [32mGET[39m /modules/postTo.mjs
+9:39:13 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:41:17 PM [32mGET[39m /thecorner
+9:41:17 PM [32mGET[39m /css/global-style.css
+9:41:17 PM [32mGET[39m /modules/contentLoader.mjs
+9:41:17 PM [32mGET[39m /modules/pageState.mjs
+9:41:17 PM [32mGET[39m /modules/nav.mjs
+9:41:17 PM [32mGET[39m /templates/thecorner.html
+9:41:17 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103277540
+9:41:17 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:41:17 PM [32mGET[39m /modules/getIdeas.mjs
+9:41:17 PM [32mGET[39m /modules/submitCreation.mjs
+9:41:17 PM [32mGET[39m /modules/submitIdea.mjs
+9:41:17 PM [32mGET[39m /modules/submitRating.mjs
+9:41:17 PM [32mGET[39m /scripts/ideasList.mjs
+9:41:17 PM [32mGET[39m /modules/getFrom.mjs
+9:41:17 PM [32mGET[39m /modules/postTo.mjs
+9:41:17 PM [32mGET[39m /idea/getIdeas
+9:41:23 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:41:45 PM [32mGET[39m /thecorner
+9:41:45 PM [32mGET[39m /css/global-style.css
+9:41:45 PM [32mGET[39m /modules/contentLoader.mjs
+9:41:45 PM [32mGET[39m /modules/pageState.mjs
+9:41:45 PM [32mGET[39m /modules/nav.mjs
+9:41:45 PM [32mGET[39m /templates/thecorner.html
+9:41:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103305864
+9:41:45 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:41:45 PM [32mGET[39m /modules/getIdeas.mjs
+9:41:45 PM [32mGET[39m /modules/submitCreation.mjs
+9:41:45 PM [32mGET[39m /modules/submitIdea.mjs
+9:41:45 PM [32mGET[39m /modules/submitRating.mjs
+9:41:45 PM [32mGET[39m /scripts/ideasList.mjs
+9:41:45 PM [32mGET[39m /modules/getFrom.mjs
+9:41:45 PM [32mGET[39m /modules/postTo.mjs
+9:41:45 PM [32mGET[39m /idea/getIdeas
+9:42:11 PM [32mGET[39m /thecorner
+9:42:12 PM [32mGET[39m /css/global-style.css
+9:42:12 PM [32mGET[39m /modules/contentLoader.mjs
+9:42:12 PM [32mGET[39m /modules/pageState.mjs
+9:42:12 PM [32mGET[39m /modules/nav.mjs
+9:42:12 PM [32mGET[39m /templates/thecorner.html
+9:42:12 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103332020
+9:42:12 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:42:12 PM [32mGET[39m /modules/getIdeas.mjs
+9:42:12 PM [32mGET[39m /modules/submitCreation.mjs
+9:42:12 PM [32mGET[39m /modules/submitIdea.mjs
+9:42:12 PM [32mGET[39m /modules/submitRating.mjs
+9:42:12 PM [32mGET[39m /scripts/ideasList.mjs
+9:42:12 PM [32mGET[39m /modules/getFrom.mjs
+9:42:12 PM [32mGET[39m /modules/postTo.mjs
+9:42:12 PM [32mGET[39m /idea/getIdeas
+9:42:15 PM [33mPOST[39m /idea/rateIdea
+9:42:17 PM [32mGET[39m /thecorner
+9:42:17 PM [32mGET[39m /css/global-style.css
+9:42:17 PM [32mGET[39m /modules/contentLoader.mjs
+9:42:17 PM [32mGET[39m /modules/pageState.mjs
+9:42:17 PM [32mGET[39m /modules/nav.mjs
+9:42:17 PM [32mGET[39m /templates/thecorner.html
+9:42:17 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103337687
+9:42:17 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:42:17 PM [32mGET[39m /modules/getIdeas.mjs
+9:42:17 PM [32mGET[39m /modules/submitCreation.mjs
+9:42:17 PM [32mGET[39m /modules/submitIdea.mjs
+9:42:17 PM [32mGET[39m /modules/submitRating.mjs
+9:42:17 PM [32mGET[39m /modules/getFrom.mjs
+9:42:17 PM [32mGET[39m /scripts/ideasList.mjs
+9:42:17 PM [32mGET[39m /modules/postTo.mjs
+9:42:17 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:42:52 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:45:20 PM [32mGET[39m /thecorner
+9:45:20 PM [32mGET[39m /css/global-style.css
+9:45:20 PM [32mGET[39m /modules/contentLoader.mjs
+9:45:20 PM [32mGET[39m /modules/pageState.mjs
+9:45:20 PM [32mGET[39m /modules/nav.mjs
+9:45:20 PM [32mGET[39m /templates/thecorner.html
+9:45:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103520894
+9:45:20 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:45:20 PM [32mGET[39m /modules/getIdeas.mjs
+9:45:20 PM [32mGET[39m /modules/submitCreation.mjs
+9:45:20 PM [32mGET[39m /modules/submitIdea.mjs
+9:45:20 PM [32mGET[39m /modules/submitRating.mjs
+9:45:20 PM [32mGET[39m /scripts/ideasList.mjs
+9:45:20 PM [32mGET[39m /modules/getFrom.mjs
+9:45:20 PM [32mGET[39m /modules/postTo.mjs
+9:45:20 PM [32mGET[39m /idea/getIdeas
+9:45:30 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:46:18 PM [32mGET[39m /thecorner
+9:46:18 PM [32mGET[39m /css/global-style.css
+9:46:18 PM [32mGET[39m /modules/contentLoader.mjs
+9:46:18 PM [32mGET[39m /modules/pageState.mjs
+9:46:18 PM [32mGET[39m /modules/nav.mjs
+9:46:18 PM [32mGET[39m /templates/thecorner.html
+9:46:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103578252
+9:46:18 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:46:18 PM [32mGET[39m /modules/getIdeas.mjs
+9:46:18 PM [32mGET[39m /modules/submitCreation.mjs
+9:46:18 PM [32mGET[39m /modules/submitIdea.mjs
+9:46:18 PM [32mGET[39m /modules/submitRating.mjs
+9:46:18 PM [32mGET[39m /scripts/ideasList.mjs
+9:46:18 PM [32mGET[39m /modules/getFrom.mjs
+9:46:18 PM [32mGET[39m /modules/postTo.mjs
+9:46:18 PM [32mGET[39m /idea/getIdeas
+9:46:24 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:47:27 PM [32mGET[39m /thecorner
+9:47:27 PM [32mGET[39m /css/global-style.css
+9:47:27 PM [32mGET[39m /modules/contentLoader.mjs
+9:47:27 PM [32mGET[39m /modules/pageState.mjs
+9:47:27 PM [32mGET[39m /modules/nav.mjs
+9:47:27 PM [32mGET[39m /templates/thecorner.html
+9:47:27 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103647271
+9:47:27 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:47:27 PM [32mGET[39m /modules/getIdeas.mjs
+9:47:27 PM [32mGET[39m /modules/submitCreation.mjs
+9:47:27 PM [32mGET[39m /modules/submitIdea.mjs
+9:47:27 PM [32mGET[39m /modules/submitRating.mjs
+9:47:27 PM [32mGET[39m /scripts/ideasList.mjs
+9:47:27 PM [32mGET[39m /modules/getFrom.mjs
+9:47:27 PM [32mGET[39m /modules/postTo.mjs
+9:47:27 PM [32mGET[39m /idea/getIdeas
+9:47:46 PM [32mGET[39m /thecorner
+9:47:46 PM [32mGET[39m /css/global-style.css
+9:47:46 PM [32mGET[39m /modules/contentLoader.mjs
+9:47:46 PM [32mGET[39m /modules/pageState.mjs
+9:47:46 PM [32mGET[39m /modules/nav.mjs
+9:47:46 PM [32mGET[39m /templates/thecorner.html
+9:47:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103666721
+9:47:46 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:47:46 PM [32mGET[39m /modules/getIdeas.mjs
+9:47:46 PM [32mGET[39m /modules/submitCreation.mjs
+9:47:46 PM [32mGET[39m /modules/submitIdea.mjs
+9:47:46 PM [32mGET[39m /modules/submitRating.mjs
+9:47:46 PM [32mGET[39m /scripts/ideasList.mjs
+9:47:46 PM [32mGET[39m /modules/getFrom.mjs
+9:47:46 PM [32mGET[39m /modules/postTo.mjs
+9:47:46 PM [32mGET[39m /idea/getIdeas
+9:47:57 PM [33mPOST[39m /idea/createIdea
+9:47:58 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:49:04 PM [32mGET[39m /thecorner
+9:49:04 PM [32mGET[39m /css/global-style.css
+9:49:04 PM [32mGET[39m /modules/contentLoader.mjs
+9:49:04 PM [32mGET[39m /modules/pageState.mjs
+9:49:04 PM [32mGET[39m /modules/nav.mjs
+9:49:04 PM [32mGET[39m /templates/thecorner.html
+9:49:04 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103744540
+9:49:04 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:49:04 PM [32mGET[39m /modules/getIdeas.mjs
+9:49:04 PM [32mGET[39m /modules/submitCreation.mjs
+9:49:04 PM [32mGET[39m /scripts/ideasList.mjs
+9:49:04 PM [32mGET[39m /modules/submitIdea.mjs
+9:49:04 PM [32mGET[39m /modules/submitRating.mjs
+9:49:04 PM [32mGET[39m /modules/getFrom.mjs
+9:49:04 PM [32mGET[39m /modules/postTo.mjs
+9:49:04 PM [32mGET[39m /idea/getIdeas
+9:49:19 PM [32mGET[39m /thecorner
+9:49:19 PM [32mGET[39m /css/global-style.css
+9:49:19 PM [32mGET[39m /modules/contentLoader.mjs
+9:49:19 PM [32mGET[39m /modules/pageState.mjs
+9:49:19 PM [32mGET[39m /modules/nav.mjs
+9:49:19 PM [32mGET[39m /templates/thecorner.html
+9:49:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103759836
+9:49:19 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:49:19 PM [32mGET[39m /modules/getIdeas.mjs
+9:49:19 PM [32mGET[39m /modules/submitCreation.mjs
+9:49:19 PM [32mGET[39m /modules/submitIdea.mjs
+9:49:19 PM [32mGET[39m /modules/submitRating.mjs
+9:49:19 PM [32mGET[39m /scripts/ideasList.mjs
+9:49:19 PM [32mGET[39m /modules/getFrom.mjs
+9:49:19 PM [32mGET[39m /modules/postTo.mjs
+9:49:19 PM [32mGET[39m /idea/getIdeas
+9:49:25 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:50:18 PM [32mGET[39m /thecorner
+9:50:18 PM [32mGET[39m /css/global-style.css
+9:50:18 PM [32mGET[39m /modules/contentLoader.mjs
+9:50:18 PM [32mGET[39m /modules/pageState.mjs
+9:50:18 PM [32mGET[39m /modules/nav.mjs
+9:50:18 PM [32mGET[39m /templates/thecorner.html
+9:50:18 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103818380
+9:50:18 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:50:18 PM [32mGET[39m /modules/getIdeas.mjs
+9:50:18 PM [32mGET[39m /modules/submitCreation.mjs
+9:50:18 PM [32mGET[39m /modules/submitIdea.mjs
+9:50:18 PM [32mGET[39m /modules/submitRating.mjs
+9:50:18 PM [32mGET[39m /scripts/ideasList.mjs
+9:50:18 PM [32mGET[39m /modules/getFrom.mjs
+9:50:18 PM [32mGET[39m /modules/postTo.mjs
+9:50:18 PM [32mGET[39m /idea/getIdeas
+9:50:27 PM [33mPOST[39m /idea/createIdea
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:50:47 PM [32mGET[39m /thecorner
+9:50:47 PM [32mGET[39m /css/global-style.css
+9:50:47 PM [32mGET[39m /modules/contentLoader.mjs
+9:50:47 PM [32mGET[39m /modules/pageState.mjs
+9:50:47 PM [32mGET[39m /modules/nav.mjs
+9:50:47 PM [32mGET[39m /templates/thecorner.html
+9:50:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103847111
+9:50:47 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:50:47 PM [32mGET[39m /modules/getIdeas.mjs
+9:50:47 PM [32mGET[39m /modules/submitCreation.mjs
+9:50:47 PM [32mGET[39m /modules/submitIdea.mjs
+9:50:47 PM [32mGET[39m /modules/getFrom.mjs
+9:50:47 PM [32mGET[39m /modules/submitRating.mjs
+9:50:47 PM [32mGET[39m /scripts/ideasList.mjs
+9:50:47 PM [32mGET[39m /modules/postTo.mjs
+9:50:47 PM [32mGET[39m /idea/getIdeas
+9:50:53 PM [33mPOST[39m /idea/createIdea
+9:50:53 PM [32mGET[39m /idea/getIdeas
+9:52:36 PM [32mGET[39m /thecorner
+9:52:36 PM [32mGET[39m /css/global-style.css
+9:52:36 PM [32mGET[39m /modules/contentLoader.mjs
+9:52:36 PM [32mGET[39m /modules/pageState.mjs
+9:52:36 PM [32mGET[39m /modules/nav.mjs
+9:52:36 PM [32mGET[39m /templates/thecorner.html
+9:52:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710103956343
+9:52:36 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:52:36 PM [32mGET[39m /modules/getIdeas.mjs
+9:52:36 PM [32mGET[39m /modules/submitCreation.mjs
+9:52:36 PM [32mGET[39m /modules/submitIdea.mjs
+9:52:36 PM [32mGET[39m /modules/getFrom.mjs
+9:52:36 PM [32mGET[39m /modules/submitRating.mjs
+9:52:36 PM [32mGET[39m /scripts/ideasList.mjs
+9:52:36 PM [32mGET[39m /modules/postTo.mjs
+9:52:36 PM [32mGET[39m /idea/getIdeas
+9:53:37 PM [32mGET[39m /thecorner
+9:53:37 PM [32mGET[39m /css/global-style.css
+9:53:37 PM [32mGET[39m /modules/contentLoader.mjs
+9:53:37 PM [32mGET[39m /modules/pageState.mjs
+9:53:37 PM [32mGET[39m /modules/nav.mjs
+9:53:37 PM [32mGET[39m /templates/thecorner.html
+9:53:37 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104017326
+9:53:37 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:53:37 PM [32mGET[39m /modules/getIdeas.mjs
+9:53:37 PM [32mGET[39m /modules/submitCreation.mjs
+9:53:37 PM [32mGET[39m /modules/submitIdea.mjs
+9:53:37 PM [32mGET[39m /modules/getFrom.mjs
+9:53:37 PM [32mGET[39m /modules/submitRating.mjs
+9:53:37 PM [32mGET[39m /modules/postTo.mjs
+9:53:37 PM [32mGET[39m /scripts/ideasList.mjs
+9:53:37 PM [32mGET[39m /idea/getIdeas
+9:53:50 PM [32mGET[39m /thecorner
+9:53:50 PM [32mGET[39m /css/global-style.css
+9:53:50 PM [32mGET[39m /modules/contentLoader.mjs
+9:53:50 PM [32mGET[39m /modules/pageState.mjs
+9:53:50 PM [32mGET[39m /modules/nav.mjs
+9:53:50 PM [32mGET[39m /templates/thecorner.html
+9:53:50 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104030402
+9:53:50 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:53:50 PM [32mGET[39m /modules/getIdeas.mjs
+9:53:50 PM [32mGET[39m /modules/submitCreation.mjs
+9:53:50 PM [32mGET[39m /modules/submitIdea.mjs
+9:53:50 PM [32mGET[39m /modules/getFrom.mjs
+9:53:50 PM [32mGET[39m /modules/submitRating.mjs
+9:53:50 PM [32mGET[39m /modules/postTo.mjs
+9:53:50 PM [32mGET[39m /scripts/ideasList.mjs
+9:53:50 PM [32mGET[39m /idea/getIdeas
+9:54:11 PM [32mGET[39m /thecorner
+9:54:11 PM [32mGET[39m /css/global-style.css
+9:54:11 PM [32mGET[39m /modules/contentLoader.mjs
+9:54:11 PM [32mGET[39m /modules/pageState.mjs
+9:54:11 PM [32mGET[39m /modules/nav.mjs
+9:54:11 PM [32mGET[39m /templates/thecorner.html
+9:54:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104051454
+9:54:11 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:54:11 PM [32mGET[39m /modules/getIdeas.mjs
+9:54:11 PM [32mGET[39m /modules/submitCreation.mjs
+9:54:11 PM [32mGET[39m /modules/submitIdea.mjs
+9:54:11 PM [32mGET[39m /modules/submitRating.mjs
+9:54:11 PM [32mGET[39m /modules/getFrom.mjs
+9:54:11 PM [32mGET[39m /scripts/ideasList.mjs
+9:54:11 PM [32mGET[39m /modules/postTo.mjs
+9:54:11 PM [32mGET[39m /idea/getIdeas
+9:54:14 PM [32mGET[39m /thecorner
+9:54:14 PM [32mGET[39m /css/global-style.css
+9:54:14 PM [32mGET[39m /modules/contentLoader.mjs
+9:54:14 PM [32mGET[39m /modules/pageState.mjs
+9:54:14 PM [32mGET[39m /modules/nav.mjs
+9:54:14 PM [32mGET[39m /templates/thecorner.html
+9:54:14 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104054183
+9:54:14 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:54:14 PM [32mGET[39m /modules/getIdeas.mjs
+9:54:14 PM [32mGET[39m /modules/submitCreation.mjs
+9:54:14 PM [32mGET[39m /modules/submitIdea.mjs
+9:54:14 PM [32mGET[39m /modules/submitRating.mjs
+9:54:14 PM [32mGET[39m /scripts/ideasList.mjs
+9:54:14 PM [32mGET[39m /modules/getFrom.mjs
+9:54:14 PM [32mGET[39m /modules/postTo.mjs
+9:54:14 PM [32mGET[39m /idea/getIdeas
+9:54:22 PM [32mGET[39m /thecorner
+9:54:22 PM [32mGET[39m /css/global-style.css
+9:54:22 PM [32mGET[39m /modules/contentLoader.mjs
+9:54:22 PM [32mGET[39m /modules/pageState.mjs
+9:54:22 PM [32mGET[39m /modules/nav.mjs
+9:54:22 PM [32mGET[39m /templates/thecorner.html
+9:54:22 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104062561
+9:54:22 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:54:22 PM [32mGET[39m /modules/getIdeas.mjs
+9:54:22 PM [32mGET[39m /modules/submitCreation.mjs
+9:54:22 PM [32mGET[39m /modules/submitIdea.mjs
+9:54:22 PM [32mGET[39m /modules/submitRating.mjs
+9:54:22 PM [32mGET[39m /modules/getFrom.mjs
+9:54:22 PM [32mGET[39m /scripts/ideasList.mjs
+9:54:22 PM [32mGET[39m /modules/postTo.mjs
+9:54:22 PM [32mGET[39m /idea/getIdeas
+9:54:39 PM [32mGET[39m /thecorner
+9:54:39 PM [32mGET[39m /css/global-style.css
+9:54:39 PM [32mGET[39m /modules/contentLoader.mjs
+9:54:39 PM [32mGET[39m /modules/pageState.mjs
+9:54:39 PM [32mGET[39m /modules/nav.mjs
+9:54:39 PM [32mGET[39m /templates/thecorner.html
+9:54:39 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104079871
+9:54:39 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:54:39 PM [32mGET[39m /modules/getIdeas.mjs
+9:54:39 PM [32mGET[39m /modules/submitCreation.mjs
+9:54:39 PM [32mGET[39m /modules/submitIdea.mjs
+9:54:39 PM [32mGET[39m /modules/submitRating.mjs
+9:54:39 PM [32mGET[39m /modules/getFrom.mjs
+9:54:39 PM [32mGET[39m /scripts/ideasList.mjs
+9:54:39 PM [32mGET[39m /modules/postTo.mjs
+9:54:39 PM [32mGET[39m /idea/getIdeas
+9:54:49 PM [32mGET[39m /thecorner
+9:54:49 PM [32mGET[39m /css/global-style.css
+9:54:49 PM [32mGET[39m /modules/contentLoader.mjs
+9:54:49 PM [32mGET[39m /modules/pageState.mjs
+9:54:49 PM [32mGET[39m /modules/nav.mjs
+9:54:49 PM [32mGET[39m /templates/thecorner.html
+9:54:49 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104089947
+9:54:49 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:54:49 PM [32mGET[39m /modules/getIdeas.mjs
+9:54:49 PM [32mGET[39m /modules/submitCreation.mjs
+9:54:49 PM [32mGET[39m /modules/submitIdea.mjs
+9:54:49 PM [32mGET[39m /modules/submitRating.mjs
+9:54:49 PM [32mGET[39m /scripts/ideasList.mjs
+9:54:49 PM [32mGET[39m /modules/getFrom.mjs
+9:54:49 PM [32mGET[39m /modules/postTo.mjs
+9:54:49 PM [32mGET[39m /idea/getIdeas
+9:55:11 PM [32mGET[39m /thecorner
+9:55:11 PM [32mGET[39m /css/global-style.css
+9:55:11 PM [32mGET[39m /modules/contentLoader.mjs
+9:55:11 PM [32mGET[39m /modules/pageState.mjs
+9:55:11 PM [32mGET[39m /modules/nav.mjs
+9:55:11 PM [32mGET[39m /templates/thecorner.html
+9:55:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104111133
+9:55:11 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:55:11 PM [32mGET[39m /modules/getIdeas.mjs
+9:55:11 PM [32mGET[39m /modules/submitCreation.mjs
+9:55:11 PM [32mGET[39m /modules/submitIdea.mjs
+9:55:11 PM [32mGET[39m /modules/submitRating.mjs
+9:55:11 PM [32mGET[39m /scripts/ideasList.mjs
+9:55:11 PM [32mGET[39m /modules/getFrom.mjs
+9:55:11 PM [32mGET[39m /modules/postTo.mjs
+9:55:11 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:55:25 PM [32mGET[39m /thecorner
+9:55:25 PM [32mGET[39m /css/global-style.css
+9:55:25 PM [32mGET[39m /modules/contentLoader.mjs
+9:55:25 PM [32mGET[39m /modules/pageState.mjs
+9:55:25 PM [32mGET[39m /modules/nav.mjs
+9:55:25 PM [32mGET[39m /templates/thecorner.html
+9:55:25 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104125462
+9:55:25 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:55:25 PM [32mGET[39m /modules/getIdeas.mjs
+9:55:25 PM [32mGET[39m /modules/submitCreation.mjs
+9:55:25 PM [32mGET[39m /modules/submitIdea.mjs
+9:55:25 PM [32mGET[39m /scripts/ideasList.mjs
+9:55:25 PM [32mGET[39m /modules/submitRating.mjs
+9:55:25 PM [32mGET[39m /modules/getFrom.mjs
+9:55:25 PM [32mGET[39m /modules/postTo.mjs
+9:55:25 PM [32mGET[39m /idea/getIdeas
+9:55:34 PM [33mPOST[39m /idea/createIdea
+9:55:35 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+9:56:55 PM [32mGET[39m /thecorner
+9:56:55 PM [32mGET[39m /css/global-style.css
+9:56:55 PM [32mGET[39m /modules/contentLoader.mjs
+9:56:55 PM [32mGET[39m /modules/pageState.mjs
+9:56:55 PM [32mGET[39m /modules/nav.mjs
+9:56:55 PM [32mGET[39m /templates/thecorner.html
+9:56:55 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104215525
+9:56:55 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:56:55 PM [32mGET[39m /modules/getIdeas.mjs
+9:56:55 PM [32mGET[39m /modules/submitCreation.mjs
+9:56:55 PM [32mGET[39m /modules/submitIdea.mjs
+9:56:55 PM [32mGET[39m /modules/submitRating.mjs
+9:56:55 PM [32mGET[39m /scripts/ideasList.mjs
+9:56:55 PM [32mGET[39m /modules/getFrom.mjs
+9:56:55 PM [32mGET[39m /modules/postTo.mjs
+9:56:55 PM [32mGET[39m /idea/getIdeas
+9:57:14 PM [33mPOST[39m /idea/createIdea
+9:57:14 PM [32mGET[39m /idea/getIdeas
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+9:57:52 PM [32mGET[39m /thecorner
+9:57:52 PM [32mGET[39m /css/global-style.css
+9:57:52 PM [32mGET[39m /modules/contentLoader.mjs
+9:57:52 PM [32mGET[39m /modules/pageState.mjs
+9:57:52 PM [32mGET[39m /modules/nav.mjs
+9:57:52 PM [32mGET[39m /templates/thecorner.html
+9:57:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104272805
+9:57:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:57:52 PM [32mGET[39m /modules/getIdeas.mjs
+9:57:52 PM [32mGET[39m /modules/submitCreation.mjs
+9:57:52 PM [32mGET[39m /modules/submitIdea.mjs
+9:57:52 PM [32mGET[39m /scripts/ideasList.mjs
+9:57:52 PM [32mGET[39m /modules/submitRating.mjs
+9:57:52 PM [32mGET[39m /modules/getFrom.mjs
+9:57:52 PM [32mGET[39m /modules/postTo.mjs
+9:57:52 PM [32mGET[39m /idea/getIdeas
+9:58:42 PM [32mGET[39m /thecorner
+9:58:42 PM [32mGET[39m /css/global-style.css
+9:58:42 PM [32mGET[39m /modules/contentLoader.mjs
+9:58:42 PM [32mGET[39m /modules/pageState.mjs
+9:58:42 PM [32mGET[39m /modules/nav.mjs
+9:58:42 PM [32mGET[39m /templates/thecorner.html
+9:58:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104322816
+9:58:42 PM [32mGET[39m /modules/calcRatingAverage.mjs
+9:58:42 PM [32mGET[39m /modules/getIdeas.mjs
+9:58:42 PM [32mGET[39m /modules/submitCreation.mjs
+9:58:42 PM [32mGET[39m /modules/submitIdea.mjs
+9:58:42 PM [32mGET[39m /modules/getFrom.mjs
+9:58:42 PM [32mGET[39m /modules/submitRating.mjs
+9:58:42 PM [32mGET[39m /scripts/ideasList.mjs
+9:58:42 PM [32mGET[39m /modules/postTo.mjs
+9:58:42 PM [32mGET[39m /idea/getIdeas
+9:58:54 PM [32mGET[39m /templates/usersettings.html
+9:58:54 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710104334288
+9:58:54 PM [32mGET[39m /modules/getUserData.mjs
+9:58:54 PM [32mGET[39m /modules/deleteUser.mjs
+9:58:54 PM [32mGET[39m /modules/editUser.mjs
+9:58:54 PM [33mPOST[39m /user/getUserData
+9:58:55 PM [32mGET[39m /templates/thecorner.html
+9:58:55 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104335238
+9:58:55 PM [32mGET[39m /idea/getIdeas
+9:59:11 PM [32mGET[39m /templates/usersettings.html
+9:59:11 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710104351339
+9:59:11 PM [33mPOST[39m /user/getUserData
+9:59:12 PM [32mGET[39m /templates/login.html
+9:59:12 PM [32mGET[39m /scripts/login.mjs?timestamp=1710104352456
+9:59:13 PM [32mGET[39m /templates/thecorner.html
+9:59:13 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104353580
+9:59:13 PM [32mGET[39m /idea/getIdeas
+9:59:19 PM [32mGET[39m /templates/login.html
+9:59:19 PM [32mGET[39m /scripts/login.mjs?timestamp=1710104359322
+9:59:21 PM [33mPOST[39m /user/login
+9:59:21 PM [32mGET[39m /templates/thecorner.html
+9:59:21 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104361558
+9:59:21 PM [32mGET[39m /idea/getIdeas
+10:00:29 PM [32mGET[39m /thecorner
+10:00:29 PM [32mGET[39m /css/global-style.css
+10:00:29 PM [32mGET[39m /modules/contentLoader.mjs
+10:00:29 PM [32mGET[39m /modules/pageState.mjs
+10:00:29 PM [32mGET[39m /modules/nav.mjs
+10:00:29 PM [32mGET[39m /templates/thecorner.html
+10:00:29 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104429307
+10:00:29 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:00:29 PM [32mGET[39m /modules/getIdeas.mjs
+10:00:29 PM [32mGET[39m /modules/submitCreation.mjs
+10:00:29 PM [32mGET[39m /modules/submitIdea.mjs
+10:00:29 PM [32mGET[39m /modules/getFrom.mjs
+10:00:29 PM [32mGET[39m /modules/submitRating.mjs
+10:00:29 PM [32mGET[39m /scripts/ideasList.mjs
+10:00:29 PM [32mGET[39m /modules/postTo.mjs
+10:00:29 PM [32mGET[39m /idea/getIdeas
+10:00:44 PM [33mPOST[39m /idea/rateIdea
+10:00:46 PM [32mGET[39m /thecorner
+10:00:46 PM [32mGET[39m /css/global-style.css
+10:00:46 PM [32mGET[39m /modules/contentLoader.mjs
+10:00:46 PM [32mGET[39m /modules/pageState.mjs
+10:00:46 PM [32mGET[39m /modules/nav.mjs
+10:00:46 PM [32mGET[39m /templates/thecorner.html
+10:00:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104446566
+10:00:46 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:00:46 PM [32mGET[39m /modules/getIdeas.mjs
+10:00:46 PM [32mGET[39m /modules/submitCreation.mjs
+10:00:46 PM [32mGET[39m /modules/submitIdea.mjs
+10:00:46 PM [32mGET[39m /modules/submitRating.mjs
+10:00:46 PM [32mGET[39m /modules/getFrom.mjs
+10:00:46 PM [32mGET[39m /scripts/ideasList.mjs
+10:00:46 PM [32mGET[39m /modules/postTo.mjs
+10:00:46 PM [32mGET[39m /idea/getIdeas
+10:01:49 PM [32mGET[39m /thecorner
+10:01:49 PM [32mGET[39m /css/global-style.css
+10:01:49 PM [32mGET[39m /modules/contentLoader.mjs
+10:01:49 PM [32mGET[39m /modules/pageState.mjs
+10:01:49 PM [32mGET[39m /modules/nav.mjs
+10:01:49 PM [32mGET[39m /templates/thecorner.html
+10:01:49 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104509814
+10:01:49 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:01:49 PM [32mGET[39m /modules/getIdeas.mjs
+10:01:49 PM [32mGET[39m /modules/submitCreation.mjs
+10:01:49 PM [32mGET[39m /modules/submitIdea.mjs
+10:01:49 PM [32mGET[39m /modules/submitRating.mjs
+10:01:49 PM [32mGET[39m /scripts/ideasList.mjs
+10:01:49 PM [32mGET[39m /modules/getFrom.mjs
+10:01:49 PM [32mGET[39m /modules/postTo.mjs
+10:01:49 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:04:23 PM [32mGET[39m /thecorner
+10:04:23 PM [32mGET[39m /css/global-style.css
+10:04:23 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:23 PM [32mGET[39m /modules/pageState.mjs
+10:04:23 PM [32mGET[39m /modules/nav.mjs
+10:04:23 PM [32mGET[39m /templates/thecorner.html
+10:04:23 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104663483
+10:04:23 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:23 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:23 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:23 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:23 PM [32mGET[39m /modules/submitRating.mjs
+10:04:23 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:23 PM [32mGET[39m /modules/getFrom.mjs
+10:04:23 PM [32mGET[39m /modules/postTo.mjs
+10:04:23 PM [32mGET[39m /idea/getIdeas
+10:04:28 PM [32mGET[39m /thecorner
+10:04:28 PM [32mGET[39m /css/global-style.css
+10:04:28 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:28 PM [32mGET[39m /modules/pageState.mjs
+10:04:28 PM [32mGET[39m /modules/nav.mjs
+10:04:28 PM [32mGET[39m /templates/thecorner.html
+10:04:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104668087
+10:04:28 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:28 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:28 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:28 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:28 PM [32mGET[39m /modules/getFrom.mjs
+10:04:28 PM [32mGET[39m /modules/submitRating.mjs
+10:04:28 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:28 PM [32mGET[39m /modules/postTo.mjs
+10:04:28 PM [32mGET[39m /idea/getIdeas
+10:04:36 PM [32mGET[39m /thecorner
+10:04:36 PM [32mGET[39m /css/global-style.css
+10:04:36 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:36 PM [32mGET[39m /modules/pageState.mjs
+10:04:36 PM [32mGET[39m /modules/nav.mjs
+10:04:36 PM [32mGET[39m /templates/thecorner.html
+10:04:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104676164
+10:04:36 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:36 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:36 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:36 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:36 PM [32mGET[39m /modules/submitRating.mjs
+10:04:36 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:36 PM [32mGET[39m /modules/postTo.mjs
+10:04:36 PM [32mGET[39m /modules/getFrom.mjs
+10:04:36 PM [32mGET[39m /idea/getIdeas
+10:04:37 PM [32mGET[39m /thecorner
+10:04:37 PM [32mGET[39m /css/global-style.css
+10:04:37 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:37 PM [32mGET[39m /modules/pageState.mjs
+10:04:37 PM [32mGET[39m /modules/nav.mjs
+10:04:37 PM [32mGET[39m /templates/thecorner.html
+10:04:37 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104677859
+10:04:37 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:37 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:37 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:37 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:37 PM [32mGET[39m /modules/submitRating.mjs
+10:04:37 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:37 PM [32mGET[39m /modules/getFrom.mjs
+10:04:37 PM [32mGET[39m /modules/postTo.mjs
+10:04:37 PM [32mGET[39m /idea/getIdeas
+10:04:38 PM [32mGET[39m /thecorner
+10:04:38 PM [32mGET[39m /css/global-style.css
+10:04:38 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:38 PM [32mGET[39m /modules/pageState.mjs
+10:04:38 PM [32mGET[39m /modules/nav.mjs
+10:04:38 PM [32mGET[39m /templates/thecorner.html
+10:04:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104678859
+10:04:38 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:38 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:38 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:38 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:38 PM [32mGET[39m /modules/submitRating.mjs
+10:04:38 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:38 PM [32mGET[39m /modules/getFrom.mjs
+10:04:38 PM [32mGET[39m /modules/postTo.mjs
+10:04:38 PM [32mGET[39m /idea/getIdeas
+10:04:45 PM [32mGET[39m /thecorner
+10:04:45 PM [32mGET[39m /css/global-style.css
+10:04:45 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:45 PM [32mGET[39m /modules/pageState.mjs
+10:04:45 PM [32mGET[39m /modules/nav.mjs
+10:04:45 PM [32mGET[39m /templates/thecorner.html
+10:04:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104685057
+10:04:45 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:45 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:45 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:45 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:45 PM [32mGET[39m /modules/submitRating.mjs
+10:04:45 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:45 PM [32mGET[39m /modules/getFrom.mjs
+10:04:45 PM [32mGET[39m /modules/postTo.mjs
+10:04:45 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+10:04:57 PM [32mGET[39m /thecorner
+10:04:57 PM [32mGET[39m /css/global-style.css
+10:04:57 PM [32mGET[39m /modules/contentLoader.mjs
+10:04:57 PM [32mGET[39m /modules/pageState.mjs
+10:04:57 PM [32mGET[39m /modules/nav.mjs
+10:04:57 PM [32mGET[39m /templates/thecorner.html
+10:04:57 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104697804
+10:04:57 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:04:57 PM [32mGET[39m /modules/getIdeas.mjs
+10:04:57 PM [32mGET[39m /modules/submitCreation.mjs
+10:04:57 PM [32mGET[39m /modules/submitIdea.mjs
+10:04:57 PM [32mGET[39m /modules/submitRating.mjs
+10:04:57 PM [32mGET[39m /scripts/ideasList.mjs
+10:04:57 PM [32mGET[39m /modules/getFrom.mjs
+10:04:57 PM [32mGET[39m /modules/postTo.mjs
+10:04:57 PM [32mGET[39m /idea/getIdeas
+10:05:02 PM [32mGET[39m /thecorner
+10:05:02 PM [32mGET[39m /css/global-style.css
+10:05:02 PM [32mGET[39m /modules/contentLoader.mjs
+10:05:02 PM [32mGET[39m /modules/pageState.mjs
+10:05:02 PM [32mGET[39m /modules/nav.mjs
+10:05:02 PM [32mGET[39m /templates/thecorner.html
+10:05:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104702138
+10:05:02 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:05:02 PM [32mGET[39m /modules/getIdeas.mjs
+10:05:02 PM [32mGET[39m /modules/submitCreation.mjs
+10:05:02 PM [32mGET[39m /modules/submitIdea.mjs
+10:05:02 PM [32mGET[39m /modules/submitRating.mjs
+10:05:02 PM [32mGET[39m /scripts/ideasList.mjs
+10:05:02 PM [32mGET[39m /modules/getFrom.mjs
+10:05:02 PM [32mGET[39m /modules/postTo.mjs
+10:05:02 PM [32mGET[39m /idea/getIdeas
+10:05:33 PM [33mPOST[39m /idea/rateIdea
+10:05:36 PM [33mPOST[39m /idea/rateIdea
+10:05:39 PM [33mPOST[39m /idea/rateIdea
+10:05:42 PM [32mGET[39m /thecorner
+10:05:42 PM [32mGET[39m /css/global-style.css
+10:05:42 PM [32mGET[39m /modules/contentLoader.mjs
+10:05:42 PM [32mGET[39m /modules/pageState.mjs
+10:05:42 PM [32mGET[39m /modules/nav.mjs
+10:05:42 PM [32mGET[39m /templates/thecorner.html
+10:05:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104742864
+10:05:42 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:05:42 PM [32mGET[39m /modules/getIdeas.mjs
+10:05:42 PM [32mGET[39m /modules/submitCreation.mjs
+10:05:42 PM [32mGET[39m /modules/submitIdea.mjs
+10:05:42 PM [32mGET[39m /modules/submitRating.mjs
+10:05:42 PM [32mGET[39m /scripts/ideasList.mjs
+10:05:42 PM [32mGET[39m /modules/getFrom.mjs
+10:05:42 PM [32mGET[39m /modules/postTo.mjs
+10:05:42 PM [32mGET[39m /idea/getIdeas
+10:05:52 PM [32mGET[39m /thecorner
+10:05:52 PM [32mGET[39m /css/global-style.css
+10:05:52 PM [32mGET[39m /modules/contentLoader.mjs
+10:05:52 PM [32mGET[39m /modules/pageState.mjs
+10:05:52 PM [32mGET[39m /modules/nav.mjs
+10:05:52 PM [32mGET[39m /templates/thecorner.html
+10:05:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710104752357
+10:05:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:05:52 PM [32mGET[39m /modules/getIdeas.mjs
+10:05:52 PM [32mGET[39m /modules/submitCreation.mjs
+10:05:52 PM [32mGET[39m /modules/submitIdea.mjs
+10:05:52 PM [32mGET[39m /modules/submitRating.mjs
+10:05:52 PM [32mGET[39m /scripts/ideasList.mjs
+10:05:52 PM [32mGET[39m /modules/getFrom.mjs
+10:05:52 PM [32mGET[39m /modules/postTo.mjs
+10:05:52 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:12:34 PM [32mGET[39m /thecorner
+10:12:34 PM [32mGET[39m /css/global-style.css
+10:12:34 PM [32mGET[39m /modules/contentLoader.mjs
+10:12:34 PM [32mGET[39m /modules/pageState.mjs
+10:12:34 PM [32mGET[39m /modules/nav.mjs
+10:12:34 PM [32mGET[39m /templates/thecorner.html
+10:12:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105154956
+10:12:34 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:12:34 PM [32mGET[39m /modules/getIdeas.mjs
+10:12:34 PM [32mGET[39m /modules/submitCreation.mjs
+10:12:34 PM [32mGET[39m /modules/submitIdea.mjs
+10:12:34 PM [32mGET[39m /modules/submitRating.mjs
+10:12:34 PM [32mGET[39m /scripts/ideasList.mjs
+10:12:35 PM [32mGET[39m /modules/getFrom.mjs
+10:12:35 PM [32mGET[39m /modules/postTo.mjs
+10:12:35 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+10:17:08 PM [32mGET[39m /templates/usersettings.html
+10:17:08 PM [32mGET[39m /scripts/usersettings.mjs?timestamp=1710105428150
+10:17:08 PM [32mGET[39m /modules/getUserData.mjs
+10:17:08 PM [32mGET[39m /modules/deleteUser.mjs
+10:17:08 PM [32mGET[39m /modules/editUser.mjs
+10:17:08 PM [33mPOST[39m /user/getUserData
+10:17:35 PM [32mGET[39m /templates/thecorner.html
+10:17:35 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105455137
+10:17:35 PM [32mGET[39m /idea/getIdeas
+10:18:03 PM [32mGET[39m /thecorner
+10:18:03 PM [32mGET[39m /css/global-style.css
+10:18:03 PM [32mGET[39m /modules/contentLoader.mjs
+10:18:03 PM [32mGET[39m /modules/pageState.mjs
+10:18:03 PM [32mGET[39m /modules/nav.mjs
+10:18:03 PM [32mGET[39m /templates/thecorner.html
+10:18:03 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105483795
+10:18:03 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:18:03 PM [32mGET[39m /modules/getIdeas.mjs
+10:18:03 PM [32mGET[39m /modules/submitCreation.mjs
+10:18:03 PM [32mGET[39m /modules/submitIdea.mjs
+10:18:03 PM [32mGET[39m /modules/submitRating.mjs
+10:18:03 PM [32mGET[39m /scripts/ideasList.mjs
+10:18:03 PM [32mGET[39m /modules/getFrom.mjs
+10:18:03 PM [32mGET[39m /modules/postTo.mjs
+10:18:03 PM [32mGET[39m /idea/getIdeas
+10:20:52 PM [32mGET[39m /thecorner
+10:20:52 PM [32mGET[39m /css/global-style.css
+10:20:52 PM [32mGET[39m /modules/contentLoader.mjs
+10:20:52 PM [32mGET[39m /modules/pageState.mjs
+10:20:52 PM [32mGET[39m /modules/nav.mjs
+10:20:52 PM [32mGET[39m /templates/thecorner.html
+10:20:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105652551
+10:20:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:20:52 PM [32mGET[39m /modules/getIdeas.mjs
+10:20:52 PM [32mGET[39m /modules/submitCreation.mjs
+10:20:52 PM [32mGET[39m /modules/submitIdea.mjs
+10:20:52 PM [32mGET[39m /modules/submitRating.mjs
+10:20:52 PM [32mGET[39m /scripts/ideasList.mjs
+10:20:52 PM [32mGET[39m /modules/getFrom.mjs
+10:20:52 PM [32mGET[39m /modules/postTo.mjs
+10:20:52 PM [32mGET[39m /idea/getIdeas
+10:21:19 PM [32mGET[39m /thecorner
+10:21:19 PM [32mGET[39m /css/global-style.css
+10:21:19 PM [32mGET[39m /modules/contentLoader.mjs
+10:21:19 PM [32mGET[39m /modules/pageState.mjs
+10:21:19 PM [32mGET[39m /modules/nav.mjs
+10:21:19 PM [32mGET[39m /templates/thecorner.html
+10:21:19 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105679184
+10:21:19 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:21:19 PM [32mGET[39m /modules/getIdeas.mjs
+10:21:19 PM [32mGET[39m /modules/submitCreation.mjs
+10:21:19 PM [32mGET[39m /modules/submitIdea.mjs
+10:21:19 PM [32mGET[39m /modules/submitRating.mjs
+10:21:19 PM [32mGET[39m /scripts/ideasList.mjs
+10:21:19 PM [32mGET[39m /modules/getFrom.mjs
+10:21:19 PM [32mGET[39m /modules/postTo.mjs
+10:21:19 PM [32mGET[39m /idea/getIdeas
+10:21:29 PM [32mGET[39m /thecorner
+10:21:30 PM [32mGET[39m /css/global-style.css
+10:21:30 PM [32mGET[39m /modules/contentLoader.mjs
+10:21:30 PM [32mGET[39m /modules/pageState.mjs
+10:21:30 PM [32mGET[39m /modules/nav.mjs
+10:21:30 PM [32mGET[39m /templates/thecorner.html
+10:21:30 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105690025
+10:21:30 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:21:30 PM [32mGET[39m /modules/getIdeas.mjs
+10:21:30 PM [32mGET[39m /modules/submitCreation.mjs
+10:21:30 PM [32mGET[39m /modules/submitIdea.mjs
+10:21:30 PM [32mGET[39m /modules/submitRating.mjs
+10:21:30 PM [32mGET[39m /scripts/ideasList.mjs
+10:21:30 PM [32mGET[39m /modules/postTo.mjs
+10:21:30 PM [32mGET[39m /modules/getFrom.mjs
+10:21:30 PM [32mGET[39m /idea/getIdeas
+10:21:47 PM [32mGET[39m /thecorner
+10:21:47 PM [32mGET[39m /css/global-style.css
+10:21:47 PM [32mGET[39m /modules/contentLoader.mjs
+10:21:47 PM [32mGET[39m /modules/pageState.mjs
+10:21:47 PM [32mGET[39m /modules/nav.mjs
+10:21:47 PM [32mGET[39m /templates/thecorner.html
+10:21:47 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105707865
+10:21:47 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:21:47 PM [32mGET[39m /modules/getIdeas.mjs
+10:21:47 PM [32mGET[39m /modules/submitCreation.mjs
+10:21:47 PM [32mGET[39m /modules/submitIdea.mjs
+10:21:47 PM [32mGET[39m /modules/submitRating.mjs
+10:21:47 PM [32mGET[39m /scripts/ideasList.mjs
+10:21:47 PM [32mGET[39m /modules/getFrom.mjs
+10:21:47 PM [32mGET[39m /modules/postTo.mjs
+10:21:47 PM [32mGET[39m /idea/getIdeas
+10:22:00 PM [32mGET[39m /thecorner
+10:22:00 PM [32mGET[39m /css/global-style.css
+10:22:00 PM [32mGET[39m /modules/contentLoader.mjs
+10:22:00 PM [32mGET[39m /modules/pageState.mjs
+10:22:00 PM [32mGET[39m /modules/nav.mjs
+10:22:00 PM [32mGET[39m /templates/thecorner.html
+10:22:00 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105720807
+10:22:00 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:22:00 PM [32mGET[39m /modules/getIdeas.mjs
+10:22:00 PM [32mGET[39m /modules/submitCreation.mjs
+10:22:00 PM [32mGET[39m /modules/submitIdea.mjs
+10:22:00 PM [32mGET[39m /modules/submitRating.mjs
+10:22:00 PM [32mGET[39m /scripts/ideasList.mjs
+10:22:00 PM [32mGET[39m /modules/getFrom.mjs
+10:22:00 PM [32mGET[39m /modules/postTo.mjs
+10:22:00 PM [32mGET[39m /idea/getIdeas
+10:22:11 PM [32mGET[39m /thecorner
+10:22:11 PM [32mGET[39m /css/global-style.css
+10:22:11 PM [32mGET[39m /modules/contentLoader.mjs
+10:22:11 PM [32mGET[39m /modules/pageState.mjs
+10:22:11 PM [32mGET[39m /modules/nav.mjs
+10:22:11 PM [32mGET[39m /templates/thecorner.html
+10:22:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105731670
+10:22:11 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:22:11 PM [32mGET[39m /modules/getIdeas.mjs
+10:22:11 PM [32mGET[39m /modules/submitCreation.mjs
+10:22:11 PM [32mGET[39m /modules/submitIdea.mjs
+10:22:11 PM [32mGET[39m /modules/submitRating.mjs
+10:22:11 PM [32mGET[39m /modules/getFrom.mjs
+10:22:11 PM [32mGET[39m /scripts/ideasList.mjs
+10:22:11 PM [32mGET[39m /modules/postTo.mjs
+10:22:11 PM [32mGET[39m /idea/getIdeas
+10:22:17 PM [32mGET[39m /thecorner
+10:22:17 PM [32mGET[39m /css/global-style.css
+10:22:17 PM [32mGET[39m /modules/contentLoader.mjs
+10:22:17 PM [32mGET[39m /modules/pageState.mjs
+10:22:17 PM [32mGET[39m /modules/nav.mjs
+10:22:17 PM [32mGET[39m /templates/thecorner.html
+10:22:17 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105737291
+10:22:17 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:22:17 PM [32mGET[39m /modules/getIdeas.mjs
+10:22:17 PM [32mGET[39m /modules/submitCreation.mjs
+10:22:17 PM [32mGET[39m /modules/submitIdea.mjs
+10:22:17 PM [32mGET[39m /modules/submitRating.mjs
+10:22:17 PM [32mGET[39m /scripts/ideasList.mjs
+10:22:17 PM [32mGET[39m /modules/getFrom.mjs
+10:22:17 PM [32mGET[39m /modules/postTo.mjs
+10:22:17 PM [32mGET[39m /idea/getIdeas
+10:24:01 PM [32mGET[39m /thecorner
+10:24:01 PM [32mGET[39m /css/global-style.css
+10:24:01 PM [32mGET[39m /modules/contentLoader.mjs
+10:24:01 PM [32mGET[39m /modules/pageState.mjs
+10:24:01 PM [32mGET[39m /modules/nav.mjs
+10:24:01 PM [32mGET[39m /templates/thecorner.html
+10:24:01 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105841300
+10:24:01 PM [32mGET[39m /modules/getIdeas.mjs
+10:24:01 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:24:01 PM [32mGET[39m /modules/submitCreation.mjs
+10:24:01 PM [32mGET[39m /scripts/ideasList.mjs
+10:24:01 PM [32mGET[39m /modules/submitIdea.mjs
+10:24:01 PM [32mGET[39m /modules/submitRating.mjs
+10:24:01 PM [32mGET[39m /modules/getFrom.mjs
+10:24:01 PM [32mGET[39m /modules/postTo.mjs
+10:24:01 PM [32mGET[39m /idea/getIdeas
+10:24:21 PM [32mGET[39m /thecorner
+10:24:21 PM [32mGET[39m /css/global-style.css
+10:24:21 PM [32mGET[39m /modules/contentLoader.mjs
+10:24:21 PM [32mGET[39m /modules/pageState.mjs
+10:24:21 PM [32mGET[39m /modules/nav.mjs
+10:24:21 PM [32mGET[39m /templates/thecorner.html
+10:24:21 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105861582
+10:24:21 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:24:21 PM [32mGET[39m /modules/getIdeas.mjs
+10:24:21 PM [32mGET[39m /modules/submitCreation.mjs
+10:24:21 PM [32mGET[39m /modules/submitIdea.mjs
+10:24:21 PM [32mGET[39m /modules/submitRating.mjs
+10:24:21 PM [32mGET[39m /modules/getFrom.mjs
+10:24:21 PM [32mGET[39m /scripts/ideasList.mjs
+10:24:21 PM [32mGET[39m /modules/postTo.mjs
+10:24:21 PM [32mGET[39m /idea/getIdeas
+10:24:52 PM [32mGET[39m /thecorner
+10:24:52 PM [32mGET[39m /css/global-style.css
+10:24:52 PM [32mGET[39m /modules/contentLoader.mjs
+10:24:52 PM [32mGET[39m /modules/pageState.mjs
+10:24:52 PM [32mGET[39m /modules/nav.mjs
+10:24:52 PM [32mGET[39m /templates/thecorner.html
+10:24:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105892337
+10:24:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:24:52 PM [32mGET[39m /modules/getIdeas.mjs
+10:24:52 PM [32mGET[39m /modules/submitCreation.mjs
+10:24:52 PM [32mGET[39m /modules/submitIdea.mjs
+10:24:52 PM [32mGET[39m /modules/submitRating.mjs
+10:24:52 PM [32mGET[39m /scripts/ideasList.mjs
+10:24:52 PM [32mGET[39m /modules/getFrom.mjs
+10:24:52 PM [32mGET[39m /modules/postTo.mjs
+10:24:52 PM [32mGET[39m /idea/getIdeas
+10:25:20 PM [32mGET[39m /thecorner
+10:25:20 PM [32mGET[39m /css/global-style.css
+10:25:20 PM [32mGET[39m /modules/contentLoader.mjs
+10:25:20 PM [32mGET[39m /modules/pageState.mjs
+10:25:20 PM [32mGET[39m /modules/nav.mjs
+10:25:20 PM [32mGET[39m /templates/thecorner.html
+10:25:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105920265
+10:25:20 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:25:20 PM [32mGET[39m /modules/getIdeas.mjs
+10:25:20 PM [32mGET[39m /modules/submitCreation.mjs
+10:25:20 PM [32mGET[39m /modules/submitIdea.mjs
+10:25:20 PM [32mGET[39m /modules/submitRating.mjs
+10:25:20 PM [32mGET[39m /scripts/ideasList.mjs
+10:25:20 PM [32mGET[39m /modules/getFrom.mjs
+10:25:20 PM [32mGET[39m /modules/postTo.mjs
+10:25:20 PM [32mGET[39m /idea/getIdeas
+10:25:28 PM [32mGET[39m /thecorner
+10:25:28 PM [32mGET[39m /css/global-style.css
+10:25:28 PM [32mGET[39m /modules/contentLoader.mjs
+10:25:28 PM [32mGET[39m /modules/pageState.mjs
+10:25:28 PM [32mGET[39m /modules/nav.mjs
+10:25:28 PM [32mGET[39m /templates/thecorner.html
+10:25:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105928172
+10:25:28 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:25:28 PM [32mGET[39m /modules/getIdeas.mjs
+10:25:28 PM [32mGET[39m /modules/submitCreation.mjs
+10:25:28 PM [32mGET[39m /modules/submitIdea.mjs
+10:25:28 PM [32mGET[39m /modules/submitRating.mjs
+10:25:28 PM [32mGET[39m /scripts/ideasList.mjs
+10:25:28 PM [32mGET[39m /modules/getFrom.mjs
+10:25:28 PM [32mGET[39m /modules/postTo.mjs
+10:25:28 PM [32mGET[39m /idea/getIdeas
+10:25:38 PM [32mGET[39m /thecorner
+10:25:38 PM [32mGET[39m /css/global-style.css
+10:25:38 PM [32mGET[39m /modules/contentLoader.mjs
+10:25:38 PM [32mGET[39m /modules/pageState.mjs
+10:25:38 PM [32mGET[39m /modules/nav.mjs
+10:25:38 PM [32mGET[39m /templates/thecorner.html
+10:25:38 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105938131
+10:25:38 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:25:38 PM [32mGET[39m /modules/getIdeas.mjs
+10:25:38 PM [32mGET[39m /modules/submitCreation.mjs
+10:25:38 PM [32mGET[39m /modules/submitIdea.mjs
+10:25:38 PM [32mGET[39m /modules/submitRating.mjs
+10:25:38 PM [32mGET[39m /modules/getFrom.mjs
+10:25:38 PM [32mGET[39m /scripts/ideasList.mjs
+10:25:38 PM [32mGET[39m /modules/postTo.mjs
+10:25:38 PM [32mGET[39m /idea/getIdeas
+10:26:11 PM [32mGET[39m /thecorner
+10:26:11 PM [32mGET[39m /css/global-style.css
+10:26:11 PM [32mGET[39m /modules/contentLoader.mjs
+10:26:11 PM [32mGET[39m /modules/pageState.mjs
+10:26:11 PM [32mGET[39m /modules/nav.mjs
+10:26:11 PM [32mGET[39m /templates/thecorner.html
+10:26:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710105971436
+10:26:11 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:26:11 PM [32mGET[39m /modules/getIdeas.mjs
+10:26:11 PM [32mGET[39m /modules/submitCreation.mjs
+10:26:11 PM [32mGET[39m /modules/submitIdea.mjs
+10:26:11 PM [32mGET[39m /modules/submitRating.mjs
+10:26:11 PM [32mGET[39m /scripts/ideasList.mjs
+10:26:11 PM [32mGET[39m /modules/getFrom.mjs
+10:26:11 PM [32mGET[39m /modules/postTo.mjs
+10:26:11 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:29:46 PM [32mGET[39m /thecorner
+10:29:46 PM [32mGET[39m /css/global-style.css
+10:29:46 PM [32mGET[39m /modules/contentLoader.mjs
+10:29:46 PM [32mGET[39m /modules/pageState.mjs
+10:29:46 PM [32mGET[39m /modules/nav.mjs
+10:29:46 PM [32mGET[39m /templates/thecorner.html
+10:29:46 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710106186799
+10:29:46 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:29:46 PM [32mGET[39m /modules/getIdeas.mjs
+10:29:46 PM [32mGET[39m /modules/submitCreation.mjs
+10:29:46 PM [32mGET[39m /modules/submitIdea.mjs
+10:29:46 PM [32mGET[39m /modules/submitRating.mjs
+10:29:46 PM [32mGET[39m /scripts/ideasList.mjs
+10:29:46 PM [32mGET[39m /modules/getFrom.mjs
+10:29:46 PM [32mGET[39m /modules/postTo.mjs
+10:29:46 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:42:34 PM [32mGET[39m /thecorner
+10:42:34 PM [32mGET[39m /css/global-style.css
+10:42:34 PM [32mGET[39m /modules/contentLoader.mjs
+10:42:34 PM [32mGET[39m /modules/pageState.mjs
+10:42:34 PM [32mGET[39m /modules/nav.mjs
+10:42:34 PM [32mGET[39m /templates/thecorner.html
+10:42:34 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710106954378
+10:42:34 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:42:34 PM [32mGET[39m /modules/getIdeas.mjs
+10:42:34 PM [32mGET[39m /modules/submitCreation.mjs
+10:42:34 PM [32mGET[39m /modules/submitIdea.mjs
+10:42:34 PM [32mGET[39m /modules/submitRating.mjs
+10:42:34 PM [32mGET[39m /scripts/ideasList.mjs
+10:42:34 PM [32mGET[39m /modules/getFrom.mjs
+10:42:34 PM [32mGET[39m /modules/postTo.mjs
+10:42:34 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:43:39 PM [32mGET[39m /thecorner
+10:43:39 PM [32mGET[39m /css/global-style.css
+10:43:39 PM [32mGET[39m /modules/contentLoader.mjs
+10:43:39 PM [32mGET[39m /modules/pageState.mjs
+10:43:39 PM [32mGET[39m /modules/nav.mjs
+10:43:39 PM [32mGET[39m /templates/thecorner.html
+10:43:39 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710107019902
+10:43:39 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:43:39 PM [32mGET[39m /modules/getIdeas.mjs
+10:43:39 PM [32mGET[39m /modules/submitCreation.mjs
+10:43:39 PM [32mGET[39m /modules/submitIdea.mjs
+10:43:39 PM [32mGET[39m /modules/submitRating.mjs
+10:43:39 PM [32mGET[39m /scripts/ideasList.mjs
+10:43:39 PM [32mGET[39m /modules/getFrom.mjs
+10:43:39 PM [32mGET[39m /modules/postTo.mjs
+10:43:39 PM [32mGET[39m /idea/getIdeas
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+10:56:54 PM [32mGET[39m /thecorner
+10:56:54 PM [32mGET[39m /css/global-style.css
+10:56:54 PM [32mGET[39m /modules/contentLoader.mjs
+10:56:54 PM [32mGET[39m /modules/pageState.mjs
+10:56:54 PM [32mGET[39m /modules/nav.mjs
+10:56:54 PM [32mGET[39m /templates/thecorner.html
+10:56:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710107814798
+10:56:54 PM [32mGET[39m /modules/calcRatingAverage.mjs
+10:56:54 PM [32mGET[39m /modules/getIdeas.mjs
+10:56:54 PM [32mGET[39m /modules/submitCreation.mjs
+10:56:54 PM [32mGET[39m /modules/submitIdea.mjs
+10:56:54 PM [32mGET[39m /modules/submitRating.mjs
+10:56:54 PM [32mGET[39m /scripts/ideasList.mjs
+10:56:54 PM [32mGET[39m /modules/getFrom.mjs
+10:56:54 PM [32mGET[39m /modules/postTo.mjs
+10:56:54 PM [32mGET[39m /idea/getIdeas
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:04:11 PM [32mGET[39m /thecorner
+11:04:11 PM [32mGET[39m /css/global-style.css
+11:04:11 PM [32mGET[39m /modules/contentLoader.mjs
+11:04:11 PM [32mGET[39m /modules/pageState.mjs
+11:04:11 PM [32mGET[39m /modules/nav.mjs
+11:04:11 PM [32mGET[39m /templates/thecorner.html
+11:04:11 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710108251406
+11:04:11 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:04:11 PM [32mGET[39m /modules/getIdeas.mjs
+11:04:11 PM [32mGET[39m /modules/submitCreation.mjs
+11:04:11 PM [32mGET[39m /modules/submitIdea.mjs
+11:04:11 PM [32mGET[39m /modules/submitRating.mjs
+11:04:11 PM [32mGET[39m /scripts/ideasList.mjs
+11:04:11 PM [32mGET[39m /modules/getFrom.mjs
+11:04:11 PM [32mGET[39m /modules/postTo.mjs
+11:04:11 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:08:06 PM [32mGET[39m /thecorner
+11:08:06 PM [32mGET[39m /css/global-style.css
+11:08:06 PM [32mGET[39m /modules/contentLoader.mjs
+11:08:06 PM [32mGET[39m /modules/pageState.mjs
+11:08:06 PM [32mGET[39m /modules/nav.mjs
+11:08:06 PM [32mGET[39m /templates/thecorner.html
+11:08:06 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710108486191
+11:08:06 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:08:06 PM [32mGET[39m /modules/getIdeas.mjs
+11:08:06 PM [32mGET[39m /modules/submitCreation.mjs
+11:08:06 PM [32mGET[39m /modules/submitIdea.mjs
+11:08:06 PM [32mGET[39m /modules/getFrom.mjs
+11:08:06 PM [32mGET[39m /modules/submitRating.mjs
+11:08:06 PM [32mGET[39m /scripts/ideasList.mjs
+11:08:06 PM [32mGET[39m /modules/postTo.mjs
+11:08:06 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:15:42 PM [32mGET[39m /thecorner
+11:15:42 PM [32mGET[39m /css/global-style.css
+11:15:42 PM [32mGET[39m /modules/contentLoader.mjs
+11:15:42 PM [32mGET[39m /modules/pageState.mjs
+11:15:42 PM [32mGET[39m /modules/nav.mjs
+11:15:42 PM [32mGET[39m /templates/thecorner.html
+11:15:42 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710108942959
+11:15:42 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:15:42 PM [32mGET[39m /modules/getIdeas.mjs
+11:15:42 PM [32mGET[39m /modules/submitCreation.mjs
+11:15:42 PM [32mGET[39m /modules/submitIdea.mjs
+11:15:42 PM [32mGET[39m /modules/submitRating.mjs
+11:15:42 PM [32mGET[39m /scripts/ideasList.mjs
+11:15:43 PM [32mGET[39m /modules/getFrom.mjs
+11:15:43 PM [32mGET[39m /modules/postTo.mjs
+11:15:43 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:19:03 PM [32mGET[39m /thecorner
+11:19:03 PM [32mGET[39m /css/global-style.css
+11:19:03 PM [32mGET[39m /modules/contentLoader.mjs
+11:19:03 PM [32mGET[39m /modules/pageState.mjs
+11:19:03 PM [32mGET[39m /modules/nav.mjs
+11:19:03 PM [32mGET[39m /templates/thecorner.html
+11:19:03 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109143082
+11:19:03 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:19:03 PM [32mGET[39m /modules/getIdeas.mjs
+11:19:03 PM [32mGET[39m /modules/submitCreation.mjs
+11:19:03 PM [32mGET[39m /modules/submitIdea.mjs
+11:19:03 PM [32mGET[39m /modules/submitRating.mjs
+11:19:03 PM [32mGET[39m /scripts/ideasList.mjs
+11:19:03 PM [32mGET[39m /modules/getFrom.mjs
+11:19:03 PM [32mGET[39m /modules/postTo.mjs
+11:19:03 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:19:44 PM [32mGET[39m /thecorner
+11:19:44 PM [32mGET[39m /css/global-style.css
+11:19:44 PM [32mGET[39m /modules/contentLoader.mjs
+11:19:44 PM [32mGET[39m /modules/pageState.mjs
+11:19:44 PM [32mGET[39m /modules/nav.mjs
+11:19:44 PM [32mGET[39m /templates/thecorner.html
+11:19:44 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109184294
+11:19:44 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:19:44 PM [32mGET[39m /modules/getIdeas.mjs
+11:19:44 PM [32mGET[39m /scripts/ideasList.mjs
+11:19:44 PM [32mGET[39m /modules/submitCreation.mjs
+11:19:44 PM [32mGET[39m /modules/submitIdea.mjs
+11:19:44 PM [32mGET[39m /modules/submitRating.mjs
+11:19:44 PM [32mGET[39m /modules/getFrom.mjs
+11:19:44 PM [32mGET[39m /modules/postTo.mjs
+11:19:44 PM [32mGET[39m /idea/getIdeas/null
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:21:13 PM [32mGET[39m /thecorner
+11:21:13 PM [32mGET[39m /css/global-style.css
+11:21:13 PM [32mGET[39m /modules/contentLoader.mjs
+11:21:13 PM [32mGET[39m /modules/pageState.mjs
+11:21:13 PM [32mGET[39m /modules/nav.mjs
+11:21:13 PM [32mGET[39m /templates/thecorner.html
+11:21:13 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109273879
+11:21:13 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:21:13 PM [32mGET[39m /modules/getIdeas.mjs
+11:21:13 PM [32mGET[39m /modules/submitCreation.mjs
+11:21:13 PM [32mGET[39m /modules/submitIdea.mjs
+11:21:13 PM [32mGET[39m /modules/submitRating.mjs
+11:21:13 PM [32mGET[39m /scripts/ideasList.mjs
+11:21:13 PM [32mGET[39m /modules/getFrom.mjs
+11:21:13 PM [32mGET[39m /modules/postTo.mjs
+11:21:13 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:21:27 PM [32mGET[39m /thecorner
+11:21:27 PM [32mGET[39m /css/global-style.css
+11:21:27 PM [32mGET[39m /modules/contentLoader.mjs
+11:21:27 PM [32mGET[39m /modules/pageState.mjs
+11:21:27 PM [32mGET[39m /modules/nav.mjs
+11:21:27 PM [32mGET[39m /templates/thecorner.html
+11:21:27 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109287631
+11:21:27 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:21:27 PM [32mGET[39m /modules/getIdeas.mjs
+11:21:27 PM [32mGET[39m /modules/submitCreation.mjs
+11:21:27 PM [32mGET[39m /modules/submitIdea.mjs
+11:21:27 PM [32mGET[39m /modules/submitRating.mjs
+11:21:27 PM [32mGET[39m /scripts/ideasList.mjs
+11:21:27 PM [32mGET[39m /modules/getFrom.mjs
+11:21:27 PM [32mGET[39m /modules/postTo.mjs
+11:21:27 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:22:02 PM [32mGET[39m /thecorner
+11:22:02 PM [32mGET[39m /css/global-style.css
+11:22:02 PM [32mGET[39m /modules/contentLoader.mjs
+11:22:02 PM [32mGET[39m /modules/pageState.mjs
+11:22:02 PM [32mGET[39m /modules/nav.mjs
+11:22:02 PM [32mGET[39m /templates/thecorner.html
+11:22:02 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109322709
+11:22:02 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:22:02 PM [32mGET[39m /modules/getIdeas.mjs
+11:22:02 PM [32mGET[39m /modules/submitCreation.mjs
+11:22:02 PM [32mGET[39m /modules/submitIdea.mjs
+11:22:02 PM [32mGET[39m /modules/submitRating.mjs
+11:22:02 PM [32mGET[39m /scripts/ideasList.mjs
+11:22:02 PM [32mGET[39m /modules/getFrom.mjs
+11:22:02 PM [32mGET[39m /modules/postTo.mjs
+11:22:02 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:22:28 PM [32mGET[39m /thecorner
+11:22:28 PM [32mGET[39m /css/global-style.css
+11:22:28 PM [32mGET[39m /modules/contentLoader.mjs
+11:22:28 PM [32mGET[39m /modules/pageState.mjs
+11:22:28 PM [32mGET[39m /modules/nav.mjs
+11:22:28 PM [32mGET[39m /templates/thecorner.html
+11:22:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109348766
+11:22:28 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:22:28 PM [32mGET[39m /modules/getIdeas.mjs
+11:22:28 PM [32mGET[39m /modules/submitCreation.mjs
+11:22:28 PM [32mGET[39m /modules/submitRating.mjs
+11:22:28 PM [32mGET[39m /modules/submitIdea.mjs
+11:22:28 PM [32mGET[39m /scripts/ideasList.mjs
+11:22:28 PM [32mGET[39m /modules/postTo.mjs
+11:22:28 PM [32mGET[39m /modules/getFrom.mjs
+11:22:28 PM [32mGET[39m /idea/getIdeas/null
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+11:22:49 PM [32mGET[39m /thecorner
+11:22:49 PM [32mGET[39m /css/global-style.css
+11:22:49 PM [32mGET[39m /modules/contentLoader.mjs
+11:22:49 PM [32mGET[39m /modules/pageState.mjs
+11:22:49 PM [32mGET[39m /modules/nav.mjs
+11:22:49 PM [32mGET[39m /templates/thecorner.html
+11:22:49 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109369311
+11:22:49 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:22:49 PM [32mGET[39m /modules/getIdeas.mjs
+11:22:49 PM [32mGET[39m /modules/submitCreation.mjs
+11:22:49 PM [32mGET[39m /modules/submitIdea.mjs
+11:22:49 PM [32mGET[39m /modules/submitRating.mjs
+11:22:49 PM [32mGET[39m /scripts/ideasList.mjs
+11:22:49 PM [32mGET[39m /modules/getFrom.mjs
+11:22:49 PM [32mGET[39m /modules/postTo.mjs
+11:22:49 PM [32mGET[39m /idea/getIdeas/null
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+11:23:28 PM [32mGET[39m /thecorner
+11:23:28 PM [32mGET[39m /css/global-style.css
+11:23:28 PM [32mGET[39m /modules/contentLoader.mjs
+11:23:28 PM [32mGET[39m /modules/pageState.mjs
+11:23:28 PM [32mGET[39m /modules/nav.mjs
+11:23:28 PM [32mGET[39m /templates/thecorner.html
+11:23:28 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109408222
+11:23:28 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:23:28 PM [32mGET[39m /modules/getIdeas.mjs
+11:23:28 PM [32mGET[39m /modules/submitCreation.mjs
+11:23:28 PM [32mGET[39m /modules/submitIdea.mjs
+11:23:28 PM [32mGET[39m /modules/submitRating.mjs
+11:23:28 PM [32mGET[39m /scripts/ideasList.mjs
+11:23:28 PM [32mGET[39m /modules/getFrom.mjs
+11:23:28 PM [32mGET[39m /modules/postTo.mjs
+11:23:28 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:24:33 PM [32mGET[39m /thecorner
+11:24:33 PM [32mGET[39m /css/global-style.css
+11:24:33 PM [32mGET[39m /modules/contentLoader.mjs
+11:24:33 PM [32mGET[39m /modules/pageState.mjs
+11:24:33 PM [32mGET[39m /modules/nav.mjs
+11:24:33 PM [32mGET[39m /templates/thecorner.html
+11:24:33 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109473281
+11:24:33 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:24:33 PM [32mGET[39m /modules/getIdeas.mjs
+11:24:33 PM [32mGET[39m /modules/submitCreation.mjs
+11:24:33 PM [32mGET[39m /modules/submitIdea.mjs
+11:24:33 PM [32mGET[39m /modules/submitRating.mjs
+11:24:33 PM [32mGET[39m /scripts/ideasList.mjs
+11:24:33 PM [32mGET[39m /modules/getUserData.mjs
+11:24:33 PM [32mGET[39m /modules/getFrom.mjs
+11:24:33 PM [32mGET[39m /modules/postTo.mjs
+11:24:33 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:25:29 PM [33mPOST[39m /user/getUserData
+11:25:29 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:26:45 PM [32mGET[39m /templates/thecorner.html
+11:26:45 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109605797
+11:26:45 PM [32mGET[39m /idea/getIdeas/null
+11:26:51 PM [32mGET[39m /thecorner
+11:26:51 PM [32mGET[39m /css/global-style.css
+11:26:51 PM [32mGET[39m /modules/contentLoader.mjs
+11:26:51 PM [32mGET[39m /modules/pageState.mjs
+11:26:51 PM [32mGET[39m /modules/nav.mjs
+11:26:51 PM [32mGET[39m /templates/thecorner.html
+11:26:51 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109611184
+11:26:51 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:26:51 PM [32mGET[39m /modules/getUserData.mjs
+11:26:51 PM [32mGET[39m /modules/getIdeas.mjs
+11:26:51 PM [32mGET[39m /modules/submitCreation.mjs
+11:26:51 PM [32mGET[39m /modules/submitIdea.mjs
+11:26:51 PM [32mGET[39m /scripts/ideasList.mjs
+11:26:51 PM [32mGET[39m /modules/submitRating.mjs
+11:26:51 PM [32mGET[39m /modules/getFrom.mjs
+11:26:51 PM [32mGET[39m /modules/postTo.mjs
+11:26:51 PM [32mGET[39m /idea/getIdeas/null
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:27:35 PM [32mGET[39m /thecorner
+11:27:36 PM [32mGET[39m /css/global-style.css
+11:27:36 PM [32mGET[39m /modules/contentLoader.mjs
+11:27:36 PM [32mGET[39m /modules/pageState.mjs
+11:27:36 PM [32mGET[39m /modules/nav.mjs
+11:27:36 PM [32mGET[39m /templates/thecorner.html
+11:27:36 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109656059
+11:27:36 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:27:36 PM [32mGET[39m /modules/getIdeas.mjs
+11:27:36 PM [32mGET[39m /modules/getUserData.mjs
+11:27:36 PM [32mGET[39m /scripts/ideasList.mjs
+11:27:36 PM [32mGET[39m /modules/submitCreation.mjs
+11:27:36 PM [32mGET[39m /modules/submitIdea.mjs
+11:27:36 PM [32mGET[39m /modules/submitRating.mjs
+11:27:36 PM [32mGET[39m /modules/postTo.mjs
+11:27:36 PM [32mGET[39m /modules/getFrom.mjs
+11:27:36 PM [32mGET[39m /idea/getIdeas/null
+11:27:39 PM [33mPOST[39m /user/getUserData
+11:27:39 PM [32mGET[39m /idea/getIdeas/null
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+####################
+11:27:52 PM [32mGET[39m /thecorner
+11:27:52 PM [32mGET[39m /css/global-style.css
+11:27:52 PM [32mGET[39m /modules/contentLoader.mjs
+11:27:52 PM [32mGET[39m /modules/pageState.mjs
+11:27:52 PM [32mGET[39m /modules/nav.mjs
+11:27:52 PM [32mGET[39m /templates/thecorner.html
+11:27:52 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109672350
+11:27:52 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:27:52 PM [32mGET[39m /modules/getIdeas.mjs
+11:27:52 PM [32mGET[39m /modules/getUserData.mjs
+11:27:52 PM [32mGET[39m /scripts/ideasList.mjs
+11:27:52 PM [32mGET[39m /modules/submitCreation.mjs
+11:27:52 PM [32mGET[39m /modules/getFrom.mjs
+11:27:52 PM [32mGET[39m /modules/postTo.mjs
+11:27:52 PM [32mGET[39m /modules/submitIdea.mjs
+11:27:52 PM [32mGET[39m /modules/submitRating.mjs
+11:27:52 PM [32mGET[39m /idea/getIdeas/null
+11:27:54 PM [33mPOST[39m /user/getUserData
+11:27:54 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:28:20 PM [32mGET[39m /thecorner
+11:28:20 PM [32mGET[39m /css/global-style.css
+11:28:20 PM [32mGET[39m /modules/contentLoader.mjs
+11:28:20 PM [32mGET[39m /modules/pageState.mjs
+11:28:20 PM [32mGET[39m /modules/nav.mjs
+11:28:20 PM [32mGET[39m /templates/thecorner.html
+11:28:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109700236
+11:28:20 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:28:20 PM [32mGET[39m /modules/getIdeas.mjs
+11:28:20 PM [32mGET[39m /modules/getUserData.mjs
+11:28:20 PM [32mGET[39m /scripts/ideasList.mjs
+11:28:20 PM [32mGET[39m /modules/submitCreation.mjs
+11:28:20 PM [32mGET[39m /modules/submitIdea.mjs
+11:28:20 PM [32mGET[39m /modules/submitRating.mjs
+11:28:20 PM [32mGET[39m /modules/getFrom.mjs
+11:28:20 PM [32mGET[39m /modules/postTo.mjs
+11:28:20 PM [32mGET[39m /idea/getIdeas/null
+11:29:40 PM [33mPOST[39m /user/getUserData
+11:29:41 PM [32mGET[39m /idea/getIdeas/72
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:30:20 PM [32mGET[39m /thecorner
+11:30:20 PM [32mGET[39m /css/global-style.css
+11:30:20 PM [32mGET[39m /modules/contentLoader.mjs
+11:30:20 PM [32mGET[39m /modules/pageState.mjs
+11:30:20 PM [32mGET[39m /modules/nav.mjs
+11:30:20 PM [32mGET[39m /templates/thecorner.html
+11:30:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109820575
+11:30:20 PM [32mGET[39m /modules/getIdeas.mjs
+11:30:20 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:30:20 PM [32mGET[39m /modules/getUserData.mjs
+11:30:20 PM [32mGET[39m /modules/submitCreation.mjs
+11:30:20 PM [32mGET[39m /scripts/ideasList.mjs
+11:30:20 PM [32mGET[39m /modules/submitIdea.mjs
+11:30:20 PM [32mGET[39m /modules/submitRating.mjs
+11:30:20 PM [32mGET[39m /modules/getFrom.mjs
+11:30:20 PM [32mGET[39m /modules/postTo.mjs
+11:30:20 PM [32mGET[39m /idea/getIdeas/null
+11:30:21 PM [33mPOST[39m /user/getUserData
+11:30:21 PM [32mGET[39m /idea/getIdeas/72
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:30:54 PM [32mGET[39m /thecorner
+11:30:54 PM [32mGET[39m /css/global-style.css
+11:30:54 PM [32mGET[39m /modules/contentLoader.mjs
+11:30:54 PM [32mGET[39m /modules/pageState.mjs
+11:30:54 PM [32mGET[39m /modules/nav.mjs
+11:30:54 PM [32mGET[39m /templates/thecorner.html
+11:30:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109854735
+11:30:54 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:30:54 PM [32mGET[39m /modules/getIdeas.mjs
+11:30:54 PM [32mGET[39m /modules/getUserData.mjs
+11:30:54 PM [32mGET[39m /scripts/ideasList.mjs
+11:30:54 PM [32mGET[39m /modules/submitRating.mjs
+11:30:54 PM [32mGET[39m /modules/submitCreation.mjs
+11:30:54 PM [32mGET[39m /modules/submitIdea.mjs
+11:30:54 PM [32mGET[39m /modules/getFrom.mjs
+11:30:54 PM [32mGET[39m /modules/postTo.mjs
+11:30:54 PM [32mGET[39m /idea/getIdeas/null
+11:30:55 PM [33mPOST[39m /user/getUserData
+11:30:56 PM [32mGET[39m /idea/getIdeas/72
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:32:08 PM [32mGET[39m /thecorner
+11:32:08 PM [32mGET[39m /css/global-style.css
+11:32:08 PM [32mGET[39m /modules/contentLoader.mjs
+11:32:08 PM [32mGET[39m /modules/pageState.mjs
+11:32:08 PM [32mGET[39m /modules/nav.mjs
+11:32:08 PM [32mGET[39m /templates/thecorner.html
+11:32:08 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710109928451
+11:32:08 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:32:08 PM [32mGET[39m /modules/getIdeas.mjs
+11:32:08 PM [32mGET[39m /modules/getUserData.mjs
+11:32:08 PM [32mGET[39m /modules/submitCreation.mjs
+11:32:08 PM [32mGET[39m /modules/getFrom.mjs
+11:32:08 PM [32mGET[39m /modules/submitIdea.mjs
+11:32:08 PM [32mGET[39m /modules/submitRating.mjs
+11:32:08 PM [32mGET[39m /modules/postTo.mjs
+11:32:08 PM [32mGET[39m /scripts/ideasList.mjs
+11:32:08 PM [32mGET[39m /idea/getIdeas/null
+11:32:10 PM [33mPOST[39m /user/getUserData
+11:32:10 PM [32mGET[39m /idea/getIdeas/72
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:34:20 PM [32mGET[39m /thecorner
+11:34:20 PM [32mGET[39m /css/global-style.css
+11:34:20 PM [32mGET[39m /modules/contentLoader.mjs
+11:34:20 PM [32mGET[39m /modules/pageState.mjs
+11:34:20 PM [32mGET[39m /modules/nav.mjs
+11:34:20 PM [32mGET[39m /templates/thecorner.html
+11:34:20 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710110060613
+11:34:20 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:34:20 PM [32mGET[39m /modules/getIdeas.mjs
+11:34:20 PM [32mGET[39m /modules/getUserData.mjs
+11:34:20 PM [32mGET[39m /modules/submitCreation.mjs
+11:34:20 PM [32mGET[39m /modules/submitIdea.mjs
+11:34:20 PM [32mGET[39m /modules/submitRating.mjs
+11:34:20 PM [32mGET[39m /scripts/ideasList.mjs
+11:34:20 PM [32mGET[39m /modules/getFrom.mjs
+11:34:20 PM [32mGET[39m /modules/postTo.mjs
+11:34:20 PM [32mGET[39m /idea/getIdeas/null
+11:34:21 PM [33mPOST[39m /user/getUserData
+11:34:22 PM [32mGET[39m /idea/getIdeas/72
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:37:31 PM [32mGET[39m /thecorner
+11:37:31 PM [32mGET[39m /css/global-style.css
+11:37:31 PM [32mGET[39m /modules/contentLoader.mjs
+11:37:31 PM [32mGET[39m /modules/pageState.mjs
+11:37:31 PM [32mGET[39m /modules/nav.mjs
+11:37:31 PM [32mGET[39m /templates/thecorner.html
+11:37:31 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710110251956
+11:37:31 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:37:31 PM [32mGET[39m /modules/getIdeas.mjs
+11:37:31 PM [32mGET[39m /modules/getUserData.mjs
+11:37:31 PM [32mGET[39m /modules/submitRating.mjs
+11:37:31 PM [32mGET[39m /modules/submitCreation.mjs
+11:37:31 PM [32mGET[39m /modules/submitIdea.mjs
+11:37:31 PM [32mGET[39m /scripts/ideasList.mjs
+11:37:31 PM [32mGET[39m /modules/getFrom.mjs
+11:37:31 PM [32mGET[39m /modules/postTo.mjs
+11:37:32 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+11:37:53 PM [32mGET[39m /thecorner
+11:37:53 PM [32mGET[39m /css/global-style.css
+11:37:53 PM [32mGET[39m /modules/contentLoader.mjs
+11:37:53 PM [32mGET[39m /modules/pageState.mjs
+11:37:53 PM [32mGET[39m /modules/nav.mjs
+11:37:53 PM [32mGET[39m /templates/thecorner.html
+11:37:53 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710110273411
+11:37:53 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:37:53 PM [32mGET[39m /modules/getIdeas.mjs
+11:37:53 PM [32mGET[39m /modules/getUserData.mjs
+11:37:53 PM [32mGET[39m /modules/submitCreation.mjs
+11:37:53 PM [32mGET[39m /modules/submitIdea.mjs
+11:37:53 PM [32mGET[39m /modules/submitRating.mjs
+11:37:53 PM [32mGET[39m /scripts/ideasList.mjs
+11:37:53 PM [32mGET[39m /modules/getFrom.mjs
+11:37:53 PM [32mGET[39m /modules/postTo.mjs
+11:37:53 PM [32mGET[39m /idea/getIdeas/null
+11:37:54 PM [32mGET[39m /thecorner
+11:37:54 PM [32mGET[39m /css/global-style.css
+11:37:54 PM [32mGET[39m /modules/contentLoader.mjs
+11:37:54 PM [32mGET[39m /modules/pageState.mjs
+11:37:54 PM [32mGET[39m /modules/nav.mjs
+11:37:54 PM [32mGET[39m /templates/thecorner.html
+11:37:54 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710110274059
+11:37:54 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:37:54 PM [32mGET[39m /modules/getIdeas.mjs
+11:37:54 PM [32mGET[39m /modules/getUserData.mjs
+11:37:54 PM [32mGET[39m /modules/submitCreation.mjs
+11:37:54 PM [32mGET[39m /modules/submitIdea.mjs
+11:37:54 PM [32mGET[39m /scripts/ideasList.mjs
+11:37:54 PM [32mGET[39m /modules/submitRating.mjs
+11:37:54 PM [32mGET[39m /modules/getFrom.mjs
+11:37:54 PM [32mGET[39m /modules/postTo.mjs
+11:37:54 PM [32mGET[39m /idea/getIdeas/null
+11:38:01 PM [33mPOST[39m /user/getUserData
+11:38:01 PM [32mGET[39m /idea/getIdeas/72
+11:38:08 PM [32mGET[39m /thecorner
+11:38:08 PM [32mGET[39m /css/global-style.css
+11:38:08 PM [32mGET[39m /modules/contentLoader.mjs
+11:38:08 PM [32mGET[39m /modules/pageState.mjs
+11:38:08 PM [32mGET[39m /modules/nav.mjs
+11:38:08 PM [32mGET[39m /templates/thecorner.html
+11:38:08 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710110288883
+11:38:08 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:38:08 PM [32mGET[39m /modules/getIdeas.mjs
+11:38:08 PM [32mGET[39m /modules/getUserData.mjs
+11:38:08 PM [32mGET[39m /modules/submitCreation.mjs
+11:38:08 PM [32mGET[39m /modules/submitIdea.mjs
+11:38:08 PM [32mGET[39m /modules/submitRating.mjs
+11:38:08 PM [32mGET[39m /scripts/ideasList.mjs
+11:38:08 PM [32mGET[39m /modules/getFrom.mjs
+11:38:08 PM [32mGET[39m /modules/postTo.mjs
+11:38:08 PM [32mGET[39m /idea/getIdeas/null
+11:38:13 PM [33mPOST[39m /user/getUserData
+11:38:13 PM [32mGET[39m /idea/getIdeas/72
+11:38:22 PM [32mGET[39m /thecorner
+11:38:22 PM [32mGET[39m /css/global-style.css
+11:38:22 PM [32mGET[39m /modules/contentLoader.mjs
+11:38:22 PM [32mGET[39m /modules/pageState.mjs
+11:38:22 PM [32mGET[39m /modules/nav.mjs
+11:38:22 PM [32mGET[39m /templates/thecorner.html
+11:38:22 PM [32mGET[39m /scripts/thecorner.mjs?timestamp=1710110302121
+11:38:22 PM [32mGET[39m /modules/calcRatingAverage.mjs
+11:38:22 PM [32mGET[39m /modules/getIdeas.mjs
+11:38:22 PM [32mGET[39m /modules/getUserData.mjs
+11:38:22 PM [32mGET[39m /modules/submitCreation.mjs
+11:38:22 PM [32mGET[39m /modules/submitIdea.mjs
+11:38:22 PM [32mGET[39m /scripts/ideasList.mjs
+11:38:22 PM [32mGET[39m /modules/submitRating.mjs
+11:38:22 PM [32mGET[39m /modules/getFrom.mjs
+11:38:22 PM [32mGET[39m /modules/postTo.mjs
+11:38:22 PM [32mGET[39m /idea/getIdeas/null
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
