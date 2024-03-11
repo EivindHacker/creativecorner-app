@@ -12,27 +12,30 @@ class DBManager {
 		};
 	}
 
-	async createUser(user) {
+	async insertIntoTable(tableName, columns, values) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
-			const output = await client.query(
-				'INSERT INTO "public"."Users"("name", "email", "password", "role") VALUES($1::Text, $2::Text, $3::Text, $4::Text) RETURNING id;',
-				[user.name, user.email, user.pswHash, user.role]
-			);
 
-			if (output.rows.length == 1) {
-				user.id = output.rows[0].id;
+			// Construct the SQL query dynamically based on input parameters
+			const placeholders = values.map((_, index) => `$${index + 1}`).join(", ");
+			const query = `INSERT INTO "${tableName}"(${columns.join(", ")}) VALUES(${placeholders}) RETURNING *`;
+
+			const output = await client.query(query, values);
+
+			if (output.rows.length === 1) {
+				// Assuming that the inserted row contains an 'id' column
+				return output.rows[0];
 			}
 		} catch (error) {
 			console.error(error);
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			// TODO: Error handling
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
 
-		return user;
+		return null; // Return null if insertion fails
 	}
 
 	async checkUserExistence(user) {
@@ -85,7 +88,7 @@ class DBManager {
 		try {
 			await client.connect();
 
-			const output = await client.query('SELECT * from "public"."Users"  where email = $1 AND password = $2;', [user.email, user.pswHash]);
+			const output = await client.query('SELECT * from "public"."Users"  where email = $1', [user.email]);
 
 			console.log(output.rows);
 
@@ -135,8 +138,8 @@ class DBManager {
 				SET "name" = $1::Text, 
 					"email" = $2::Text,
 					"role" = $3::Text
-				WHERE password = $4::Text AND email = $5::Text;`,
-				[user.name, user.newEmail, user.role, user.pswHash, user.email]
+				WHERE email = $4::Text;`,
+				[user.name, user.newEmail, user.role, user.email]
 			);
 
 			if (output.rows.length == 1) {
@@ -146,6 +149,36 @@ class DBManager {
 		} catch (error) {
 			console.error(error);
 			//TODO : Error handling?? Remember that this is a module seperate from your server
+		} finally {
+			client.end(); // Always disconnect from the database.
+		}
+
+		return user;
+	}
+
+	async updateUserPassword(user) {
+		const client = new pg.Client(this.#credentials);
+
+		try {
+			await client.connect();
+
+			console.log(user.newPass, user.email);
+
+			const output = await client.query(
+				`UPDATE "public"."Users"
+				SET password = $1
+				WHERE email = $2`,
+				[user.newPass, user.email]
+			);
+
+			console.log(user.newPass, user.email);
+
+			if (output.rows.length == 1) {
+				// We stored the user in the DB.
+				user.id = output.rows[0].id;
+			}
+		} catch (error) {
+			throw error; // Re-throw the error for handling in the calling code
 		} finally {
 			client.end(); // Always disconnect from the database.
 		}
@@ -172,29 +205,6 @@ class DBManager {
 		} finally {
 			client.end(); // Always disconnect from the database.
 		}
-	}
-
-	async createIdea(idea) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-			const output = await client.query(
-				'INSERT INTO "public"."Ideas"("title", "creator_id", "creator_name", "genres", description) VALUES($1::Text, $2::Integer, $3::Text, $4::Text, $5::Text) RETURNING id;',
-				[idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.description]
-			);
-
-			if (output.rows.length == 1) {
-				idea.id = output.rows[0].id;
-			}
-		} catch (error) {
-			console.error(error);
-			//TODO : Error handling?? Remember that this is a module seperate from your server
-		} finally {
-			client.end(); // Always disconnect from the database.
-		}
-
-		return idea;
 	}
 
 	async getIdea(idea) {

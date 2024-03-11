@@ -17,16 +17,15 @@ export default async function editUser(type, userInfo) {
 
 		if (response.ok) {
 			const data = await response.json();
-			const token = JSON.parse(data);
-			localStorage.setItem("token", token);
-			console.log(token);
-			if (type === "Info") {
-				return "User Updated Successfully";
-			} else {
-				return "Password Updated Successfully";
+			const dataRes = JSON.parse(data);
+
+			if (data.data) {
+				const token = data.data;
+				localStorage.setItem("token", token);
 			}
+			return dataRes;
 		}
 	} catch (error) {
-		return error.message;
+		return error;
 	}
 }

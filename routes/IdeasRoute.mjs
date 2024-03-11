@@ -3,8 +3,9 @@ import Idea from "../model/idea.mjs";
 import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
 import SuperLogger from "../modules/SuperLogger.mjs";
-import decryptUserToken from "../middleware/decryptUserToken.mjs";
+import validateToken from "../middleware/validateToken.mjs";
 import createGenreString from "../modules/createGenreString.mjs";
+import {ResMsg} from "../modules/responseMessages.mjs";
 
 const IDEA_API = express.Router();
 
@@ -24,20 +25,16 @@ IDEA_API.get("/getIdeas/:id", async (req, res, next) => {
 		ideas.id = id;
 	}
 
-	console.log(ideas.id);
-
 	ideas = await ideas.getIdeas();
-
-	console.log(ideas);
 
 	if (ideas.length !== 0) {
 		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("No Ideas were found...").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.noIdeasFound).end();
 	}
 });
 
-IDEA_API.post("/createIdea", decryptUserToken, async (req, res, next) => {
+IDEA_API.post("/createIdea", validateToken, async (req, res, next) => {
 	const ideaInput = req.body;
 
 	let idea = new Idea();
@@ -47,8 +44,7 @@ IDEA_API.post("/createIdea", decryptUserToken, async (req, res, next) => {
 
 	let user = new User();
 
-	user.email = req.token.email;
-	user.pswHash = req.token.pswHash;
+	user.email = req.emailFromToken;
 
 	user = await user.getUserData();
 
@@ -71,7 +67,7 @@ IDEA_API.post("/createIdea", decryptUserToken, async (req, res, next) => {
 	}
 });
 
-IDEA_API.post("/rateIdea", decryptUserToken, async (req, res, next) => {
+IDEA_API.post("/rateIdea", validateToken, async (req, res, next) => {
 	let user = new User();
 
 	user.email = req.token.email;

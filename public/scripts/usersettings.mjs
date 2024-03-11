@@ -125,12 +125,12 @@ async function submitChanges() {
 
 		console.log(response);
 
-		if (response === "User Updated Successfully") {
+		if (response.success) {
 			toggleEditUserWrapper();
 			updateUserDataDisplay();
-			successDisplay.textContent = response;
+			successDisplay.textContent = response.message;
 		} else {
-			errorDisplay.textContent = response;
+			errorDisplay.textContent = response.message;
 		}
 	} else {
 		const oldPass = document.getElementById("oldPasswordInput");
@@ -139,15 +139,13 @@ async function submitChanges() {
 		const passwords = {oldPass: oldPass.value, newPass: newPass.value};
 		const response = await editUser("Password", passwords);
 
-		console.log(response);
-
-		if (response === "Password Updated Successfully") {
+		if (response.success) {
 			toggleEditUserWrapper();
 			updateUserDataDisplay();
 			toggleEditPasswordWrapper();
-			successDisplay.textContent = response;
+			successDisplay.textContent = response.message;
 		} else {
-			errorDisplay.textContent = response;
+			errorDisplay.textContent = response.message;
 		}
 	}
 }

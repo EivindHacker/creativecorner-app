@@ -22,7 +22,6 @@ class HTTPCodes {
 	};
 }
 
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 const HTTPMethods = {
 	POST: "POST",
 	GET: "GET",

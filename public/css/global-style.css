@@ -293,6 +293,13 @@ textarea {
 	border-radius: 25px;
 	box-shadow: #00000049 0px 5px 25px;
 	width: calc(100% - 60px);
+	position: relative;
+}
+
+.edit-card-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }
 
 .creator-wrapper {

@@ -7,9 +7,33 @@ import submitIdea from "../modules/submitIdea.mjs";
 import submitRating from "../modules/submitRating.mjs";
 import createIdeaCard from "./ideasList.mjs";
 
+let sortBy = "beforeend";
+
+//Sort By
+
+document.getElementById("sortByNewBtn").addEventListener("click", () => {
+	sortBy = "beforeend";
+	if (!showUserIdeasBtn.classList.contains("cancel")) {
+		getAllIdeas();
+	} else {
+		getIdeasFromUser();
+	}
+});
+
+document.getElementById("sortByOldBtn").addEventListener("click", () => {
+	sortBy = "afterbegin";
+	if (!showUserIdeasBtn.classList.contains("cancel")) {
+		getAllIdeas();
+	} else {
+		getIdeasFromUser();
+	}
+});
+
 const errorDisplay = document.getElementById("errorDisplay");
 
 const getStartedWrapper = document.getElementById("getStartedWrapper");
+
+const createIdeaBtn = document.getElementById("createIdeaBtn");
 
 document.getElementById("loginBtn").addEventListener("click", () => {
 	updatePageState("login");
@@ -18,16 +42,6 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 document.getElementById("signUpBtn").addEventListener("click", () => {
 	updatePageState("signup");
 });
-
-const createIdeaBtn = document.getElementById("createIdeaBtn");
-
-if (localStorage.getItem("token")) {
-	getStartedWrapper.style.display = "none";
-	createIdeaBtn.style.display = "block";
-} else {
-	getStartedWrapper.style.display = "block";
-	createIdeaBtn.style.display = "none";
-}
 
 //----------- CREATE IDEA -----------
 
@@ -68,10 +82,11 @@ document.getElementById("saveIdeaBtn").addEventListener("click", async () => {
 
 	ideaResponse.creations = null;
 
-	if (typeof ideaResponse === "object") {
-		clearIdeasDisplay();
+	if (!ideaResponse.message) {
 		getAllIdeas();
 		hideCreateIdeaWrapper();
+	} else {
+		errorDisplay.innerText = ideaResponse.message;
 	}
 });
 
@@ -120,20 +135,24 @@ function toggleCreationsWrapper(id) {
 const ideasList = document.getElementById("ideasList");
 
 async function getAllIdeas() {
+	clearIdeasDisplay();
 	const response = await getIdeas();
 
 	displayIdeas(response);
 }
 
-function displayIdeas(ideas) {
+async function displayIdeas(ideas) {
+	const userData = await getUserData();
+	const userId = userData.id;
+
 	if (Array.isArray(ideas)) {
-		ideas.forEach((idea, index) => {
-			const ideaCardHtml = createIdeaCard(idea, index);
-			ideasList.insertAdjacentHTML("beforeend", ideaCardHtml);
+		ideas.forEach((idea) => {
+			const ideaCardHtml = createIdeaCard(idea, userId);
+			ideasList.insertAdjacentHTML(sortBy, ideaCardHtml);
 			createCardListeners(idea.id);
 		});
 	} else {
-		errorDisplay.textContent = response;
+		errorDisplay.textContent = userId.message;
 	}
 }
 
@@ -145,13 +164,39 @@ function clearIdeasDisplay() {
 
 const showUserIdeasBtn = document.getElementById("showUserIdeasBtn");
 
-showUserIdeasBtn.addEventListener("click", async () => {
-	const userData = await getUserData();
+showUserIdeasBtn.addEventListener("click", getIdeasFromUser);
 
-	const ideasResponse = await getIdeas(userData.id);
-	if (typeof ideasResponse === "object") {
-		clearIdeasDisplay();
-		displayIdeas(ideasResponse);
-		hideCreateIdeaWrapper();
+async function getIdeasFromUser() {
+	if (!showUserIdeasBtn.classList.contains("cancel")) {
+		const userData = await getUserData();
+
+		const ideasResponse = await getIdeas(userData.id);
+
+		if (!ideasResponse.message) {
+			clearIdeasDisplay();
+			displayIdeas(ideasResponse);
+			hideCreateIdeaWrapper();
+		} else {
+			console.log(ideasResponse);
+			errorDisplay.textContent = ideasResponse.message;
+			clearIdeasDisplay();
+		}
+
+		showUserIdeasBtn.classList.add("cancel");
+		showUserIdeasBtn.textContent = "Show All Ideas";
+	} else {
+		getAllIdeas();
+		showUserIdeasBtn.classList.remove("cancel");
+		showUserIdeasBtn.textContent = "Show Your Ideas";
 	}
-});
+}
+
+if (localStorage.getItem("token")) {
+	getStartedWrapper.style.display = "none";
+	createIdeaBtn.style.display = "block";
+	showUserIdeasBtn.style.display = "block";
+} else {
+	getStartedWrapper.style.display = "block";
+	createIdeaBtn.style.display = "none";
+	showUserIdeasBtn.style.display = "none";
+}

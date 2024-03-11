@@ -8,10 +8,11 @@ class User {
 		this.name;
 		this.id;
 		this.role;
+		this.token;
 	}
 
 	async createUser() {
-		return await DBManager.createUser(this);
+		return await DBManager.insertIntoTable("Users", ["name", "email", "password", "role"], [this.name, this.email, this.pswHash, this.role]);
 	}
 
 	async login() {

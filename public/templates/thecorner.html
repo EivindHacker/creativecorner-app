@@ -41,9 +41,14 @@
 <!-- THE CORNER -->
 
 <div style="margin: auto; text-align: center" class="sm"><h3 id="errorDisplay" class="err"></h3></div>
-<div class="cont lg" style="flex-direction: row; justify-content: space-between">
+<div class="cont lg" style="flex-direction: row; justify-content: space-between; align-items: center">
 	<h2 style="width: max-content">Song Ideas</h2>
-	<button id="showUserIdeasBtn">Show Your Ideas</button>
+
+	<div style="display: flex; margin-left: auto; align-items: center">
+		<span class="subtle" style="margin-right: 5px">Sort By</span><button id="sortByNewBtn" style="font-size: x-small" class="cancel">Newest</button
+		><button id="sortByOldBtn" style="font-size: x-small" class="cancel">Oldest</button>
+	</div>
+	<button style="font-size: x-small" id="showUserIdeasBtn">Show Your Ideas</button>
 </div>
 
 <div id="ideasList" class="appear lg cont">

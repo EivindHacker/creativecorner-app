@@ -1,9 +1,13 @@
 import express from "express";
 import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
+import {ResMsg} from "../modules/responseMessages.mjs";
 import SuperLogger from "../modules/SuperLogger.mjs";
 import createHashPassword from "../middleware/createPswHash.mjs";
-import decryptUserToken from "../middleware/decryptUserToken.mjs";
+import createToken from "../middleware/createToken.mjs";
+import updateToken from "../middleware/updateToken.mjs";
+import validateToken from "../middleware/validateToken.mjs";
+import {ServerResponse} from "../model/serverRes.mjs";
 
 const USER_API = express.Router();
 USER_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
@@ -13,7 +17,7 @@ USER_API.get("/", (req, res, next) => {
 	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
 });
 
-USER_API.post("/signUp", createHashPassword, async (req, res, next) => {
+USER_API.post("/signUp", createHashPassword, createToken, async (req, res, next) => {
 	const {name, email, pswHash, role} = req.body;
 
 	if (name != "" && email != "" && pswHash != "") {
@@ -26,23 +30,21 @@ USER_API.post("/signUp", createHashPassword, async (req, res, next) => {
 
 		const exists = await user.checkUserExistence();
 
-		console.log(exists);
-
 		if (!exists) {
-			const token = btoa(user.email + " " + user.pswHash);
-
 			user = await user.createUser();
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(token)).end();
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(req.token)).end();
 		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("User already exists, login or use another email.").end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.userExists).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing data fields").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
 	}
 });
 
-USER_API.post("/login", createHashPassword, async (req, res, next) => {
+USER_API.post("/login", createHashPassword, createToken, async (req, res, next) => {
 	const {email, pswHash} = req.body;
+
+	console.log("Token", req.token);
 
 	if (email != "" && pswHash != "") {
 		let user = new User();
@@ -54,22 +56,20 @@ USER_API.post("/login", createHashPassword, async (req, res, next) => {
 		user = await user.login();
 
 		if (user.length !== 0) {
-			const emailRes = user[0].email;
-			const passRes = user[0].password;
-
-			const token = btoa(emailRes + " " + passRes);
-
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(token)).end();
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(req.token)).end();
 		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Wrong Username or Password").end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing Data Fields").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
 	}
 });
 
-USER_API.post("/getUserData", decryptUserToken, async (req, res, next) => {
-	let user = req.token;
+USER_API.post("/getUserData", validateToken, async (req, res, next) => {
+	let user = new User();
+	user.email = req.emailFromToken;
+
+	console.log("Email from Token:", user.email);
 
 	if (user) {
 		user = await user.getUserData();
@@ -77,65 +77,69 @@ USER_API.post("/getUserData", decryptUserToken, async (req, res, next) => {
 		if (user.length !== 0) {
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
 		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Wrong Username or Password").end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing Data Fields").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
 	}
 });
 
-USER_API.post("/updateUserInfo", decryptUserToken, async (req, res, next) => {
-	const {name, email, role, token} = req.body;
+USER_API.post("/updateUserInfo", validateToken, createHashPassword, async (req, res, next) => {
+	const {name, email, role} = req.body;
 
 	if (name != "" && email != "") {
 		let user = new User();
 		user.name = name;
 		user.newEmail = email;
-		user.email = req.token.email;
-		user.pswHash = req.token.pswHash;
+		user.email = req.emailFromToken;
 		user.role = role;
 
 		console.log("User: ", user);
 
 		user = await user.updateUserInfo();
 
-		const token = btoa(user.newEmail + " " + user.pswHash);
-		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(token)).end();
+		const token = await updateToken(user.email);
+		const response = new ServerResponse();
+		response.message = ResMsg.UserMsg.accountUpdateSuccess;
+		response.data = token;
+		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing data fields").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
 	}
 });
 
-USER_API.post("/updateUserPassword", decryptUserToken, createHashPassword, async (req, res, next) => {
-	const {oldPass, newPass, token} = req.body;
+USER_API.post("/updateUserPassword", validateToken, createHashPassword, async (req, res, next) => {
+	const {oldPass, newPass} = req.body;
 
 	if (oldPass != "" && newPass != "") {
-		let user = new User();
-		user.email = req.token.email;
-		user.pswHash = req.oldPswHash;
+		let userFromDB = new User();
+		userFromDB.email = req.emailFromToken;
+		userFromDB = await userFromDB.getUserData();
 
-		console.log(user.pswHash);
-
-		console.log(req.token.pswHash);
-
-		if (user.pswHash === req.token.pswHash) {
+		if (userFromDB[0].password === req.oldPswHash) {
+			let user = new User();
 			user.newPass = req.newPswHash;
-			console.log(user.newPass);
-
+			console.log("New Password in Routes:", user.newPass);
+			user.email = req.emailFromToken;
 			user = await user.updateUserPassword();
 
-			const token = btoa(user.email + " " + user.newPass);
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(token)).end();
+			if (user.newPass === req.newPswHash) {
+				const response = new ServerResponse();
+				response.message = ResMsg.UserMsg.passwordUpdateSuccess;
+
+				res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
+			} else {
+				res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.passwordUpdateFailure).end();
+			}
 		} else {
-			console.log("Wrong password");
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Your old password did not match your original password").end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.passwordMissMatch).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Missing data fields").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
 	}
 });
 
-USER_API.post("/deleteUser", decryptUserToken, async (req, res, next) => {
+USER_API.post("/deleteUser", validateToken, async (req, res, next) => {
 	let user = req.token;
 
 	if (user) {
@@ -144,10 +148,10 @@ USER_API.post("/deleteUser", decryptUserToken, async (req, res, next) => {
 		if (user.length !== 0) {
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
 		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Could not delete user...").end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.deleteAccountFailure).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Could not find a user to delete...").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.accountToDeleteNotFound).end();
 	}
 });
 

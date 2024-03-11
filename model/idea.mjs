@@ -13,7 +13,11 @@ class Idea {
 	}
 
 	async createIdea() {
-		return await DBManager.createIdea(this);
+		return await DBManager.insertIntoTable(
+			"Ideas",
+			["title", "creator_id", "creator_name", "genres", "description"],
+			[this.title, this.creator_id, this.creator_name, this.genres, this.description]
+		);
 	}
 
 	async getIdeas() {

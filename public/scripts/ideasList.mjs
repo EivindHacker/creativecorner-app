@@ -1,7 +1,10 @@
 import calcRatingAverage from "../modules/calcRatingAverage.mjs";
 
-export default function createIdeaCard(data, index) {
-	console.log(data);
+export default function createIdeaCard(data, userId) {
+	const token = localStorage.getItem("token");
+
+	console.log(data.creator_id);
+	console.log(userId);
 
 	const genres = data.genres.split(",");
 
@@ -30,7 +33,8 @@ export default function createIdeaCard(data, index) {
 	const ratingAverage = calcRatingAverage(data.rating);
 
 	const ideaCard = `
-    <div class="idea-card appear" style="animation-delay: ${index / 5}s" id="card_${data.id}">
+    <div class="idea-card appear" id="card_${data.id}">
+	<button class="edit-card-btn" style="display: ${data.creator_id === userId ? "block" : "none"}">Edit</button>
 	<h3 id="title">${data.title}</h3>
 	<div class="creator-wrapper">
 		<span>By:</span>
@@ -44,8 +48,8 @@ export default function createIdeaCard(data, index) {
 		<h4>Rating</h4>
 		<span>⭐️</span><span id="rating_${data.id}" class="rating">${ratingAverage ? ratingAverage : "-"}</span>
 	</div>
-	<div id="cardUserInteractivesWrapper" style="display: none">
-		<div class="rating-input-wrapper">
+	<div id="cardUserInteractivesWrapper" style="display: ${token ? "block" : "none"}">
+		<div class="rating-input-wrapper" style="display: ${data.creator_id === userId ? "none" : "block"}">
 			<input id="ratingInput_${data.id}" style="width: 40px" type="number" min="0" max="5" />
 			<button
 				id="submitRatingBtn_${data.id}">

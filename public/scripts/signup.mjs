@@ -9,6 +9,8 @@ document.getElementById("goToLoginBtn").addEventListener("click", async () => {
 });
 
 document.getElementById("createUserButton").onclick = async function (e) {
+	clearErrorDisplay();
+
 	const name = document.getElementById("nameInputSignUp").value;
 	const email = document.getElementById("emailInputSignUp").value;
 	const pswHash = document.getElementById("pswHashInputSignUp").value;
@@ -38,6 +40,7 @@ document.getElementById("createUserButton").onclick = async function (e) {
 			updatePageState("thecorner");
 		}
 	} catch (error) {
+		console.log(error.message);
 		displayError(error.message);
 	}
 };
