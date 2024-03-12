@@ -1,26 +1,69 @@
 import {updatePageState} from "../modules/pageState.mjs";
-import getUserData from "../modules/getUserData.mjs";
-import deleteUser from "../modules/deleteUser.mjs";
+import getUserData from "../modules/user/getUserData.mjs";
+import deleteUser from "../modules/user/deleteUser.mjs";
 import {displayLoggedIn} from "../modules/nav.mjs";
-import editUser from "../modules/editUser.mjs";
+import editUser from "../modules/user/editUser.mjs";
 
-const successDisplay = document.getElementById("successDisplay");
-const errorDisplay = document.getElementById("errorDisplay");
+let successDisplay = document.getElementById("successDisplay");
+let errorDisplay = document.getElementById("errorDisplay");
 
-const nameInput = document.getElementById("nameInput");
-const emailInput = document.getElementById("emailInput");
-const musicianInput = document.getElementById("musicianInput");
-const writerInput = document.getElementById("writerInput");
+let nameInput;
+let emailInput;
+let musicianInput;
+let writerInput;
 
-const editUserBtn = document.getElementById("editUserBtn");
-const userInfoWrapper = document.getElementById("userInfoWrapper");
+let editUserBtn;
+let userInfoWrapper;
 
-const changePasswordBtn = document.getElementById("changePasswordBtn");
-const editUserWrapper = document.getElementById("editUserWrapper");
-const changePasswordWrapper = document.getElementById("changePasswordWrapper");
-const editUserInfoWrapper = document.getElementById("editUserInfoWrapper");
-const logOutBtn = document.getElementById("logoutBtn");
-const deleteUserBtn = document.getElementById("deleteUserBtn");
+let changePasswordBtn;
+let editUserWrapper;
+let changePasswordWrapper;
+let editUserInfoWrapper;
+let logOutBtn;
+let deleteUserBtn;
+
+export default function initDomElementsUserSettings() {
+	initDomVariables();
+	initEventListeners();
+	loadOnRuntime();
+}
+
+function initDomVariables() {
+	successDisplay = document.getElementById("successDisplay");
+	errorDisplay = document.getElementById("errorDisplay");
+	nameInput = document.getElementById("nameInput");
+	emailInput = document.getElementById("emailInput");
+	musicianInput = document.getElementById("musicianInput");
+	writerInput = document.getElementById("writerInput");
+	editUserBtn = document.getElementById("editUserBtn");
+	userInfoWrapper = document.getElementById("userInfoWrapper");
+	changePasswordBtn = document.getElementById("changePasswordBtn");
+	editUserWrapper = document.getElementById("editUserWrapper");
+	changePasswordWrapper = document.getElementById("changePasswordWrapper");
+	editUserInfoWrapper = document.getElementById("editUserInfoWrapper");
+	logOutBtn = document.getElementById("logoutBtn");
+	deleteUserBtn = document.getElementById("deleteUserBtn");
+}
+
+function initEventListeners() {
+	logOutBtn.addEventListener("click", () => {
+		localStorage.removeItem("token");
+		displayLoggedIn(false);
+		updatePageState("login");
+	});
+
+	deleteUserBtn.addEventListener("click", () => {
+		deleteUser();
+	});
+
+	editUserBtn.addEventListener("click", toggleEditUserWrapper);
+	changePasswordBtn.addEventListener("click", toggleEditPasswordWrapper);
+	document.getElementById("submitChangesBtn").addEventListener("click", submitChanges);
+}
+
+function loadOnRuntime() {
+	updateUserDataDisplay();
+}
 
 async function updateUserDataDisplay() {
 	const userData = await getUserData();
@@ -33,18 +76,6 @@ async function updateUserDataDisplay() {
 		displayUserData(userData);
 	}
 }
-
-updateUserDataDisplay();
-
-logOutBtn.addEventListener("click", () => {
-	localStorage.removeItem("token");
-	displayLoggedIn(false);
-	updatePageState("login");
-});
-
-deleteUserBtn.addEventListener("click", () => {
-	deleteUser();
-});
 
 function displayUserData(userData) {
 	console.log(userData.name);
@@ -70,8 +101,6 @@ function displayError(msg) {
 		updatePageState("thecorner");
 	}, 3000);
 }
-
-editUserBtn.addEventListener("click", toggleEditUserWrapper);
 
 function toggleEditUserWrapper() {
 	if (userInfoWrapper.style.display === "flex") {
@@ -107,8 +136,6 @@ function toggleEditPasswordWrapper() {
 	successDisplay.textContent = "";
 	errorDisplay.textContent = "";
 }
-
-changePasswordBtn.addEventListener("click", toggleEditPasswordWrapper);
 
 async function submitChanges() {
 	if (changePasswordWrapper.style.display === "none") {
@@ -149,5 +176,3 @@ async function submitChanges() {
 		}
 	}
 }
-
-document.getElementById("submitChangesBtn").addEventListener("click", submitChanges);

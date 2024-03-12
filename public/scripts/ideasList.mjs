@@ -1,4 +1,4 @@
-import calcRatingAverage from "../modules/calcRatingAverage.mjs";
+import calcRatingAverage from "../modules/idea/calcRatingAverage.mjs";
 
 export default function createIdeaCard(data, userId) {
 	const token = localStorage.getItem("token");

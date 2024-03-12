@@ -1,4 +1,4 @@
-import postTo from "../modules/postTo.mjs";
+import postTo from "../httpmethods/postTo.mjs";
 
 export default async function getUserData() {
 	const token = localStorage.getItem("token");

@@ -1,5 +1,5 @@
+import {getPageState} from "./pageState.mjs";
 import {updatePageState} from "./pageState.mjs";
-import {pageState} from "./pageState.mjs";
 
 document.getElementById("logo").addEventListener("click", () => {
 	updatePageState("thecorner");
@@ -46,5 +46,3 @@ export function setNavBtns(clickedButton) {
 		}
 	});
 }
-
-setNavBtns(pageState);

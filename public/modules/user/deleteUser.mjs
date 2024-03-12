@@ -1,6 +1,6 @@
-import postTo from "./postTo.mjs";
-import {updatePageState} from "./pageState.mjs";
-import {displayLoggedIn} from "./nav.mjs";
+import postTo from "../httpmethods/postTo.mjs";
+import {updatePageState} from "../pageState.mjs";
+import {displayLoggedIn} from "../nav.mjs";
 
 export default async function deleteUser() {
 	const token = localStorage.getItem("token");

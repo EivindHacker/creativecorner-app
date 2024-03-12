@@ -1,4 +1,4 @@
-import postTo from "./postTo.mjs";
+import postTo from "../httpmethods/postTo.mjs";
 
 export default async function submitIdea(idea) {
 	idea.token = localStorage.getItem("token");

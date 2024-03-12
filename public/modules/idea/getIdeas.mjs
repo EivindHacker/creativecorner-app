@@ -1,4 +1,4 @@
-import getFrom from "./getFrom.mjs";
+import getFrom from "../httpmethods/getFrom.mjs";
 
 export default async function getIdeas(id) {
 	let url = "idea/getIdeas/null";

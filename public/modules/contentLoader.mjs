@@ -1,10 +1,12 @@
-import {setNavBtns} from "./nav.mjs";
+import initDomElementsTheCorner from "../scripts/thecorner.mjs";
+import initDomElementsUserSettings from "../scripts/usersettings.mjs";
+import initDomElementsSignUp from "../scripts/signup.mjs";
+import initDomElementsLogin from "../scripts/login.mjs";
 
 export default async function updatePageContent(pageState) {
 	try {
-		console.log(pageState);
 		await insertTemplate(pageState);
-		updateURL(pageState); // Update the URL based on the page state
+		updateURL(pageState);
 	} catch (error) {
 		console.error("Error updating page content:", error);
 	}
@@ -13,32 +15,21 @@ export default async function updatePageContent(pageState) {
 async function insertTemplate(pageState) {
 	const content = await fetch(`./templates/${pageState}.html`).then((d) => d.text());
 	document.querySelector("main").innerHTML = content;
-	loadScripts(pageState);
+	initateScripts(pageState);
 }
 
-function loadScripts(pageState) {
-	const dynamicScript = document.getElementById("dynamicScript");
-	if (dynamicScript) {
-		dynamicScript.remove();
+function initateScripts(pageState) {
+	if (pageState === "thecorner") {
+		initDomElementsTheCorner();
+	} else if (pageState === "usersettings") {
+		initDomElementsUserSettings();
+	} else if (pageState === "signup") {
+		initDomElementsSignUp();
+	} else if (pageState === "login") {
+		initDomElementsLogin();
 	}
-
-	const timestamp = new Date().getTime();
-	const newScript = document.createElement("script");
-	newScript.type = "module";
-	newScript.id = "dynamicScript";
-	newScript.src = `./scripts/${pageState}.mjs?timestamp=${timestamp}`;
-
-	document.body.appendChild(newScript);
 }
 
 function updateURL(pageState) {
 	history.pushState({pageState: pageState}, "", `/${pageState}`);
 }
-
-window.onpopstate = function (event) {
-	// Handle browser back/forward button clicks
-	if (event.state) {
-		updatePageContent(event.state.pageState);
-		setNavBtns(event.state.pageState);
-	}
-};

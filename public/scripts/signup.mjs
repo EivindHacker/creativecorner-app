@@ -1,14 +1,25 @@
 import {updatePageState} from "../modules/pageState.mjs";
 import {displayLoggedIn} from "../modules/nav.mjs";
-import postTo from "../modules/postTo.mjs";
+import postTo from "../modules/httpmethods/postTo.mjs";
 
-console.log("This is the singup script calling...");
+export default function initDomElementsSignUp() {
+	initDomVariables();
+	initEventListeners();
+	loadOnRuntime();
+}
 
-document.getElementById("goToLoginBtn").addEventListener("click", async () => {
-	updatePageState("login");
-});
+function initDomVariables() {}
 
-document.getElementById("createUserButton").onclick = async function (e) {
+function initEventListeners() {
+	document.getElementById("goToLoginBtn").addEventListener("click", async () => {
+		updatePageState("login");
+	});
+	document.getElementById("createUserButton").addEventListener("click", createUser);
+}
+
+function loadOnRuntime() {}
+
+async function createUser() {
 	clearErrorDisplay();
 
 	const name = document.getElementById("nameInputSignUp").value;
@@ -16,7 +27,6 @@ document.getElementById("createUserButton").onclick = async function (e) {
 	const pswHash = document.getElementById("pswHashInputSignUp").value;
 
 	const writerInput = document.getElementById("writerInput");
-	const musicianInput = document.getElementById("musicianInput");
 
 	let user = {};
 
@@ -43,7 +53,8 @@ document.getElementById("createUserButton").onclick = async function (e) {
 		console.log(error.message);
 		displayError(error.message);
 	}
-};
+}
+
 function displayError(msg) {
 	document.getElementById("errorDisplay").innerText = msg;
 }

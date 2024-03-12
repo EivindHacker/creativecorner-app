@@ -1,56 +1,116 @@
-import calcRatingAverage from "../modules/calcRatingAverage.mjs";
-import getIdeas from "../modules/getIdeas.mjs";
-import getUserData from "../modules/getUserData.mjs";
+import calcRatingAverage from "../modules/idea/calcRatingAverage.mjs";
+import getIdeas from "../modules/idea/getIdeas.mjs";
+import getUserData from "../modules/user/getUserData.mjs";
 import {updatePageState} from "../modules/pageState.mjs";
-import submitCreation from "../modules/submitCreation.mjs";
-import submitIdea from "../modules/submitIdea.mjs";
-import submitRating from "../modules/submitRating.mjs";
+import submitCreation from "../modules/idea/submitCreation.mjs";
+import submitIdea from "../modules/idea/submitIdea.mjs";
+import submitRating from "../modules/idea/submitRating.mjs";
 import createIdeaCard from "./ideasList.mjs";
 
 let sortBy = "beforeend";
 
-//Sort By
+let errorDisplay;
+let getStartedWrapper;
+let createIdeaBtn;
+let ideasList;
+let showUserIdeasBtn;
 
-document.getElementById("sortByNewBtn").addEventListener("click", () => {
-	sortBy = "beforeend";
-	if (!showUserIdeasBtn.classList.contains("cancel")) {
-		getAllIdeas();
+export default function initDomElementsTheCorner() {
+	initDomVaribles();
+	initEventListeners();
+	loadOnRuntime();
+}
+
+function loadOnRuntime() {
+	getAllIdeas();
+
+	if (localStorage.getItem("token")) {
+		getStartedWrapper.style.display = "none";
+		createIdeaBtn.style.display = "block";
+		showUserIdeasBtn.style.display = "block";
 	} else {
-		getIdeasFromUser();
+		getStartedWrapper.style.display = "block";
+		createIdeaBtn.style.display = "none";
+		showUserIdeasBtn.style.display = "none";
 	}
-});
+}
 
-document.getElementById("sortByOldBtn").addEventListener("click", () => {
-	sortBy = "afterbegin";
-	if (!showUserIdeasBtn.classList.contains("cancel")) {
-		getAllIdeas();
-	} else {
-		getIdeasFromUser();
-	}
-});
+function initDomVaribles() {
+	errorDisplay = document.getElementById("errorDisplay");
+	getStartedWrapper = document.getElementById("getStartedWrapper");
+	createIdeaBtn = document.getElementById("createIdeaBtn");
+	ideasList = document.getElementById("ideasList");
+	showUserIdeasBtn = document.getElementById("showUserIdeasBtn");
+}
+function initEventListeners() {
+	document.getElementById("sortByNewBtn").addEventListener("click", () => {
+		sortBy = "beforeend";
+		if (!showUserIdeasBtn.classList.contains("cancel")) {
+			getAllIdeas();
+		} else {
+			getIdeasFromUser();
+		}
+	});
 
-const errorDisplay = document.getElementById("errorDisplay");
+	document.getElementById("sortByOldBtn").addEventListener("click", () => {
+		sortBy = "afterbegin";
+		if (!showUserIdeasBtn.classList.contains("cancel")) {
+			getAllIdeas();
+		} else {
+			getIdeasFromUser();
+		}
+	});
 
-const getStartedWrapper = document.getElementById("getStartedWrapper");
+	document.getElementById("loginBtn").addEventListener("click", () => {
+		updatePageState("login");
+	});
 
-const createIdeaBtn = document.getElementById("createIdeaBtn");
+	document.getElementById("signUpBtn").addEventListener("click", () => {
+		updatePageState("signup");
+	});
 
-document.getElementById("loginBtn").addEventListener("click", () => {
-	updatePageState("login");
-});
+	//----------- CREATE IDEA -----------
 
-document.getElementById("signUpBtn").addEventListener("click", () => {
-	updatePageState("signup");
-});
+	createIdeaBtn.addEventListener("click", () => {
+		document.getElementById("createIdeaWrapper").style.display = "block";
+		createIdeaBtn.style.display = "none";
+	});
 
-//----------- CREATE IDEA -----------
+	document.getElementById("cancelIdeaBtn").addEventListener("click", hideCreateIdeaWrapper);
 
-createIdeaBtn.addEventListener("click", () => {
-	document.getElementById("createIdeaWrapper").style.display = "block";
-	createIdeaBtn.style.display = "none";
-});
+	document.getElementById("addGenreBtn").addEventListener("click", () => {
+		const genreInput = document.getElementById("genreInput");
+		const genreHtml = `<span class="genre">${genreInput.value}</span>`;
 
-document.getElementById("cancelIdeaBtn").addEventListener("click", hideCreateIdeaWrapper);
+		genreSuggestions.push(genreInput.value);
+
+		document.getElementById("genreInputDisplay").innerHTML += genreHtml;
+		genreInput.value = "";
+	});
+
+	document.getElementById("saveIdeaBtn").addEventListener("click", async () => {
+		const idea = {
+			title: document.getElementById("titleInput").value,
+			description: document.getElementById("descriptionInput").value,
+			genres: genreSuggestions,
+		};
+
+		const response = await submitIdea(idea);
+
+		const ideaResponse = JSON.parse(response);
+
+		ideaResponse.creations = null;
+
+		if (!ideaResponse.message) {
+			getAllIdeas();
+			hideCreateIdeaWrapper();
+		} else {
+			errorDisplay.innerText = ideaResponse.message;
+		}
+	});
+
+	showUserIdeasBtn.addEventListener("click", getIdeasFromUser);
+}
 
 function hideCreateIdeaWrapper() {
 	document.getElementById("createIdeaWrapper").style.display = "none";
@@ -58,37 +118,6 @@ function hideCreateIdeaWrapper() {
 }
 
 const genreSuggestions = [];
-
-document.getElementById("addGenreBtn").addEventListener("click", () => {
-	const genreInput = document.getElementById("genreInput");
-	const genreHtml = `<span class="genre">${genreInput.value}</span>`;
-
-	genreSuggestions.push(genreInput.value);
-
-	document.getElementById("genreInputDisplay").innerHTML += genreHtml;
-	genreInput.value = "";
-});
-
-document.getElementById("saveIdeaBtn").addEventListener("click", async () => {
-	const idea = {
-		title: document.getElementById("titleInput").value,
-		description: document.getElementById("descriptionInput").value,
-		genres: genreSuggestions,
-	};
-
-	const response = await submitIdea(idea);
-
-	const ideaResponse = JSON.parse(response);
-
-	ideaResponse.creations = null;
-
-	if (!ideaResponse.message) {
-		getAllIdeas();
-		hideCreateIdeaWrapper();
-	} else {
-		errorDisplay.innerText = ideaResponse.message;
-	}
-});
 
 //----------- IDEA CARDS -----------
 
@@ -132,8 +161,6 @@ function toggleCreationsWrapper(id) {
 	}
 }
 
-const ideasList = document.getElementById("ideasList");
-
 async function getAllIdeas() {
 	clearIdeasDisplay();
 	const response = await getIdeas();
@@ -156,15 +183,9 @@ async function displayIdeas(ideas) {
 	}
 }
 
-getAllIdeas();
-
 function clearIdeasDisplay() {
 	ideasList.innerHTML = "";
 }
-
-const showUserIdeasBtn = document.getElementById("showUserIdeasBtn");
-
-showUserIdeasBtn.addEventListener("click", getIdeasFromUser);
 
 async function getIdeasFromUser() {
 	if (!showUserIdeasBtn.classList.contains("cancel")) {
@@ -189,14 +210,4 @@ async function getIdeasFromUser() {
 		showUserIdeasBtn.classList.remove("cancel");
 		showUserIdeasBtn.textContent = "Show Your Ideas";
 	}
-}
-
-if (localStorage.getItem("token")) {
-	getStartedWrapper.style.display = "none";
-	createIdeaBtn.style.display = "block";
-	showUserIdeasBtn.style.display = "block";
-} else {
-	getStartedWrapper.style.display = "block";
-	createIdeaBtn.style.display = "none";
-	showUserIdeasBtn.style.display = "none";
 }

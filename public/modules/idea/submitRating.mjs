@@ -1,4 +1,4 @@
-import postTo from "./postTo.mjs";
+import postTo from "../httpmethods/postTo.mjs";
 
 export default async function submitRating(ratingObject) {
 	ratingObject.token = localStorage.getItem("token");

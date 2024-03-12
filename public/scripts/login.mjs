@@ -1,14 +1,25 @@
-import postTo from "../modules/postTo.mjs";
+import postTo from "../modules/httpmethods/postTo.mjs";
 import {updatePageState} from "../modules/pageState.mjs";
 import {displayLoggedIn} from "../modules/nav.mjs";
 
-console.log("This is the login script calling...");
+export default function initDomElementsLogin() {
+	initDomVariables();
+	initEventListeners();
+	loadOnRuntime();
+}
 
-document.getElementById("goToSignUpBtn").addEventListener("click", async () => {
-	updatePageState("signup");
-});
+function initDomVariables() {}
 
-document.getElementById("loginBtn").addEventListener("click", async () => {
+function initEventListeners() {
+	document.getElementById("loginBtn").addEventListener("click", login);
+	document.getElementById("goToSignUpBtn").addEventListener("click", async () => {
+		updatePageState("signup");
+	});
+}
+
+function loadOnRuntime() {}
+
+async function login() {
 	clearErrorDisplay();
 	const email = document.getElementById("emailInputLogin").value;
 	const pswHash = document.getElementById("pswHashInputLogin").value;
@@ -29,7 +40,7 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
 	} catch (error) {
 		displayError(error.message);
 	}
-});
+}
 
 function displayError(msg) {
 	document.getElementById("errorDisplay").innerText = msg;

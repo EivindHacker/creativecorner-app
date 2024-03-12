@@ -1,4 +1,4 @@
-import postTo from "./postTo.mjs";
+import postTo from "../httpmethods/postTo.mjs";
 
 export default async function editUser(type, userInfo) {
 	console.log(type);

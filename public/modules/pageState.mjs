@@ -1,9 +1,11 @@
-// index.js
-
-import updatePageContent from "./contentLoader.mjs";
 import {setNavBtns} from "./nav.mjs";
+import updatePageContent from "./contentLoader.mjs";
 
-export let pageState = "thecorner";
+let pageState = "thecorner";
+
+export function getPageState() {
+	return pageState;
+}
 
 if (sessionStorage.getItem("state")) {
 	pageState = sessionStorage.getItem("state");
@@ -18,3 +20,8 @@ export function updatePageState(aState) {
 }
 
 updatePageContent(pageState);
+
+//Disabling back and forth buttons in Browser
+window.onpopstate = function (event) {
+	event.preventDefault();
+};
