@@ -1,11 +1,11 @@
 # Semester project
 
 ## Description
-This is our template for the semester project. It contains a basic structure for the project and a few examples of how to use the different parts of the project. You must expand upon the project, refactor when nessasary and make it your own.
+Creative Corner is my exam project in Application Development 2 at UiA. This is a simple app were you can share your ideas for a song, and musicians can use this page as inspiration for their work.
+Maybe your idea will be the next big hit? Probably not... :P
 
 ## Projectmanagment
-We use [Trello](https://trello.com/b/FHCiBdTb/demo) for projectmanagment. You can find the board [here](https://trello.com/b/FHCiBdTb/demo).
-Note that you should create your own board for your project.
+I've used [Trello]([https://trello.com/b/FHCiBdTb/demo](https://trello.com/invite/b/F7Eo5hqg/ATTI94983d617c3506dd55d62b207dfc4c72912EAFB0/apputvikling-2)) for projectmanagment. You can find the board [here]([https://trello.com/b/FHCiBdTb/demo](https://trello.com/invite/b/F7Eo5hqg/ATTI94983d617c3506dd55d62b207dfc4c72912EAFB0/apputvikling-2)).
 
 ## Getting started
 To get started with the project you need to clone the repository and open it in your favorite IDE. We recommend using VS Code.
@@ -21,6 +21,6 @@ You also need to edit the .env file with values for:
 
 Once the dependencies are installed and the database is runing you can run the project by running the following command in the terminal:
 ```
-node server.mjs
+npm start
 ```
 This will start the server and you can now access the project on http://localhost:8080 in your browser.
