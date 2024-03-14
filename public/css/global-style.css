@@ -1,3 +1,27 @@
+.error-bg {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	z-index: 90;
+	background-color: #16161641;
+	backdrop-filter: blur(10px);
+}
+
+.error-wrapper {
+	width: auto;
+	height: auto;
+	background-color: #393939;
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	border-radius: 25px;
+}
+
 .err {
 	color: red;
 }
@@ -13,6 +37,13 @@
 
 .cancel {
 	filter: brightness(0.5) grayscale();
+}
+
+.remove {
+	border: none;
+	margin-left: 10px;
+	padding: 0 4px 2px 4px;
+	font-size: small;
 }
 
 /*--------- Appear Animation --------*/
@@ -156,6 +187,16 @@ button:hover {
 	}
 }
 
+.green-btn {
+	border-color: greenyellow;
+	color: greenyellow;
+}
+
+.red-btn {
+	border-color: red;
+	color: red;
+}
+
 input {
 	margin-top: 5px;
 	background: none;
@@ -198,8 +239,12 @@ span {
 	font-size: large;
 }
 
+details {
+	margin-top: 10px;
+}
+
 .cont {
-	padding: 25px;
+	padding: 15px;
 	background: linear-gradient(#2c2c2c, #2c2c2c) padding-box, linear-gradient(to right, #ffd466, #c46d0f) border-box;
 	border: 2px solid transparent;
 	border-radius: 25px;
@@ -279,17 +324,33 @@ textarea {
 	border: 1px solid rgb(122, 122, 122);
 }
 
+summary {
+	font-size: larger;
+	cursor: pointer;
+	width: max-content;
+}
+
 @media (max-width: 768px) {
 	p {
 		font-size: medium;
 	}
 }
 
+.list-nav {
+	margin: auto;
+	width: 80vw;
+	max-width: 756px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 25px;
+}
+
 /*-------- Song Idea Card ----------*/
 
 .idea-card {
 	border: 1px solid rgb(92, 92, 92);
-	padding: 30px;
+	padding: 10px 30px 30px 30px;
 	border-radius: 25px;
 	box-shadow: #00000049 0px 5px 25px;
 	width: calc(100% - 60px);
@@ -298,8 +359,8 @@ textarea {
 
 .edit-card-btn {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 15px;
+	right: 15px;
 }
 
 .creator-wrapper {
@@ -310,11 +371,6 @@ textarea {
 	margin-top: -18px;
 }
 
-.description {
-	max-height: 300px;
-	overflow: scroll;
-}
-
 .genre-wrapper {
 	display: flex;
 	gap: 5px;
@@ -323,12 +379,13 @@ textarea {
 }
 
 .genre {
-	padding: 10px 24px 7px 24px;
+	padding: 10px 15px 7px 15px;
 	text-align: center;
 	background-color: #202020;
 	border-radius: 20px;
 	font-style: italic;
 	font-weight: 200;
+	font-size: small;
 	color: rgb(151, 151, 151);
 	width: max-content;
 }

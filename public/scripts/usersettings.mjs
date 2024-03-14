@@ -3,9 +3,9 @@ import getUserData from "../modules/user/getUserData.mjs";
 import deleteUser from "../modules/user/deleteUser.mjs";
 import {displayLoggedIn} from "../modules/nav.mjs";
 import editUser from "../modules/user/editUser.mjs";
+import displayError from "../modules/displayError.mjs";
 
-let successDisplay = document.getElementById("successDisplay");
-let errorDisplay = document.getElementById("errorDisplay");
+let successDisplay;
 
 let nameInput;
 let emailInput;
@@ -30,7 +30,6 @@ export default function initDomElementsUserSettings() {
 
 function initDomVariables() {
 	successDisplay = document.getElementById("successDisplay");
-	errorDisplay = document.getElementById("errorDisplay");
 	nameInput = document.getElementById("nameInput");
 	emailInput = document.getElementById("emailInput");
 	musicianInput = document.getElementById("musicianInput");
@@ -66,14 +65,14 @@ function loadOnRuntime() {
 }
 
 async function updateUserDataDisplay() {
-	const userData = await getUserData();
+	const response = await getUserData();
 
-	if (typeof userData === "string") {
-		localStorage.removeItem("token");
+	if (typeof response === "string") {
 		displayLoggedIn(false);
-		displayError(userData);
+		displayError(response);
+		updatePageState("login");
 	} else {
-		displayUserData(userData);
+		displayUserData(response);
 	}
 }
 
@@ -95,13 +94,6 @@ function displayUserData(userData) {
 	emailInput.value = userData.email;
 }
 
-function displayError(msg) {
-	document.getElementById("errorDisplay").innerText = msg;
-	setTimeout(() => {
-		updatePageState("thecorner");
-	}, 3000);
-}
-
 function toggleEditUserWrapper() {
 	if (userInfoWrapper.style.display === "flex") {
 		userInfoWrapper.style.display = "none";
@@ -116,7 +108,6 @@ function toggleEditUserWrapper() {
 	}
 	editUserWrapper.style.display = editUserWrapper.style.display === "none" ? "flex" : "none";
 	successDisplay.textContent = "";
-	errorDisplay.textContent = "";
 }
 
 function toggleEditPasswordWrapper() {
@@ -134,7 +125,6 @@ function toggleEditPasswordWrapper() {
 		deleteUserBtn.style.display = "block";
 	}
 	successDisplay.textContent = "";
-	errorDisplay.textContent = "";
 }
 
 async function submitChanges() {
@@ -157,7 +147,7 @@ async function submitChanges() {
 			updateUserDataDisplay();
 			successDisplay.textContent = response.message;
 		} else {
-			errorDisplay.textContent = response.message;
+			displayError(response.message);
 		}
 	} else {
 		const oldPass = document.getElementById("oldPasswordInput");
@@ -172,7 +162,7 @@ async function submitChanges() {
 			toggleEditPasswordWrapper();
 			successDisplay.textContent = response.message;
 		} else {
-			errorDisplay.textContent = response.message;
+			displayError(response.message);
 		}
 	}
 }

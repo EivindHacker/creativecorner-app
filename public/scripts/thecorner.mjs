@@ -6,10 +6,13 @@ import submitCreation from "../modules/idea/submitCreation.mjs";
 import submitIdea from "../modules/idea/submitIdea.mjs";
 import submitRating from "../modules/idea/submitRating.mjs";
 import createIdeaCard from "./ideasList.mjs";
+import displayError from "../modules/displayError.mjs";
+import submitIdeaEdit from "../modules/idea/submitIdeaEdit.mjs";
+import genreDataConverter from "../modules/idea/genreDataConverter.mjs";
+import deleteIdea from "../modules/idea/deleteIdea.mjs";
 
 let sortBy = "beforeend";
 
-let errorDisplay;
 let getStartedWrapper;
 let createIdeaBtn;
 let ideasList;
@@ -36,7 +39,6 @@ function loadOnRuntime() {
 }
 
 function initDomVaribles() {
-	errorDisplay = document.getElementById("errorDisplay");
 	getStartedWrapper = document.getElementById("getStartedWrapper");
 	createIdeaBtn = document.getElementById("createIdeaBtn");
 	ideasList = document.getElementById("ideasList");
@@ -45,20 +47,12 @@ function initDomVaribles() {
 function initEventListeners() {
 	document.getElementById("sortByNewBtn").addEventListener("click", () => {
 		sortBy = "beforeend";
-		if (!showUserIdeasBtn.classList.contains("cancel")) {
-			getAllIdeas();
-		} else {
-			getIdeasFromUser();
-		}
+		getAllIdeas();
 	});
 
 	document.getElementById("sortByOldBtn").addEventListener("click", () => {
 		sortBy = "afterbegin";
-		if (!showUserIdeasBtn.classList.contains("cancel")) {
-			getAllIdeas();
-		} else {
-			getIdeasFromUser();
-		}
+		getAllIdeas();
 	});
 
 	document.getElementById("loginBtn").addEventListener("click", () => {
@@ -72,20 +66,49 @@ function initEventListeners() {
 	//----------- CREATE IDEA -----------
 
 	createIdeaBtn.addEventListener("click", () => {
-		document.getElementById("createIdeaWrapper").style.display = "block";
+		const createIdeaWrapper = document.getElementById("createIdeaWrapper");
+		createIdeaWrapper.style.display = "block";
+		createIdeaWrapper.scrollIntoView({behavior: "smooth", block: "center"});
 		createIdeaBtn.style.display = "none";
 	});
 
 	document.getElementById("cancelIdeaBtn").addEventListener("click", hideCreateIdeaWrapper);
 
+	let genreSuggestions = [];
+
 	document.getElementById("addGenreBtn").addEventListener("click", () => {
 		const genreInput = document.getElementById("genreInput");
-		const genreHtml = `<span class="genre">${genreInput.value}</span>`;
+		const genreHtml = `<span class="genre">${genreInput.value}<button class="cancel remove" id="remove-genre" data-genre="${genreInput.value}" >x</button></span>`;
 
 		genreSuggestions.push(genreInput.value);
 
 		document.getElementById("genreInputDisplay").innerHTML += genreHtml;
 		genreInput.value = "";
+
+		function initGenres() {
+			const genreInputDisplay = document.getElementById("genreInputDisplay");
+
+			const genreHtmlChildrenArray = Array.from(genreInputDisplay.children);
+
+			const removeGenrebtns = Array.from(document.querySelectorAll("#remove-genre"));
+
+			removeGenrebtns.forEach((btn) => {
+				btn.addEventListener("click", (e) => {
+					findGenreChild(e.target.dataset.genre);
+				});
+			});
+
+			function findGenreChild(genre) {
+				genreHtmlChildrenArray.forEach((child) => {
+					if (child.textContent.slice(0, -1) === genre) {
+						child.remove();
+						genreSuggestions = genreSuggestions.filter((item) => item !== child.textContent.slice(0, -1));
+					}
+				});
+			}
+		}
+
+		initGenres();
 	});
 
 	document.getElementById("saveIdeaBtn").addEventListener("click", async () => {
@@ -97,15 +120,12 @@ function initEventListeners() {
 
 		const response = await submitIdea(idea);
 
-		const ideaResponse = JSON.parse(response);
-
-		ideaResponse.creations = null;
-
-		if (!ideaResponse.message) {
+		if (typeof response !== "string") {
+			response.creations = null;
 			getAllIdeas();
 			hideCreateIdeaWrapper();
 		} else {
-			errorDisplay.innerText = ideaResponse.message;
+			displayError(response);
 		}
 	});
 
@@ -116,8 +136,6 @@ function hideCreateIdeaWrapper() {
 	document.getElementById("createIdeaWrapper").style.display = "none";
 	createIdeaBtn.style.display = "block";
 }
-
-const genreSuggestions = [];
 
 //----------- IDEA CARDS -----------
 
@@ -131,9 +149,12 @@ function createCardListeners(id) {
 		const ratingObject = {rating, id};
 		const response = await submitRating(ratingObject);
 
-		const updatedRatings = JSON.parse(response);
-		const updatedRatingAverage = calcRatingAverage(updatedRatings.rating);
-		document.getElementById(`rating_${id}`).textContent = updatedRatingAverage;
+		if (typeof response == "string") {
+			displayError(response);
+		} else {
+			const updatedRatingAverage = calcRatingAverage(response.rating);
+			document.getElementById(`rating_${id}`).textContent = updatedRatingAverage;
+		}
 	});
 
 	document.getElementById(`saveCreationBtn_${id}`).addEventListener("click", () => {
@@ -165,12 +186,23 @@ async function getAllIdeas() {
 	clearIdeasDisplay();
 	const response = await getIdeas();
 
-	displayIdeas(response);
+	if (typeof response !== "string") {
+		displayIdeas(response);
+	} else {
+		displayError(response);
+	}
 }
 
 async function displayIdeas(ideas) {
 	const userData = await getUserData();
-	const userId = userData.id;
+
+	let userId;
+
+	if (typeof userData == "string") {
+		userId = null;
+	} else {
+		userId = userData.id;
+	}
 
 	if (Array.isArray(ideas)) {
 		ideas.forEach((idea) => {
@@ -178,9 +210,82 @@ async function displayIdeas(ideas) {
 			ideasList.insertAdjacentHTML(sortBy, ideaCardHtml);
 			createCardListeners(idea.id);
 		});
-	} else {
-		errorDisplay.textContent = userId.message;
 	}
+
+	document.getElementById("editIdeaBtn").addEventListener("click", (e) => {
+		toggleIdeaWrapper(e.target.dataset.ideadata);
+	});
+}
+
+function toggleIdeaWrapper(ideaData) {
+	const editIdeaWrapper = document.getElementById("editIdeaWrapper");
+	editIdeaWrapper.style.display = "block";
+	editIdeaWrapper.scrollIntoView({behavior: "smooth", block: "center"});
+
+	const ideaDataArray = ideaData.split("_");
+	let [id, creator_id, title, description, genres] = ideaDataArray;
+
+	let updatedGenres = genres.split(",");
+
+	const genreHtml = genreDataConverter(genres.split(","), true);
+
+	function initGenres(reInit) {
+		const genreInputDisplayEdit = document.getElementById("genreInputDisplayEdit");
+		if (!reInit) {
+			genreInputDisplayEdit.innerHTML = genreHtml;
+		}
+
+		const genreHtmlChildrenArray = Array.from(genreInputDisplayEdit.children);
+
+		const removeGenrebtn = Array.from(document.querySelectorAll("#remove-genre"));
+
+		removeGenrebtn.forEach((btn) => {
+			btn.addEventListener("click", (e) => {
+				findGenreChild(e.target.dataset.genre);
+			});
+		});
+
+		function findGenreChild(genre) {
+			genreHtmlChildrenArray.forEach((child) => {
+				if (child.textContent.slice(0, -1) === genre) {
+					child.remove();
+					//Remove from genre from array.
+					updatedGenres = updatedGenres.filter((item) => item !== child.textContent.slice(0, -1));
+				}
+			});
+		}
+	}
+
+	initGenres();
+
+	function addGenre() {
+		const genreInput = document.getElementById("genreInputEdit");
+		updatedGenres.push(genreInput.value);
+		const genreHtmlElement = `<span class="genre">${genreInput.value}<button class="cancel remove" id="remove-genre" data-genre="${genreInput.value}" >x</button></span>`;
+		genreInputDisplayEdit.innerHTML += genreHtmlElement;
+		initGenres(true);
+		genreInput.value = "";
+	}
+
+	document.getElementById("addGenreBtnEdit").addEventListener("click", addGenre);
+
+	const titleInputEdit = document.getElementById("titleInputEdit");
+	titleInputEdit.value = title;
+	const descriptionInputEdit = document.getElementById("descriptionInputEdit");
+	descriptionInputEdit.value = description;
+
+	document.getElementById("saveEditIdeaBtn").addEventListener("click", () => {
+		const idea = {id, creator_id, title: titleInputEdit.value, description: descriptionInputEdit, genres: updatedGenres};
+		submitIdeaEdit(idea);
+	});
+
+	document.getElementById("cancelEditIdeaBtn").addEventListener("click", () => {
+		editIdeaWrapper.style.display = "none";
+	});
+
+	document.getElementById("deleteIdeaBtn", () => {
+		deleteIdea(id);
+	});
 }
 
 function clearIdeasDisplay() {
@@ -188,26 +293,24 @@ function clearIdeasDisplay() {
 }
 
 async function getIdeasFromUser() {
-	if (!showUserIdeasBtn.classList.contains("cancel")) {
+	if (showUserIdeasBtn.textContent === "Your Ideas") {
 		const userData = await getUserData();
 
 		const ideasResponse = await getIdeas(userData.id);
 
-		if (!ideasResponse.message) {
+		if (typeof ideasResponse !== "string") {
 			clearIdeasDisplay();
 			displayIdeas(ideasResponse);
 			hideCreateIdeaWrapper();
 		} else {
-			console.log(ideasResponse);
-			errorDisplay.textContent = ideasResponse.message;
+			displayError(ideasResponse);
 			clearIdeasDisplay();
 		}
-
-		showUserIdeasBtn.classList.add("cancel");
-		showUserIdeasBtn.textContent = "Show All Ideas";
+		showUserIdeasBtn.textContent = "All Ideas";
+		showUserIdeasBtn.classList.remove("cancel");
 	} else {
 		getAllIdeas();
-		showUserIdeasBtn.classList.remove("cancel");
-		showUserIdeasBtn.textContent = "Show Your Ideas";
+		showUserIdeasBtn.textContent = "Your Ideas";
+		showUserIdeasBtn.classList.add("cancel");
 	}
 }

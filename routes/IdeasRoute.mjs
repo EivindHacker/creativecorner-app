@@ -6,6 +6,7 @@ import SuperLogger from "../modules/SuperLogger.mjs";
 import validateToken from "../middleware/validateToken.mjs";
 import createGenreString from "../modules/createGenreString.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
+import {checkNumbersOnly} from "../modules/inputTesters.mjs";
 
 const IDEA_API = express.Router();
 
@@ -42,39 +43,40 @@ IDEA_API.post("/createIdea", validateToken, async (req, res, next) => {
 	idea.description = ideaInput.description;
 	idea.genres = createGenreString(ideaInput.genres);
 
-	let user = new User();
+	if (idea.title !== "" && idea.description !== "" && idea.genres !== "") {
+		let user = new User();
 
-	user.email = req.emailFromToken;
+		user.email = req.emailFromToken;
 
-	user = await user.getUserData();
+		user = await user.getUserData();
 
-	if (user.length !== 0) {
-		idea.creator_id = user[0].id;
-		idea.creator_name = user[0].name;
+		if (user.length !== 0) {
+			idea.creator_id = user[0].id;
+			idea.creator_name = user[0].name;
 
-		idea = await idea.createIdea();
+			idea = await idea.createIdea();
 
-		if (typeof idea.id === "number") {
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
+			if (typeof idea.id === "number") {
+				res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
+			} else {
+				res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantCreateIdea).end();
+			}
 		} else {
-			res
-				.status(HTTPCodes.ClientSideErrorRespons.BadRequest)
-				.send("Could not create Idea, if the error persist, contact the creator of the page...")
-				.end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Your authentication token is not valid, try to re-login...").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 });
 
 IDEA_API.post("/rateIdea", validateToken, async (req, res, next) => {
 	let user = new User();
 
-	user.email = req.token.email;
-	user.pswHash = req.token.pswHash;
+	user.email = req.emailFromToken;
 
 	user = await user.getUserData();
 
+	//Check if user exists
 	if (user.length !== 0) {
 		let idea = new Idea();
 
@@ -82,27 +84,39 @@ IDEA_API.post("/rateIdea", validateToken, async (req, res, next) => {
 
 		const selectedIdeaData = await idea.getIdea();
 
-		const prevRatings = selectedIdeaData.rating;
+		//Checking if user is trying to rate its own idea.
+		if (user[0].id !== selectedIdeaData.creator_id) {
+			const prevRatings = selectedIdeaData.rating;
 
-		if (prevRatings) {
-			const updatedRatings = prevRatings + "," + req.body.rating;
+			const ratingInput = req.body.rating;
 
-			idea.rating = updatedRatings;
+			if (checkNumbersOnly(ratingInput)) {
+				if (prevRatings) {
+					const updatedRatings = prevRatings + "," + ratingInput;
 
-			idea = await idea.rateIdea();
+					idea.rating = updatedRatings;
+
+					idea = await idea.rateIdea();
+				} else {
+					idea.rating = ratingInput;
+					idea = await idea.rateIdea();
+				}
+
+				//Update idea.rated_by with user[0].id
+
+				if (typeof idea.id === "number" && idea.rating != prevRatings) {
+					res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
+				} else {
+					res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantRateIdea).end();
+				}
+			} else {
+				res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+			}
 		} else {
-			idea.rating = req.body.rating;
-
-			idea = await idea.rateIdea();
-		}
-
-		if (typeof idea.id === "number" && idea.rating != prevRatings) {
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
-		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Could not rate idea...").end();
+			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.ratingNotAllowed).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send("Your authentication token is not valid, try to re-login...").end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
 	}
 });
 

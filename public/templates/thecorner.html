@@ -2,8 +2,7 @@
 	<h1 style="text-align: center; margin-top: 50px">The Corner</h1>
 	<p style="max-width: 564px; margin: auto; text-align: center">
 		Do you have a good idea for a song, but do not have the tools to create music? Than this is the place for you! <br /><br />
-		At Creative Corner musicians can find inspiration for their next song, based on your ideas! Get started by
-		<span style="font-weight: 600">signing up</span>, and post your unique and special ideas.
+		At Creative Corner musicians can find inspiration for their next song, based on your ideas!
 	</p>
 </div>
 
@@ -27,85 +26,46 @@
 		<div><label>Title: </label> <input type="text" id="titleInput" /><br /></div>
 		<label>Description: </label>
 		<textarea style="margin-top: -15px" id="descriptionInput"></textarea>
-		<h4>Genre Suggestions</h4>
+		<h4 style="margin-top: 0px">Genre Suggestions</h4>
 		<div style="margin-top: -45px; margin-bottom: 10px">
 			<input id="genreInput" type="text" />
 			<button id="addGenreBtn">Add Genre</button>
 		</div>
 		<div id="genreInputDisplay" class="genre-wrapper"></div>
 	</div>
-	<button id="saveIdeaBtn" style="margin-top: 20px; border-color: greenyellow; color: greenyellow">Save Idea</button>
+	<button id="saveIdeaBtn" class="green-btn" style="margin-top: 20px">Save Idea</button>
 	<button id="cancelIdeaBtn" style="margin-left: 5px" class="cancel">Cancel</button>
 </div>
 
-<!-- THE CORNER -->
+<!-- EDIT SONG IDEA -->
 
-<div style="margin: auto; text-align: center" class="sm"><h3 id="errorDisplay" class="err"></h3></div>
-<div class="cont lg" style="flex-direction: row; justify-content: space-between; align-items: center">
+<div class="appear lg cont" id="editIdeaWrapper" style="display: none">
+	<h2>Edit Song Idea</h2>
+	<div class="song-input-card">
+		<div><label>Title: </label> <input type="text" id="titleInputEdit" /><br /></div>
+		<label>Description: </label>
+		<textarea style="margin-top: -15px" id="descriptionInputEdit"></textarea>
+		<h4 style="margin-top: 0px">Genre Suggestions</h4>
+		<div style="margin-top: -45px; margin-bottom: 10px">
+			<input id="genreInputEdit" type="text" />
+			<button id="addGenreBtnEdit">Add Genre</button>
+		</div>
+		<div id="genreInputDisplayEdit" class="genre-wrapper"></div>
+	</div>
+	<button id="saveEditIdeaBtn" class="green-btn" style="margin-top: 20px">Save Changes</button>
+	<button id="deleteIdeaBtn" class="red-btn" style="margin-left: 5px">Delete Idea</button>
+	<button id="cancelEditIdeaBtn" style="margin-left: 5px" class="cancel">Cancel</button>
+</div>
+
+<div class="list-nav">
 	<h2 style="width: max-content">Song Ideas</h2>
 
-	<div style="display: flex; margin-left: auto; align-items: center">
+	<div style="display: flex; margin-left: auto; align-items: center; gap: 4px">
 		<span class="subtle" style="margin-right: 5px">Sort By</span><button id="sortByNewBtn" style="font-size: x-small" class="cancel">Newest</button
 		><button id="sortByOldBtn" style="font-size: x-small" class="cancel">Oldest</button>
+		<button id="sortByOldBtn" style="font-size: x-small" class="cancel">Random</button>
+		<button class="cancel" style="font-size: x-small" id="showUserIdeasBtn">Your Ideas</button>
 	</div>
-	<button style="font-size: x-small" id="showUserIdeasBtn">Show Your Ideas</button>
 </div>
 
-<div id="ideasList" class="appear lg cont">
-	<!--
-
-	<div class="idea-card">
-		<h3 id="title">Carrots on Mars</h3>
-		<div class="creator-wrapper">
-			<span>By:</span>
-			<h4 id="creator">Sparky</h4>
-		</div>
-
-		<p class="description">
-			"Carrots on Mars" is an eccentric and whimsical tune that whimsically explores the idea of growing vegetables on the red planet. Set to a catchy
-			melody with a blend of upbeat rhythms and futuristic sounds, the song follows the adventures of a group of intrepid astronauts who embark on a
-			mission to cultivate carrots in the barren landscapes of Mars. As they face challenges and unexpected discoveries along the way, the song
-			celebrates the spirit of exploration, innovation, and the possibility of finding life, even in the most unlikely of places. With its playful
-			lyrics and infectious energy, "Carrots on Mars" is a delightful ode to curiosity and the wonders of the universe.
-		</p>
-		<h4>Genre Suggestions</h4>
-		<div class="genre-wrapper">
-			<span class="genre">EDM</span>
-			<span class="genre">Electronic</span>
-			<span class="genre">Hyper Pop</span>
-		</div>
-		<div id="cardUserInteractivesWrapper">
-			<h4>Rating</h4>
-			<div class="rating-wrapper">
-				<span>⭐️</span><span class="rating">5</span>
-				<div style="height: 30px; width: 2px; background-color: gray; margin-left: 10px; margin-right: 10px"></div>
-				<input style="width: 40px" type="number" min="0" max="5" /> <button>Submit Rating</button>
-			</div>
-			<h4>Creations</h4>
-			<ul class="creations-wrapper">
-				<li>
-					Title: <span>Carrots On Mars</span>&nbsp;By: <span>Bluesbrothers</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-				</li>
-				<li>Title: <span>Vegetables On Venus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a></li>
-				<li>
-					Title: <span>Vegetables On The Moon</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-				</li>
-				<li>
-					Title: <span>Vegetables In Uranus</span>&nbsp;By: <span>Sparky</span>&nbsp;Link: <a href="https://youtube.com">https://youtube.com</a>
-				</li>
-			</ul>
-
-			 Only Visible for Musicians
-
-			<div id="addCreationWrapper" style="display: none" class="add-creation-wrapper">
-				<h4>Add Creation</h4>
-				<div><label>Title: &nbsp; </label><input type="text" /></div>
-				<div><label>Artist: </label><input type="text" /></div>
-				<div><label>Link: &nbsp; </label><input type="url" /></div>
-				<button style="margin-top: 10px">Save Creation</button>
-			</div>
-			<button id="addCreationBtn" style="margin-top: 10px; display: block">Add Creation</button>
-		</div>
-	</div>
-	-->
-</div>
+<div id="ideasList" style="margin-top: 0px" class="appear lg cont"></div>

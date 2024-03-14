@@ -90,8 +90,6 @@ class DBManager {
 
 			const output = await client.query('SELECT * from "public"."Users"  where email = $1', [user.email]);
 
-			console.log(output.rows);
-
 			return output.rows;
 		} catch (error) {
 			//TODO : Error handling?? Remember that this is a module seperate from your server
@@ -114,9 +112,11 @@ class DBManager {
 				[user.email, user.pswHash]
 			);
 
-			const msg = "User deleted successfully";
+			if (output.rows.length == 1) {
+				const msg = "User deleted successfully";
 
-			return msg;
+				return msg;
+			}
 
 			//TODO: Did the user get deleted?
 		} catch (error) {
@@ -213,7 +213,7 @@ class DBManager {
 		try {
 			await client.connect();
 
-			const output = await client.query('SELECT * FROM "public"."Ideas" where id = $1', [idea.id]);
+			const output = await client.query('SELECT * FROM "public"."Ideas" WHERE id = $1', [idea.id]);
 
 			const aIdea = output.rows[0];
 

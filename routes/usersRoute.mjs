@@ -37,7 +37,7 @@ USER_API.post("/signUp", createHashPassword, createToken, async (req, res, next)
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.userExists).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 });
 
@@ -61,7 +61,7 @@ USER_API.post("/login", createHashPassword, createToken, async (req, res, next) 
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 });
 
@@ -80,7 +80,7 @@ USER_API.post("/getUserData", validateToken, async (req, res, next) => {
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 });
 
@@ -104,7 +104,7 @@ USER_API.post("/updateUserInfo", validateToken, createHashPassword, async (req, 
 		response.data = token;
 		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 });
 
@@ -135,7 +135,7 @@ USER_API.post("/updateUserPassword", validateToken, createHashPassword, async (r
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.passwordMissMatch).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.missingDataFields).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 });
 
@@ -151,7 +151,7 @@ USER_API.post("/deleteUser", validateToken, async (req, res, next) => {
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.deleteAccountFailure).end();
 		}
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.accountToDeleteNotFound).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
 	}
 });
 

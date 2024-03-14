@@ -20,7 +20,6 @@ function initEventListeners() {
 function loadOnRuntime() {}
 
 async function login() {
-	clearErrorDisplay();
 	const email = document.getElementById("emailInputLogin").value;
 	const pswHash = document.getElementById("pswHashInputLogin").value;
 
@@ -38,14 +37,7 @@ async function login() {
 			updatePageState("thecorner");
 		}
 	} catch (error) {
+		localStorage.removeItem("token");
 		displayError(error.message);
 	}
-}
-
-function displayError(msg) {
-	document.getElementById("errorDisplay").innerText = msg;
-}
-
-function clearErrorDisplay() {
-	document.getElementById("errorDisplay").innerText = "";
 }

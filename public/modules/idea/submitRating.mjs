@@ -7,8 +7,7 @@ export default async function submitRating(ratingObject) {
 		if (response.ok) {
 			const data = await response.json();
 
-			console.log(data);
-			return data;
+			return JSON.parse(data);
 		}
 	} catch (error) {
 		return error.message;
