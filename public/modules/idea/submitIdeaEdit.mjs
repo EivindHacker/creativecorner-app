@@ -7,7 +7,7 @@ export default async function submitIdeaEdit(idea) {
 		if (response.ok) {
 			const data = await response.json();
 
-			return data;
+			return JSON.parse(data);
 		}
 	} catch (error) {
 		return error.message;

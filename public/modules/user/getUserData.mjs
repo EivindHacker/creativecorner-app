@@ -1,4 +1,5 @@
 import postTo from "../httpmethods/postTo.mjs";
+import {displayLoggedIn} from "../nav.mjs";
 
 export default async function getUserData() {
 	const token = localStorage.getItem("token");
@@ -14,6 +15,7 @@ export default async function getUserData() {
 			}
 		} catch (error) {
 			localStorage.removeItem("token");
+			displayLoggedIn(false);
 			return error.message;
 		}
 	} else {

@@ -4,7 +4,8 @@ import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
 import SuperLogger from "../modules/SuperLogger.mjs";
 import validateToken from "../middleware/validateToken.mjs";
-import createGenreString from "../modules/createGenreString.mjs";
+//import createGenreString from "../modules/createGenreString.mjs";
+import createGenreString from "../middleware/createGenreString.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
 import {checkIllegalRatingInput, checkIllegalSymbols} from "../modules/inputTesters.mjs";
 import {fetchUserData} from "../middleware/fetchUserData.mjs";
@@ -68,6 +69,38 @@ IDEA_API.post("/createIdea", validateToken, async (req, res, next) => {
 		}
 	} else {
 		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
+	}
+});
+
+IDEA_API.post("/editIdea", validateToken, fetchUserData, createGenreString, async (req, res, next) => {
+	const userData = req.userData;
+	const ideaData = req.body;
+	ideaData.creator_id = parseInt(ideaData.creator_id);
+
+	if (userData.id !== ideaData.creator_id) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UniversalMsg.editNotAllowed).end();
+	}
+
+	if (checkIllegalSymbols(ideaData.title, ["!", "."]) || checkIllegalSymbols(ideaData.description, [",", "!"])) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+	}
+
+	try {
+		let idea = new Idea();
+		idea.id = ideaData.id;
+		idea.title = ideaData.title;
+		idea.description = ideaData.description;
+		idea.genres = req.genreString;
+		idea.creator_name = userData.name;
+		idea = await idea.updateIdea();
+
+		if (idea !== null) {
+			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
+		} else {
+			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.DbMsg.errorUpdatingData).end();
+		}
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 });
 

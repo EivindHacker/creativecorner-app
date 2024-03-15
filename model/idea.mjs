@@ -21,6 +21,15 @@ class Idea {
 		);
 	}
 
+	async updateIdea() {
+		return await DBManager.updateTable(
+			"Ideas",
+			["title", "creator_name", "genres", "description"],
+			[this.title, this.creator_name, this.genres, this.description],
+			`id = ${this.id}`
+		);
+	}
+
 	async getIdeas() {
 		return await DBManager.getIdeas(this);
 	}

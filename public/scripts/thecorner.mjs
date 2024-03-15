@@ -217,11 +217,11 @@ async function displayIdeas(ideas) {
 	}
 
 	document.getElementById("editIdeaBtn").addEventListener("click", (e) => {
-		toggleIdeaWrapper(e.target.dataset.ideadata);
+		showEditIdeaWrapper(e.target.dataset.ideadata);
 	});
 }
 
-function toggleIdeaWrapper(ideaData) {
+function showEditIdeaWrapper(ideaData) {
 	const editIdeaWrapper = document.getElementById("editIdeaWrapper");
 	editIdeaWrapper.style.display = "block";
 	editIdeaWrapper.scrollIntoView({behavior: "smooth", block: "center"});
@@ -262,8 +262,9 @@ function toggleIdeaWrapper(ideaData) {
 
 	initGenres();
 
+	const genreInput = document.getElementById("genreInputEdit");
+
 	function addGenre() {
-		const genreInput = document.getElementById("genreInputEdit");
 		updatedGenres.push(genreInput.value);
 		const genreHtmlElement = `<span class="genre">${genreInput.value}<button class="cancel remove" id="remove-genre" data-genre="${genreInput.value}" >x</button></span>`;
 		genreInputDisplayEdit.innerHTML += genreHtmlElement;
@@ -278,18 +279,44 @@ function toggleIdeaWrapper(ideaData) {
 	const descriptionInputEdit = document.getElementById("descriptionInputEdit");
 	descriptionInputEdit.value = description;
 
-	document.getElementById("saveEditIdeaBtn").addEventListener("click", () => {
-		const idea = {id, creator_id, title: titleInputEdit.value, description: descriptionInputEdit, genres: updatedGenres};
-		submitIdeaEdit(idea);
+	titleInputEdit.addEventListener("input", enableSaveChangesBtn);
+	descriptionInputEdit.addEventListener("input", enableSaveChangesBtn);
+	genreInput.addEventListener("input", enableSaveChangesBtn);
+
+	const saveChangesBtn = document.getElementById("saveEditIdeaBtn");
+
+	saveChangesBtn.addEventListener("click", async () => {
+		const idea = {id, creator_id, title: titleInputEdit.value, description: descriptionInputEdit.value, genres: updatedGenres};
+		const response = await submitIdeaEdit(idea);
+		console.log(response);
+		if (typeof response !== "string") {
+			clearIdeasDisplay();
+			getAllIdeas();
+			hideEditIdeaWrapper();
+			document.getElementById("successDisplay").textContent = "Idea updated successfully";
+		} else {
+			displayError(response);
+			clearIdeasDisplay();
+		}
 	});
 
+	function enableSaveChangesBtn() {
+		saveChangesBtn.classList.add("green-btn");
+		saveChangesBtn.classList.remove("cancel");
+		saveChangesBtn.style.pointerEvents = "auto";
+	}
+
 	document.getElementById("cancelEditIdeaBtn").addEventListener("click", () => {
-		editIdeaWrapper.style.display = "none";
+		hideEditIdeaWrapper();
 	});
 
 	document.getElementById("deleteIdeaBtn", () => {
 		deleteIdea(id);
 	});
+}
+
+function hideEditIdeaWrapper() {
+	editIdeaWrapper.style.display = "none";
 }
 
 function clearIdeasDisplay() {

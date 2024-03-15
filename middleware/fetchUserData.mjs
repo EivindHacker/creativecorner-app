@@ -12,6 +12,6 @@ export const fetchUserData = async (req, res, next) => {
 		}
 		next();
 	} catch (error) {
-		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
+		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
 	}
 };

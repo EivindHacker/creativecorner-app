@@ -10,19 +10,20 @@ export function checkIllegalRatingInput(string) {
 	return false;
 }
 
-export function checkIllegalSymbols(string) {
-	const illegalSymbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ',', '?', ';', ':', '"', "'", '\n', '\r', '\t', '+', '*', '/', '=', '/', '\\',  '<', '>', '|']; //prettier-ignore
-	let usedIllegalSymbols = "";
+export function checkIllegalSymbols(string, except) {
+	let illegalSymbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ',', '?', ';', ':', '"', "'", '\n', '\r', '\t', '+', '*', '/', '=', '\\', '<', '>', '|']; //prettier-ignore
+	if (except) {
+		except.forEach((symbol) => {
+			illegalSymbols = illegalSymbols.filter((item) => item !== symbol);
+		});
+	}
+	let illegalSymbol = false;
 
 	string.split("").forEach((char) => {
 		if (illegalSymbols.includes(char)) {
-			usedIllegalSymbols += char + " ";
+			illegalSymbol = true;
 		}
 	});
 
-	if (usedIllegalSymbols !== "") {
-		return usedIllegalSymbols;
-	} else {
-		return false;
-	}
+	return illegalSymbol;
 }

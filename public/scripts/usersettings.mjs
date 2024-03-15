@@ -77,7 +77,6 @@ async function updateUserDataDisplay() {
 }
 
 function displayUserData(userData) {
-	console.log(userData.name);
 	document.getElementById("nameDisplay").innerText = userData.name;
 	document.getElementById("emailDisplay").innerText = userData.email;
 	document.getElementById("accountTypeDisplay").innerText = userData.role;

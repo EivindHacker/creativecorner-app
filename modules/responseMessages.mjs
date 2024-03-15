@@ -1,6 +1,11 @@
+//Input messages
+
 const missingDataFieldsTxt = {en: "Required fields was not filled in. Fix this, and try again"};
-const illegalInputTxt = {en: "You have entered a illegal input"};
+const illegalInputTxt = {
+	en: "You have entered a illegal input. Some of the following symbols may not be allowed: ! # $ % ^ & * ( ) { } [ ] ' , ? ; : \n \r \t + * / = < > |",
+};
 const illegalRatingInputTxt = {en: "You have entered a illegal input, only 1 digit between 0 and 5 is allowed"};
+const editNotAllowedTxt = {en: "You are not allowed to edit this."};
 
 //User Messages
 
@@ -68,6 +73,10 @@ class ResMsg {
 
 		this.DbMsg = {
 			errorUpdatingData: errorUpdatingDataTxt[lang],
+		};
+
+		this.UniversalMsg = {
+			editNotAllowed: editNotAllowedTxt[lang],
 		};
 	}
 }

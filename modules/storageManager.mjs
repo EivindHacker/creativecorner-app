@@ -30,13 +30,38 @@ class DBManager {
 				return output.rows[0];
 			}
 		} catch (error) {
-			console.error(error);
-			// TODO: Error handling
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
 			client.end();
 		}
 
-		return null; // Return null if insertion fails
+		return null;
+	}
+
+	async updateTable(tableName, columns, values, condition) {
+		const client = new pg.Client(this.#credentials);
+
+		console.log("updating table...");
+
+		try {
+			await client.connect();
+
+			// Construct the SQL query dynamically based on input parameters
+			const setClause = columns.map((col, index) => `"${col}" = $${index + 1}`).join(", ");
+			const query = `UPDATE "${tableName}" SET ${setClause} WHERE ${condition} RETURNING *`;
+
+			const output = await client.query(query, values);
+
+			if (output.rows.length === 1) {
+				return output.rows[0];
+			}
+		} catch (error) {
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
+		} finally {
+			client.end();
+		}
+
+		return null;
 	}
 
 	async checkUserExistence(user) {
