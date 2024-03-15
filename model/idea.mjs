@@ -9,6 +9,7 @@ class Idea {
 		this.creator_name;
 		this.genres;
 		this.rating;
+		this.rated_by;
 		this.creations;
 	}
 

@@ -145,15 +145,19 @@ function createCardListeners(id) {
 	});
 
 	document.getElementById(`submitRatingBtn_${id}`).addEventListener("click", async () => {
-		const rating = document.getElementById(`ratingInput_${id}`).value;
-		const ratingObject = {rating, id};
+		const rating = document.getElementById(`ratingInput_${id}`);
+		const ratingObject = {rating: rating.value, id};
 		const response = await submitRating(ratingObject);
 
 		if (typeof response == "string") {
 			displayError(response);
 		} else {
 			const updatedRatingAverage = calcRatingAverage(response.rating);
-			document.getElementById(`rating_${id}`).textContent = updatedRatingAverage;
+			const ratingDisplay = document.getElementById(`rating_${id}`);
+			ratingDisplay.textContent = updatedRatingAverage;
+			ratingDisplay.classList.add("success");
+			rating.parentNode.style.display = "none";
+			//
 		}
 	});
 

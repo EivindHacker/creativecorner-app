@@ -1,3 +1,3 @@
-export function checkNumbersOnly(string) {
+export function checkRatingInput(string) {
 	return /^\d+$/.test(string);
 }

@@ -21,6 +21,11 @@ const noIdeasFoundTxt = {en: "We could not find any ideas..."};
 const cantCreateIdeaTxt = {en: "Cant create idea. Try again, or contact developer"};
 const ratingNotAllowedTxt = {en: "You are not allowed to rate your own idea."};
 const alreadyRatedTxt = {en: "You have already rated this idea"};
+const cantFindIdeaTxt = {en: "We could not find the idea you were interacting with"};
+
+//DB Errors
+
+const errorUpdatingDataTxt = {en: "An error occured while updating database"};
 
 const avialableLanguages = {
 	norwegian: "no",
@@ -51,11 +56,16 @@ class ResMsg {
 			cantRateIdea: cantRateIdeaTxt[lang],
 			ratingNotAllowed: ratingNotAllowedTxt[lang],
 			alreadyRated: alreadyRatedTxt[lang],
+			cantFindIdea: cantFindIdeaTxt[lang],
 		};
 
 		this.InputMsg = {
 			missingDataFields: missingDataFieldsTxt[lang],
 			illegalInput: illegalInputTxt[lang],
+		};
+
+		this.DbMsg = {
+			errorUpdatingData: errorUpdatingDataTxt[lang],
 		};
 	}
 }

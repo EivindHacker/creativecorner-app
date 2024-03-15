@@ -1,4 +1,5 @@
 import pg from "pg";
+import {ResMsg} from "./responseMessages.mjs";
 
 /// TODO: is the structure / design of the DBManager as good as it could be?
 
@@ -90,7 +91,7 @@ class DBManager {
 
 			const output = await client.query('SELECT * from "public"."Users"  where email = $1', [user.email]);
 
-			return output.rows;
+			return output.rows[0];
 		} catch (error) {
 			//TODO : Error handling?? Remember that this is a module seperate from your server
 		} finally {
@@ -233,21 +234,23 @@ class DBManager {
 		try {
 			await client.connect();
 
-			const output = await client.query(`UPDATE "public"."Ideas" SET "rating" = $1::Text WHERE "id" = $2::Integer;`, [idea.rating, idea.id]);
+			const output = await client.query(`UPDATE "public"."Ideas" SET "rating" = $1::Text, "rated_by" = $2::Text WHERE "id" = $3::Integer;`, [
+				idea.rating,
+				idea.rated_by,
+				idea.id,
+			]);
 
 			if (output.rows.length == 1) {
-				idea.id = output.rows[0].id;
+				idea.rating = output.rows[0].rating;
+				idea.rated_by = output.rows[0].rated_by;
 			}
 
 			return idea;
 		} catch (error) {
-			console.error(error);
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
-
-		return idea;
 	}
 }
 

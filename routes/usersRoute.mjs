@@ -74,7 +74,7 @@ USER_API.post("/getUserData", validateToken, async (req, res, next) => {
 	if (user) {
 		user = await user.getUserData();
 
-		if (user.length !== 0) {
+		if (user.id) {
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
 		} else {
 			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();

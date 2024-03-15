@@ -6,7 +6,9 @@ import SuperLogger from "../modules/SuperLogger.mjs";
 import validateToken from "../middleware/validateToken.mjs";
 import createGenreString from "../modules/createGenreString.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
-import {checkNumbersOnly} from "../modules/inputTesters.mjs";
+import {checkRatingInput} from "../modules/inputTesters.mjs";
+import {fetchUserData} from "../middleware/fetchUserData.mjs";
+import {fetchIdeaData} from "../middleware/fetchIdeaData.mjs";
 
 const IDEA_API = express.Router();
 
@@ -69,54 +71,34 @@ IDEA_API.post("/createIdea", validateToken, async (req, res, next) => {
 	}
 });
 
-IDEA_API.post("/rateIdea", validateToken, async (req, res, next) => {
-	let user = new User();
+IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (req, res, next) => {
+	const userData = req.userData;
+	const ideaData = req.ideaData;
 
-	user.email = req.emailFromToken;
+	if (userData.id === ideaData.creator_id) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.ratingNotAllowed).end();
+	}
 
-	user = await user.getUserData();
+	const ratingInput = req.body.rating;
 
-	//Check if user exists
-	if (user.length !== 0) {
-		let idea = new Idea();
+	if (!checkRatingInput(ratingInput)) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+	}
 
-		idea.id = req.body.id;
+	const idea = new Idea();
+	idea.id = ideaData.id;
+	idea.rated_by = ideaData.rated_by ? `${ideaData.rated_by},${userData.id}` : userData.id;
+	idea.rating = ideaData.rating ? `${ideaData.rating},${ratingInput}` : ratingInput;
 
-		const selectedIdeaData = await idea.getIdea();
-
-		//Checking if user is trying to rate its own idea.
-		if (user[0].id !== selectedIdeaData.creator_id) {
-			const prevRatings = selectedIdeaData.rating;
-
-			const ratingInput = req.body.rating;
-
-			if (checkNumbersOnly(ratingInput)) {
-				if (prevRatings) {
-					const updatedRatings = prevRatings + "," + ratingInput;
-
-					idea.rating = updatedRatings;
-
-					idea = await idea.rateIdea();
-				} else {
-					idea.rating = ratingInput;
-					idea = await idea.rateIdea();
-				}
-
-				//Update idea.rated_by with user[0].id
-
-				if (typeof idea.id === "number" && idea.rating != prevRatings) {
-					res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
-				} else {
-					res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantRateIdea).end();
-				}
-			} else {
-				res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
-			}
+	try {
+		const updatedIdea = await idea.rateIdea();
+		if (updatedIdea.rating !== ideaData.rating) {
+			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(updatedIdea)).end();
 		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.ratingNotAllowed).end();
+			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.cantRateIdea).end();
 		}
-	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 });
 

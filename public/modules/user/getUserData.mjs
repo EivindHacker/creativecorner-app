@@ -9,7 +9,7 @@ export default async function getUserData() {
 
 			if (response.ok) {
 				const data = await response.json();
-				const userData = JSON.parse(data)[0];
+				const userData = JSON.parse(data);
 				return userData;
 			}
 		} catch (error) {
