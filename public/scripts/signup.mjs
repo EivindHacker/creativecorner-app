@@ -1,6 +1,7 @@
 import {updatePageState} from "../modules/pageState.mjs";
 import {displayLoggedIn} from "../modules/nav.mjs";
 import postTo from "../modules/httpmethods/postTo.mjs";
+import displayError from "../modules/displayError.mjs";
 
 export default function initDomElementsSignUp() {
 	initDomVariables();
@@ -20,8 +21,6 @@ function initEventListeners() {
 function loadOnRuntime() {}
 
 async function createUser() {
-	clearErrorDisplay();
-
 	const name = document.getElementById("nameInputSignUp").value;
 	const email = document.getElementById("emailInputSignUp").value;
 	const pswHash = document.getElementById("pswHashInputSignUp").value;
@@ -53,12 +52,4 @@ async function createUser() {
 		console.log(error.message);
 		displayError(error.message);
 	}
-}
-
-function displayError(msg) {
-	document.getElementById("errorDisplay").innerText = msg;
-}
-
-function clearErrorDisplay() {
-	document.getElementById("errorDisplay").innerText = "";
 }

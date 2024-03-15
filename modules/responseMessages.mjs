@@ -1,5 +1,6 @@
 const missingDataFieldsTxt = {en: "Required fields was not filled in. Fix this, and try again"};
 const illegalInputTxt = {en: "You have entered a illegal input"};
+const illegalRatingInputTxt = {en: "You have entered a illegal input, only 1 digit between 0 and 5 is allowed"};
 
 //User Messages
 
@@ -62,6 +63,7 @@ class ResMsg {
 		this.InputMsg = {
 			missingDataFields: missingDataFieldsTxt[lang],
 			illegalInput: illegalInputTxt[lang],
+			illegalRatingInput: illegalRatingInputTxt[lang],
 		};
 
 		this.DbMsg = {

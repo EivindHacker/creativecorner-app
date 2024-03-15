@@ -6,7 +6,7 @@ import SuperLogger from "../modules/SuperLogger.mjs";
 import validateToken from "../middleware/validateToken.mjs";
 import createGenreString from "../modules/createGenreString.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
-import {checkRatingInput} from "../modules/inputTesters.mjs";
+import {checkIllegalRatingInput, checkIllegalSymbols} from "../modules/inputTesters.mjs";
 import {fetchUserData} from "../middleware/fetchUserData.mjs";
 import {fetchIdeaData} from "../middleware/fetchIdeaData.mjs";
 
@@ -81,8 +81,8 @@ IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (r
 
 	const ratingInput = req.body.rating;
 
-	if (!checkRatingInput(ratingInput)) {
-		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+	if (checkIllegalRatingInput(ratingInput)) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalRatingInput).end();
 	}
 
 	const idea = new Idea();
