@@ -8,12 +8,11 @@ export default async function deleteUser() {
 	try {
 		const response = await postTo("/user/deleteUser", {token});
 
-		console.log(response);
-
 		if (response.ok) {
 			localStorage.removeItem("token");
 			displayLoggedIn(false);
-			updatePageState("thecorner");
+			const data = await response.json();
+			return JSON.parse(data);
 		}
 
 		return data;

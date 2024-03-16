@@ -19,14 +19,15 @@ class DBManager {
 		try {
 			await client.connect();
 
-			// Construct the SQL query dynamically based on input parameters
-			const placeholders = values.map((_, index) => `$${index + 1}`).join(", ");
-			const query = `INSERT INTO "${tableName}"(${columns.join(", ")}) VALUES(${placeholders}) RETURNING *`;
+			//Creating a VALUES string based on parameters.
+			//I know it looks a litle crazy, but i does the job well!
+			const columnSql = columns.join(", ");
+			const valuesSql = values.map((_, index) => `$${index + 1}`).join(", ");
+			const query = `INSERT INTO "${tableName}"(${columnSql}) VALUES(${valuesSql}) RETURNING *`;
 
 			const output = await client.query(query, values);
 
 			if (output.rows.length === 1) {
-				// Assuming that the inserted row contains an 'id' column
 				return output.rows[0];
 			}
 		} catch (error) {
@@ -38,17 +39,20 @@ class DBManager {
 		return null;
 	}
 
-	async updateTable(tableName, columns, values, condition) {
+	async updateTable(tableName, columns, values, id) {
 		const client = new pg.Client(this.#credentials);
 
-		console.log("updating table...");
+		console.log(values, id);
 
 		try {
 			await client.connect();
 
-			// Construct the SQL query dynamically based on input parameters
-			const setClause = columns.map((col, index) => `"${col}" = $${index + 1}`).join(", ");
-			const query = `UPDATE "${tableName}" SET ${setClause} WHERE ${condition} RETURNING *`;
+			values.push(id);
+			//Creating a SET string based on parameters.
+			//I know it looks a litle crazy, but i does the job well!
+			const setSql = columns.map((column, index) => `"${column}" = $${index + 1}`).join(", ");
+			const length = values.length;
+			const query = `UPDATE "${tableName}" SET ${setSql} WHERE id = $${length} RETURNING *`;
 
 			const output = await client.query(query, values);
 
@@ -74,17 +78,14 @@ class DBManager {
 			console.log(output.rows[0].exists);
 
 			if (output.rows[0].exists) {
-				console.log("User already exists");
 				return true;
 			} else {
-				console.log("User does not exists");
 				return false;
 			}
 		} catch (error) {
-			console.error(error);
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
 	}
 
@@ -100,12 +101,10 @@ class DBManager {
 
 			//TODO: Did the user get deleted?
 		} catch (error) {
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
-
-		return user;
 	}
 
 	async getUserData(user) {
@@ -118,12 +117,10 @@ class DBManager {
 
 			return output.rows[0];
 		} catch (error) {
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
-
-		return user;
 	}
 
 	async deleteUser(user) {
@@ -131,7 +128,6 @@ class DBManager {
 
 		try {
 			await client.connect();
-			//const output = await client.query('Delete from "public"."Users"  where id = $1;', [user.id]);
 
 			const output = await client.query(
 				'UPDATE "public"."Users" SET email = NULL, name = NULL, password = NULL, role = NULL WHERE email = $1 AND password = $2;',
@@ -143,15 +139,13 @@ class DBManager {
 
 				return msg;
 			}
-
-			//TODO: Did the user get deleted?
 		} catch (error) {
-			console.log(error);
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
 
-		return user;
+		return null;
 	}
 
 	async updateUserInfo(user) {
@@ -173,13 +167,12 @@ class DBManager {
 				user.id = output.rows[0].id;
 			}
 		} catch (error) {
-			console.error(error);
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
 
-		return user;
+		return null;
 	}
 
 	async updateUserPassword(user) {
@@ -204,12 +197,12 @@ class DBManager {
 				user.id = output.rows[0].id;
 			}
 		} catch (error) {
-			throw error; // Re-throw the error for handling in the calling code
+			throw new Error(ResMsg.DbMsg.errorUpdatingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
 
-		return user;
+		return null;
 	}
 
 	async getIdeas(idea) {
@@ -227,30 +220,26 @@ class DBManager {
 
 			return output.rows;
 		} catch (error) {
-			//TODO : Error handling?? Remember that this is a module seperate from your server
+			throw new Error(ResMsg.DbMsg.errorGettingData);
 		} finally {
-			client.end(); // Always disconnect from the database.
+			client.end();
 		}
 	}
 
-	async getIdea(idea) {
+	async getIdea(id) {
 		const client = new pg.Client(this.#credentials);
 
 		try {
 			await client.connect();
 
-			const output = await client.query('SELECT * FROM "public"."Ideas" WHERE id = $1', [idea.id]);
+			const output = await client.query('SELECT * FROM "public"."Ideas" WHERE id = $1', [id]);
 
-			const aIdea = output.rows[0];
-
-			return aIdea;
+			return output.rows[0];
 		} catch (error) {
-			console.error(error);
+			throw new Error(ResMsg.DbMsg.errorGettingData);
 		} finally {
 			client.end();
 		}
-
-		return idea;
 	}
 
 	async rateIdea(idea) {

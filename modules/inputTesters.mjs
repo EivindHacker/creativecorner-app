@@ -10,7 +10,7 @@ export function checkIllegalRatingInput(string) {
 	return false;
 }
 
-export function checkIllegalSymbols(string, except) {
+export function checkIllegalInput(string, except) {
 	let illegalSymbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ',', '?', ';', ':', '"', "'", '\n', '\r', '\t', '+', '*', '/', '=', '\\', '<', '>', '|']; //prettier-ignore
 	if (except) {
 		except.forEach((symbol) => {
@@ -24,6 +24,10 @@ export function checkIllegalSymbols(string, except) {
 			illegalSymbol = true;
 		}
 	});
+
+	if (string.length < 1) {
+		illegalSymbol = true;
+	}
 
 	return illegalSymbol;
 }

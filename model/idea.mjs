@@ -1,4 +1,5 @@
 import DBManager from "../modules/storageManager.mjs";
+import deleteIdea from "../public/modules/idea/deleteIdea.mjs";
 
 class Idea {
 	constructor() {
@@ -26,7 +27,16 @@ class Idea {
 			"Ideas",
 			["title", "creator_name", "genres", "description"],
 			[this.title, this.creator_name, this.genres, this.description],
-			`id = ${this.id}`
+			this.id
+		);
+	}
+
+	async deleteIdea() {
+		return await DBManager.updateTable(
+			"Ideas",
+			["title", "creator_name", "genres", "description", "creator_id", "rating", "creations", "rated_by"],
+			[null, null, null, null, null, null, null, null],
+			this.id
 		);
 	}
 
@@ -35,7 +45,7 @@ class Idea {
 	}
 
 	async getIdea() {
-		return await DBManager.getIdea(this);
+		return await DBManager.getIdea(this.id);
 	}
 
 	async rateIdea() {

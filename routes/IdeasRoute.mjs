@@ -1,15 +1,15 @@
-import express, {response} from "express";
+import express from "express";
 import Idea from "../model/idea.mjs";
 import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
 import SuperLogger from "../modules/SuperLogger.mjs";
 import validateToken from "../middleware/validateToken.mjs";
-//import createGenreString from "../modules/createGenreString.mjs";
 import createGenreString from "../middleware/createGenreString.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
-import {checkIllegalRatingInput, checkIllegalSymbols} from "../modules/inputTesters.mjs";
+import {checkIllegalRatingInput, checkIllegalInput} from "../modules/inputTesters.mjs";
 import {fetchUserData} from "../middleware/fetchUserData.mjs";
 import {fetchIdeaData} from "../middleware/fetchIdeaData.mjs";
+import {ServerResponse} from "../model/serverRes.mjs";
 
 const IDEA_API = express.Router();
 
@@ -38,13 +38,13 @@ IDEA_API.get("/getIdeas/:id", async (req, res, next) => {
 	}
 });
 
-IDEA_API.post("/createIdea", validateToken, async (req, res, next) => {
+IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, next) => {
 	const ideaInput = req.body;
 
 	let idea = new Idea();
 	idea.title = ideaInput.title;
 	idea.description = ideaInput.description;
-	idea.genres = createGenreString(ideaInput.genres);
+	idea.genres = req.genreString;
 
 	if (idea.title !== "" && idea.description !== "" && idea.genres !== "") {
 		let user = new User();
@@ -54,8 +54,8 @@ IDEA_API.post("/createIdea", validateToken, async (req, res, next) => {
 		user = await user.getUserData();
 
 		if (user.length !== 0) {
-			idea.creator_id = user[0].id;
-			idea.creator_name = user[0].name;
+			idea.creator_id = user.id;
+			idea.creator_name = user.name;
 
 			idea = await idea.createIdea();
 
@@ -81,7 +81,7 @@ IDEA_API.post("/editIdea", validateToken, fetchUserData, createGenreString, asyn
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UniversalMsg.editNotAllowed).end();
 	}
 
-	if (checkIllegalSymbols(ideaData.title, ["!", "."]) || checkIllegalSymbols(ideaData.description, [",", "!"])) {
+	if (checkIllegalInput(ideaData.title, ["!", "."]) || checkIllegalInput(ideaData.description, [",", "!"])) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
 	}
 
@@ -95,7 +95,9 @@ IDEA_API.post("/editIdea", validateToken, fetchUserData, createGenreString, asyn
 		idea = await idea.updateIdea();
 
 		if (idea !== null) {
-			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
+			const response = new ServerResponse();
+			response.message = ResMsg.IdeaMsg.ideaUpdateSuccess;
+			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 		} else {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.DbMsg.errorUpdatingData).end();
 		}
@@ -124,14 +126,35 @@ IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (r
 	idea.rating = ideaData.rating ? `${ideaData.rating},${ratingInput}` : ratingInput;
 
 	try {
-		const updatedIdea = await idea.rateIdea();
-		if (updatedIdea.rating !== ideaData.rating) {
-			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(updatedIdea)).end();
+		const updatedRating = await idea.rateIdea();
+		if (updatedRating.rating !== ideaData.rating) {
+			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(updatedRating)).end();
 		} else {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.cantRateIdea).end();
 		}
 	} catch (error) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
+	}
+});
+
+IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async (req, res, next) => {
+	const userData = req.userData;
+	const ideaData = req.ideaData;
+
+	if (userData) {
+		let idea = new Idea();
+		idea.id = ideaData.id;
+		idea = await idea.deleteIdea();
+
+		if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val !== null)) {
+			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
+		} // prettier-ignore
+
+		const response = new ServerResponse();
+		response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
+		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
+	} else {
+		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
 	}
 });
 

@@ -28,14 +28,14 @@ class User {
 	}
 
 	async updateUserInfo() {
-		return await DBManager.updateUserInfo(this);
+		return await DBManager.updateTable("Users", ["name", "email", "role"], [this.name, this.newEmail, this.role], this.id);
 	}
 	async updateUserPassword() {
-		return await DBManager.updateUserPassword(this);
+		return await DBManager.updateTable("Users", ["password"], [this.newPass], this.id);
 	}
 
 	async delete() {
-		return await DBManager.deleteUser(this);
+		return await DBManager.updateTable("Users", ["name", "email", "password", "role"], [null, null, null, null], this.id);
 	}
 }
 

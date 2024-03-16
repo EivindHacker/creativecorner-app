@@ -51,8 +51,22 @@ function initEventListeners() {
 		updatePageState("login");
 	});
 
-	deleteUserBtn.addEventListener("click", () => {
-		deleteUser();
+	deleteUserBtn.addEventListener("click", async () => {
+		const confirmation = await window.confirm(
+			"Are you sure you want to delete your user? You cannot undo this action. Your ideas will still be public. (You can delete your ideas manually on The Corner)"
+		);
+
+		if (confirmation) {
+			const response = await deleteUser();
+			if (typeof response !== "string") {
+				successDisplay.textContent = response.message;
+				setTimeout(() => {
+					updatePageState("thecorner");
+				}, 5000);
+			} else {
+				displayError(response);
+			}
+		}
 	});
 
 	editUserBtn.addEventListener("click", toggleEditUserWrapper);

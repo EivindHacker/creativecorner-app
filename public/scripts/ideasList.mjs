@@ -2,6 +2,11 @@ import calcRatingAverage from "../modules/idea/calcRatingAverage.mjs";
 import genreDataConverter from "../modules/idea/genreDataConverter.mjs";
 
 export default function createIdeaCard(data, userId) {
+	console.log(data);
+	if (data.title === null && data.creator_id === null) {
+		return null;
+	} // prettier-ignore
+
 	const token = localStorage.getItem("token");
 
 	let ratedByUser = false;

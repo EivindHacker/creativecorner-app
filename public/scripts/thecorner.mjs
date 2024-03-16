@@ -211,8 +211,10 @@ async function displayIdeas(ideas) {
 	if (Array.isArray(ideas)) {
 		ideas.forEach((idea) => {
 			const ideaCardHtml = createIdeaCard(idea, userId);
-			ideasList.insertAdjacentHTML(sortBy, ideaCardHtml);
-			createCardListeners(idea.id);
+			if (ideaCardHtml !== null) {
+				ideasList.insertAdjacentHTML(sortBy, ideaCardHtml);
+				createCardListeners(idea.id);
+			}
 		});
 	}
 
@@ -293,7 +295,7 @@ function showEditIdeaWrapper(ideaData) {
 			clearIdeasDisplay();
 			getAllIdeas();
 			hideEditIdeaWrapper();
-			document.getElementById("successDisplay").textContent = "Idea updated successfully";
+			document.getElementById("successDisplay").textContent = response.message;
 		} else {
 			displayError(response);
 			clearIdeasDisplay();
@@ -310,8 +312,19 @@ function showEditIdeaWrapper(ideaData) {
 		hideEditIdeaWrapper();
 	});
 
-	document.getElementById("deleteIdeaBtn", () => {
-		deleteIdea(id);
+	document.getElementById("deleteIdeaBtn").addEventListener("click", async () => {
+		const confirmation = await window.confirm("Are you sure you want to delete your idea? You cannot undo this action.");
+
+		if (confirmation) {
+			const response = await deleteIdea(id);
+			if (typeof response !== "string") {
+				document.getElementById("successDisplay").textContent = response.message;
+				getAllIdeas();
+				hideEditIdeaWrapper();
+			} else {
+				displayError(response);
+			}
+		}
 	});
 }
 

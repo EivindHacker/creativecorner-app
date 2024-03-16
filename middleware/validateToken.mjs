@@ -14,13 +14,12 @@ export default async function validateToken(req, res, next) {
 		const decoded = jwt.verify(token, process.env.SECRET_KEY);
 
 		if (decoded.exp <= Date.now() / 1000) {
-			// Token has expired
-			throw new Error();
+			return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.UserMsg.tokenHasExpired);
 		}
 
 		req.emailFromToken = decoded.data;
 		next();
 	} catch (error) {
-		res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.UserMsg.tokenHasExpired);
+		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.errorValidatingToken);
 	}
 }
