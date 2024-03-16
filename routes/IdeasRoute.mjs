@@ -10,6 +10,7 @@ import {checkIllegalRatingInput, checkIllegalInput} from "../modules/inputTester
 import {fetchUserData} from "../middleware/fetchUserData.mjs";
 import {fetchIdeaData} from "../middleware/fetchIdeaData.mjs";
 import {ServerResponse} from "../model/serverRes.mjs";
+import getOrderAndID from "../middleware/getOrderAndID.mjs";
 
 const IDEA_API = express.Router();
 
@@ -20,21 +21,29 @@ IDEA_API.get("/", (req, res, next) => {
 	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
 });
 
-IDEA_API.get("/getIdeas/:id", async (req, res, next) => {
-	const {id} = req.params;
+IDEA_API.get("/getIdeas/:data", getOrderAndID, async (req, res, next) => {
+	req.id;
 
 	let ideas = new Idea();
-
-	if (id) {
-		ideas.id = id;
+	if (req.sortBy) {
+		ideas.sortBy = req.sortBy;
 	}
+	const creator_id = req.creator_id;
 
-	ideas = await ideas.getIdeas();
-
-	if (ideas.length !== 0) {
-		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
-	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.noIdeasFound).end();
+	try {
+		if (creator_id !== null) {
+			ideas.creator_id = creator_id;
+			ideas = await ideas.getUserIdeas();
+		} else {
+			ideas = await ideas.getIdeas();
+		}
+		if (ideas.length !== 0) {
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
+		} else {
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
+		}
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
 	}
 });
 
@@ -46,29 +55,37 @@ IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, 
 	idea.description = ideaInput.description;
 	idea.genres = req.genreString;
 
-	if (idea.title !== "" && idea.description !== "" && idea.genres !== "") {
-		let user = new User();
+	if (checkIllegalInput(idea.title, ["!", "."]) || checkIllegalInput(idea.description, ["!", "."])) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+	}
 
-		user.email = req.emailFromToken;
+	let user = new User();
+	user.email = req.emailFromToken;
 
+	try {
 		user = await user.getUserData();
+		user = user[0];
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
 
-		if (user.length !== 0) {
-			idea.creator_id = user.id;
-			idea.creator_name = user.name;
+	if (user.length === 0) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantCreateIdea).end();
+	}
 
-			idea = await idea.createIdea();
+	idea.creator_id = user.id;
+	idea.creator_name = user.name;
 
-			if (typeof idea.id === "number") {
-				res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
-			} else {
-				res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantCreateIdea).end();
-			}
-		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
-		}
+	try {
+		idea = await idea.createIdea();
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
+	}
+
+	if (typeof idea.id === "number") {
+		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
 	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantCreateIdea).end();
 	}
 });
 
@@ -85,25 +102,31 @@ IDEA_API.post("/editIdea", validateToken, fetchUserData, createGenreString, asyn
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
 	}
 
-	try {
-		let idea = new Idea();
-		idea.id = ideaData.id;
-		idea.title = ideaData.title;
-		idea.description = ideaData.description;
-		idea.genres = req.genreString;
-		idea.creator_name = userData.name;
-		idea = await idea.updateIdea();
+	let idea = new Idea();
+	idea.id = ideaData.id;
+	idea.title = ideaData.title;
+	idea.description = ideaData.description;
 
-		if (idea !== null) {
-			const response = new ServerResponse();
-			response.message = ResMsg.IdeaMsg.ideaUpdateSuccess;
-			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
-		} else {
-			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.DbMsg.errorUpdatingData).end();
-		}
+	if (req.genreString === "") {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
+	}
+
+	idea.genres = req.genreString;
+	idea.creator_name = userData.name;
+
+	try {
+		idea = await idea.updateIdea();
 	} catch (error) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
+
+	if (idea === null) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.DbMsg.errorUpdatingData).end();
+	}
+
+	const response = new ServerResponse();
+	response.message = ResMsg.IdeaMsg.ideaUpdateSuccess;
+	return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 
 IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (req, res, next) => {
@@ -141,21 +164,26 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 	const userData = req.userData;
 	const ideaData = req.ideaData;
 
-	if (userData) {
-		let idea = new Idea();
-		idea.id = ideaData.id;
-		idea = await idea.deleteIdea();
+	if (userData.id !== ideaData.creator_id) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
+	}
 
-		if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val !== null)) {
+	let idea = new Idea();
+	idea.id = ideaData.id;
+
+	try {
+		idea = await idea.deleteIdea();
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
+	}
+
+	if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val !== null)) {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 		} // prettier-ignore
 
-		const response = new ServerResponse();
-		response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
-		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
-	} else {
-		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
-	}
+	const response = new ServerResponse();
+	response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 
 export default IDEA_API;

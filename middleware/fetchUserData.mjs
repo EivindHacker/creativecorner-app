@@ -7,6 +7,7 @@ export const fetchUserData = async (req, res, next) => {
 		let user = new User();
 		user.email = req.emailFromToken;
 		req.userData = await user.getUserData();
+		req.userData = req.userData[0];
 		if (req.userData.email !== req.emailFromToken) {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
 		}

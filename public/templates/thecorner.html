@@ -25,14 +25,16 @@
 <div class="appear lg cont" id="createIdeaWrapper" style="display: none">
 	<h2>Create Song Idea</h2>
 	<div class="song-input-card">
-		<div><label>Title: </label> <input type="text" id="titleInput" /><br /></div>
-		<label>Description: </label>
+		<div><label>Title </label> <input type="text" id="titleInput" /><span class="subtle"> &nbsp;(Required)</span></div>
+		<label>Description <span class="subtle"> &nbsp;(Required)</span> </label>
 		<textarea style="margin-top: -15px" id="descriptionInput"></textarea>
-		<h4 style="margin-top: 0px">Genre Suggestions</h4>
+		<h4 style="margin-top: 0px">Genre Suggestions<span class="subtle"> &nbsp;(Min 1 Required)</span></h4>
+
 		<div style="margin-top: -45px; margin-bottom: 10px">
 			<input id="genreInput" type="text" />
 			<button id="addGenreBtn">Add Genre</button>
 		</div>
+
 		<div id="genreInputDisplay" class="genre-wrapper"></div>
 	</div>
 	<button id="saveIdeaBtn" class="green-btn" style="margin-top: 20px">Save Idea</button>
@@ -44,10 +46,10 @@
 <div class="appear lg cont" id="editIdeaWrapper" style="display: none">
 	<h2>Edit Song Idea</h2>
 	<div class="song-input-card">
-		<div><label>Title: </label> <input type="text" id="titleInputEdit" /><br /></div>
-		<label>Description: </label>
+		<div><label>Title: </label> <input type="text" id="titleInputEdit" /><span class="subtle"> &nbsp;(Required)</span></div>
+		<label>Description:<span class="subtle"> &nbsp;(Required)</span> </label>
 		<textarea style="margin-top: -15px" id="descriptionInputEdit"></textarea>
-		<h4 style="margin-top: 0px">Genre Suggestions</h4>
+		<h4 style="margin-top: 0px">Genre Suggestions <span class="subtle"> &nbsp;(Min 1 Required)</span></h4>
 		<div style="margin-top: -45px; margin-bottom: 10px">
 			<input id="genreInputEdit" type="text" />
 			<button id="addGenreBtnEdit">Add Genre</button>
@@ -65,7 +67,7 @@
 	<div style="display: flex; margin-left: auto; align-items: center; gap: 4px">
 		<span class="subtle" style="margin-right: 5px">Sort By</span><button id="sortByNewBtn" style="font-size: x-small" class="cancel">Newest</button
 		><button id="sortByOldBtn" style="font-size: x-small" class="cancel">Oldest</button>
-		<button id="sortByOldBtn" style="font-size: x-small" class="cancel">Random</button>
+		<button id="sortByRandomBtn" style="font-size: x-small" class="cancel">Random</button>
 		<button class="cancel" style="font-size: x-small" id="showUserIdeasBtn">Your Ideas</button>
 	</div>
 </div>

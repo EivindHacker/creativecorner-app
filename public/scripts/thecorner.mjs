@@ -10,8 +10,9 @@ import displayError from "../modules/displayError.mjs";
 import submitIdeaEdit from "../modules/idea/submitIdeaEdit.mjs";
 import genreDataConverter from "../modules/idea/genreDataConverter.mjs";
 import deleteIdea from "../modules/idea/deleteIdea.mjs";
+import {SortBy} from "../modules/idea/sortyBy.mjs";
 
-let sortBy = "beforeend";
+let selectedSortBy = "ASC";
 
 let getStartedWrapper;
 let createIdeaBtn;
@@ -46,12 +47,17 @@ function initDomVaribles() {
 }
 function initEventListeners() {
 	document.getElementById("sortByNewBtn").addEventListener("click", () => {
-		sortBy = "beforeend";
+		selectedSortBy = SortBy.ascending;
 		getAllIdeas();
 	});
 
 	document.getElementById("sortByOldBtn").addEventListener("click", () => {
-		sortBy = "afterbegin";
+		selectedSortBy = SortBy.descending;
+		getAllIdeas();
+	});
+
+	document.getElementById("sortByRandomBtn").addEventListener("click", () => {
+		selectedSortBy = SortBy.random;
 		getAllIdeas();
 	});
 
@@ -188,7 +194,7 @@ function toggleCreationsWrapper(id) {
 
 async function getAllIdeas() {
 	clearIdeasDisplay();
-	const response = await getIdeas();
+	const response = await getIdeas(selectedSortBy);
 
 	if (typeof response !== "string") {
 		displayIdeas(response);
@@ -212,14 +218,18 @@ async function displayIdeas(ideas) {
 		ideas.forEach((idea) => {
 			const ideaCardHtml = createIdeaCard(idea, userId);
 			if (ideaCardHtml !== null) {
-				ideasList.insertAdjacentHTML(sortBy, ideaCardHtml);
+				ideasList.insertAdjacentHTML("afterbegin", ideaCardHtml);
 				createCardListeners(idea.id);
 			}
 		});
 	}
 
-	document.getElementById("editIdeaBtn").addEventListener("click", (e) => {
-		showEditIdeaWrapper(e.target.dataset.ideadata);
+	const editButtons = Array.from(document.querySelectorAll("#editIdeaBtn"));
+
+	editButtons.forEach((button) => {
+		button.addEventListener("click", (e) => {
+			showEditIdeaWrapper(e.target.dataset.ideadata);
+		});
 	});
 }
 
@@ -337,24 +347,16 @@ function clearIdeasDisplay() {
 }
 
 async function getIdeasFromUser() {
-	if (showUserIdeasBtn.textContent === "Your Ideas") {
-		const userData = await getUserData();
+	const userData = await getUserData();
 
-		const ideasResponse = await getIdeas(userData.id);
+	const ideasResponse = await getIdeas(selectedSortBy, userData.id);
 
-		if (typeof ideasResponse !== "string") {
-			clearIdeasDisplay();
-			displayIdeas(ideasResponse);
-			hideCreateIdeaWrapper();
-		} else {
-			displayError(ideasResponse);
-			clearIdeasDisplay();
-		}
-		showUserIdeasBtn.textContent = "All Ideas";
-		showUserIdeasBtn.classList.remove("cancel");
+	if (typeof ideasResponse !== "string") {
+		clearIdeasDisplay();
+		displayIdeas(ideasResponse);
+		hideCreateIdeaWrapper();
 	} else {
-		getAllIdeas();
-		showUserIdeasBtn.textContent = "Your Ideas";
-		showUserIdeasBtn.classList.add("cancel");
+		displayError(ideasResponse);
+		clearIdeasDisplay();
 	}
 }

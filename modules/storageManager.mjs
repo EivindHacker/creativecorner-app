@@ -1,5 +1,6 @@
 import pg from "pg";
 import {ResMsg} from "./responseMessages.mjs";
+import {selectFromWhereOrderByQuery, updateWhereQuery, insertValuesQuery} from "../modules/createQueries.mjs";
 
 /// TODO: is the structure / design of the DBManager as good as it could be?
 
@@ -16,14 +17,10 @@ class DBManager {
 	async insertIntoTable(tableName, columns, values) {
 		const client = new pg.Client(this.#credentials);
 
+		const query = insertValuesQuery(tableName, columns, values);
+
 		try {
 			await client.connect();
-
-			//Creating a VALUES string based on parameters.
-			//I know it looks a litle crazy, but i does the job well!
-			const columnSql = columns.join(", ");
-			const valuesSql = values.map((_, index) => `$${index + 1}`).join(", ");
-			const query = `INSERT INTO "${tableName}"(${columnSql}) VALUES(${valuesSql}) RETURNING *`;
 
 			const output = await client.query(query, values);
 
@@ -42,17 +39,10 @@ class DBManager {
 	async updateTable(tableName, columns, values, id) {
 		const client = new pg.Client(this.#credentials);
 
-		console.log(values, id);
+		const query = updateWhereQuery(tableName, columns, values, id);
 
 		try {
 			await client.connect();
-
-			values.push(id);
-			//Creating a SET string based on parameters.
-			//I know it looks a litle crazy, but i does the job well!
-			const setSql = columns.map((column, index) => `"${column}" = $${index + 1}`).join(", ");
-			const length = values.length;
-			const query = `UPDATE "${tableName}" SET ${setSql} WHERE id = $${length} RETURNING *`;
 
 			const output = await client.query(query, values);
 
@@ -68,200 +58,22 @@ class DBManager {
 		return null;
 	}
 
-	async checkUserExistence(user) {
+	async selectFromTable(tableName, selectColumns, whereColumns, whereValues, sortOrder) {
 		const client = new pg.Client(this.#credentials);
 
+		const query = selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder);
 		try {
 			await client.connect();
-			const output = await client.query('SELECT EXISTS (SELECT 1 FROM "public"."Users" WHERE email = $1::Text)', [user.email]);
 
-			console.log(output.rows[0].exists);
+			const output = await client.query(query, whereValues);
 
-			if (output.rows[0].exists) {
-				return true;
+			if (output.rows.length >= 1) {
+				return output.rows;
 			} else {
-				return false;
+				return null;
 			}
 		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
-		} finally {
-			client.end();
-		}
-	}
-
-	async login(user) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-			const output = await client.query('SELECT * from "public"."Users"  where password = $1 AND email = $2;', [user.pswHash, user.email]);
-			return output.rows;
-			// Client.Query returns an object of type pg.Result (https://node-postgres.com/apis/result)
-			// Of special intrest is the rows and rowCount properties of this object.
-
-			//TODO: Did the user get deleted?
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
-		} finally {
-			client.end();
-		}
-	}
-
-	async getUserData(user) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-
-			const output = await client.query('SELECT * from "public"."Users"  where email = $1', [user.email]);
-
-			return output.rows[0];
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
-		} finally {
-			client.end();
-		}
-	}
-
-	async deleteUser(user) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-
-			const output = await client.query(
-				'UPDATE "public"."Users" SET email = NULL, name = NULL, password = NULL, role = NULL WHERE email = $1 AND password = $2;',
-				[user.email, user.pswHash]
-			);
-
-			if (output.rows.length == 1) {
-				const msg = "User deleted successfully";
-
-				return msg;
-			}
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
-		} finally {
-			client.end();
-		}
-
-		return null;
-	}
-
-	async updateUserInfo(user) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-			const output = await client.query(
-				`UPDATE "public"."Users"
-				SET "name" = $1::Text, 
-					"email" = $2::Text,
-					"role" = $3::Text
-				WHERE email = $4::Text;`,
-				[user.name, user.newEmail, user.role, user.email]
-			);
-
-			if (output.rows.length == 1) {
-				// We stored the user in the DB.
-				user.id = output.rows[0].id;
-			}
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
-		} finally {
-			client.end();
-		}
-
-		return null;
-	}
-
-	async updateUserPassword(user) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-
-			console.log(user.newPass, user.email);
-
-			const output = await client.query(
-				`UPDATE "public"."Users"
-				SET password = $1
-				WHERE email = $2`,
-				[user.newPass, user.email]
-			);
-
-			console.log(user.newPass, user.email);
-
-			if (output.rows.length == 1) {
-				// We stored the user in the DB.
-				user.id = output.rows[0].id;
-			}
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
-		} finally {
-			client.end();
-		}
-
-		return null;
-	}
-
-	async getIdeas(idea) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-
-			let output = await client.query('SELECT * FROM "public"."Ideas" ORDER BY id DESC;');
-
-			if (idea.id !== "null") {
-				console.log("id", idea.id);
-				output = await client.query('SELECT * FROM "public"."Ideas" WHERE creator_id = $1::Integer ORDER BY id DESC;', [idea.id]);
-			}
-
-			return output.rows;
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorGettingData);
-		} finally {
-			client.end();
-		}
-	}
-
-	async getIdea(id) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-
-			const output = await client.query('SELECT * FROM "public"."Ideas" WHERE id = $1', [id]);
-
-			return output.rows[0];
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorGettingData);
-		} finally {
-			client.end();
-		}
-	}
-
-	async rateIdea(idea) {
-		const client = new pg.Client(this.#credentials);
-
-		try {
-			await client.connect();
-
-			const output = await client.query(`UPDATE "public"."Ideas" SET "rating" = $1::Text, "rated_by" = $2::Text WHERE "id" = $3::Integer;`, [
-				idea.rating,
-				idea.rated_by,
-				idea.id,
-			]);
-
-			if (output.rows.length == 1) {
-				idea.rating = output.rows[0].rating;
-				idea.rated_by = output.rows[0].rated_by;
-			}
-
-			return idea;
-		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
+			throw new Error(ResMsg.DbMsg.errorSelectingData);
 		} finally {
 			client.end();
 		}

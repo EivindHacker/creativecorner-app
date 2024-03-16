@@ -22,8 +22,9 @@ const cantFindUserTxt = {en: "Could not find your account. Try to re-login or co
 const tokenHasExpiredTxt = {en: "Your login token has expired, please login again."};
 const missingTokenTxt = {en: "You are missing a token, please login again."};
 const couldNotUpdateTokenTxt = {en: "Could not update user token"};
-const errorValidatingTokenTxt = {en: "Error validating token"};
+const errorValidatingTokenTxt = {en: "Error validating token, if the error persist, login again"};
 const deleteUserSuccessTxt = {en: "User deleted successfully, you will be redirected in 5 seconds"};
+const loginSuccessTxt = {en: "Logged in successfully"};
 
 //Idea Messages
 
@@ -65,6 +66,7 @@ class ResMsg {
 			couldNotUpdateToken: couldNotUpdateTokenTxt[lang],
 			errorValidatingToken: errorValidatingTokenTxt[lang],
 			deleteUserSuccess: deleteUserSuccessTxt[lang],
+			loginSuccess: loginSuccessTxt[lang],
 		};
 
 		this.IdeaMsg = {

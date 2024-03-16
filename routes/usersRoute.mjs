@@ -14,80 +14,73 @@ import {checkIllegalInput} from "../modules/inputTesters.mjs";
 const USER_API = express.Router();
 USER_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
 
-USER_API.get("/", (req, res, next) => {
-	SuperLogger.log("Demo of logging tool");
-	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
-});
-
 USER_API.post("/signUp", createHashPassword, createToken, async (req, res, next) => {
 	const {name, email, pswHash, role} = req.body;
 
-	if (name != "" && email != "" && pswHash != "") {
-		let user = new User();
-		user.name = name;
-		user.email = email;
-		user.role = role;
+	if (checkIllegalInput(name) || checkIllegalInput(email, ["@"]) || checkIllegalInput(pswHash) || checkIllegalInput(role)) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+	}
 
-		user.pswHash = req.hashedPassword;
+	let user = new User();
+	user.name = name;
+	user.email = email;
+	user.role = role;
+	user.pswHash = req.hashedPassword;
 
-		const exists = await user.checkUserExistence();
+	const exists = await user.checkUserExistence();
 
-		if (!exists) {
-			user = await user.createUser();
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(req.token)).end();
-		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.userExists).end();
-		}
-	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
+	if (exists) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.userExists).end();
+	}
+
+	user = await user.createUser();
+
+	if (user.id) {
+		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(req.token)).end();
 	}
 });
 
 USER_API.post("/login", createHashPassword, createToken, async (req, res, next) => {
 	const {email, pswHash} = req.body;
 
-	console.log("Token", req.token);
-
-	if (email != "" && pswHash != "") {
-		let user = new User();
-
-		user.email = email;
-
-		user.pswHash = req.hashedPassword;
-
-		user = await user.login();
-
-		if (user.length !== 0) {
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(req.token)).end();
-		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
-		}
-	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
+	if (checkIllegalInput(email, ["@"]) || checkIllegalInput(pswHash)) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
 	}
+
+	let user = new User();
+	user.email = email;
+	user.pswHash = req.hashedPassword;
+
+	user = await user.login();
+	user = user[0];
+
+	const response = new ServerResponse();
+	response.message = ResMsg.UserMsg.loginSuccess;
+	response.data = req.token;
+
+	if (user === null) {
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
+	}
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 
 USER_API.post("/getUserData", validateToken, async (req, res, next) => {
 	let user = new User();
 	user.email = req.emailFromToken;
+	user = await user.getUserData();
+	user = user[0];
 
-	if (user) {
-		user = await user.getUserData();
-
-		if (user.id) {
-			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
-		} else {
-			res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
-		}
-	} else {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
+	if (!user.id) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
 	}
+
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
 });
 
 USER_API.post("/updateUserInfo", validateToken, fetchUserData, async (req, res, next) => {
 	const {name, email, role} = req.body;
 
-	if (checkIllegalInput(name) || checkIllegalInput(email, ["@", "_"])) {
+	if (checkIllegalInput(name) || checkIllegalInput(email, ["@"])) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
 	}
 
@@ -100,7 +93,11 @@ USER_API.post("/updateUserInfo", validateToken, fetchUserData, async (req, res, 
 	user.email = originalEmail;
 	user.role = role;
 
-	user = await user.updateUserInfo();
+	try {
+		user = await user.updateUserInfo();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
 
 	if (originalEmail !== email) {
 		if (user === null) {
@@ -108,7 +105,14 @@ USER_API.post("/updateUserInfo", validateToken, fetchUserData, async (req, res, 
 		}
 	}
 
-	const token = await updateToken(user.email);
+	let token;
+
+	try {
+		token = await updateToken(user.email);
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
+
 	if (token === null) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.couldNotUpdateToken).end();
 	}
@@ -127,8 +131,14 @@ USER_API.post("/updateUserPassword", validateToken, createHashPassword, async (r
 
 	let userFromDB = new User();
 	userFromDB.email = req.emailFromToken;
-	userFromDB = await userFromDB.getUserData();
 
+	try {
+		userFromDB = await userFromDB.getUserData();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
+
+	userFromDB = userFromDB[0];
 	if (userFromDB.password !== req.oldPswHash) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.passwordMissMatch).end();
 	}
@@ -136,7 +146,12 @@ USER_API.post("/updateUserPassword", validateToken, createHashPassword, async (r
 	user.newPass = req.newPswHash;
 	user.email = req.emailFromToken;
 	user.id = userFromDB.id;
-	user = await user.updateUserPassword();
+
+	try {
+		user = await user.updateUserPassword();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
 
 	if (user.newPass !== req.newPswHash) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.passwordUpdateFailure).end();
@@ -152,20 +167,25 @@ USER_API.post("/deleteUser", validateToken, fetchUserData, async (req, res, next
 	const userData = req.userData;
 
 	if (userData) {
-		let user = new User();
-		user.id = userData.id;
-		user = await user.delete();
-
-		if ([user.email, user.name, user.password, user.role].every((val) => val !== null)) {
-			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.deleteAccountFailure).end();
-		}
-
-		const response = new ServerResponse();
-		response.message = ResMsg.UserMsg.deleteUserSuccess;
-		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
-	} else {
-		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
 	}
+
+	let user = new User();
+	user.id = userData.id;
+
+	try {
+		user = await user.delete();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
+
+	if ([user.email, user.name, user.password, user.role].every((val) => val !== null)) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.deleteAccountFailure).end();
+	}
+
+	const response = new ServerResponse();
+	response.message = ResMsg.UserMsg.deleteUserSuccess;
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 
 export default USER_API;

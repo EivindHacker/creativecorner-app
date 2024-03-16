@@ -16,15 +16,15 @@ class User {
 	}
 
 	async login() {
-		return await DBManager.login(this);
+		return await DBManager.selectFromTable("Users", ["*"], ["password", "email"], [this.pswHash, this.email], this.sortBy);
 	}
 
 	async checkUserExistence() {
-		return await DBManager.checkUserExistence(this);
+		return await DBManager.selectFromTable("Users", ["*"], ["email"], [this.email], this.sortBy);
 	}
 
 	async getUserData() {
-		return await DBManager.getUserData(this);
+		return await DBManager.selectFromTable("Users", ["*"], ["email"], [this.email], this.sortBy);
 	}
 
 	async updateUserInfo() {

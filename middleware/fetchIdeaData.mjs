@@ -7,6 +7,7 @@ export const fetchIdeaData = async (req, res, next) => {
 		let idea = new Idea();
 		idea.id = req.body.id;
 		req.ideaData = await idea.getIdea();
+		req.ideaData = req.ideaData[0];
 		if (parseInt(req.body.id) !== req.ideaData.id) {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.cantFindIdea).end();
 		}

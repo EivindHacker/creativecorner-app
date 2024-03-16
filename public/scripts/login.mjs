@@ -27,16 +27,16 @@ async function login() {
 	const user = {email, pswHash};
 	try {
 		const response = await postTo("/user/login", user);
-		if (response.ok) {
-			const data = await response.json();
 
-			const token = JSON.parse(data);
+		const data = await response.json();
 
-			localStorage.setItem("token", token);
+		const parseData = JSON.parse(data);
+		console.log(parseData);
 
-			displayLoggedIn(true);
-			updatePageState("thecorner");
-		}
+		localStorage.setItem("token", parseData.data);
+
+		displayLoggedIn(true);
+		updatePageState("thecorner");
 	} catch (error) {
 		localStorage.removeItem("token");
 		displayError(error.message);

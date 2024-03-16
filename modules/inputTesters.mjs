@@ -25,6 +25,7 @@ export function checkIllegalInput(string, except) {
 		}
 	});
 
+	//Checking length of input
 	if (string.length < 1) {
 		illegalSymbol = true;
 	}

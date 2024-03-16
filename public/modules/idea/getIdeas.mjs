@@ -1,11 +1,9 @@
 import getFrom from "../httpmethods/getFrom.mjs";
 
-export default async function getIdeas(id) {
+export default async function getIdeas(sortBy, id) {
 	let url = "idea/getIdeas/null";
 
-	if (id) {
-		url = `idea/getIdeas/${id}`;
-	}
+	url = `idea/getIdeas/${sortBy}_${id}`;
 
 	try {
 		const response = await getFrom(url);
