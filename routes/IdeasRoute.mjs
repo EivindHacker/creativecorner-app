@@ -152,7 +152,7 @@ IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (r
 	const userData = req.userData;
 	const ideaData = req.ideaData;
 
-	if (userData.id === ideaData.creator_id) {
+	if (userData.id == ideaData.creator_id) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.ratingNotAllowed).end();
 	}
 
@@ -186,7 +186,7 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 	console.log("user id: ", userData.id);
 	console.log("Creator id: ", ideaData.creator_id);
 
-	if (userData.id !== ideaData.creator_id) {
+	if (userData.id != ideaData.creator_id) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 	}
 
@@ -203,7 +203,7 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 	}
 
 	console.log("answer from db is successfull");
-	if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val !== null)) {
+	if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val != null)) {
 		console.log("failure: checked that all fields now are null");
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 		} // prettier-ignore
@@ -243,7 +243,7 @@ IDEA_API.post("/deleteCreation", validateToken, fetchUserData, fetchIdeaData, ex
 	const ideaData = req.ideaData;
 	const creationCreatorId = req.creationCreatorId;
 
-	if (creationCreatorId !== userData.id) {
+	if (creationCreatorId != userData.id) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.UniversalMsg.deleteNotAllowed).end();
 	}
 
@@ -255,7 +255,7 @@ IDEA_API.post("/deleteCreation", validateToken, fetchUserData, fetchIdeaData, ex
 	idea.id = ideaData.id;
 
 	try {
-		idea.deleteCreation();
+		idea = await idea.deleteCreation();
 	} catch (error) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}

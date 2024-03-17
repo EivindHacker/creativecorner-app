@@ -203,7 +203,7 @@ USER_API.post("/deleteUser", validateToken, fetchUserData, async (req, res, next
 		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
 	}
 
-	if ([user.email, user.name, user.password, user.role].every((val) => val !== null)) {
+	if ([user.email, user.name, user.password, user.role].every((val) => val != null)) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.deleteAccountFailure).end();
 	}
 

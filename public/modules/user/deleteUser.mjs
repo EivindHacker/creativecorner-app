@@ -4,19 +4,22 @@ import {displayLoggedIn} from "../nav.mjs";
 
 export default async function deleteUser() {
 	const token = localStorage.getItem("token");
+	if (token) {
+		try {
+			const response = await postTo("/user/deleteUser", {token});
 
-	try {
-		const response = await postTo("/user/deleteUser", {token});
+			if (response.ok) {
+				localStorage.removeItem("token");
+				displayLoggedIn(false);
+				const data = await response.json();
+				return JSON.parse(data);
+			}
 
-		if (response.ok) {
-			localStorage.removeItem("token");
-			displayLoggedIn(false);
-			const data = await response.json();
-			return JSON.parse(data);
+			return data;
+		} catch (error) {
+			return error.message;
 		}
-
-		return data;
-	} catch (error) {
-		return error.message;
+	} else {
+		return "Missing token, please login again";
 	}
 }

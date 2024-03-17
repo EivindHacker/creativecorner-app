@@ -17,6 +17,6 @@ export default async function getUserData() {
 			return error.message;
 		}
 	} else {
-		return "";
+		return "Missing token, please login again";
 	}
 }
