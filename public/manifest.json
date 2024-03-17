@@ -1,0 +1,9 @@
+{
+	"name": "Creative Corner",
+	"short_name": "CreativeCorner",
+	"start_url": "/index.html",
+	"display": "browser",
+	"background_color": "#161616",
+	"theme_color": "#161616",
+	"orientation": "landscape-primary"
+}

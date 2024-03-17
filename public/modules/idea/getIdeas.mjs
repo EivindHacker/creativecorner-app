@@ -15,7 +15,11 @@ export async function getIdeas(sortBy, orderBy) {
 			return "Could not find any Ideas";
 		}
 	} catch (error) {
-		return error.message;
+		if (error.message.includes("<!DOCTYPE html>")) {
+			return "You are offline. Unofortunately, we do not offer any offline functionality.";
+		} else {
+			return error.message;
+		}
 	}
 }
 
