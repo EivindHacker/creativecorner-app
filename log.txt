@@ -75828,3 +75828,7 @@ Database connection  postgresql://localhost/CC-DB
 7:19:12 PM [32mGET[39m /thecorner
 7:19:13 PM [32mGET[39m /sw.js
 7:19:14 PM [32mGET[39m /sw.js
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
