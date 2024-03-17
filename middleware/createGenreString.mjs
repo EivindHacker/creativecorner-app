@@ -1,6 +1,6 @@
 import {HTTPCodes} from "../modules/httpConstants.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
-import {checkIllegalInput} from "../modules/inputTesters.mjs";
+import {checkIllegalInput, removeComma} from "../modules/inputTesters.mjs";
 
 export default function createGenreString(req, res, next) {
 	try {
@@ -8,11 +8,9 @@ export default function createGenreString(req, res, next) {
 
 		const genres = req.body.genres;
 
-		console.log(genres);
-
 		genres.forEach((genre, index) => {
 			if (checkIllegalInput(genre)) {
-				return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+				throw new Error(ResMsg.InputMsg.illegalInput);
 			}
 			if (index + 1 !== genres.length) {
 				genreString += genre + ",";
@@ -21,9 +19,9 @@ export default function createGenreString(req, res, next) {
 			}
 		});
 
-		req.genreString = genreString;
+		req.genreString = removeComma(genreString);
 		next();
 	} catch (error) {
-		res.status(HTTPCodes.ServerErrorRespons.InternalErrorr).send(error.message).end();
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 }

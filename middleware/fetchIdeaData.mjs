@@ -9,10 +9,10 @@ export const fetchIdeaData = async (req, res, next) => {
 		req.ideaData = await idea.getIdea();
 		req.ideaData = req.ideaData[0];
 		if (parseInt(req.body.id) !== req.ideaData.id) {
-			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.cantFindIdea).end();
+			throw new Error(ResMsg.IdeaMsg.cantFindIdea);
 		}
 		next();
 	} catch (error) {
-		return res.status(HTTPCodes.ServerErrorRespons.InternalErrorr).send(ResMsg.IdeaMsg.cantFindIdea).end();
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 };

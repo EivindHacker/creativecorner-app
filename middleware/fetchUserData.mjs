@@ -8,11 +8,11 @@ export const fetchUserData = async (req, res, next) => {
 		user.email = req.emailFromToken;
 		req.userData = await user.getUserData();
 		req.userData = req.userData[0];
-		if (req.userData.email !== req.emailFromToken) {
-			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
+		if (req.userData.email != req.emailFromToken) {
+			throw new Error(ResMsg.UserMsg.cantFindUser);
 		}
 		next();
 	} catch (error) {
-		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.UserMsg.cantFindUser).end();
+		res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 };

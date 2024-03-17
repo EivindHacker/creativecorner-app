@@ -79,7 +79,7 @@ IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, 
 	try {
 		user = await user.getUserData();
 
-		if (user === null) {
+		if (user == null) {
 			throw new Error(ResMsg.UserMsg.cantFindUser);
 		} else {
 			user = user[0];
@@ -88,7 +88,7 @@ IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, 
 		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
 	}
 
-	if (user.length === 0) {
+	if (user.length == 0) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantCreateIdea).end();
 	}
 
@@ -101,7 +101,7 @@ IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, 
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 
-	if (typeof idea.id === "number") {
+	if (typeof idea.id == "number") {
 		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(idea)).end();
 	} else {
 		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.cantCreateIdea).end();
@@ -126,7 +126,7 @@ IDEA_API.post("/editIdea", validateToken, fetchUserData, createGenreString, asyn
 	idea.title = ideaData.title;
 	idea.description = ideaData.description;
 
-	if (req.genreString === "") {
+	if (req.genreString == "") {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.missingDataFields).end();
 	}
 
@@ -139,7 +139,7 @@ IDEA_API.post("/editIdea", validateToken, fetchUserData, createGenreString, asyn
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 
-	if (idea === null) {
+	if (idea == null) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.DbMsg.errorUpdatingData).end();
 	}
 
@@ -183,34 +183,26 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 	const userData = req.userData;
 	const ideaData = req.ideaData;
 
-	console.log("user id: ", userData.id);
-	console.log("Creator id: ", ideaData.creator_id);
-
 	if (userData.id != ideaData.creator_id) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 	}
-
-	console.log("ids match");
 
 	let idea = new Idea();
 	idea.id = ideaData.id;
 
 	try {
-		console.log("calling idea.deleteIdea");
 		idea = await idea.deleteIdea();
 	} catch (error) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
 
-	console.log("answer from db is successfull");
 	if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val != null)) {
-		console.log("failure: checked that all fields now are null");
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 		} // prettier-ignore
-	console.log("success: checked that all fields now are null");
+
 	const response = new ServerResponse();
 	response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
-	console.log("sending response back to client");
+
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 
@@ -218,7 +210,7 @@ IDEA_API.post("/submitCreation", validateToken, fetchUserData, fetchIdeaData, cr
 	const userData = req.userData;
 	const ideaData = req.ideaData;
 
-	if (userData.role !== "Musician") {
+	if (userData.role != "Musician") {
 		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.IdeaMsg.creationNotAuthorized).end();
 	}
 

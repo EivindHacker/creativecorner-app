@@ -16,21 +16,19 @@ class DBManager {
 		const client = new pg.Client(this.#credentials);
 
 		const query = insertValuesQuery(tableName, columns, values);
-		console.log("query: ", query);
-		console.log("Values: ", values);
 
 		try {
 			await client.connect();
 
 			const output = await client.query(query, values);
 
-			console.log("output: ", output);
-
 			if (output.rows.length === 1) {
 				return output.rows[0];
+			} else {
+				throw new Error(ResMsg.DbMsg.errorUpdatingData);
 			}
 		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
+			throw new Error(error.message);
 		} finally {
 			client.end();
 		}
@@ -50,14 +48,14 @@ class DBManager {
 
 			if (output.rows.length === 1) {
 				return output.rows[0];
+			} else {
+				throw new Error(ResMsg.DbMsg.errorUpdatingData);
 			}
 		} catch (error) {
-			throw new Error(ResMsg.DbMsg.errorUpdatingData);
+			throw new Error(error.message);
 		} finally {
 			client.end();
 		}
-
-		return null;
 	}
 
 	async selectFromTable(tableName, selectColumns, whereColumns, whereValues, sortOrder, orderBy) {

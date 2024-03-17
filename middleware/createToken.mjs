@@ -1,17 +1,27 @@
 import jwt from "jsonwebtoken";
+import {ResMsg} from "../modules/responseMessages.mjs";
+import {HTTPCodes} from "../modules/httpConstants.mjs";
 
 export default async function createToken(req, res, next) {
-	const {email} = req.body;
+	try {
+		const {email} = req.body;
 
-	const token = jwt.sign(
-		{
-			data: email,
-		},
-		process.env.SECRET_KEY,
-		{expiresIn: "1h"}
-	);
+		if (!email) {
+			throw new Error(ResMsg.UniversalMsg.missingPrameters);
+		}
 
-	req.token = token;
+		const token = jwt.sign(
+			{
+				data: email,
+			},
+			process.env.SECRET_KEY,
+			{expiresIn: "1h"}
+		);
 
-	next();
+		req.token = token;
+
+		next();
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
+	}
 }

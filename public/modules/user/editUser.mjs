@@ -19,8 +19,8 @@ export default async function editUser(type, userInfo) {
 				const data = await response.json();
 				const dataRes = JSON.parse(data);
 
-				if (data.data) {
-					const token = data.data;
+				if (dataRes.data) {
+					const token = dataRes.data;
 					localStorage.setItem("token", token);
 				}
 				return dataRes;

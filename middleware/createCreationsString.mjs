@@ -8,7 +8,7 @@ export default function createCreationsString(req, res, next) {
 		const userData = req.userData;
 
 		if (checkIllegalInput(title) || checkIllegalInput(artist) || checkIllegalInput(link)) {
-			return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+			throw new Error(ResMsg.InputMsg.illegalInput);
 		}
 
 		let creationsString = req.ideaData.creations;
@@ -23,6 +23,6 @@ export default function createCreationsString(req, res, next) {
 
 		next();
 	} catch (error) {
-		res.status(HTTPCodes.ServerErrorRespons.InternalErrorr).send(error.message).end();
+		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(error.message).end();
 	}
 }

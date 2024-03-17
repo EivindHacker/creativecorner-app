@@ -9,11 +9,13 @@ const illegalRatingInputTxt = {en: "You have entered a illegal input, only 1 dig
 //Universal messages
 const editNotAllowedTxt = {en: "You are not allowed to edit this."};
 const deleteNotAllowedTxt = {en: "You are not allowed to delete this."};
+const missingPrametersTxt = {en: "Missing parameters"};
 
 //User Messages
 
-const userExistsTxt = {en: "User already exists, login using this email, or try another email"};
+const userExistsTxt = {en: "User already exists"};
 const wrongPassOrEmailTxt = {en: "Wrong username or password"};
+const emailAlreadyExistsTxt = {en: "Email already exists"};
 const passwordMissMatchTxt = {en: "The password you typed does not match your original password"};
 const passwordUpdateSuccessTxt = {en: "Password updated successfully", no: "Passordet ditt har blitt oppdatert"};
 const passwordUpdateFailureTxt = {en: "Could not update password"};
@@ -31,6 +33,7 @@ const creationNotAuthorizedTxt = {en: "You have to set your user role to 'Musici
 //Idea Messages
 
 const noIdeasFoundTxt = {en: "We could not find any ideas..."};
+const errorGettingIdeasTxt = {en: "Error while getting ideas"};
 const cantCreateIdeaTxt = {en: "Cant create idea. Try again, or contact developer"};
 const ratingNotAllowedTxt = {en: "You are not allowed to rate your own idea."};
 const alreadyRatedTxt = {en: "You have already rated this idea"};
@@ -60,6 +63,7 @@ class ResMsg {
 		this.UserMsg = {
 			passwordUpdateSuccess: passwordUpdateSuccessTxt[lang],
 			accountUpdateSuccess: accountUpdateSuccessTxt[lang],
+			emailAlreadyExists: emailAlreadyExistsTxt[lang],
 			userExists: userExistsTxt[lang],
 			wrongPassOrEmail: wrongPassOrEmailTxt[lang],
 			passwordMissMatch: passwordMissMatchTxt[lang],
@@ -76,6 +80,7 @@ class ResMsg {
 
 		this.IdeaMsg = {
 			noIdeasFound: noIdeasFoundTxt[lang],
+			errorGettingIdeas: errorGettingIdeasTxt[lang],
 			cantCreateIdea: cantCreateIdeaTxt[lang],
 			cantRateIdea: cantRateIdeaTxt[lang],
 			ratingNotAllowed: ratingNotAllowedTxt[lang],
@@ -104,6 +109,7 @@ class ResMsg {
 		this.UniversalMsg = {
 			editNotAllowed: editNotAllowedTxt[lang],
 			deleteNotAllowed: deleteNotAllowedTxt[lang],
+			missingPrameters: missingPrametersTxt[lang],
 		};
 	}
 }

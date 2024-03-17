@@ -7,11 +7,17 @@ export default function extractCreationCreatorId(req, res, next) {
 
 	const creationData = creationString.split("|");
 
+	let hasIllegalInput = false;
+
 	creationData.forEach((data) => {
 		if (checkIllegalInput(data)) {
-			return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+			hasIllegalInput = true;
 		}
 	});
+
+	if (hasIllegalInput) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
+	}
 
 	req.creationCreatorId = parseInt(creationData[3]);
 	next();
