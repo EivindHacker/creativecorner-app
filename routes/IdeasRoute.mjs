@@ -195,11 +195,11 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 	} catch (error) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
-
+	/*
 	if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val !== null)) {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 		} // prettier-ignore
-
+*/
 	const response = new ServerResponse();
 	response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
