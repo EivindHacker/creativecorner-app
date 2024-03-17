@@ -13,7 +13,6 @@ export default function createIdeaCard(data, userId, userRole) {
 	if (data.rated_by) {
 		const ratedByArray = data.rated_by.split(",");
 		ratedByArray.forEach((rateId) => {
-			console.log(rateId, userId);
 			if (rateId == userId) {
 				ratedByUser = true;
 			}

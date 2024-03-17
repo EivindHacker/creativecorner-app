@@ -1,3 +1,5 @@
+//I know these functions looks a litle crazy, but i does the job well!
+
 export function selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder, orderBy) {
 	const selectClause = selectColumns.join(", ");
 
@@ -14,7 +16,6 @@ export function selectFromWhereOrderByQuery(tableName, selectColumns, whereColum
 		orderByClause = `ORDER BY id ${sortOrder}`;
 	}
 	if (orderBy === "rating" && orderBy) {
-		console.log("Kjører");
 		orderByClause = `ORDER BY ${orderBy} ${sortOrder}`;
 	}
 
@@ -33,8 +34,6 @@ export function updateWhereQuery(tableName, columns, values, id) {
 }
 
 export function insertValuesQuery(tableName, columns, values) {
-	//Here I'm creating VALUES strings based on parameters.
-	//I know it looks a litle crazy, but i does the job well!
 	const columnSql = columns.join(", ");
 	const valuesSql = values.map((_, index) => `$${index + 1}`).join(", ");
 	return `INSERT INTO "${tableName}"(${columnSql}) VALUES(${valuesSql}) RETURNING *`;

@@ -49,7 +49,7 @@ async function createUser() {
 
 	try {
 		const response = await postTo("/user/signUp", user);
-		console.log(response);
+
 		if (response.ok) {
 			const data = await response.json();
 
@@ -61,7 +61,6 @@ async function createUser() {
 			updatePageState("thecorner");
 		}
 	} catch (error) {
-		console.log(error.message);
 		displayError(error.message);
 	}
 }

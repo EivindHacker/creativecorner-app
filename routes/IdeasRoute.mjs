@@ -152,8 +152,21 @@ IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (r
 	const userData = req.userData;
 	const ideaData = req.ideaData;
 
+	//Check that user doesnt rate its own idea.
 	if (userData.id == ideaData.creator_id) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.ratingNotAllowed).end();
+	}
+
+	let alreadyRated = false;
+
+	if (ideaData.rated_by !== null) {
+		const ratedByArray = ideaData.rated_by.split(",");
+		for (let i = 0; i < ratedByArray.length; i++) {
+			if (ratedByArray[i] == userData.id) {
+				alreadyRated = true;
+				break;
+			}
+		}
 	}
 
 	const ratingInput = req.body.rating;
@@ -170,7 +183,11 @@ IDEA_API.post("/rateIdea", validateToken, fetchUserData, fetchIdeaData, async (r
 	try {
 		const updatedRating = await idea.rateIdea();
 		if (updatedRating.rating !== ideaData.rating) {
-			return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(updatedRating)).end();
+			if (!alreadyRated) {
+				return res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(updatedRating)).end();
+			} else {
+				return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.IdeaMsg.alreadyRated).end();
+			}
 		} else {
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.cantRateIdea).end();
 		}

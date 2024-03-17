@@ -155,7 +155,6 @@ USER_API.post("/updateUserInfo", validateToken, fetchUserData, async (req, res, 
 	const response = new ServerResponse();
 	response.message = ResMsg.UserMsg.accountUpdateSuccess;
 	response.data = token;
-	console.log(response);
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 

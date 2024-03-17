@@ -242,8 +242,6 @@ async function displayIdeas(ideas) {
 	} else {
 		const userData = await getUserData();
 
-		console.log(userData);
-
 		let userId;
 		let userRole;
 

@@ -31,7 +31,6 @@ async function login() {
 		const data = await response.json();
 
 		const parseData = JSON.parse(data);
-		console.log(parseData);
 
 		localStorage.setItem("token", parseData.data);
 

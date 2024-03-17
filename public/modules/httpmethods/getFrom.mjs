@@ -1,6 +1,4 @@
 export default async function getFrom(url) {
-	console.log("getting from...");
-
 	const header = {
 		method: "GET",
 		headers: {

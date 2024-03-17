@@ -100,8 +100,6 @@ function displayUserData(userData) {
 	document.getElementById("accountTypeDisplay").innerText = userData.role;
 	document.getElementById("languageDisplay").innerText = userData.language;
 
-	console.log(userData);
-
 	if (userData.role === "Writer") {
 		writerInput.checked = true;
 		musicianInput.checked = false;
@@ -175,8 +173,6 @@ async function submitChanges() {
 
 		const userInputs = {name: nameInput.value, email: emailInput.value, role, language};
 		const response = await editUser("Info", userInputs);
-
-		console.log(response);
 
 		if (response.success) {
 			toggleEditUserWrapper();
