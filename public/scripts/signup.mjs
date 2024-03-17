@@ -27,13 +27,25 @@ async function createUser() {
 
 	const writerInput = document.getElementById("writerInput");
 
-	let user = {};
+	let role = "Writer";
 
 	if (writerInput.checked) {
-		user = {name, email, pswHash, role: "Writer"};
+		role = "Writer";
 	} else {
-		user = {name, email, pswHash, role: "Musician"};
+		role = "Musician";
 	}
+
+	let language = "en";
+
+	const enInput = document.getElementById("enInput");
+
+	if (enInput.checked) {
+		language = "en";
+	} else {
+		language = "no";
+	}
+
+	const user = {name, email, pswHash, role, language};
 
 	try {
 		const response = await postTo("/user/signUp", user);

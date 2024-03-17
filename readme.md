@@ -33,4 +33,24 @@ This will start the server and you can now access the project on http://localhos
 
 ## API Documentation
 
-- [Login](login.md) : `POST /api/login/`
+Common for all these API's is that they return a object if successful, and string if unsuccessful.
+
+### User
+
+- `POST /User/signUp/`: Allows users to sign up for the platform.
+- `POST /User/login/`: Enables users to log in to their accounts.
+- `POST /User/getUserData/`: Retrieves data related to the authenticated user.
+- `POST /User/updateUserInfo/`: Allows users to update their information.
+- `POST /User/updateUserPassword/`: Allows users to update their password.
+- `POST /User/deleteUser/`: Deletes the user account.
+
+### Ideas
+
+- `GET /Idea/getIdeas/`: Retrieves a list of all available ideas.
+- `GET /Idea/getUserIdeas/`: Retrieves ideas specific to the authenticated user.
+- `POST /Idea/createIdea/`: Allows users to create a new idea.
+- `POST /Idea/editIdea/`: Enables users to edit an existing idea.
+- `POST /Idea/rateIdea/`: Allows users to rate an idea.
+- `POST /Idea/deleteIdea/`: Deletes a specific idea.
+- `POST /Idea/submitCreation/`: Submits the creation based on an idea.
+- `POST /Idea/deleteCreation/`: Deletes a creation associated with an idea.

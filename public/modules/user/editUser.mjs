@@ -7,7 +7,7 @@ export default async function editUser(type, userInfo) {
 		let user = {};
 
 		if (type === "Info") {
-			user = {name: userInfo.name, email: userInfo.email, role: userInfo.role, token};
+			user = {name: userInfo.name, email: userInfo.email, role: userInfo.role, language: userInfo.language, token};
 		} else {
 			user = {oldPass: userInfo.oldPass, newPass: userInfo.newPass, token};
 		}

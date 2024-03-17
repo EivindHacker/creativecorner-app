@@ -12,7 +12,11 @@ class User {
 	}
 
 	async createUser() {
-		return await DBManager.insertIntoTable("Users", ["name", "email", "password", "role"], [this.name, this.email, this.pswHash, this.role]);
+		return await DBManager.insertIntoTable(
+			"Users",
+			["name", "email", "password", "role", "language"],
+			[this.name, this.email, this.pswHash, this.role, this.language]
+		);
 	}
 
 	async login() {
@@ -28,7 +32,7 @@ class User {
 	}
 
 	async updateUserInfo() {
-		return await DBManager.updateTable("Users", ["name", "email", "role"], [this.name, this.newEmail, this.role], this.id);
+		return await DBManager.updateTable("Users", ["name", "email", "role", "language"], [this.name, this.newEmail, this.role, this.language], this.id);
 	}
 	async updateUserPassword() {
 		return await DBManager.updateTable("Users", ["password"], [this.newPass], this.id);

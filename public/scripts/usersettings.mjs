@@ -11,6 +11,8 @@ let nameInput;
 let emailInput;
 let musicianInput;
 let writerInput;
+let englishInput;
+let norwegianInput;
 
 let editUserBtn;
 let userInfoWrapper;
@@ -34,6 +36,8 @@ function initDomVariables() {
 	emailInput = document.getElementById("emailInput");
 	musicianInput = document.getElementById("musicianInput");
 	writerInput = document.getElementById("writerInput");
+	englishInput = document.getElementById("enInput");
+	norwegianInput = document.getElementById("noInput");
 	editUserBtn = document.getElementById("editUserBtn");
 	userInfoWrapper = document.getElementById("userInfoWrapper");
 	changePasswordBtn = document.getElementById("changePasswordBtn");
@@ -94,6 +98,9 @@ function displayUserData(userData) {
 	document.getElementById("nameDisplay").innerText = userData.name;
 	document.getElementById("emailDisplay").innerText = userData.email;
 	document.getElementById("accountTypeDisplay").innerText = userData.role;
+	document.getElementById("languageDisplay").innerText = userData.language;
+
+	console.log(userData);
 
 	if (userData.role === "Writer") {
 		writerInput.checked = true;
@@ -101,6 +108,14 @@ function displayUserData(userData) {
 	} else {
 		writerInput.checked = false;
 		musicianInput.checked = true;
+	}
+
+	if (userData.language === "en") {
+		englishInput.checked = true;
+		norwegianInput.checked = false;
+	} else {
+		englishInput.checked = false;
+		norwegianInput.checked = true;
 	}
 
 	nameInput.value = userData.name;
@@ -142,15 +157,23 @@ function toggleEditPasswordWrapper() {
 
 async function submitChanges() {
 	if (changePasswordWrapper.style.display === "none") {
-		let accountType = "";
+		let role = "";
 
 		if (writerInput.checked) {
-			accountType = "Writer";
+			role = "Writer";
 		} else {
-			accountType = "Musician";
+			role = "Musician";
 		}
 
-		const userInputs = {name: nameInput.value, email: emailInput.value, role: accountType};
+		let language = "en";
+
+		if (enInput.checked) {
+			language = "en";
+		} else {
+			language = "no";
+		}
+
+		const userInputs = {name: nameInput.value, email: emailInput.value, role, language};
 		const response = await editUser("Info", userInputs);
 
 		console.log(response);

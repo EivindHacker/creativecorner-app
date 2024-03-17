@@ -4,6 +4,7 @@
 		<div><label>Name: </label><span id="nameDisplay"></span></div>
 		<div><label>Email: </label><span id="emailDisplay"></span></div>
 		<div><label>Account Type: </label><span id="accountTypeDisplay"></span></div>
+		<div><label>Error Language: </label><span id="languageDisplay"></span></div>
 	</div>
 	<div id="editUserWrapper" style="display: none; flex-direction: column; gap: 10px">
 		<div id="editUserInfoWrapper" style="display: flex; flex-direction: column; gap: 10px">
@@ -13,6 +14,11 @@
 			<div style="display: flex; gap: 10px; margin-top: -5px; margin-bottom: 5px">
 				<div><label>Writer</label><input type="radio" id="writerInput" name="user-type" /></div>
 				<div><label>Musician</label><input type="radio" id="musicianInput" name="user-type" /></div>
+			</div>
+			<label>Error Language</label>
+			<div style="display: flex; gap: 10px">
+				<div><label>English</label><input type="radio" id="enInput" name="language" checked="true" /></div>
+				<div><label>Norsk</label><input type="radio" id="noInput" name="language" /></div>
 			</div>
 		</div>
 

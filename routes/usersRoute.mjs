@@ -1,7 +1,7 @@
 import express from "express";
 import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
-import {ResMsg} from "../modules/responseMessages.mjs";
+import {ResMsg, updateLanguage} from "../modules/responseMessages.mjs";
 import createHashPassword from "../middleware/createPswHash.mjs";
 import createToken from "../middleware/createToken.mjs";
 import updateToken from "../middleware/updateToken.mjs";
@@ -9,12 +9,14 @@ import validateToken from "../middleware/validateToken.mjs";
 import {ServerResponse} from "../model/serverRes.mjs";
 import {fetchUserData} from "../middleware/fetchUserData.mjs";
 import {checkIllegalInput} from "../modules/inputTesters.mjs";
+import {avialableLanguages} from "../modules/responseMessages.mjs";
+import reInitLanguage from "../modules/reInitLanguage.mjs";
 
 const USER_API = express.Router();
 USER_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
 
 USER_API.post("/signUp", createHashPassword, createToken, async (req, res, next) => {
-	const {name, email, pswHash, role} = req.body;
+	const {name, email, pswHash, role, language} = req.body;
 
 	if (checkIllegalInput(name) || checkIllegalInput(email, ["@"]) || checkIllegalInput(pswHash) || checkIllegalInput(role)) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
@@ -25,6 +27,8 @@ USER_API.post("/signUp", createHashPassword, createToken, async (req, res, next)
 	user.email = email;
 	user.role = role;
 	user.pswHash = req.hashedPassword;
+
+	user.language = reInitLanguage(language);
 
 	try {
 		const exists = await user.checkUserExistence();
@@ -91,11 +95,13 @@ USER_API.post("/getUserData", validateToken, async (req, res, next) => {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
 	}
 
+	reInitLanguage(user.language);
+
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
 });
 
 USER_API.post("/updateUserInfo", validateToken, fetchUserData, async (req, res, next) => {
-	const {name, email, role} = req.body;
+	const {name, email, role, language} = req.body;
 
 	if (checkIllegalInput(name) || checkIllegalInput(email, ["@"])) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
@@ -121,6 +127,8 @@ USER_API.post("/updateUserInfo", validateToken, fetchUserData, async (req, res, 
 	user.name = name;
 	user.newEmail = email;
 	user.role = role;
+
+	user.language = reInitLanguage(language);
 
 	try {
 		user = await user.updateUserInfo();

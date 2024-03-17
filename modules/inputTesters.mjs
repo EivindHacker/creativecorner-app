@@ -1,3 +1,5 @@
+import {updateLanguage} from "./responseMessages.mjs";
+
 export function checkIllegalRatingInput(string) {
 	if (parseInt(string) < 0 || parseInt(string) > 5) {
 		return true;
@@ -11,6 +13,8 @@ export function checkIllegalRatingInput(string) {
 }
 
 export function checkIllegalInput(string, except, maxLength) {
+	updateLanguage("no");
+
 	let illegalSymbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ',', '?', ';', ':', '"', "'", '\n', '\r', '\t', '+', '*', '/', '=', '\\', '<', '>', '|']; //prettier-ignore
 	if (except) {
 		except.forEach((symbol) => {
