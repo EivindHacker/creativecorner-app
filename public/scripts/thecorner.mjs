@@ -242,6 +242,8 @@ async function displayIdeas(ideas) {
 	} else {
 		const userData = await getUserData();
 
+		console.log(userData);
+
 		let userId;
 		let userRole;
 
@@ -340,7 +342,7 @@ function showEditIdeaWrapper(ideaData) {
 	saveChangesBtn.addEventListener("click", async () => {
 		const idea = {id, creator_id, title: titleInputEdit.value, description: descriptionInputEdit.value, genres: updatedGenres};
 		const response = await submitIdeaEdit(idea);
-		console.log(response);
+
 		if (typeof response !== "string") {
 			getAllIdeas();
 			hideEditIdeaWrapper();

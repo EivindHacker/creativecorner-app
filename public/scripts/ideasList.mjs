@@ -6,6 +6,8 @@ export default function createIdeaCard(data, userId, userRole) {
 		return null;
 	} // prettier-ignore
 
+	console.log(data.creator_id, userId);
+
 	const token = localStorage.getItem("token");
 
 	let ratedByUser = false;
@@ -26,6 +28,8 @@ export default function createIdeaCard(data, userId, userRole) {
 		isUsersIdea = true;
 	}
 
+	console.log("Is users idea");
+
 	let genreHtml = "";
 
 	if (data.genres) {
@@ -45,7 +49,6 @@ export default function createIdeaCard(data, userId, userRole) {
 			const creationsArtist = creationElements[1];
 			const creationsLink = creationElements[2];
 			const creationsId = parseInt(creationElements[3]);
-			console.log(creationsId === userId);
 
 			creationsHtml += `<li>
             Title: <span>${creationsTitle}</span>&nbsp;By: <span>${creationsArtist}</span>&nbsp;Link: <a href="${creationsLink}">${creationsLink}</a>
@@ -64,7 +67,7 @@ export default function createIdeaCard(data, userId, userRole) {
     <div class="idea-card appear" id="card_${data.id}">
 	<button data-ideadata="${data.id}_${data.creator_id}_${data.title}_${data.description}_${
 		data.genres
-	}" id="editIdeaBtn" class="edit-card-btn" style="display: ${data.creator_id === userId ? "block" : "none"}">Edit</button>
+	}" id="editIdeaBtn" class="edit-card-btn" style="display: ${isUsersIdea ? "block" : "none"}">Edit</button>
 	<h3 id="title">${data.title}</h3>
 	<div class="creator-wrapper">
 		<span>By</span>
