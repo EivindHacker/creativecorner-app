@@ -183,25 +183,34 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 	const userData = req.userData;
 	const ideaData = req.ideaData;
 
+	console.log("user id: ", userData.id);
+	console.log("Creator id: ", ideaData.creator_id);
+
 	if (userData.id !== ideaData.creator_id) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 	}
+
+	console.log("ids match");
 
 	let idea = new Idea();
 	idea.id = ideaData.id;
 
 	try {
+		console.log("calling idea.deleteIdea");
 		idea = await idea.deleteIdea();
 	} catch (error) {
 		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
 	}
-	/*
+
+	console.log("answer from db is successfull");
 	if ([idea.title, idea.creator_id, idea.creator_name, idea.genres, idea.rating, idea.creations, idea.description, idea.rated_by].every((val) => val !== null)) {
+		console.log("failure: checked that all fields now are null");
 			return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(ResMsg.IdeaMsg.deleteIdeaFailure).end();
 		} // prettier-ignore
-*/
+	console.log("success: checked that all fields now are null");
 	const response = new ServerResponse();
 	response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
+	console.log("sending response back to client");
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 

@@ -16,11 +16,15 @@ class DBManager {
 		const client = new pg.Client(this.#credentials);
 
 		const query = insertValuesQuery(tableName, columns, values);
+		console.log("query: ", query);
+		console.log("Values: ", values);
 
 		try {
 			await client.connect();
 
 			const output = await client.query(query, values);
+
+			console.log("output: ", output);
 
 			if (output.rows.length === 1) {
 				return output.rows[0];
@@ -60,8 +64,6 @@ class DBManager {
 		const client = new pg.Client(this.#credentials);
 
 		const query = selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder, orderBy);
-		console.log(query);
-		console.log(whereValues);
 		try {
 			await client.connect();
 
