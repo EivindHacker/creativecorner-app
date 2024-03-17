@@ -73,21 +73,6 @@ self.addEventListener("install", (event) => {
 			"/modules/displayError.mjs",
 			"/modules/nav.mjs",
 			"/modules/pageState.mjs",
-			"/modules/idea/calcRatingAverage.mjs",
-			"/modules/idea/deleteCreation.mjs",
-			"/modules/idea/deleteIdea.mjs",
-			"/modules/idea/genreDataConverter.mjs",
-			"/modules/idea/getIdeas.mjs",
-			"/modules/idea/sortyBy.mjs",
-			"/modules/idea/submitCreation.mjs",
-			"/modules/idea/submitIdea.mjs",
-			"/modules/idea/submitIdeaEdit.mjs",
-			"/modules/idea/submitRating.mjs",
-			"/modules/httpmethods/getFrom.mjs",
-			"/templates/login.html",
-			"/templates/signup.html",
-			"/templates/thecorner.html",
-			"/templates/usersettings.html",
 		])
 	);
 });

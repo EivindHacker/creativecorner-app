@@ -79334,3 +79334,7 @@ Database connection  postgresql://localhost/CC-DB
 10:39:22 PM [33mPOST[39m /idea/deleteIdea
 10:39:22 PM [32mGET[39m /idea/getIdeas/ASC_undefined
 10:39:22 PM [33mPOST[39m /user/getUserData
+####################
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
