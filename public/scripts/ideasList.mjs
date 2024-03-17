@@ -6,8 +6,6 @@ export default function createIdeaCard(data, userId, userRole) {
 		return null;
 	} // prettier-ignore
 
-	console.log(data.creator_id, userId);
-
 	const token = localStorage.getItem("token");
 
 	let ratedByUser = false;
@@ -24,11 +22,9 @@ export default function createIdeaCard(data, userId, userRole) {
 
 	let isUsersIdea = false;
 
-	if (data.creator_id === userId) {
+	if (parseInt(data.creator_id) === userId) {
 		isUsersIdea = true;
 	}
-
-	console.log("Is users idea");
 
 	let genreHtml = "";
 
