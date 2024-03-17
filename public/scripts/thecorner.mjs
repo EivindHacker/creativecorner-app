@@ -1,5 +1,5 @@
 import calcRatingAverage from "../modules/idea/calcRatingAverage.mjs";
-import getIdeas from "../modules/idea/getIdeas.mjs";
+import {getIdeas, getUserIdeas} from "../modules/idea/getIdeas.mjs";
 import getUserData from "../modules/user/getUserData.mjs";
 import {updatePageState} from "../modules/pageState.mjs";
 import submitCreation from "../modules/idea/submitCreation.mjs";
@@ -11,6 +11,7 @@ import submitIdeaEdit from "../modules/idea/submitIdeaEdit.mjs";
 import genreDataConverter from "../modules/idea/genreDataConverter.mjs";
 import deleteIdea from "../modules/idea/deleteIdea.mjs";
 import {SortBy} from "../modules/idea/sortyBy.mjs";
+import deleteCreation from "../modules/idea/deleteCreation.mjs";
 
 let selectedSortBy = "ASC";
 
@@ -46,6 +47,16 @@ function initDomVaribles() {
 	showUserIdeasBtn = document.getElementById("showUserIdeasBtn");
 }
 function initEventListeners() {
+	document.getElementById("sortByRatingHigh").addEventListener("click", () => {
+		selectedSortBy = SortBy.ascending;
+		getAllIdeas("rating");
+	});
+
+	document.getElementById("sortByRatingLow").addEventListener("click", () => {
+		selectedSortBy = SortBy.descending;
+		getAllIdeas("rating");
+	});
+
 	document.getElementById("sortByNewBtn").addEventListener("click", () => {
 		selectedSortBy = SortBy.ascending;
 		getAllIdeas();
@@ -167,13 +178,35 @@ function createCardListeners(id) {
 		}
 	});
 
-	document.getElementById(`saveCreationBtn_${id}`).addEventListener("click", () => {
+	document.getElementById(`saveCreationBtn_${id}`).addEventListener("click", async () => {
 		const title = document.getElementById(`creationTitleInput_${id}`).value;
 		const artist = document.getElementById(`creationArtistInput_${id}`).value;
-		const link = document.getElementById(`crationLinkInput_${id}`).value;
-		const inputObject = {title, artist, link};
-		const response = submitCreation(inputObject);
-		console.log(JSON.parse(response));
+		const link = document.getElementById(`creationLinkInput_${id}`).value;
+		const creation = {id, title, artist, link};
+		const response = await submitCreation(creation);
+		if (typeof response == "string") {
+			displayError(response);
+		} else {
+			toggleCreationsWrapper(id);
+			getAllIdeas();
+		}
+	});
+
+	const deleteCreationsBtns = Array.from(document.querySelectorAll("#deleteCreation"));
+
+	deleteCreationsBtns.forEach((btn) => {
+		btn.addEventListener("click", async (e) => {
+			const ideaId = e.target.dataset.creationid;
+			const creationObject = {id: ideaId, creation: e.target.dataset.creation};
+			if (ideaId == id) {
+				const response = await deleteCreation(creationObject);
+				if (typeof response == "string") {
+					displayError(response);
+				} else {
+					getAllIdeas();
+				}
+			}
+		});
 	});
 }
 
@@ -192,9 +225,9 @@ function toggleCreationsWrapper(id) {
 	}
 }
 
-async function getAllIdeas() {
+async function getAllIdeas(orderBy) {
 	clearIdeasDisplay();
-	const response = await getIdeas(selectedSortBy);
+	const response = await getIdeas(selectedSortBy, orderBy);
 
 	if (typeof response !== "string") {
 		displayIdeas(response);
@@ -204,33 +237,40 @@ async function getAllIdeas() {
 }
 
 async function displayIdeas(ideas) {
-	const userData = await getUserData();
-
-	let userId;
-
-	if (typeof userData == "string") {
-		userId = null;
+	if (ideas.length === 0) {
+		ideasList.textContent = "No ideas were found";
 	} else {
-		userId = userData.id;
-	}
+		const userData = await getUserData();
 
-	if (Array.isArray(ideas)) {
-		ideas.forEach((idea) => {
-			const ideaCardHtml = createIdeaCard(idea, userId);
-			if (ideaCardHtml !== null) {
-				ideasList.insertAdjacentHTML("afterbegin", ideaCardHtml);
-				createCardListeners(idea.id);
-			}
+		let userId;
+		let userRole;
+
+		if (typeof userData == "string") {
+			userId = null;
+			userRole = null;
+		} else {
+			userId = userData.id;
+			userRole = userData.role;
+		}
+
+		if (Array.isArray(ideas)) {
+			ideas.forEach((idea) => {
+				const ideaCardHtml = createIdeaCard(idea, userId, userRole);
+				if (ideaCardHtml !== null) {
+					ideasList.insertAdjacentHTML("afterbegin", ideaCardHtml);
+					createCardListeners(idea.id);
+				}
+			});
+		}
+
+		const editButtons = Array.from(document.querySelectorAll("#editIdeaBtn"));
+
+		editButtons.forEach((button) => {
+			button.addEventListener("click", (e) => {
+				showEditIdeaWrapper(e.target.dataset.ideadata);
+			});
 		});
 	}
-
-	const editButtons = Array.from(document.querySelectorAll("#editIdeaBtn"));
-
-	editButtons.forEach((button) => {
-		button.addEventListener("click", (e) => {
-			showEditIdeaWrapper(e.target.dataset.ideadata);
-		});
-	});
 }
 
 function showEditIdeaWrapper(ideaData) {
@@ -302,7 +342,6 @@ function showEditIdeaWrapper(ideaData) {
 		const response = await submitIdeaEdit(idea);
 		console.log(response);
 		if (typeof response !== "string") {
-			clearIdeasDisplay();
 			getAllIdeas();
 			hideEditIdeaWrapper();
 			document.getElementById("successDisplay").textContent = response.message;
@@ -349,7 +388,7 @@ function clearIdeasDisplay() {
 async function getIdeasFromUser() {
 	const userData = await getUserData();
 
-	const ideasResponse = await getIdeas(selectedSortBy, userData.id);
+	const ideasResponse = await getUserIdeas(selectedSortBy, userData.id);
 
 	if (typeof ideasResponse !== "string") {
 		clearIdeasDisplay();

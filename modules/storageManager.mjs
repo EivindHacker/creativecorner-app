@@ -2,8 +2,6 @@ import pg from "pg";
 import {ResMsg} from "./responseMessages.mjs";
 import {selectFromWhereOrderByQuery, updateWhereQuery, insertValuesQuery} from "../modules/createQueries.mjs";
 
-/// TODO: is the structure / design of the DBManager as good as it could be?
-
 class DBManager {
 	#credentials = {};
 
@@ -58,10 +56,12 @@ class DBManager {
 		return null;
 	}
 
-	async selectFromTable(tableName, selectColumns, whereColumns, whereValues, sortOrder) {
+	async selectFromTable(tableName, selectColumns, whereColumns, whereValues, sortOrder, orderBy) {
 		const client = new pg.Client(this.#credentials);
 
-		const query = selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder);
+		const query = selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder, orderBy);
+		console.log(query);
+		console.log(whereValues);
 		try {
 			await client.connect();
 

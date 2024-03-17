@@ -10,7 +10,7 @@ export function checkIllegalRatingInput(string) {
 	return false;
 }
 
-export function checkIllegalInput(string, except) {
+export function checkIllegalInput(string, except, maxLength) {
 	let illegalSymbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ',', '?', ';', ':', '"', "'", '\n', '\r', '\t', '+', '*', '/', '=', '\\', '<', '>', '|']; //prettier-ignore
 	if (except) {
 		except.forEach((symbol) => {
@@ -25,10 +25,31 @@ export function checkIllegalInput(string, except) {
 		}
 	});
 
-	//Checking length of input
 	if (string.length < 1) {
 		illegalSymbol = true;
 	}
 
+	if (maxLength) {
+		if (string.length > maxLength) {
+			illegalSymbol = true;
+		}
+	} else {
+		if (string.length > 64) {
+			illegalSymbol = true;
+		}
+	}
+
 	return illegalSymbol;
+}
+
+export function removeComma(inputString) {
+	if (inputString.charAt(0) === ",") {
+		return inputString.slice(1);
+	}
+
+	if (inputString.charAt(inputString.length - 1) === ",") {
+		return inputString.slice(0, -1);
+	}
+
+	return inputString;
 }

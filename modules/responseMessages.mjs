@@ -8,6 +8,7 @@ const illegalRatingInputTxt = {en: "You have entered a illegal input, only 1 dig
 
 //Universal messages
 const editNotAllowedTxt = {en: "You are not allowed to edit this."};
+const deleteNotAllowedTxt = {en: "You are not allowed to delete this."};
 
 //User Messages
 
@@ -25,6 +26,7 @@ const couldNotUpdateTokenTxt = {en: "Could not update user token"};
 const errorValidatingTokenTxt = {en: "Error validating token, if the error persist, login again"};
 const deleteUserSuccessTxt = {en: "User deleted successfully, you will be redirected in 5 seconds"};
 const loginSuccessTxt = {en: "Logged in successfully"};
+const creationNotAuthorizedTxt = {en: "You have to set your user role to 'Musician', to submit a creation to a idea."};
 
 //Idea Messages
 
@@ -37,6 +39,9 @@ const ideaUpdateSuccessTxt = {en: "Idea updated successfully"};
 const cantRateIdeaTxt = {en: "Cant create idea. Try again, or contact developer."};
 const deleteIdeaSuccessTxt = {en: "Idea deleted successfully"};
 const deleteIdeaFailureTxt = {en: "Failed to delete idea"};
+const cantFindCreationToDeleteTxt = {en: "Cant find creation to delete"};
+const creationDeleteSuccessTxt = {en: "Creation deleted successfully"};
+const creationDeletionFailureTxt = {en: "Error while deleting creation"};
 
 //DB Errors
 
@@ -79,6 +84,10 @@ class ResMsg {
 			ideaUpdateSuccess: ideaUpdateSuccessTxt[lang],
 			deleteIdeaSuccess: deleteIdeaSuccessTxt[lang],
 			deleteIdeaFailure: deleteIdeaFailureTxt[lang],
+			creationNotAuthorized: creationNotAuthorizedTxt[lang],
+			cantFindCreationToDelete: cantFindCreationToDeleteTxt[lang],
+			creationDeleteSuccess: creationDeleteSuccessTxt[lang],
+			creationDeletionFailure: creationDeletionFailureTxt[lang],
 		};
 
 		this.InputMsg = {
@@ -94,6 +103,7 @@ class ResMsg {
 
 		this.UniversalMsg = {
 			editNotAllowed: editNotAllowedTxt[lang],
+			deleteNotAllowed: deleteNotAllowedTxt[lang],
 		};
 	}
 }

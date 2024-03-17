@@ -1,8 +1,7 @@
 import calcRatingAverage from "../modules/idea/calcRatingAverage.mjs";
 import genreDataConverter from "../modules/idea/genreDataConverter.mjs";
 
-export default function createIdeaCard(data, userId) {
-	console.log(data);
+export default function createIdeaCard(data, userId, userRole) {
 	if (data.title === null && data.creator_id === null) {
 		return null;
 	} // prettier-ignore
@@ -42,9 +41,17 @@ export default function createIdeaCard(data, userId) {
 
 		creations.forEach((creation) => {
 			const creationElements = creation.split("|");
+			const creationsTitle = creationElements[0];
+			const creationsArtist = creationElements[1];
+			const creationsLink = creationElements[2];
+			const creationsId = parseInt(creationElements[3]);
+			console.log(creationsId === userId);
 
 			creationsHtml += `<li>
-            Title: <span>${creationElements[0]}</span>&nbsp;By: <span>${creationElements[1]}</span>&nbsp;Link: <a href="${creationElements[2]}">${creationElements[2]}</a>
+            Title: <span>${creationsTitle}</span>&nbsp;By: <span>${creationsArtist}</span>&nbsp;Link: <a href="${creationsLink}">${creationsLink}</a>
+			<button class="cancel remove" style="display: ${creationsId === userId ? "block" : "none"};" id="deleteCreation" data-creationid="${
+				data.id
+			}" data-creation="${creation}">x</button>
         </li>`;
 		});
 	} else {
@@ -89,12 +96,12 @@ export default function createIdeaCard(data, userId) {
 
 		<div id="addCreationWrapper_${data.id}" style="display: none" class="add-creation-wrapper">
 			<h4>Add Creation</h4>
-			<div><label>Title: &nbsp; </label><input id="creationTitleInput_${data.id}" type="text" /></div>
-			<div><label>Artist: </label><input id="creationArtistInput_${data.id}" type="text" /></div>
-			<div><label>Link: &nbsp; </label><input id="crationLinkInput_${data.id}" type="url" /></div>
+			<div><label>Title: &nbsp; </label><input id="creationTitleInput_${data.id}" type="text" maxlength="64" /></div>
+			<div><label>Artist: </label><input id="creationArtistInput_${data.id}" type="text" maxlength="64" /></div>
+			<div><label>Link: &nbsp; </label><input id="creationLinkInput_${data.id}" type="url" maxlength="64" /></div>
 			<button id="saveCreationBtn_${data.id}" class="green-btn" style="margin-top: 10px;">Save Creation</button>
 		</div>
-		<button id="addCreationBtn_${data.id}" style="margin-top: 10px; display: block">Add Creation</button>
+		<button id="addCreationBtn_${data.id}" style="margin-top: 10px; display: ${userRole === "Musician" ? "block" : "none"}">Add Creation</button>
 	</div>
 </div>
 `;

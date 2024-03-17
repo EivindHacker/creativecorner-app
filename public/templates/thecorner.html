@@ -25,13 +25,13 @@
 <div class="appear lg cont" id="createIdeaWrapper" style="display: none">
 	<h2>Create Song Idea</h2>
 	<div class="song-input-card">
-		<div><label>Title </label> <input type="text" id="titleInput" /><span class="subtle"> &nbsp;(Required)</span></div>
+		<div><label>Title </label> <input type="text" id="titleInput" maxlength="64" /><span class="subtle"> &nbsp;(Required)</span></div>
 		<label>Description <span class="subtle"> &nbsp;(Required)</span> </label>
-		<textarea style="margin-top: -15px" id="descriptionInput"></textarea>
+		<textarea style="margin-top: -15px" id="descriptionInput" maxlength="200"></textarea>
 		<h4 style="margin-top: 0px">Genre Suggestions<span class="subtle"> &nbsp;(Min 1 Required)</span></h4>
 
 		<div style="margin-top: -45px; margin-bottom: 10px">
-			<input id="genreInput" type="text" />
+			<input id="genreInput" type="text" maxlength="64" />
 			<button id="addGenreBtn">Add Genre</button>
 		</div>
 
@@ -46,12 +46,12 @@
 <div class="appear lg cont" id="editIdeaWrapper" style="display: none">
 	<h2>Edit Song Idea</h2>
 	<div class="song-input-card">
-		<div><label>Title: </label> <input type="text" id="titleInputEdit" /><span class="subtle"> &nbsp;(Required)</span></div>
+		<div><label>Title: </label> <input type="text" id="titleInputEdit" maxlength="64" /><span class="subtle"> &nbsp;(Required)</span></div>
 		<label>Description:<span class="subtle"> &nbsp;(Required)</span> </label>
-		<textarea style="margin-top: -15px" id="descriptionInputEdit"></textarea>
+		<textarea style="margin-top: -15px" id="descriptionInputEdit" maxlength="200"></textarea>
 		<h4 style="margin-top: 0px">Genre Suggestions <span class="subtle"> &nbsp;(Min 1 Required)</span></h4>
 		<div style="margin-top: -45px; margin-bottom: 10px">
-			<input id="genreInputEdit" type="text" />
+			<input id="genreInputEdit" type="text" maxlength="64" />
 			<button id="addGenreBtnEdit">Add Genre</button>
 		</div>
 		<div id="genreInputDisplayEdit" class="genre-wrapper"></div>
@@ -64,11 +64,17 @@
 <div class="list-nav">
 	<h2 style="width: max-content">Song Ideas</h2>
 
-	<div style="display: flex; margin-left: auto; align-items: center; gap: 4px">
-		<span class="subtle" style="margin-right: 5px">Sort By</span><button id="sortByNewBtn" style="font-size: x-small" class="cancel">Newest</button
-		><button id="sortByOldBtn" style="font-size: x-small" class="cancel">Oldest</button>
-		<button id="sortByRandomBtn" style="font-size: x-small" class="cancel">Random</button>
-		<button class="cancel" style="font-size: x-small" id="showUserIdeasBtn">Your Ideas</button>
+	<div class="list-sortby">
+		<span class="subtle">Sort By</span>
+		<div style="display: flex; margin-left: auto; align-items: center; gap: 4px">
+			<button id="sortByRatingHigh" style="font-size: x-small" class="cancel">Rating High</button>
+			<button id="sortByRatingLow" style="font-size: x-small" class="cancel">Rating Low</button>
+			<button id="sortByNewBtn" style="font-size: x-small" class="cancel">Newest</button>
+			<button id="sortByOldBtn" style="font-size: x-small" class="cancel">Oldest</button>
+			<button id="sortByRandomBtn" style="font-size: x-small" class="cancel">Random</button>
+			<button class="cancel" style="font-size: x-small" id="showUserIdeasBtn">Your Ideas</button>
+			<!-- prettier-ignore -->
+		</div>
 	</div>
 </div>
 

@@ -306,6 +306,8 @@ p {
 li {
 	margin-top: 5px;
 	color: rgba(255, 255, 255, 0.683);
+	display: flex;
+	gap: 4px;
 }
 
 a {
@@ -345,6 +347,27 @@ summary {
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 25px;
+}
+
+.list-sortby {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.list-sortby {
+		flex-direction: column;
+	}
+
+	.list-sortby button {
+		height: 50px;
+	}
+
+	.list-nav {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
 }
 
 /*-------- Song Idea Card ----------*/

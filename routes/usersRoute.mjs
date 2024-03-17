@@ -27,13 +27,23 @@ USER_API.post("/signUp", createHashPassword, createToken, async (req, res, next)
 	user.role = role;
 	user.pswHash = req.hashedPassword;
 
-	const exists = await user.checkUserExistence();
+	let exists;
+
+	try {
+		exists = await user.checkUserExistence();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
 
 	if (exists) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.userExists).end();
 	}
 
-	user = await user.createUser();
+	try {
+		user = await user.createUser();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
 
 	if (user.id) {
 		res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(req.token)).end();
@@ -51,27 +61,38 @@ USER_API.post("/login", createHashPassword, createToken, async (req, res, next) 
 	user.email = email;
 	user.pswHash = req.hashedPassword;
 
-	user = await user.login();
-	user = user[0];
+	try {
+		user = await user.login();
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
+
+	if (user === null) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
+	} else {
+		user = user[0];
+	}
 
 	const response = new ServerResponse();
 	response.message = ResMsg.UserMsg.loginSuccess;
 	response.data = req.token;
 
-	if (user === null) {
-		res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
-	}
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 
 USER_API.post("/getUserData", validateToken, async (req, res, next) => {
 	let user = new User();
 	user.email = req.emailFromToken;
-	user = await user.getUserData();
-	user = user[0];
 
-	if (!user.id) {
-		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.wrongPassOrEmail).end();
+	try {
+		user = await user.getUserData();
+		user = user[0];
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
+
+	if (user === null) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.cantFindUser).end();
 	}
 
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(user)).end();
@@ -134,6 +155,9 @@ USER_API.post("/updateUserPassword", validateToken, createHashPassword, async (r
 
 	try {
 		userFromDB = await userFromDB.getUserData();
+		if (userFromDB === null) {
+			throw new Error(ResMsg.UserMsg.cantFindUser);
+		}
 	} catch (error) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
 	}
@@ -153,7 +177,7 @@ USER_API.post("/updateUserPassword", validateToken, createHashPassword, async (r
 		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
 	}
 
-	if (user.newPass !== req.newPswHash) {
+	if (user.newPass === req.newPswHash) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.UserMsg.passwordUpdateFailure).end();
 	}
 

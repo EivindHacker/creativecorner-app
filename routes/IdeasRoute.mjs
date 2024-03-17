@@ -2,44 +2,58 @@ import express from "express";
 import Idea from "../model/idea.mjs";
 import User from "../model/user.mjs";
 import {HTTPCodes} from "../modules/httpConstants.mjs";
-import SuperLogger from "../modules/SuperLogger.mjs";
 import validateToken from "../middleware/validateToken.mjs";
 import createGenreString from "../middleware/createGenreString.mjs";
 import {ResMsg} from "../modules/responseMessages.mjs";
-import {checkIllegalRatingInput, checkIllegalInput} from "../modules/inputTesters.mjs";
+import {checkIllegalRatingInput, checkIllegalInput, removeComma} from "../modules/inputTesters.mjs";
 import {fetchUserData} from "../middleware/fetchUserData.mjs";
 import {fetchIdeaData} from "../middleware/fetchIdeaData.mjs";
 import {ServerResponse} from "../model/serverRes.mjs";
-import getOrderAndID from "../middleware/getOrderAndID.mjs";
+import createCreationsString from "../middleware/createCreationsString.mjs";
+import extractCreationCreatorId from "../middleware/exctractCreationCreatorId.mjs";
+import {getOrderBy, getOrderByAndID} from "../middleware/getOrderBy.mjs";
 
 const IDEA_API = express.Router();
 
 IDEA_API.use(express.json()); // This makes it so that express parses all incoming payloads as JSON for this route.
 
-IDEA_API.get("/", (req, res, next) => {
-	SuperLogger.log("Demo of logging tool");
-	SuperLogger.log("A important msg", SuperLogger.LOGGING_LEVELS.CRTICAL);
-});
-
-IDEA_API.get("/getIdeas/:data", getOrderAndID, async (req, res, next) => {
-	req.id;
-
+IDEA_API.get("/getIdeas/:data", getOrderBy, async (req, res, next) => {
 	let ideas = new Idea();
 	if (req.sortBy) {
 		ideas.sortBy = req.sortBy;
 	}
-	const creator_id = req.creator_id;
+	if (req.orderBy) {
+		ideas.orderBy = req.orderBy;
+	} else {
+		ideas.orderBy = null;
+	}
 
 	try {
-		if (creator_id !== null) {
-			ideas.creator_id = creator_id;
-			ideas = await ideas.getUserIdeas();
-		} else {
-			ideas = await ideas.getIdeas();
-		}
-		if (ideas.length !== 0) {
+		ideas = await ideas.getIdeas();
+
+		if (ideas !== null) {
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
 		} else {
+			ideas = [];
+			res.status(HTTPCodes.SuccesfullRespons.Ok).send(ideas).end();
+		}
+	} catch (error) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
+	}
+});
+
+IDEA_API.get("/getUserIdeas/:data", getOrderByAndID, async (req, res, next) => {
+	let ideas = new Idea();
+	ideas.sortBy = req.sortBy;
+	ideas.creator_id = req.id;
+
+	try {
+		ideas = await ideas.getUserIdeas();
+
+		if (ideas !== null) {
+			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
+		} else {
+			ideas = [];
 			res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(ideas)).end();
 		}
 	} catch (error) {
@@ -55,7 +69,7 @@ IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, 
 	idea.description = ideaInput.description;
 	idea.genres = req.genreString;
 
-	if (checkIllegalInput(idea.title, ["!", "."]) || checkIllegalInput(idea.description, ["!", "."])) {
+	if (checkIllegalInput(idea.title, ["!", "."]) || checkIllegalInput(idea.description, ["!", "."], 200)) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.BadRequest).send(ResMsg.InputMsg.illegalInput).end();
 	}
 
@@ -64,7 +78,12 @@ IDEA_API.post("/createIdea", validateToken, createGenreString, async (req, res, 
 
 	try {
 		user = await user.getUserData();
-		user = user[0];
+
+		if (user === null) {
+			throw new Error(ResMsg.UserMsg.cantFindUser);
+		} else {
+			user = user[0];
+		}
 	} catch (error) {
 		return res.status(HTTPCodes.ClientSideErrorRespons.NotFound).send(error.message).end();
 	}
@@ -183,6 +202,57 @@ IDEA_API.post("/deleteIdea", validateToken, fetchUserData, fetchIdeaData, async 
 
 	const response = new ServerResponse();
 	response.message = ResMsg.IdeaMsg.deleteIdeaSuccess;
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
+});
+
+IDEA_API.post("/submitCreation", validateToken, fetchUserData, fetchIdeaData, createCreationsString, async (req, res, next) => {
+	const userData = req.userData;
+	const ideaData = req.ideaData;
+
+	if (userData.role !== "Musician") {
+		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.IdeaMsg.creationNotAuthorized).end();
+	}
+
+	let idea = new Idea();
+	idea.id = ideaData.id;
+	idea.creations = req.updatedCreationString;
+
+	try {
+		idea = await idea.addCreation();
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
+	}
+
+	const response = new ServerResponse();
+	response.data = idea.creations;
+	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
+});
+
+IDEA_API.post("/deleteCreation", validateToken, fetchUserData, fetchIdeaData, extractCreationCreatorId, async (req, res, next) => {
+	const {creation} = req.body;
+	const userData = req.userData;
+	const ideaData = req.ideaData;
+	const creationCreatorId = req.creationCreatorId;
+
+	if (creationCreatorId !== userData.id) {
+		return res.status(HTTPCodes.ClientSideErrorRespons.Forbidden).send(ResMsg.UniversalMsg.deleteNotAllowed).end();
+	}
+
+	const oldCreationsString = ideaData.creations;
+	const updatedCreationsString = removeComma(oldCreationsString.replace(creation, ""));
+
+	let idea = new Idea();
+	idea.creations = updatedCreationsString;
+	idea.id = ideaData.id;
+
+	try {
+		idea.deleteCreation();
+	} catch (error) {
+		return res.status(HTTPCodes.ServerErrorRespons.InternalError).send(error.message).end();
+	}
+
+	const response = new ServerResponse();
+	response.message = ResMsg.IdeaMsg.creationDeleteSuccess;
 	res.status(HTTPCodes.SuccesfullRespons.Ok).json(JSON.stringify(response)).end();
 });
 

@@ -1,4 +1,4 @@
-export function selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder) {
+export function selectFromWhereOrderByQuery(tableName, selectColumns, whereColumns, whereValues, sortOrder, orderBy) {
 	const selectClause = selectColumns.join(", ");
 
 	let whereClause = "";
@@ -13,6 +13,11 @@ export function selectFromWhereOrderByQuery(tableName, selectColumns, whereColum
 	} else if (selectColumns.length > 0 && selectColumns[0]) {
 		orderByClause = `ORDER BY id ${sortOrder}`;
 	}
+	if (orderBy === "rating" && orderBy) {
+		console.log("Kjører");
+		orderByClause = `ORDER BY ${orderBy} ${sortOrder}`;
+	}
+
 	if (sortOrder == undefined) {
 		orderByClause = "";
 	}

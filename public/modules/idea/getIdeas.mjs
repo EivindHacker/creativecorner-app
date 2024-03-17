@@ -1,9 +1,26 @@
 import getFrom from "../httpmethods/getFrom.mjs";
 
-export default async function getIdeas(sortBy, id) {
-	let url = "idea/getIdeas/null";
+export async function getIdeas(sortBy, orderBy) {
+	const url = `idea/getIdeas/${sortBy}_${orderBy}`;
 
-	url = `idea/getIdeas/${sortBy}_${id}`;
+	try {
+		const response = await getFrom(url);
+		if (response.ok) {
+			const data = await response.json();
+
+			const ideas = JSON.parse(data);
+
+			return ideas;
+		} else {
+			return "Could not find any Ideas";
+		}
+	} catch (error) {
+		return error.message;
+	}
+}
+
+export async function getUserIdeas(sortBy, id) {
+	const url = `idea/getUserIdeas/${sortBy}_${id}`;
 
 	try {
 		const response = await getFrom(url);

@@ -40,17 +40,24 @@ class Idea {
 	}
 
 	async getIdeas() {
-		return await DBManager.selectFromTable("Ideas", ["*"], [], [], this.sortBy);
-	}
-	async getIdea() {
-		return await DBManager.selectFromTable("Ideas", ["*"], ["id"], [this.id], this.sortBy);
+		return await DBManager.selectFromTable("Ideas", ["*"], [], [], this.sortBy, this.orderBy);
 	}
 	async getUserIdeas() {
 		return await DBManager.selectFromTable("Ideas", ["*"], ["creator_id"], [this.creator_id], this.sortBy);
 	}
+	async getIdea() {
+		return await DBManager.selectFromTable("Ideas", ["*"], ["id"], [this.id], this.sortBy);
+	}
 
 	async rateIdea() {
 		return await DBManager.updateTable("Ideas", ["rating", "rated_by"], [this.rating, this.rated_by], this.id);
+	}
+
+	async addCreation() {
+		return await DBManager.updateTable("Ideas", ["creations"], [this.creations], this.id);
+	}
+	async deleteCreation() {
+		return await DBManager.updateTable("Ideas", ["creations"], [this.creations], this.id);
 	}
 }
 
