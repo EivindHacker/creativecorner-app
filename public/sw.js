@@ -81,16 +81,19 @@ self.addEventListener("fetch", (event) => {
 	// Check if the requested URL is in the excluded list
 	const isExcluded = excludedUrls.some((url) => request.url.includes(url));
 
+	// Modify the request URL to include a cache-busting query parameter
+	const cacheBustedRequest = isExcluded ? new Request(request.url + "?_=" + Date.now(), request) : request;
+
 	// If the URL is in the excluded list, fetch it directly from the network
 	if (isExcluded) {
-		event.respondWith(fetch(request));
+		event.respondWith(fetch(cacheBustedRequest));
 		return;
 	}
 
 	// If the URL is not excluded, apply your caching strategy
 	event.respondWith(
 		cacheFirst({
-			request: event.request,
+			request: cacheBustedRequest,
 			preloadResponsePromise: event.preloadResponse,
 			fallbackUrl: "/index.html",
 		})
