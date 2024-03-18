@@ -73,6 +73,21 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+	const {request} = event;
+
+	// Define URLs that you want to exclude from caching
+	const excludedUrls = ["/scripts/ideasList.mjs", "/modules/idea/getIdeas.mjs"];
+
+	// Check if the requested URL is in the excluded list
+	const isExcluded = excludedUrls.some((url) => request.url.includes(url));
+
+	// If the URL is in the excluded list, fetch it directly from the network
+	if (isExcluded) {
+		event.respondWith(fetch(request));
+		return;
+	}
+
+	// If the URL is not excluded, apply your caching strategy
 	event.respondWith(
 		cacheFirst({
 			request: event.request,

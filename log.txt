@@ -79342,3 +79342,30 @@ Database connection  postgresql://localhost/CC-DB
 Database connection  postgresql://localhost/CC-DB
 ####################
 Server enviorment local
+Server enviorment local
+Database connection  postgresql://localhost/CC-DB
+####################
+####################
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
+Server enviorment local
+1:34:13 AM [32mGET[39m /
+1:34:13 AM [33mPOST[39m /user/getUserData
+1:34:14 AM [32mGET[39m /sw.js
+1:34:14 AM [32mGET[39m /
+1:34:14 AM [32mGET[39m /modules/contentLoader.mjs
+1:34:14 AM [32mGET[39m /index.html
+1:34:14 AM [32mGET[39m /css/global-style.css
+1:34:14 AM [32mGET[39m /modules/nav.mjs
+1:34:14 AM [32mGET[39m /app.js
+1:34:14 AM [32mGET[39m /modules/displayError.mjs
+1:34:14 AM [32mGET[39m /modules/pageState.mjs
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+Server enviorment local
+####################
+####################
+Database connection  postgresql://localhost/CC-DB
