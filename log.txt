@@ -79454,3 +79454,28 @@ Database connection  postgresql://localhost/CC-DB
 Server enviorment local
 Database connection  postgresql://localhost/CC-DB
 ####################
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+2:09:53 AM [32mGET[39m /thecorner
+2:09:53 AM [33mPOST[39m /user/getUserData
+2:09:54 AM [32mGET[39m /sw.js
+2:09:54 AM [32mGET[39m /index.html
+2:09:54 AM [32mGET[39m /scripts/thecorner.mjs
+2:09:54 AM [32mGET[39m /css/global-style.css
+2:09:54 AM [32mGET[39m /app.js
+2:09:54 AM [32mGET[39m /modules/pageState.mjs
+2:09:54 AM [32mGET[39m /scripts/usersettings.mjs
+2:09:54 AM [32mGET[39m /scripts/ideaList.mjs
+2:09:54 AM [32mGET[39m /scripts/login.mjs
+2:09:54 AM [32mGET[39m /modules/contentLoader.mjs
+2:09:54 AM [32mGET[39m /scripts/signup.mjs
+2:09:54 AM [32mGET[39m /modules/displayError.mjs
+2:09:54 AM [32mGET[39m /modules/nav.mjs
+2:10:08 AM [32mGET[39m /
+2:10:08 AM [33mPOST[39m /user/getUserData
+2:10:09 AM [32mGET[39m /sw.js
+2:10:20 AM [32mGET[39m /thecorner
+2:10:20 AM [33mPOST[39m /user/getUserData
+2:10:21 AM [32mGET[39m /sw.js
