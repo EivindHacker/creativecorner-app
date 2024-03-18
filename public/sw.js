@@ -58,18 +58,7 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("install", (event) => {
-	event.waitUntil(
-		addResourcesToCache([
-			"/",
-			"/index.html",
-			"/css/global-style.css",
-			"/app.js",
-			"/modules/contentLoader.mjs",
-			"/modules/displayError.mjs",
-			"/modules/nav.mjs",
-			"/modules/pageState.mjs",
-		])
-	);
+	event.waitUntil(addResourcesToCache(["/", "/index.html", "/css/global-style.css"]));
 });
 
 self.addEventListener("fetch", (event) => {
@@ -81,19 +70,16 @@ self.addEventListener("fetch", (event) => {
 	// Check if the requested URL is in the excluded list
 	const isExcluded = excludedUrls.some((url) => request.url.includes(url));
 
-	// Modify the request URL to include a cache-busting query parameter
-	const cacheBustedRequest = isExcluded ? new Request(request.url + "?_=" + Date.now(), request) : request;
-
 	// If the URL is in the excluded list, fetch it directly from the network
 	if (isExcluded) {
-		event.respondWith(fetch(cacheBustedRequest));
+		event.respondWith(fetch(request));
 		return;
 	}
 
 	// If the URL is not excluded, apply your caching strategy
 	event.respondWith(
 		cacheFirst({
-			request: cacheBustedRequest,
+			request: event.request,
 			preloadResponsePromise: event.preloadResponse,
 			fallbackUrl: "/index.html",
 		})

@@ -79430,3 +79430,15 @@ Database connection  postgresql://localhost/CC-DB
 1:56:57 AM [32mGET[39m /idea/getIdeas/ASC_undefined
 1:56:57 AM [33mPOST[39m /user/getUserData
 1:56:58 AM [32mGET[39m /sw.js
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
+####################
+Server enviorment local
+####################
+Database connection  postgresql://localhost/CC-DB
